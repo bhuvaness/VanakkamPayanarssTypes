@@ -1,0 +1,394 @@
+[
+    {
+        "Id": "100000000000000000000000000000000",
+        "ParentId": "100000000000000000000000000000000",
+        "Name": "ValueType",
+        "PayanarssTypeId": "100000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "100000000000000000000000000000001",
+        "ParentId": "100000000000000000000000000000001",
+        "Name": "TableType",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": []
+    },
+    {
+        "Id": "100000000000000000000000000000002",
+        "ParentId": "100000000000000000000000000000002",
+        "Name": "LookupType",
+        "PayanarssTypeId": "100000000000000000000000000000002",
+        "Attributes": []
+    },
+    {
+        "Id": "100000000000000000000000000000003",
+        "ParentId": "100000000000000000000000000000003",
+        "Name": "GroupType",
+        "PayanarssTypeId": "100000000000000000000000000000003",
+        "Attributes": []
+    },
+    {
+        "Id": "10000000000000000000000000000000",
+        "ParentId": "10000000000000000000000000000000",
+        "Name": "Text",
+        "PayanarssTypeId": "100000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "10000000000000000000000000000001",
+        "ParentId": "10000000000000000000000000000001",
+        "Name": "Number",
+        "PayanarssTypeId": "100000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "10000000000000000000000000000002",
+        "ParentId": "10000000000000000000000000000002",
+        "Name": "DateTime",
+        "PayanarssTypeId": "100000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "10000000000000000000000000000003",
+        "ParentId": "10000000000000000000000000000003",
+        "Name": "Boolean",
+        "PayanarssTypeId": "100000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "10000000000000000000000000000004",
+        "ParentId": "10000000000000000000000000000004",
+        "Name": "Blob",
+        "PayanarssTypeId": "100000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "68541200cce9f",
+        "ParentId": "68541200cce9f",
+        "Name": "PA",
+        "PayanarssTypeId": "100000000000000000000000000000003",
+        "Attributes": []
+    },
+    {
+        "Id": "685816c2bf44a",
+        "ParentId": "68541200cce9f",
+        "Name": "Customers",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [
+            "68593eed5c3eb"
+        ]
+    },
+    {
+        "Id": "6858da91234e6",
+        "ParentId": "68541200cce9f",
+        "Name": "Address",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [
+            "68593eed5c3eb"
+        ]
+    },
+    {
+        "Id": "6858da947dfe8",
+        "ParentId": "68541200cce9f",
+        "Name": "Contacts",
+        "PayanarssTypeId": "685cf4c130420",
+        "Attributes": [
+            "68593eed5c3eb"
+        ]
+    },
+    {
+        "Id": "6858ddafcb6d4",
+        "ParentId": "68541200cce9f",
+        "Name": "PA2",
+        "PayanarssTypeId": "100000000000000000000000000000003",
+        "Attributes": [
+            "68593efd4dba4"
+        ]
+    },
+    {
+        "Id": "6858e3e7ce0e5",
+        "ParentId": "6858ddafcb6d4",
+        "Name": "Tbl1",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": []
+    },
+    {
+        "Id": "6858e3e8ef24a",
+        "ParentId": "6858ddafcb6d4",
+        "Name": "Tbl2",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": []
+    },
+    {
+        "Id": "6858e3e9993fd",
+        "ParentId": "6858ddafcb6d4",
+        "Name": "Tbl3",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": []
+    },
+    {
+        "Id": "6858e41677189",
+        "ParentId": "6858ddafcb6d4",
+        "Name": "Group3",
+        "PayanarssTypeId": "100000000000000000000000000000003",
+        "Attributes": []
+    },
+    {
+        "Id": "6858e422c5ddb",
+        "ParentId": "6858e41677189",
+        "Name": "G3Tbl1",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": []
+    },
+    {
+        "Id": "6858f0ec71680",
+        "ParentId": "685816c2bf44a",
+        "Name": "Id",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": [
+            "6859408b95f6d"
+        ]
+    },
+    {
+        "Id": "6858f0f7ba3a4",
+        "ParentId": "685816c2bf44a",
+        "Name": "Name",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "6858f0fbeaed2",
+        "ParentId": "685816c2bf44a",
+        "Name": "Email",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "6858f103a1ba5",
+        "ParentId": "685816c2bf44a",
+        "Name": "PhoneNumber",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "6858f11852945",
+        "ParentId": "6858da91234e6",
+        "Name": "Id",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "6858f11e79828",
+        "ParentId": "6858da91234e6",
+        "Name": "LineOne",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "6858f127500f6",
+        "ParentId": "6858da91234e6",
+        "Name": "LineTwo",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "6858f12cec73b",
+        "ParentId": "6858da91234e6",
+        "Name": "LineThree",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "6858f1338bb3d",
+        "ParentId": "6858da91234e6",
+        "Name": "City",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "6858f138c19fd",
+        "ParentId": "6858da91234e6",
+        "Name": "State",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "6858f13d957a8",
+        "ParentId": "6858da91234e6",
+        "Name": "PinCode",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "6858f143453ee",
+        "ParentId": "6858da91234e6",
+        "Name": "Country",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "6858f15366487",
+        "ParentId": "6858da947dfe8",
+        "Name": "Id",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "6858f1585bee3",
+        "ParentId": "6858da947dfe8",
+        "Name": "FirstName",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "6858f15fa01e8",
+        "ParentId": "6858da947dfe8",
+        "Name": "LastName",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "6858f16f54f6a",
+        "ParentId": "685816c2bf44a",
+        "Name": "Contacts",
+        "PayanarssTypeId": "6858da947dfe8",
+        "Attributes": []
+    },
+    {
+        "Id": "68593dc3b71d7",
+        "ParentId": "68541200cce9f",
+        "Name": "PayanarssAttribute",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": []
+    },
+    {
+        "Id": "68593ebf5ce42",
+        "ParentId": "68593dc3b71d7",
+        "Name": "IsValueType",
+        "PayanarssTypeId": "10000000000000000000000000000003",
+        "Attributes": []
+    },
+    {
+        "Id": "68593eed5c3eb",
+        "ParentId": "68593dc3b71d7",
+        "Name": "IsTableType",
+        "PayanarssTypeId": "10000000000000000000000000000003",
+        "Attributes": []
+    },
+    {
+        "Id": "68593efd4dba4",
+        "ParentId": "68593dc3b71d7",
+        "Name": "IsGroup",
+        "PayanarssTypeId": "10000000000000000000000000000003",
+        "Attributes": []
+    },
+    {
+        "Id": "68593f06eb472",
+        "ParentId": "68593dc3b71d7",
+        "Name": "IsReadOnly",
+        "PayanarssTypeId": "10000000000000000000000000000003",
+        "Attributes": []
+    },
+    {
+        "Id": "68593f1779f55",
+        "ParentId": "68593dc3b71d7",
+        "Name": "IsMandatory",
+        "PayanarssTypeId": "10000000000000000000000000000003",
+        "Attributes": []
+    },
+    {
+        "Id": "6859408b95f6d",
+        "ParentId": "68593dc3b71d7",
+        "Name": "IsUniqueId",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "685a532f288b9",
+        "ParentId": "100000000000000000000000000000000",
+        "Name": "IsValueType",
+        "PayanarssTypeId": "68593ebf5ce42",
+        "Attributes": []
+    },
+    {
+        "Id": "685a5347d7331",
+        "ParentId": "100000000000000000000000000000001",
+        "Name": "IsTableType",
+        "PayanarssTypeId": "68593eed5c3eb",
+        "Attributes": [
+            "68593eed5c3eb"
+        ]
+    },
+    {
+        "Id": "685a5358ce3d3",
+        "ParentId": "100000000000000000000000000000002",
+        "Name": "Name",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "685a537b2dc1c",
+        "ParentId": "100000000000000000000000000000003",
+        "Name": "IsGroupType",
+        "PayanarssTypeId": "68593efd4dba4",
+        "Attributes": []
+    },
+    {
+        "Id": "685ba9195741f",
+        "ParentId": "68593dc3b71d7",
+        "Name": "IsLookupType",
+        "PayanarssTypeId": "10000000000000000000000000000003",
+        "Attributes": []
+    },
+    {
+        "Id": "685cf4c130420",
+        "ParentId": "68593dc3b71d7",
+        "Name": "IsChildTable",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": null
+    },
+    {
+        "Id": "685cf849814dd",
+        "ParentId": "685816c2bf44a",
+        "Name": "CustomerType.Name",
+        "PayanarssTypeId": "685cfa025126d",
+        "Attributes": null
+    },
+    {
+        "Id": "685cf8590446a",
+        "ParentId": "68541200cce9f",
+        "Name": "CustomerType",
+        "PayanarssTypeId": "685ba9195741f",
+        "Attributes": null
+    },
+    {
+        "Id": "685cf9f0b0216",
+        "ParentId": "685cf8590446a",
+        "Name": "Id",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": [
+            "6859408b95f6d"
+        ]
+    },
+    {
+        "Id": "685cfa025126d",
+        "ParentId": "685cf8590446a",
+        "Name": "Name",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": null
+    },
+    {
+        "Id": "685cfa08c1c30",
+        "ParentId": "685cf8590446a",
+        "Name": "Description",
+        "PayanarssTypeId": "10000000000000000000000000000000",
+        "Attributes": null
+    },
+    {
+        "Id": "685d19fe870e6",
+        "ParentId": "6858da947dfe8",
+        "Name": "ParentId",
+        "PayanarssTypeId": "6858f0ec71680",
+        "Attributes": null
+    }
+]
