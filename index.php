@@ -28,6 +28,65 @@ if (isset($_GET['parent_id'])) {
 
 $payanarssTypes = $app->load_children_v1($parentId);
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['generate_from_prompt'])) {
+    $prompt = $_POST['ai_prompt'] ?? '';
+
+    if (!empty($prompt)) {
+        require_once 'OpenAIHelper.php'; // your helper file
+
+        $response = $app->prompt_for_type($prompt); // this function should return JSON (see below)
+        //echo "<pre>AI Response: " . htmlspecialchars($response) . "</pre>";
+        /*
+        if (preg_match('/json(.*?)/s', $response, $matches)) {
+            $jsonString = trim($matches[1]);
+            echo($jsonString);
+        } else {
+            echo "JSON block not found!";
+        }
+        */
+        $start = strpos($response, '[');
+        $end = strrpos($response, ']');
+        if ($start !== false && $end !== false) {
+            $jsonString = substr($response, $start, $end - $start + 1);
+        } else {
+            echo "Could not find JSON array!";
+        }
+        $arr = json_decode($jsonString, true);
+        $bobj = new PayanarssTypeBusinessLogics();
+        $types =   $bobj->convert_to_payanarss_type($arr);
+        $app->addTypes($parentId, $types);
+        $app->save_all_types();
+        /*
+        if ($schema && isset($schema['Table'])) {
+            $table = new PayanarssType();
+            $table->Id = uniqid();
+            $table->ParentId = $table->Id;
+            $table->Name = $schema['Table'];
+
+            foreach ($schema['Columns'] ?? [] as $col) {
+                $colObj = new PayanarssType();
+                $colObj->Id = uniqid();
+                $colObj->ParentId = $table->Id;
+                $colObj->Name = $col['Name'] ?? '';
+                $colObj->PayanarssTypeId = $app->get_type_id_by_name($col['Type'] ?? 'Text');
+                foreach ($col['Attributes'] ?? [] as $attrName) {
+                    $colObj->Attributes[] = $app->get_type_id_by_name($attrName);
+                }
+                $table->Children->add($colObj);
+            }
+
+            $app->Types->add($table);
+            
+
+            $_SESSION['PayanarssApp'] = $app;
+            $success = "✅ Table '{$table->Name}' generated successfully!";
+        } else {
+            $error = "⚠️ Unable to parse AI response. Please try a simpler prompt.";
+        }
+            */
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -79,6 +138,25 @@ $payanarssTypes = $app->load_children_v1($parentId);
                 <div id="dataEntryTab" class="hidden">
                     <?php include 'PayanarssDataEntry.php'; ?>
                 </div>
+
+                <!-- Footer for Prompt-Based Schema Generation -->
+                <div class="absolute bottom-0 left-0 right-0 bg-white border-t p-4 shadow flex items-center gap-4 z-50">
+                    <form method="post" class="flex w-full items-center gap-2">
+                        <input
+                            type="text"
+                            name="ai_prompt"
+                            placeholder="💬 Describe your table (e.g., Customer with Name, Email, Phone)..."
+                            class="flex-1 border px-3 py-2 rounded shadow text-sm"
+                            required>
+                        <button
+                            type="submit"
+                            name="generate_from_prompt"
+                            class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded text-sm">
+                            🔮 Generate
+                        </button>
+                    </form>
+                </div>
+
             </main>
         </div>
 

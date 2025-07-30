@@ -347,5 +347,89 @@
         "Name": "Facilities Management System",
         "PayanarssTypeId": "100000000000000000000000000000004",
         "Attributes": null
+    },
+    {
+        "Id": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "ParentId": "6878a138e904a",
+        "Name": "Assets",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "6F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "AssetId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": null
+    },
+    {
+        "Id": "7F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "AssetName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "8F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "AssetType",
+        "PayanarssTypeId": "68821a6228051",
+        "Attributes": null
+    },
+    {
+        "Id": "9F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "AssetStatus",
+        "PayanarssTypeId": "7F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "Attributes": null
+    },
+    {
+        "Id": "6F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "ParentId": "6878a138e904a",
+        "Name": "AssetType",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "68821a36ca1b8",
+        "ParentId": "6F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": null
+    },
+    {
+        "Id": "68821a6228051",
+        "ParentId": "6F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "ParentId": "6878a138e904a",
+        "Name": "AssetStatus",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "7F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "Name": "StatusName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "8F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "Name": "Description",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "68821bc09a223",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": null
     }
 ]

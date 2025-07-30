@@ -88,6 +88,7 @@ $parentType = $app->get_type($parentId);
 //$payanarssTypes = $app->load_children_v1($parentId);
 $payanarssTypes = $app->getChildren($parentId);
 $attribute = $app->Attribute;
+
 ?>
 
 <!DOCTYPE html>
@@ -100,6 +101,7 @@ $attribute = $app->Attribute;
 </head>
 
 <body class="h-screen bg-gray-50">
+
     <div class="flex h-[calc(100%-64px)]"> <!-- Adjust height minus header -->
         <!-- 📄 Main Content Area -->
         <main class="flex-1 overflow-y-auto p-6 bg-white">
@@ -127,7 +129,7 @@ $attribute = $app->Attribute;
                     <tbody>
                         <?php if (count($payanarssTypes) > 0) {
                             foreach ($payanarssTypes as $type): ?>
-                                
+
                                 <?php $isEditing = isset($_POST['edit_type']) && $_POST['edit_type'] === $type->Id; ?>
                                 <tr>
                                     <form method="post">

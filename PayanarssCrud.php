@@ -90,6 +90,9 @@ function readRecord($id, $entityId)
 }
 function readAllRecords(string $entityId): array
 {
+    if (!file_exists(getFileName(RECORD_FILE, $entityId)))
+        return [];
+
     $index = loadIndex($entityId);
     $matches = [];
     foreach ($index as $entry) {
@@ -108,7 +111,13 @@ function readAllRecords(string $entityId): array
 
     $fp = fopen(getFileName(RECORD_FILE, $entityId), 'rb');
     $results = [];
+    $length = filesize(getFileName(RECORD_FILE, $entityId));
+    $record = fread($fp, $length);
+    $decoded = decryptAndDecompress($record, ENK_KEY);
+    $json = trim($decoded);
+    $results[] = json_decode($json, true);
 
+    /*
     foreach ($matches as $match) {
         fseek($fp, $match['offset']);
         $record = fread($fp, $match['length']);
@@ -118,6 +127,7 @@ function readAllRecords(string $entityId): array
         $json = preg_replace('/[^\x20-\x7E]+/', '', $json); // Remove non-ASCII (optional)
         $results[] = json_decode($json, true);
     }
+    */
 
     fclose($fp);
     return $results;

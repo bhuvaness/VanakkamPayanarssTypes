@@ -1,6 +1,7 @@
 <?php
 require_once 'PayanarssTypeJsonDAO.php';
 require_once 'PayanarssCrud.php';
+require_once 'OpenAIHelper.php'; // your helper file
 
 class PayanarssTypeApplication
 {
@@ -72,6 +73,20 @@ class PayanarssTypeApplication
         $this->RootNodes = $this->map_parent_children();
         return $new;
     }
+    public function addTypes($parentId = null, $types = [])
+    {
+        foreach ($types as $new) {
+            if ($new->ParentId === null || $new->ParentId === "") {
+                if ($parentId !== null && $parentId !== "")
+                    $new->ParentId = $parentId;
+                else
+                    $new->ParentId = $new->Id;
+            }
+            $this->Types->add($new);
+        }
+
+        $this->RootNodes = $this->map_parent_children();
+    }
     public function map_parent_children(): PayanarssTypes
     {
         $busObj = new PayanarssTypeBusinessLogics();
@@ -84,6 +99,20 @@ class PayanarssTypeApplication
             if ($eachTyp->Id === $typeId)
                 return $eachTyp;
         }
+    }
+    function prompt_for_type(string $prompt): string
+    {
+        $count = 0;
+        $types = new PayanarssTypes();
+        foreach ($this->Types as $eachType) {
+            if ($count++ > 50) break;
+            $types->add($eachType);
+        }
+
+        $bobj = new PayanarssTypeBusinessLogics();
+        $response = callOpenAI($prompt, $bobj->convertToArray($types)); // this function should return JSON (see below)
+
+        return $response;
     }
 }
 
@@ -388,7 +417,8 @@ class PayanarssTypeBusinessLogics
         $dao = new PayanarssTypeJsonDAO($fileName, $this->convertToArray($datas), "datas");
         $dao->save();
     }
-    function read_all_records(string $entityId): array {
+    function read_all_records(string $entityId): array
+    {
         return readAllRecords($entityId);
     }
     function load_all(): PayanarssTypes
