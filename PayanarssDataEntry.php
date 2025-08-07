@@ -11,10 +11,7 @@ $parentId = null;
 $payanarssTypes = null;
 $payanarssType = null;
 $payanarssTypes = null;
-$data = null;
-
-if (!isset($_SESSION['data'])) $_SESSION['data'] = [];
-$data = &$_SESSION['data'];
+$data = [];
 
 // Load or initialize rows
 if (!isset($_SESSION['PayanarssApp'])) {
@@ -22,41 +19,53 @@ if (!isset($_SESSION['PayanarssApp'])) {
     $app->load_all_types();
     $_SESSION['PayanarssApp'] = $app;
     $_SESSION['parent_id'] = "";
+    $_SESSION['PayanarssData'] = $data;
 } else {
     $app = $_SESSION['PayanarssApp'];
     $parentId = $_SESSION['parent_id'];
+    $data = isset($_SESSION['PayanarssData']) ? $_SESSION['PayanarssData'] : [];
 }
 
 if (isset($parentId)) {
     $payanarssType = $app->get_type($parentId);
     if (isset($payanarssType)) {
         $payanarssTypes = $payanarssType->Children;
-        $data = &$payanarssType->Rows;
     }
+}
+
+if (isset($_SESSION['PayanarssData'])) {
+    $data = $_SESSION['PayanarssData'];
+    $payanarssType->Rows = $data; // ✅ Always re-link to the active type
+} else {
+    $boj = new PayanarssTypeBusinessLogics();
+    $payanarssType->Rows = $boj->read_all_records($parentId);
+    $data = &$payanarssType->Rows;
+    $_SESSION['PayanarssData'] = $data;
 }
 
 if (isset($_GET['parent_id'])) {
     $_SESSION['parent_id'] = $_GET['parent_id'];
     $parentId = $_GET['parent_id'];
-    $boj = new PayanarssTypeBusinessLogics();
-    $payanarssType->Rows = $boj->read_all_records($parentId);
-    $data = &$payanarssType->Rows;
-    $_SESSION['data'] = $data;
-}
-
-if (!isset($data)) {
-    $data = [];
 }
 
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['data'])) {
+        $data = $_POST['data']; // Now this is a full array of rows with column IDs
+        $payanarssType->Rows = $data;
+        $_SESSION['PayanarssData'] = $data;
+        echo "Data saved successfully!";
+    }
+
     if (isset($_POST['add_row'])) {
         $new = [];
         foreach ($payanarssTypes as $col) {
             $new[$col->Id] = '';
         }
         $data[] = $new;
+        $payanarssType->Rows = $data;
         $_SESSION['PayanarssApp'] = $app;
+        $_SESSION['PayanarssData'] = $data;
     } elseif (isset($_POST['save_row'])) {
         $index = $_POST['save_row'];
         foreach ($payanarssTypes as $col) {
@@ -74,9 +83,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         $bObj = new PayanarssTypeBusinessLogics();
         $bObj->save_data($id, $data, $parentId, $parentId);
+        $_SESSION['PayanarssData'] = $data;
     } elseif (isset($_POST['delete_row'])) {
         $index = $_POST['delete_row'];
         array_splice($data, $index, 1);
+        $_SESSION['PayanarssData'] = $data;
     }
 }
 
@@ -95,6 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="flex justify-between mb-2">
                 <h2 class="text-lg font-bold">Dynamic Data Entry</h2>
                 <button type="submit" name="add_row" class="bg-blue-500 text-white px-3 py-1 rounded">➕ Add Row</button>
+                <button type="submit" name="add_row" class="bg-blue-500 text-white px-3 py-1 rounded">➕ Save Rows</button>
             </div>
         </form>
         <table class="w-full border border-gray-300 text-sm">
