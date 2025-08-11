@@ -42,7 +42,7 @@ function decryptAndDecompress($data, $key)
 }
 function getFileName($path, $fileName): string
 {
-    $ext = $path === "datas" ? ".dat" : ".idx";
+    $ext = $path === "datas/" ? ".dat" : ".idx";
     return $path . $fileName . $ext;
 }
 // CREATE
@@ -98,7 +98,6 @@ function readAllRecords(string $entityId): array
     foreach ($index as $entry) {
         $row = [];
         foreach ($entry as $id => $meta) {
-            //echo $index[$entry];
             if (($meta['entity'] ?? '') === $entityId) {
                 $matches[] = [
                     'id' => $id,
@@ -116,7 +115,9 @@ function readAllRecords(string $entityId): array
     $decoded = decryptAndDecompress($record, ENK_KEY);
     $json = trim($decoded);
     $results[] = json_decode($json, true);
-
+    echo $length;
+    echo $decoded;
+    echo $json;
     /*
     foreach ($matches as $match) {
         fseek($fp, $match['offset']);

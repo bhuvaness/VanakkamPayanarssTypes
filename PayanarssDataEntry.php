@@ -35,11 +35,15 @@ if (isset($parentId)) {
 
 if (isset($_SESSION['PayanarssData'])) {
     $data = $_SESSION['PayanarssData'];
-    $payanarssType->Rows = $data; // ✅ Always re-link to the active type
+    if (isset($payanarssType)) {
+        $payanarssType->Rows = $data; // ✅ Always re-link to the active type
+    }
 } else {
     $boj = new PayanarssTypeBusinessLogics();
-    $payanarssType->Rows = $boj->read_all_records($parentId);
-    $data = &$payanarssType->Rows;
+    if (isset($payanarssType)) {
+        $payanarssType->Rows = $boj->read_all_records($parentId);
+        $data = &$payanarssType->Rows;
+    }
     $_SESSION['PayanarssData'] = $data;
 }
 
@@ -165,13 +169,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                     $ptype = $app->get_type($col->PayanarssTypeId);
                                                     $isUniqueId = $ptype->Name === "IsUniqueId";
                                                     $readonly = '';
+                                                    echo $ptype->Name;
 
                                                     if (!isset($row[$col->Id]) || ($row[$col->Id] === null || $row[$col->Id] === '')) {
                                                         $value = $isUniqueId ? uniqid() : '';
                                                         $row[$col->Id] = $value;
-                                                        $readonly = $isUniqueId ? 'readonly' : '';
                                                     }
-
                                                     $ptype = $app->get_type($col->PayanarssTypeId);
                                                     if ($ptype->Name === 'Number') echo 'number';
                                                     else if ($ptype->Name === 'DateTime') echo 'datetime-local';
