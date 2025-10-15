@@ -108,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['generate_from_prompt'
         <!-- 📁 Left Nav (Tree View) -->
         <aside class="w-64 bg-white border-r border-gray-300 overflow-y-auto p-4">
             <h2 class="text-md font-semibold mb-3">📁 Table Designs</h2>
-            <ul class="text-xs">
+            <ul class="text-xs italic">
                 <?php include 'PayanarssTypeTreeNode.php'; ?>
                 <?php renderTree($app->RootNodes, $parentId); ?>
             </ul>

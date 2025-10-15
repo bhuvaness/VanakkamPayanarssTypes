@@ -2183,13 +2183,6 @@
         "Attributes": null
     },
     {
-        "Id": "68edaeb910e14",
-        "ParentId": "6878a138e904a",
-        "Name": "Name",
-        "PayanarssTypeId": "10000000000000000000000000000000",
-        "Attributes": null
-    },
-    {
         "Id": "68edaef612a7b",
         "ParentId": "68edaecf94e5e",
         "Name": "Id",

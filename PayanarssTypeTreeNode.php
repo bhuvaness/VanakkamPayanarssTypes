@@ -1,4 +1,5 @@
 <?php
+
 function isInPath($node, $selectedId): bool
 {
     if ($node->Id === $selectedId) return true;
