@@ -11,12 +11,15 @@ function isInPath($node, $selectedId): bool
 function renderTree($types, $selectedId)
 {
     foreach ($types as $type) {
+        $type->get_children($GLOBALS['app'], $type->Id);
         if($type->Id === $type->PayanarssTypeId) continue; // Skip root types that are their own parent
         $shouldExpand = isInPath($type, $selectedId);
 ?>
         <li class="ml-2">
             <div class="flex items-center gap-1">
-                <?php if (count($type->Children) > 0): ?>
+                <?php 
+                
+                if (count($type->Children) > 0): ?>
                     <button type="button"
                         onclick="document.getElementById('node_<?= $type->Id ?>').classList.toggle('hidden')"
                         class="text-xs w-5 h-5 flex justify-center items-center rotate-90 transition-transform">

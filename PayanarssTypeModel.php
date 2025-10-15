@@ -37,7 +37,8 @@ class PayanarssTypeApplication
         //$this->Attribute = $this->get_type("68593dc3b71d7");
         $this->Attributes = $busObj->getAttributes($this->Types);
         $busObj->map_payanarss_type($this->Types);
-        $this->RootNodes = $busObj->map_parent_children($this->Types->copy());
+        //$this->RootNodes = $busObj->map_parent_children($this->Types->copy());
+        $this->RootNodes = $this->getChildren("");
         return $this->Types;
     }
     public function getChildren(string $parentId = ""): PayanarssTypes
@@ -208,6 +209,11 @@ class PayanarssType implements JsonSerializable
             'PayanarssTypeId' => $this->PayanarssTypeId,
             'Attributes' => $this->Attributes
         ];
+    }
+    public function get_children(PayanarssTypeApplication $payanarssTypeApplication, string $parentId = ""): int
+    {
+        $this->Children = $payanarssTypeApplication->getChildren($parentId);
+        return $this->Children->count();
     }
 }
 
