@@ -1,0 +1,2430 @@
+[
+    {
+        "Id": "100000000000000000000000000000000",
+        "ParentId": "100000000000000000000000000000000",
+        "Name": "ValueType",
+        "PayanarssTypeId": "100000000000000000000000000000000",
+        "Attributes": []
+    },
+    {
+        "Id": "100000000000000000000000000000001",
+        "ParentId": "100000000000000000000000000000001",
+        "Name": "TableType",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": []
+    },
+    {
+        "Id": "100000000000000000000000000000002",
+        "ParentId": "100000000000000000000000000000002",
+        "Name": "ChildTableType",
+        "PayanarssTypeId": "100000000000000000000000000000002",
+        "Attributes": []
+    },
+    {
+        "Id": "100000000000000000000000000000003",
+        "ParentId": "100000000000000000000000000000003",
+        "Name": "LookupType",
+        "PayanarssTypeId": "100000000000000000000000000000003",
+        "Attributes": []
+    },
+    {
+        "Id": "100000000000000000000000000000004",
+        "ParentId": "100000000000000000000000000000004",
+        "Name": "GroupType",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": []
+    },
+    {
+        "Id": "100000000000000000000000000000005",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "AttributeType",
+        "PayanarssTypeId": "100000000000000000000000000000005",
+        "Attributes": [
+            1.0e+32
+        ]
+    },
+    {
+        "Id": "100000000000000000000000000000006",
+        "ParentId": "100000000000000000000000000000006",
+        "Name": "Text",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": []
+    },
+    {
+        "Id": "100000000000000000000000000000007",
+        "ParentId": "100000000000000000000000000000007",
+        "Name": "Number",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": []
+    },
+    {
+        "Id": "100000000000000000000000000000008",
+        "ParentId": "100000000000000000000000000000008",
+        "Name": "DateTime",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": []
+    },
+    {
+        "Id": "100000000000000000000000000000009",
+        "ParentId": "100000000000000000000000000000009",
+        "Name": "Boolean",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": []
+    },
+    {
+        "Id": "100000000000000000000000000000010",
+        "ParentId": "100000000000000000000000000000010",
+        "Name": "Blob",
+        "PayanarssTypeId": "100000000000000000000000000000010",
+        "Attributes": []
+    },
+    {
+        "Id": "100000000000000000000000000000011",
+        "ParentId": "100000000000000000000000000000011",
+        "Name": "ReadOnly",
+        "PayanarssTypeId": "100000000000000000000000000000011",
+        "Attributes": [
+            1.0e+32
+        ]
+    },
+    {
+        "Id": "100000000000000000000000000000012",
+        "ParentId": "100000000000000000000000000000012",
+        "Name": "Mandatory",
+        "PayanarssTypeId": "100000000000000000000000000000012",
+        "Attributes": [
+            1.0e+32
+        ]
+    },
+    {
+        "Id": "100000000000000000000000000000013",
+        "ParentId": "100000000000000000000000000000013",
+        "Name": "IsUniqueId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": []
+    },
+    {
+        "Id": "100000000000000000000000000000014",
+        "ParentId": "100000000000000000000000000000014",
+        "Name": "ShowInTreeView",
+        "PayanarssTypeId": "100000000000000000000000000000014",
+        "Attributes": []
+    },
+    {
+        "Id": "100000000000000000000000000000015",
+        "ParentId": "100000000000000000000000000000015",
+        "Name": "SelectableType",
+        "PayanarssTypeId": "100000000000000000000000000000015",
+        "Attributes": []
+    },
+    {
+        "Id": "68637a3f60937",
+        "ParentId": "68637a3f60937",
+        "Name": "PayanarssApplications",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68637b20a004f",
+        "ParentId": "68637a3f60937",
+        "Name": "Customers",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "68637b479078d",
+        "ParentId": "68637a3f60937",
+        "Name": "Addresses",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "68637b571d1c2",
+        "ParentId": "68637a3f60937",
+        "Name": "CustomerTypes",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "68637b9494e73",
+        "ParentId": "68637b20a004f",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": null
+    },
+    {
+        "Id": "68637ba535683",
+        "ParentId": "68637b20a004f",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "68637bb3c891b",
+        "ParentId": "68637b20a004f",
+        "Name": "Email",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "68637bbea9e29",
+        "ParentId": "68637b20a004f",
+        "Name": "PhoneNumber",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "68637bd51736a",
+        "ParentId": "68637b20a004f",
+        "Name": "ContactPersons",
+        "PayanarssTypeId": "68639a78dac58",
+        "Attributes": null
+    },
+    {
+        "Id": "68637d53f382e",
+        "ParentId": "68637b571d1c2",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": null
+    },
+    {
+        "Id": "68637d657ecb1",
+        "ParentId": "68637b571d1c2",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "68637d74109c4",
+        "ParentId": "68637b571d1c2",
+        "Name": "Description",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "68637d991c40a",
+        "ParentId": "68637b20a004f",
+        "Name": "CustomerTypeName",
+        "PayanarssTypeId": "68637d657ecb1",
+        "Attributes": null
+    },
+    {
+        "Id": "68639a78dac58",
+        "ParentId": "68637a3f60937",
+        "Name": "Persons",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "68639a8c67ecf",
+        "ParentId": "68639a78dac58",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": null
+    },
+    {
+        "Id": "68639a9c58b24",
+        "ParentId": "68639a78dac58",
+        "Name": "First Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "68639ab2299c0",
+        "ParentId": "68639a78dac58",
+        "Name": "Last Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "68639abf8fe10",
+        "ParentId": "68639a78dac58",
+        "Name": "Middle Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "68639b1660b33",
+        "ParentId": "68637a3f60937",
+        "Name": "ContactDetails",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "68639b3e4adbf",
+        "ParentId": "68639a78dac58",
+        "Name": "PersonContactsDetails",
+        "PayanarssTypeId": "68639b1660b33",
+        "Attributes": null
+    },
+    {
+        "Id": "68639b5472db3",
+        "ParentId": "68639b1660b33",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": null
+    },
+    {
+        "Id": "68639b6860506",
+        "ParentId": "68639b1660b33",
+        "Name": "Value",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "68639bd86ee2a",
+        "ParentId": "68637a3f60937",
+        "Name": "ContactTypes",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "68639bef0772e",
+        "ParentId": "68639bd86ee2a",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": null
+    },
+    {
+        "Id": "68639c0179738",
+        "ParentId": "68639bd86ee2a",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "68639c0a8caa8",
+        "ParentId": "68639bd86ee2a",
+        "Name": "Description",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "68639c1dec176",
+        "ParentId": "68639b1660b33",
+        "Name": "ContactType",
+        "PayanarssTypeId": "68639c0179738",
+        "Attributes": null
+    },
+    {
+        "Id": "6878a0d084ef4",
+        "ParentId": "6878a0d084ef4",
+        "Name": "AGH",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6878a138e904a",
+        "ParentId": "6878a0d084ef4",
+        "Name": "IT Asset Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6878a14cee096",
+        "ParentId": "6878a0d084ef4",
+        "Name": "HR & Payroll",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6878a17dac423",
+        "ParentId": "6878a0d084ef4",
+        "Name": "Tenant Management System",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6878a1a37c034",
+        "ParentId": "6878a0d084ef4",
+        "Name": "Facilities Management System",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "ParentId": "6878a138e904a",
+        "Name": "Assets",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "6F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "AssetId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": null
+    },
+    {
+        "Id": "7F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "AssetName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "8F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "AssetType",
+        "PayanarssTypeId": "68821a6228051",
+        "Attributes": null
+    },
+    {
+        "Id": "9F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "AssetStatus",
+        "PayanarssTypeId": "7F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "Attributes": null
+    },
+    {
+        "Id": "6F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "ParentId": "6878a138e904a",
+        "Name": "AssetType",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "68821a36ca1b8",
+        "ParentId": "6F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": null
+    },
+    {
+        "Id": "68821a6228051",
+        "ParentId": "6F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "ParentId": "6878a138e904a",
+        "Name": "AssetStatus",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "7F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "Name": "StatusName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "8F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "Name": "Description",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "68821bc09a223",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": null
+    },
+    {
+        "Id": "6899a29ee74d1",
+        "ParentId": "6899a29ee74d1",
+        "Name": "EAP.ERP",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6899a396ed75c",
+        "ParentId": "6899a29ee74d1",
+        "Name": "Accounting Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6899a3afae549",
+        "ParentId": "6899a29ee74d1",
+        "Name": "HR Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6899a3c02a8cd",
+        "ParentId": "6899a29ee74d1",
+        "Name": "Payroll Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6899a3ed050cf",
+        "ParentId": "6899a29ee74d1",
+        "Name": "Procurement Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6899a42a1a064",
+        "ParentId": "6899a29ee74d1",
+        "Name": "Property Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6899a441bd68d",
+        "ParentId": "6899a29ee74d1",
+        "Name": "Property Management Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
+        "ParentId": "6899a3afae549",
+        "Name": "Employee Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "5AF16005-A519-4500-98CB-5ED48B88DDAD",
+        "ParentId": "6899a3afae549",
+        "Name": "Org & Department Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "55A5DDD8-47B2-4C6E-B12E-EE84A2417FAC",
+        "ParentId": "6899a3afae549",
+        "Name": "Designation Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "65471127-8512-46C1-9125-FC4B81E0038B",
+        "ParentId": "6899a3afae549",
+        "Name": "Attendance Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "168450CB-2707-4EA5-8225-DCDA4BB1775C",
+        "ParentId": "6899a3afae549",
+        "Name": "Leave Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6556624D-43D2-4E18-8D5A-137ACA339856",
+        "ParentId": "6899a3afae549",
+        "Name": "Compensation & Benefits Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "D0D53C1A-00E8-4A9C-B541-011325177B19",
+        "ParentId": "6899a3afae549",
+        "Name": "Payroll Period Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "0085A4CE-EBB2-4987-8875-D516EAA8F223",
+        "ParentId": "6899a3afae549",
+        "Name": "Training Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "15B31008-7802-4924-B214-89F32A80ABC4",
+        "ParentId": "6899a3afae549",
+        "Name": "Performance Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "46D4EAD1-AF83-40B7-AD9A-729157B6E0B8",
+        "ParentId": "6899a3afae549",
+        "Name": "Disciplinary Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6C6B5F3C-11F7-40E5-92F0-09D6A4301C3C",
+        "ParentId": "6899a3afae549",
+        "Name": "Recruitment & Onboarding Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "ADF4A32C-5183-4A34-94C1-ACBC8EE70B62",
+        "ParentId": "6899a3afae549",
+        "Name": "Offboarding Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "BD0380E0-2A3B-40E8-883E-5A1B7BBA38DF",
+        "ParentId": "6899a3afae549",
+        "Name": "Employment Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "689c31fef2fa9",
+        "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
+        "Name": "Tables",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "38208B39-7FEC-4381-9662-A0F461060C17",
+        "ParentId": "689c31fef2fa9",
+        "Name": "Employee",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
+        "ParentId": "689c31fef2fa9",
+        "Name": "EmployeeProfile",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "DF1CE630-3BE9-46E3-862B-C61E877A6713",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PayrollCalendar",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "1B8B7211-C53D-4BD0-98EB-D4BC38610A3F",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PayrollPeriod",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "CAAC10C0-D8C5-49A2-A38F-960757E3A693",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PayGroup",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "97188D9B-BE3A-44AF-8160-C69B2E7A7CD5",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PayCycle",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "2987B3A0-0AF2-4045-9D69-70D8F409B58E",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PayRun",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "AF880F43-DE6D-451D-BDB8-F9B1DCD82E07",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PayRunStatus",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "50F1D304-5AF2-424B-84DA-B1A61E1FB68B",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PayElement",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "A3E7231F-43C3-481D-9940-9A940CF25D0F",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PayElementType",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "F6F672A9-8B33-4B34-A83D-57EAE21A0C3A",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PayElementAssignment",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "D0A7FE36-5D45-417F-AE09-CA127F4D636B",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "EarningType",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "72569D01-D77F-431F-86B1-16A148C9B55E",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "DeductionType",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "572F5A9B-F576-41D3-9DCA-E7C054F1B2DE",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "AllowanceType",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "04BB87F4-90DD-4616-943D-AD61EE800ECD",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "OvertimeRate",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "7B42B826-92DE-454B-A424-538B6FF31C39",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "CommissionPlan",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "1B60BF88-F386-4CA3-A5D6-2FC9E174B50C",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "BonusPlan",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "7862315E-49F3-4D85-9849-2DD50973EEFC",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "BenefitPlan",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "23EB8AD9-F069-4B17-B6F5-6EC457958229",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "BenefitType",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "8274A9C9-EDF4-4B00-A278-5E0D2BC9221C",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "EmployeeBenefit",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "43F44155-20B7-4295-AB33-3F7D5C6F1408",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "Loan",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "FABDC513-8C32-4289-A1EA-D8EF30B350F6",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "LoanRepayment",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "025CF820-F409-485D-AACB-42F5DA320F39",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "Advance",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "49002211-7E49-45F0-A30E-3D3CB15E87A8",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "ReimbursementType",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "96A93A09-BF2C-4BD9-95F5-6C5D24C6B5F7",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "ReimbursementClaim",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "08D769E2-85F3-46A5-88D7-13B12E93A98E",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "Timesheet",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "895D8CEC-7F28-4BFD-BFAD-396106F26C1D",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "TimeEntry",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "DBC61D58-1362-47F6-BA95-B0B12C0EA7E8",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "LeaveEncashment",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "515258B0-45A2-4A5A-A5C2-88D1F9610A1B",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "EndOfServiceRule",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "A93AB06A-39CB-416F-8938-CF083A2FF022",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "EndOfServiceAccrual",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "E14B2386-8231-47DB-A9B1-017B2BE22DE3",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "EndOfServicePayout",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "93C82644-1555-4CE8-8167-D06796688E18",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "GratuityRule",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "007403B8-8642-4E73-B229-A93ED52645E8",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "GratuityAccrual",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "F8DAEF72-0FD7-4B4C-8566-B455CE0FBB54",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "GratuityPayout",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "CCE1ADDD-3B72-4216-B6B1-43C575907469",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "TaxRule",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "51376BE2-2159-4DCC-8EB9-8BA18E2B49C5",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "TaxBracket",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "E117FFA6-5CAB-4F4D-9E31-DB963BCDC025",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "SocialSecurityScheme",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "9A4A9DB7-8A60-4945-A884-158DA8FAB080",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "GarnishmentType",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6F69A475-FFE1-4D97-A17C-E3159BC1362F",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "GarnishmentOrder",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "2800C223-4081-4FDC-A7DE-00A109A5273F",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "CourtOrder",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "BDF7F84E-DCC4-49A5-96CF-87B07C4F033A",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PayrollAdjustment",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "26BF142E-341E-4B4C-9F5F-570FD6D22FE7",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "RetroPay",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "CC3AD639-49ED-4307-8A5E-5A3626DCF512",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "Arrears",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "E1A160FB-DEFF-49FA-9717-B7E4737108DF",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PayrollJournal",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "AD4CFDC6-4DEE-47CE-B95A-33AB08FC2241",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "GLPosting",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "B29E579D-4548-4117-A688-F06404918D1F",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "CostCenter",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "92B70B55-646B-459B-A6AC-5E8CB4B7BF44",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "DimensionMapping",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "ECD44845-B623-472F-96D5-03FA38E60455",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "Payslip",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "5A92C5B5-FCE8-480A-9040-DBD76BCC25D9",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PayslipLine",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "E8E1FFB1-A697-4C66-B0C9-81D5EA9231C8",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PaymentMethod",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "77AEA8AD-FCC3-4FB8-B5F4-896627E47563",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "BankAccount",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "1B35B70D-037C-4B5F-A272-E6F8BFE9E498",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PaymentBatch",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6E3A3A84-E6D5-489E-83D3-433A64617AA5",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PaymentFile",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6ABAD7F3-672D-4339-8997-D02C212A1673",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "WPSFile",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "3D654A02-85DC-4B1A-80AF-F4FA439C738D",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "WPSBatch",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "CB4F8023-39DC-4AA0-BB6D-3C8CD7DD4A96",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "WPSDetail",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "597A6B55-8289-4EA9-B0A9-1EA7974429AB",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "SIFFile",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "17935466-AC6F-4A47-8EE2-F6D4D39955B2",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "Currency",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "89E0C5B9-D176-4514-BD31-0777EA6FD6E4",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "ExchangeRate",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "1E00713B-0D78-4DB6-A829-351A101079CC",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PayrollReport",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "2DC23FB0-4115-400B-A69B-08C611957DE0",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PayrollAuditLog",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "894B33F5-67EA-4BFA-B42E-A085D7310A96",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PayrollIntegrationLog",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "FF098993-56FB-4763-BE91-B82886799EB4",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PayrollWorkflowDefinition",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "CDDC4650-11EC-405E-992C-7AE57C1E4D93",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PayrollRuleDefinition",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "DBC2F28A-5C57-4027-9177-7C6705592C05",
+        "ParentId": "6899a3c02a8cd",
+        "Name": "PayrollAgentLog",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6FBC4FA5-7BA4-4EA5-9807-D619A0FD9FBE",
+        "ParentId": "6899a396ed75c",
+        "Name": "ChartOfAccounts",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "392192A6-F693-4524-A691-1067D8F7CCEB",
+        "ParentId": "6899a396ed75c",
+        "Name": "AccountType",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "ED8EE584-ECD5-4A30-8CF0-9F75DE959F45",
+        "ParentId": "6899a396ed75c",
+        "Name": "AccountGroup",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "846F4EED-8D63-4603-A62C-9215EC0288E9",
+        "ParentId": "6899a396ed75c",
+        "Name": "GeneralLedger",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6294327A-39D0-4583-B11E-653E08817038",
+        "ParentId": "6899a396ed75c",
+        "Name": "JournalEntry",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "67500E88-8B58-429B-967B-D054F77577B4",
+        "ParentId": "6899a396ed75c",
+        "Name": "JournalLine",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "D5F531A7-20B3-4A77-951F-72811617B3D9",
+        "ParentId": "6899a396ed75c",
+        "Name": "TrialBalance",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "3BCD73B6-A519-4675-B356-398C54887B33",
+        "ParentId": "6899a396ed75c",
+        "Name": "BalanceSheet",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "9DDF9EF5-87DF-45BF-8111-B18C11428A36",
+        "ParentId": "6899a396ed75c",
+        "Name": "IncomeStatement",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "9B7E4E0B-0606-484E-A882-96A9597CD7C0",
+        "ParentId": "6899a396ed75c",
+        "Name": "CashFlowStatement",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6D177786-2615-4C27-8449-A95FE90F397C",
+        "ParentId": "6899a396ed75c",
+        "Name": "AccountsReceivable",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "2539745D-A525-4CEB-8D4C-D7F8F63BAB74",
+        "ParentId": "6899a396ed75c",
+        "Name": "CustomerInvoice",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "3BC3DF9A-0D41-4E88-8DF5-00F54DFB527A",
+        "ParentId": "6899a396ed75c",
+        "Name": "CustomerPayment",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "28A95F1D-E34B-4793-BB9F-57F361E3F4BA",
+        "ParentId": "6899a396ed75c",
+        "Name": "CreditNote",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "11B913E1-6A52-4F75-9394-01BCE94F05BD",
+        "ParentId": "6899a396ed75c",
+        "Name": "AccountsPayable",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "F96C825F-1C6A-40D7-941B-688771E9A52A",
+        "ParentId": "6899a396ed75c",
+        "Name": "VendorBill",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "CF92C4E0-0150-488F-BFBE-D33DF24C1168",
+        "ParentId": "6899a396ed75c",
+        "Name": "VendorPayment",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "2D82B333-5397-46E8-8DC0-863E054EAEF1",
+        "ParentId": "6899a396ed75c",
+        "Name": "DebitNote",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "743EE31D-8D60-48D2-91CD-E1BD5A5CFC98",
+        "ParentId": "6899a396ed75c",
+        "Name": "FixedAsset",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "99432CC7-A1DD-44EE-BC7D-7EF4D5D59715",
+        "ParentId": "6899a396ed75c",
+        "Name": "AssetDepreciation",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "01ECAF68-21F3-44A2-89AF-786C97850460",
+        "ParentId": "6899a396ed75c",
+        "Name": "BankAccount",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "B323A5E2-BEA6-4F33-804A-371C1C01B78B",
+        "ParentId": "6899a396ed75c",
+        "Name": "BankStatement",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "1207086C-1028-400E-93CB-F798B91C9D18",
+        "ParentId": "6899a396ed75c",
+        "Name": "BankReconciliation",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "D57BA6B0-DBEA-49B9-8F6D-10907C794587",
+        "ParentId": "6899a396ed75c",
+        "Name": "TaxRate",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "3CCF0A4F-8291-48BB-A2AC-8B92DEBF3345",
+        "ParentId": "6899a396ed75c",
+        "Name": "TaxCode",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "9D78A6F3-DDAD-4518-B8B9-6D8FADC235FB",
+        "ParentId": "6899a396ed75c",
+        "Name": "TaxTransaction",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "0F215766-4D3B-4F29-93C7-FA20E7428636",
+        "ParentId": "6899a396ed75c",
+        "Name": "Currency",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "0B6D1DEC-2069-4521-A0E9-835D78E1DCE0",
+        "ParentId": "6899a396ed75c",
+        "Name": "ExchangeRate",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6A1D9038-CDF7-49C9-8267-E10D4EBD8DEC",
+        "ParentId": "6899a396ed75c",
+        "Name": "FinancialPeriod",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "A2F63F3A-05E3-4366-B079-18DC7BF835DB",
+        "ParentId": "6899a396ed75c",
+        "Name": "Budget",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "1953776B-1624-40C2-BB34-7E3F8F15914C",
+        "ParentId": "6899a396ed75c",
+        "Name": "BudgetLine",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "92076929-31C3-442D-8527-8CE81DFDB1A2",
+        "ParentId": "6899a396ed75c",
+        "Name": "CostCenter",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "466A6618-B524-47E1-8555-2795F3B04D62",
+        "ParentId": "6899a396ed75c",
+        "Name": "ProjectAccounting",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "EF9BA7BF-329B-411D-B0C5-C703680D98CB",
+        "ParentId": "6899a396ed75c",
+        "Name": "IntercompanyTransaction",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "D23057F0-4834-48FA-B5E6-0E4EFC182520",
+        "ParentId": "6899a396ed75c",
+        "Name": "AccountingRule",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "1AD5B500-35C6-4605-B1D6-DD9A22219E71",
+        "ParentId": "6899a396ed75c",
+        "Name": "AccountingWorkflow",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "1B17EF35-D6C8-4F52-8CC9-5872CDF84FC1",
+        "ParentId": "6899a396ed75c",
+        "Name": "AccountingAgentLog",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "ParentId": "6899a3ed050cf",
+        "Name": "PurchaseRequest",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "9EE295E3-A3B0-4A24-8872-EA2CEA51425A",
+        "ParentId": "6899a3ed050cf",
+        "Name": "PurchaseRequestLine",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "1886AF63-3111-4388-9727-C139749A00EF",
+        "ParentId": "6899a3ed050cf",
+        "Name": "PurchaseOrder",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "3B9364BF-2593-484C-8B1C-9269D6DC46BC",
+        "ParentId": "6899a3ed050cf",
+        "Name": "PurchaseOrderLine",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "3B48E105-9AB3-441A-8ADA-21BDBF4E41A0",
+        "ParentId": "6899a3ed050cf",
+        "Name": "Supplier",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "43469BB6-64D6-4AFD-BD02-3A27823A79D0",
+        "ParentId": "6899a3ed050cf",
+        "Name": "SupplierContact",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "DD56EF15-1289-48FB-B481-A00A39A3044D",
+        "ParentId": "6899a3ed050cf",
+        "Name": "SupplierCategory",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "F377C05D-A5DD-43B2-A4A9-6AAB56AB6CE7",
+        "ParentId": "6899a3ed050cf",
+        "Name": "SupplierQualification",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "2887E74A-FCE7-4AC5-BB61-FA9C6B0ECD13",
+        "ParentId": "6899a3ed050cf",
+        "Name": "RequestForQuotation",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "40653CB9-FEE1-4B9D-842F-3CC6A8E18376",
+        "ParentId": "6899a3ed050cf",
+        "Name": "RFQLine",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "B8175861-DAB1-435A-82E2-B4CC4480F947",
+        "ParentId": "6899a3ed050cf",
+        "Name": "Quotation",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "4293380F-8A8E-4B85-B86C-8C8472772893",
+        "ParentId": "6899a3ed050cf",
+        "Name": "QuotationLine",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "DA95074C-7BE4-4170-B00C-F74A29B3751A",
+        "ParentId": "6899a3ed050cf",
+        "Name": "QuotationComparison",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "FFCEB46C-10A9-42F3-8435-9AEDCAD3DCE8",
+        "ParentId": "6899a3ed050cf",
+        "Name": "Contract",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "700E0A9B-7609-48E6-9A8F-F84B7C75191B",
+        "ParentId": "6899a3ed050cf",
+        "Name": "ContractLine",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "C17A70F4-C57F-4D67-9EF4-B6E16432785E",
+        "ParentId": "6899a3ed050cf",
+        "Name": "GoodsReceiptNote",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "A9FAAD87-25D5-4D9F-8E7E-3E6676DECF4F",
+        "ParentId": "6899a3ed050cf",
+        "Name": "GRNLine",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "1847544B-4972-4FAF-9E1B-984F245E2AEE",
+        "ParentId": "6899a3ed050cf",
+        "Name": "PurchaseInvoice",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "49C68849-8314-4AEA-9CD5-92D2F69096A1",
+        "ParentId": "6899a3ed050cf",
+        "Name": "PurchaseInvoiceLine",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "75BB8985-C1CC-4CEC-AE57-E788708CE46D",
+        "ParentId": "6899a3ed050cf",
+        "Name": "PurchaseReturn",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6AA953F8-006C-46F8-9CD0-D47ABA036D3A",
+        "ParentId": "6899a3ed050cf",
+        "Name": "PurchaseReturnLine",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "E2C0980F-127B-47B3-B47D-A06D6CC29F54",
+        "ParentId": "6899a3ed050cf",
+        "Name": "PurchaseRequisitionApproval",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "A6E50D98-46DC-4368-ADB2-C8473102185F",
+        "ParentId": "6899a3ed050cf",
+        "Name": "PurchaseOrderApproval",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "5880A21F-BBC9-4361-A90F-F1EA9A5DA778",
+        "ParentId": "6899a3ed050cf",
+        "Name": "SupplierEvaluation",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "AB8AF192-18AA-4086-AE08-10EC3D180A8A",
+        "ParentId": "6899a3ed050cf",
+        "Name": "SupplierScorecard",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "7240A2FF-22BF-4B99-8350-F9F91E113B58",
+        "ParentId": "6899a3ed050cf",
+        "Name": "ProcurementPlan",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "ED9E83CA-6B32-42E0-A425-B133DFDDE656",
+        "ParentId": "6899a3ed050cf",
+        "Name": "ProcurementBudget",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "5967510C-42DE-4E37-9B09-40DD2820C5B9",
+        "ParentId": "6899a3ed050cf",
+        "Name": "ProcurementWorkflowDefinition",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "4688BD5B-8351-43A6-8455-25C396AE3D58",
+        "ParentId": "6899a3ed050cf",
+        "Name": "ProcurementRuleDefinition",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "C1159A28-0369-4106-8676-11FC97FB0930",
+        "ParentId": "6899a3ed050cf",
+        "Name": "ProcurementAgentLog",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "ParentId": "6899a42a1a064",
+        "Name": "Property",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "2B825665-B964-4580-9850-0B6709D20058",
+        "ParentId": "6899a42a1a064",
+        "Name": "PropertyType",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "D703D35B-6C5E-4ADA-A5DE-6090D94F7FDC",
+        "ParentId": "6899a42a1a064",
+        "Name": "PropertyUnit",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "85A1F789-C6E0-4E16-BDDF-21E8C44D5361",
+        "ParentId": "6899a42a1a064",
+        "Name": "PropertyUnitType",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "DDE78C2A-CC1B-45E7-893D-05B656541BA4",
+        "ParentId": "6899a42a1a064",
+        "Name": "PropertyOwner",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "B4023D50-8118-492A-9522-FAFC0B9EAB21",
+        "ParentId": "6899a42a1a064",
+        "Name": "OwnerContact",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "61C058BB-9617-49BE-8597-4F1103AFC3BE",
+        "ParentId": "6899a42a1a064",
+        "Name": "Tenant",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "BAEDF2C7-ED8A-4E94-A128-868064BD01CE",
+        "ParentId": "6899a42a1a064",
+        "Name": "TenantContact",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "F379DBEA-6633-4F4A-AB88-488F06EEE63F",
+        "ParentId": "6899a42a1a064",
+        "Name": "LeaseAgreement",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "04C9EB47-48A9-45ED-9062-48931737E1DC",
+        "ParentId": "6899a42a1a064",
+        "Name": "LeaseAmendment",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "A89EAB20-1F48-4551-9B88-5F455152DFD5",
+        "ParentId": "6899a42a1a064",
+        "Name": "LeaseTermination",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "92BE0F87-E9CC-401B-BF26-ABBF5C4DCBA5",
+        "ParentId": "6899a42a1a064",
+        "Name": "RentSchedule",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "AC0D1F15-F149-482C-BE34-46005E4956EE",
+        "ParentId": "6899a42a1a064",
+        "Name": "RentInvoice",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "80C4CB62-4959-42E3-A583-84D750067184",
+        "ParentId": "6899a42a1a064",
+        "Name": "RentPayment",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "D847C0DA-BC59-45C3-AA23-EEB41A159C0A",
+        "ParentId": "6899a42a1a064",
+        "Name": "SecurityDeposit",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "00F4CC44-C126-439A-A3F1-B1263FD1368C",
+        "ParentId": "6899a42a1a064",
+        "Name": "DepositRefund",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "82CAE1A8-FD8B-4D74-9909-47A29E7CDFF7",
+        "ParentId": "6899a42a1a064",
+        "Name": "PropertyMaintenanceRequest",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "74B98241-A0D6-410C-803B-9CC0B740B19C",
+        "ParentId": "6899a42a1a064",
+        "Name": "MaintenanceWorkOrder",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "BE564389-EAE0-4704-8E51-D5CF62B6805E",
+        "ParentId": "6899a42a1a064",
+        "Name": "PropertyInspection",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "D427EEC2-02F9-49AF-A21D-B92A0CDC3429",
+        "ParentId": "6899a42a1a064",
+        "Name": "InspectionReport",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "7E824442-7B59-428B-B3A4-A4E7734E0E4E",
+        "ParentId": "6899a42a1a064",
+        "Name": "PropertyDocument",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "3BF16309-E0DE-4BE3-A472-14F44ED0F908",
+        "ParentId": "6899a42a1a064",
+        "Name": "Amenity",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "FFC202A4-0E41-479A-B07B-7CC61B8AD21F",
+        "ParentId": "6899a42a1a064",
+        "Name": "AmenityType",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "ADE797F6-9F2B-484A-9985-A43FCE866AD9",
+        "ParentId": "6899a42a1a064",
+        "Name": "UtilityMeter",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "DB364ECE-BE4F-4574-BC19-5699A0C54CFC",
+        "ParentId": "6899a42a1a064",
+        "Name": "UtilityReading",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "96FA4482-7EBF-4327-8873-73184E732ADD",
+        "ParentId": "6899a42a1a064",
+        "Name": "UtilityBill",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "A5409871-A333-45F9-8ABB-6FA8C7E0EED9",
+        "ParentId": "6899a42a1a064",
+        "Name": "PropertyValuation",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "757D1F3A-1831-4A6F-B622-45E75D1B2712",
+        "ParentId": "6899a42a1a064",
+        "Name": "PropertySale",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "2A1C0F02-1AD4-421C-9C16-1D7E433B6814",
+        "ParentId": "6899a42a1a064",
+        "Name": "PropertyPurchase",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "0D05D293-3A9A-411A-A075-4D4E890A133A",
+        "ParentId": "6899a42a1a064",
+        "Name": "PropertyWorkflowDefinition",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "AE663160-9707-473C-B64D-3BEC36D4A993",
+        "ParentId": "6899a42a1a064",
+        "Name": "PropertyRuleDefinition",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "2C862E5F-04AA-4F77-8B88-7E4BA363B99D",
+        "ParentId": "6899a42a1a064",
+        "Name": "PropertyAgentLog",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "40C4D5F2-E730-40E8-AE09-97A0B7A4ABFE",
+        "ParentId": "6899a441bd68d",
+        "Name": "Facility",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "F8E1E302-B17B-453E-90A2-97BD76A3B54B",
+        "ParentId": "6899a441bd68d",
+        "Name": "FacilityType",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "14331918-960E-437D-A068-6851D6493F8C",
+        "ParentId": "6899a441bd68d",
+        "Name": "Building",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "2E74ACD6-8ED5-435C-B4C5-0359A7E91262",
+        "ParentId": "6899a441bd68d",
+        "Name": "BuildingUnit",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "D1219C16-2214-47C5-82E6-FEDD33F2C6AB",
+        "ParentId": "6899a441bd68d",
+        "Name": "CommonArea",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "35B64FA6-F4AB-4392-8A21-C32DE5428A07",
+        "ParentId": "6899a441bd68d",
+        "Name": "MaintenanceRequest",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "4091722A-3B8C-46A5-9F4F-95E35AF05E7E",
+        "ParentId": "6899a441bd68d",
+        "Name": "WorkOrder",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "3DE12B07-B94D-4674-AC7B-CC4AD58308CF",
+        "ParentId": "6899a441bd68d",
+        "Name": "WorkOrderTask",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "03C7BB72-32EC-43B3-9082-A8518C06BB84",
+        "ParentId": "6899a441bd68d",
+        "Name": "MaintenanceSchedule",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "C985C20F-C1B8-4239-81C4-7F41C679FDCA",
+        "ParentId": "6899a441bd68d",
+        "Name": "MaintenancePlan",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "33456388-BEB4-4E8E-9F09-FEBC6A0A7DE2",
+        "ParentId": "6899a441bd68d",
+        "Name": "MaintenanceAsset",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "7E536CC3-7D32-4608-BCB7-B43A89E28231",
+        "ParentId": "6899a441bd68d",
+        "Name": "ServiceProvider",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "8D381817-9559-4668-A266-6BFED7170D77",
+        "ParentId": "6899a441bd68d",
+        "Name": "ServiceContract",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "E9A178E8-3870-4CF0-82D8-2A2D4058EF87",
+        "ParentId": "6899a441bd68d",
+        "Name": "ServiceContractLine",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "B1915C86-8052-4E91-BB20-9157B20D8EF4",
+        "ParentId": "6899a441bd68d",
+        "Name": "InventoryItem",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "D9ED3FEC-E606-45B2-8E18-351E32887142",
+        "ParentId": "6899a441bd68d",
+        "Name": "InventoryLocation",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "D7391A13-648F-4B6E-971F-19932E400B2D",
+        "ParentId": "6899a441bd68d",
+        "Name": "InventoryTransaction",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "601BB798-D4EA-438F-84B0-9EE32C0BEEF4",
+        "ParentId": "6899a441bd68d",
+        "Name": "PurchaseRequest",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "27374733-CE37-4F19-B5E3-ECF1A74B7043",
+        "ParentId": "6899a441bd68d",
+        "Name": "PurchaseOrder",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "DCD93B62-42B3-4E42-8CBB-4E36D3ED05F9",
+        "ParentId": "6899a441bd68d",
+        "Name": "GoodsReceiptNote",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "28D15A5D-6450-459D-9926-6F3CDACF8B3A",
+        "ParentId": "6899a441bd68d",
+        "Name": "ServiceRequest",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "17C1D02B-6D3F-4E12-AD56-7BF181ED132E",
+        "ParentId": "6899a441bd68d",
+        "Name": "IncidentReport",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "A3F05D46-D2D3-4EEF-B412-176EE004689D",
+        "ParentId": "6899a441bd68d",
+        "Name": "InspectionSchedule",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "46721DE4-CCB4-4C2A-AE39-6A32DE890D00",
+        "ParentId": "6899a441bd68d",
+        "Name": "InspectionReport",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "FA1C2C1A-B620-4589-9085-025279982855",
+        "ParentId": "6899a441bd68d",
+        "Name": "VisitorLog",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "2C5C81BA-5322-41E7-9E7D-978C3AAF3CBA",
+        "ParentId": "6899a441bd68d",
+        "Name": "KeyManagement",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "9B1A3F79-BEA4-47F0-8031-A4900D0A2EBE",
+        "ParentId": "6899a441bd68d",
+        "Name": "ParkingAllocation",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "EA545128-F435-4B65-8422-590288FD0F9B",
+        "ParentId": "6899a441bd68d",
+        "Name": "AmenityBooking",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "D4FA10E8-0327-4352-8C95-EC3379E15DEB",
+        "ParentId": "6899a441bd68d",
+        "Name": "PropertyManagementWorkflowDefinition",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "B0C3F2F0-DFA9-4581-8333-0131B7981F4D",
+        "ParentId": "6899a441bd68d",
+        "Name": "PropertyManagementRuleDefinition",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "9DCBFE40-B05B-4103-8F9D-61FA49F273A8",
+        "ParentId": "6899a441bd68d",
+        "Name": "PropertyManagementAgentLog",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "5649CEEF-7D8E-49EB-AAD3-92464F8D323C",
+        "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
+        "Name": "EmployeeId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": null
+    },
+    {
+        "Id": "A84D4DB1-75E8-41DD-A29C-177590E19F5E",
+        "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
+        "Name": "EmployeeCode",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "51951A9F-64A5-46A1-A0D9-9B36CCB172D9",
+        "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
+        "Name": "FirstName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "484E910F-2278-4191-A9F9-A110699B544C",
+        "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
+        "Name": "MiddleName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "51B04C85-0392-47D8-B79F-98D716EEC01C",
+        "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
+        "Name": "LastName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "F925B812-56ED-4BF3-926E-C873EF6B2A78",
+        "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
+        "Name": "PreferredName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "F22FAC60-C28B-4B37-848B-AC87C466F456",
+        "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
+        "Name": "Gender",
+        "PayanarssTypeId": "100000000000000000000000000000002",
+        "Attributes": null
+    },
+    {
+        "Id": "7388F9FB-FD9A-4977-B782-97C95D1883B9",
+        "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
+        "Name": "DateOfBirth",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": null
+    },
+    {
+        "Id": "AD44B182-D933-49AF-A518-025EBF8668E6",
+        "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
+        "Name": "Nationality",
+        "PayanarssTypeId": "100000000000000000000000000000002",
+        "Attributes": null
+    },
+    {
+        "Id": "66A7337B-795B-40F4-A65A-7EAA7CB05CFB",
+        "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
+        "Name": "Status",
+        "PayanarssTypeId": "100000000000000000000000000000002",
+        "Attributes": null
+    },
+    {
+        "Id": "79B810E6-1DBA-4D57-B75A-F94DCE0166B1",
+        "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
+        "Name": "DateCreated",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": null
+    },
+    {
+        "Id": "E22FC734-F329-4317-B9D7-6F552959F5FD",
+        "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
+        "Name": "DateModified",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": null
+    },
+    {
+        "Id": "689b2769ac2f3",
+        "ParentId": "689c31fef2fa9",
+        "Name": "Gender",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "689b278188acd",
+        "ParentId": "689c31fef2fa9",
+        "Name": "EmployeeStatus",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "689b27aa2ae2d",
+        "ParentId": "689b2769ac2f3",
+        "Name": "GenderId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": null
+    },
+    {
+        "Id": "689b27c8a0e05",
+        "ParentId": "689b2769ac2f3",
+        "Name": "GenderCode",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "689b27e4318a9",
+        "ParentId": "689b2769ac2f3",
+        "Name": "Description",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "689b28085c405",
+        "ParentId": "689b278188acd",
+        "Name": "EmployeeStatusId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": null
+    },
+    {
+        "Id": "689b283d6b77c",
+        "ParentId": "689b278188acd",
+        "Name": "Code",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "689b2857734d3",
+        "ParentId": "689b278188acd",
+        "Name": "Description",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "689b2872686a5",
+        "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": null
+    },
+    {
+        "Id": "E2953AEE-E8B2-4E87-9BBE-4C1F35E29936",
+        "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
+        "Name": "Code",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "FE4BF780-788A-48CC-8DCD-9DAE2BB5996C",
+        "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
+        "Name": "EmployeeId",
+        "PayanarssTypeId": "100000000000000000000000000000002",
+        "Attributes": null
+    },
+    {
+        "Id": "EBE3519D-0DE6-4246-8CF3-6C28F5239308",
+        "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
+        "Name": "EmailAddress",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "D066E0A8-2A7F-48C1-AB3B-9B69593451A6",
+        "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
+        "Name": "PhoneNumber",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "8B5177CA-F2CC-463A-8105-559447A1DBD4",
+        "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
+        "Name": "AlternatePhone",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "3F3ADFD2-ECB5-431C-A0A3-55EF986F45CD",
+        "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
+        "Name": "PrimaryAddress",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "BD6F63DF-A698-4220-B728-91216C1A313E",
+        "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
+        "Name": "EmergencyContactName",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "56774B2D-D474-4577-90F1-C3ED893B5EFD",
+        "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
+        "Name": "EmergencyContactPhone",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "66549B58-1074-4855-B581-5F1F3D72D92A",
+        "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
+        "Name": "MaritalStatus",
+        "PayanarssTypeId": "100000000000000000000000000000002",
+        "Attributes": null
+    },
+    {
+        "Id": "F8C3B7C1-201E-4F94-A1E3-14127B032957",
+        "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
+        "Name": "LanguagesSpoken",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "EBD02142-9840-473B-B701-07FC1E972DD9",
+        "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
+        "Name": "PhotoId",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "1EAECFE6-077A-4A01-8D22-2C7073C07164",
+        "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
+        "Name": "LinkedInProfile",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "79D5114F-A2D6-4FE0-BE02-76A2B5B017A3",
+        "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
+        "Name": "PersonalEmail",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "5216EA77-605F-4451-A622-4323C2DA33CC",
+        "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
+        "Name": "Notes",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "68edaef612a7b",
+        "ParentId": "68edaecf94e5e",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": null
+    },
+    {
+        "Id": "68edaf1230d66",
+        "ParentId": "68edaecf94e5e",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee0e80eae76",
+        "ParentId": "68ee0e52bd802",
+        "Name": "Job Vacancy Declarations",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee0e9f5537a",
+        "ParentId": "68ee0e52bd802",
+        "Name": "Job Vacancy Justifications",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee0eb8a22c3",
+        "ParentId": "68ee0e52bd802",
+        "Name": "Job Requirements",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee0ed2763ec",
+        "ParentId": "68ee0e52bd802",
+        "Name": "Job Salary & Budget",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee0eef32e58",
+        "ParentId": "68ee0e52bd802",
+        "Name": "Hiring Plan & Timeline",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee0fe8cc996",
+        "ParentId": "6878a14cee096",
+        "Name": "Recruitments",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee1008bcb8a",
+        "ParentId": "6878a14cee096",
+        "Name": "Employee Joinings",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee1021ef3f7",
+        "ParentId": "6878a14cee096",
+        "Name": "Time & Attendance",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee103e32d60",
+        "ParentId": "6878a14cee096",
+        "Name": "Payroll Process",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee10ac371c6",
+        "ParentId": "6878a14cee096",
+        "Name": "Performance Appraisal",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee10cbd19b1",
+        "ParentId": "6878a14cee096",
+        "Name": "Shukran Module",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee118c2f98e",
+        "ParentId": "6878a14cee096",
+        "Name": "Employee Self Service",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee144a39584",
+        "ParentId": "6878a17dac423",
+        "Name": "Properties Detail Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee148a42a19",
+        "ParentId": "6878a17dac423",
+        "Name": "Tenants Detail Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee14a60a4f9",
+        "ParentId": "6878a17dac423",
+        "Name": "Lease & Contract Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee14d0461b5",
+        "ParentId": "6878a17dac423",
+        "Name": "Rental Billing & Invoicing",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee14e177b1c",
+        "ParentId": "6878a17dac423",
+        "Name": "Payments & Collections",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee14f330410",
+        "ParentId": "6878a17dac423",
+        "Name": "Vacancy & Occupancy Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee156460630",
+        "ParentId": "6878a17dac423",
+        "Name": "Document Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee159d87a57",
+        "ParentId": "6878a0d084ef4",
+        "Name": "Accounting & Finance",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee16e9b4fe8",
+        "ParentId": "68ee159d87a57",
+        "Name": "General Ledger (GL)",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee17061ca78",
+        "ParentId": "68ee159d87a57",
+        "Name": "Accounts Payable (AP)",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee171e8c246",
+        "ParentId": "68ee159d87a57",
+        "Name": "Accounts Receivable (AR)",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee173c592b5",
+        "ParentId": "68ee159d87a57",
+        "Name": "Cash & Bank Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee174b4cab4",
+        "ParentId": "68ee159d87a57",
+        "Name": "Taxation & Compliance",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee1761e3baf",
+        "ParentId": "68ee159d87a57",
+        "Name": "Financial Reporting & Analytics",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee17734b106",
+        "ParentId": "68ee159d87a57",
+        "Name": "Budgeting & Forecasting",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee178e8200d",
+        "ParentId": "68ee159d87a57",
+        "Name": "Controls & Audit Trail",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee18229ef57",
+        "ParentId": "6878a0d084ef4",
+        "Name": "Procurements",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee185635c79",
+        "ParentId": "6878a0d084ef4",
+        "Name": "Project Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee1869e5758",
+        "ParentId": "6878a0d084ef4",
+        "Name": "Time Less",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee2012ae192",
+        "ParentId": "6878a0d084ef4",
+        "Name": "Common Utilities Agent",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    },
+    {
+        "Id": "68ee2063e73f4",
+        "ParentId": "68ee185635c79",
+        "Name": "Person Details",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": null
+    }
+]
