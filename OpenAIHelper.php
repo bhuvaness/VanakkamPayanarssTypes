@@ -2,6 +2,7 @@
 
 function callOpenAI(string $prompt, $types = []): string
 {
+
     $allTypesJson = json_encode($types, JSON_PRETTY_PRINT);
 
     $systemPrompt = <<<EOT

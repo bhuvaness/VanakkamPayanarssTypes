@@ -50,6 +50,62 @@
         "Description": null
     },
     {
+        "Id": "100000000000000000000000000000017",
+        "ParentId": "6899a441bd68d",
+        "Name": "IsRequired",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": null,
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000018",
+        "ParentId": "6899a441bd68d",
+        "Name": "Minimum",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": null,
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000019",
+        "ParentId": "6899a441bd68d",
+        "Name": "Maximum",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": null,
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000020",
+        "ParentId": "6899a441bd68d",
+        "Name": "From",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": null,
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000021",
+        "ParentId": "6899a441bd68d",
+        "Name": "To",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": null,
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000022",
+        "ParentId": "6899a441bd68d",
+        "Name": "IsEmail",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": null,
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000023",
+        "ParentId": "6899a441bd68d",
+        "Name": "IsPhone",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": null,
+        "Description": null
+    },
+    {
         "Id": "100000000000000000000000000000006",
         "ParentId": "100000000000000000000000000000006",
         "Name": "Text",
