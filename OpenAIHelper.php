@@ -2,8 +2,6 @@
 
 function callOpenAI(string $prompt, $types = []): string
 {
-    $apiKey = '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';
-
     $allTypesJson = json_encode($types, JSON_PRETTY_PRINT);
 
     $systemPrompt = <<<EOT
@@ -27,7 +25,7 @@ EOT;
     $ch = curl_init('https://api.openai.com/v1/chat/completions');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        'Authorization: Bearer ' . $apiKey,
+        'Authorization: Bearer ',
         'Content-Type: application/json'
     ]);
 

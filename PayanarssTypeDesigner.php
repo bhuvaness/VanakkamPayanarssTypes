@@ -45,6 +45,7 @@ if (isset($_POST['save_type'])) {
             $type->Name = $_POST['type_name'] ?? $type->Name;
             $type->PayanarssTypeId = $_POST['payanarss_type_id'] ?? $type->PayanarssTypeId;
             $type->Type = null;
+            $type->Description = $_POST['type_description'] ?? ($type->Description ?? '');
             break;
         }
     }
@@ -121,9 +122,12 @@ $attribute = $app->Attribute;
                             </th>
                         </tr>
                         <tr>
-                            <th class="bg-gray-100 border px-4 py-2 font-semibold text-left">Name</th>
-                            <th class="bg-gray-100 border px-4 py-2 font-semibold text-left">Type</th>
-                            <th class="bg-gray-100 border px-4 py-2 font-semibold text-left">Actions</th>
+                        <tr>
+                            <th class="bg-gray-100 border px-4 py-2 font-semibold text-left w-1/6">Name</th>
+                            <th class="bg-gray-100 border px-4 py-2 font-semibold text-left w-1/2">Description</th>
+                            <th class="bg-gray-100 border px-4 py-2 font-semibold text-left w-1/6">Type</th>
+                            <th class="bg-gray-100 border px-4 py-2 font-semibold text-left w-1/6">Actions</th>
+                        </tr>
                         </tr>
                     </header>
                     <tbody>
@@ -143,7 +147,13 @@ $attribute = $app->Attribute;
                                                 <?= htmlspecialchars($type->Name) ?>
                                             <?php endif; ?>
                                         </td>
-
+                                        <td class="border px-3 py-2">
+                                            <?php if ($isEditing): ?>
+                                                <textarea name="type_description" rows="2" class="border px-2 py-1 w-full"><?= htmlspecialchars($type->Description ?? '') ?></textarea>
+                                            <?php else: ?>
+                                                <?= htmlspecialchars($type->Description ?? '') ?>
+                                            <?php endif; ?>
+                                        </td>
                                         <td class="border px-3 py-2">
                                             <?php if ($isEditing): ?>
                                                 <!-- Inside an edit row -->
