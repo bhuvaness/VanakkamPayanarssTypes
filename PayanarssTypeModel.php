@@ -124,6 +124,7 @@ class PayanarssType implements JsonSerializable
     public string $Name = "";
     public string $PayanarssTypeId = "";
     public $Attributes = [];
+    public ?string $Description = null;
     public ?string $ParentName = null;
     public ?PayanarssType $Parent = null;
     public ?PayanarssType $Type = null;
@@ -136,6 +137,7 @@ class PayanarssType implements JsonSerializable
         $this->Name = "";
         $this->PayanarssTypeId = "";
         $this->Attributes = null;
+        $this->Description = null;
         $this->Type = null;
         $this->Parent = null;
         $this->ParentName = null;
@@ -207,7 +209,8 @@ class PayanarssType implements JsonSerializable
             'ParentId' => $this->ParentId,
             'Name' => $this->Name,
             'PayanarssTypeId' => $this->PayanarssTypeId,
-            'Attributes' => $this->Attributes
+            'Attributes' => $this->Attributes,
+            'Description' => $this->Description
         ];
     }
     public function get_children(PayanarssTypeApplication $payanarssTypeApplication, string $parentId = ""): int
