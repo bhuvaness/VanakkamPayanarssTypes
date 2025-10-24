@@ -209,7 +209,6 @@ $attribute = $app->Attribute;
                 <table class="w-full text-left text-xs border-collapse">
                     <thead class="bg-gray-100">
                         <tr>
-                            <th class="border px-2 py-1">Id</th>
                             <th class="border px-2 py-1">Name</th>
                             <th class="border px-2 py-1">Select</th>
                         </tr>
@@ -306,7 +305,6 @@ $attribute = $app->Attribute;
                         const displayName = data.displayName;
                         const row = document.createElement("tr");
                         row.innerHTML = `
-        <td class="border px-2 py-1">${type.Id}</td>
         <td class="border px-2 py-1">${displayName}</td>
         <td class="border px-2 py-1 text-center">
           <button type="button" class="text-blue-600 text-xs underline"
