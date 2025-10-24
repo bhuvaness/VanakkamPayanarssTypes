@@ -410,9 +410,9 @@ class PayanarssTypeBusinessLogics
     }
     function save_all(PayanarssTypes $types, string $entityId = "1000000000000000000000000000000000", ?string $fileName = null)
     {
-        foreach ($types as $type) {
+        /*foreach ($types as $type) {
             createRecord($type->Id, $type, $entityId);
-        }
+        }*/
         $fileName = (!isset($fileName)) ? "VanakkamPayanarssTypes.json" : $fileName;
         $dao = new PayanarssTypeJsonDAO($fileName, $this->convertToArray($types));
         $dao->save();
