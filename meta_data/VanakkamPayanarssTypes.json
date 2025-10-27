@@ -50,6 +50,78 @@
         "Description": null
     },
     {
+        "Id": "1000000000000000000000000000000017",
+        "ParentId": "1000000000000000000000000000000017",
+        "Name": "IsRequired",
+        "PayanarssTypeId": "1000000000000000000000000000000017",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "1000000000000000000000000000000018",
+        "ParentId": "1000000000000000000000000000000018",
+        "Name": "Minimum",
+        "PayanarssTypeId": "1000000000000000000000000000000018",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "1000000000000000000000000000000019",
+        "ParentId": "1000000000000000000000000000000019",
+        "Name": "Maximum",
+        "PayanarssTypeId": "1000000000000000000000000000000019",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "1000000000000000000000000000000020",
+        "ParentId": "1000000000000000000000000000000020",
+        "Name": "From",
+        "PayanarssTypeId": "1000000000000000000000000000000020",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "1000000000000000000000000000000021",
+        "ParentId": "1000000000000000000000000000000021",
+        "Name": "To",
+        "PayanarssTypeId": "1000000000000000000000000000000021",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "1000000000000000000000000000000022",
+        "ParentId": "1000000000000000000000000000000022",
+        "Name": "LessThan",
+        "PayanarssTypeId": "1000000000000000000000000000000022",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "1000000000000000000000000000000023",
+        "ParentId": "1000000000000000000000000000000023",
+        "Name": "LessThanEqualTo",
+        "PayanarssTypeId": "1000000000000000000000000000000023",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "1000000000000000000000000000000024",
+        "ParentId": "1000000000000000000000000000000024",
+        "Name": "GreaterThan",
+        "PayanarssTypeId": "1000000000000000000000000000000024",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "1000000000000000000000000000000025",
+        "ParentId": "1000000000000000000000000000000025",
+        "Name": "GreaterThanEqualTo",
+        "PayanarssTypeId": "1000000000000000000000000000000025",
+        "Attributes": [],
+        "Description": null
+    },
+    {
         "Id": "100000000000000000000000000000006",
         "ParentId": "100000000000000000000000000000006",
         "Name": "Text",
@@ -2219,7 +2291,7 @@
         "Name": "EmployeeId",
         "PayanarssTypeId": "100000000000000000000000000000013",
         "Attributes": null,
-        "Description": null
+        "Description": "Required; GUID; Auto-generated unique Employee identifier."
     },
     {
         "Id": "A84D4DB1-75E8-41DD-A29C-177590E19F5E",
@@ -2227,7 +2299,7 @@
         "Name": "EmployeeCode",
         "PayanarssTypeId": "100000000000000000000000000000006",
         "Attributes": null,
-        "Description": null
+        "Description": "Required; Text; Unique employee code; Max length 10."
     },
     {
         "Id": "51951A9F-64A5-46A1-A0D9-9B36CCB172D9",
@@ -2235,7 +2307,7 @@
         "Name": "FirstName",
         "PayanarssTypeId": "100000000000000000000000000000006",
         "Attributes": null,
-        "Description": null
+        "Description": "Required; Text; Employee first name; Max length 100."
     },
     {
         "Id": "484E910F-2278-4191-A9F9-A110699B544C",
@@ -2251,7 +2323,7 @@
         "Name": "LastName",
         "PayanarssTypeId": "100000000000000000000000000000006",
         "Attributes": null,
-        "Description": null
+        "Description": "Required; Text; Last name; Max length 100."
     },
     {
         "Id": "F925B812-56ED-4BF3-926E-C873EF6B2A78",
@@ -2267,7 +2339,7 @@
         "Name": "Gender",
         "PayanarssTypeId": "100000000000000000000000000000002",
         "Attributes": null,
-        "Description": null
+        "Description": "Required; Lookup; Must reference Gender master."
     },
     {
         "Id": "7388F9FB-FD9A-4977-B782-97C95D1883B9",
@@ -2275,7 +2347,7 @@
         "Name": "DateOfBirth",
         "PayanarssTypeId": "100000000000000000000000000000008",
         "Attributes": null,
-        "Description": null
+        "Description": "Required; Date; Must be a valid birth date; Cannot be future. Age must be > 18"
     },
     {
         "Id": "AD44B182-D933-49AF-A518-025EBF8668E6",
@@ -2291,7 +2363,7 @@
         "Name": "Status",
         "PayanarssTypeId": "100000000000000000000000000000002",
         "Attributes": null,
-        "Description": null
+        "Description": "Required; Lookup; Must reference Employment Status."
     },
     {
         "Id": "79B810E6-1DBA-4D57-B75A-F94DCE0166B1",
@@ -2299,7 +2371,7 @@
         "Name": "DateCreated",
         "PayanarssTypeId": "100000000000000000000000000000008",
         "Attributes": null,
-        "Description": null
+        "Description": "Auto-generated; DateTime; Record creation timestamp."
     },
     {
         "Id": "E22FC734-F329-4317-B9D7-6F552959F5FD",
@@ -2307,7 +2379,7 @@
         "Name": "DateModified",
         "PayanarssTypeId": "100000000000000000000000000000008",
         "Attributes": null,
-        "Description": null
+        "Description": "Auto-updated; DateTime; Record modification timestamp."
     },
     {
         "Id": "689b2769ac2f3",
@@ -2331,7 +2403,7 @@
         "Name": "GenderId",
         "PayanarssTypeId": "100000000000000000000000000000013",
         "Attributes": null,
-        "Description": null
+        "Description": "Required; GUID; Auto-generated unique Gender identifier."
     },
     {
         "Id": "689b27c8a0e05",
@@ -2339,7 +2411,7 @@
         "Name": "GenderCode",
         "PayanarssTypeId": "100000000000000000000000000000006",
         "Attributes": null,
-        "Description": null
+        "Description": "Required; Text; Gender code; Max length 10; Must be unique."
     },
     {
         "Id": "689b27e4318a9",
@@ -2347,7 +2419,7 @@
         "Name": "Description",
         "PayanarssTypeId": "100000000000000000000000000000006",
         "Attributes": null,
-        "Description": null
+        "Description": "Required; Text; Description; Max length 100."
     },
     {
         "Id": "689b28085c405",
@@ -2355,7 +2427,7 @@
         "Name": "EmployeeStatusId",
         "PayanarssTypeId": "100000000000000000000000000000013",
         "Attributes": null,
-        "Description": null
+        "Description": "Required; GUID; Auto-generated unique Status identifier."
     },
     {
         "Id": "689b283d6b77c",
@@ -2363,7 +2435,7 @@
         "Name": "Code",
         "PayanarssTypeId": "100000000000000000000000000000006",
         "Attributes": null,
-        "Description": null
+        "Description": "Required; Text; Status code; Max length 10; Must be unique."
     },
     {
         "Id": "689b2857734d3",
@@ -2371,7 +2443,7 @@
         "Name": "Description",
         "PayanarssTypeId": "100000000000000000000000000000006",
         "Attributes": null,
-        "Description": null
+        "Description": "Required; Text; Description; Max length 200."
     },
     {
         "Id": "689b2872686a5",
@@ -2843,7 +2915,7 @@
         "Name": "PayElementId",
         "PayanarssTypeId": "100000000000000000000000000000013",
         "Attributes": null,
-        "Description": null
+        "Description": "Required; GUID; Auto-generated PayElement identifier."
     },
     {
         "Id": "68fb18ea86ff8",
@@ -2851,7 +2923,7 @@
         "Name": "Name",
         "PayanarssTypeId": "100000000000000000000000000000006",
         "Attributes": null,
-        "Description": null
+        "Description": "Required; Text; Pay element name; Max length 100."
     },
     {
         "Id": "68fb18ff0581e",
@@ -2859,7 +2931,7 @@
         "Name": "ElementTypeId",
         "PayanarssTypeId": "68fb196d51f74",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; GUID; References PayElementType."
     },
     {
         "Id": "68fb190ee4b59",
@@ -2867,7 +2939,7 @@
         "Name": "CalculationTypeId",
         "PayanarssTypeId": "68fb1c454144d",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; GUID; References PayCalculationType."
     },
     {
         "Id": "68fb1925b7e29",
@@ -2875,7 +2947,7 @@
         "Name": "PayFrequencyId",
         "PayanarssTypeId": "68fb1d4097b58",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; GUID; References PayFrequency."
     },
     {
         "Id": "68fb194f43af5",
@@ -2883,7 +2955,7 @@
         "Name": "IsTaxable",
         "PayanarssTypeId": "100000000000000000000000000000009",
         "Attributes": null,
-        "Description": null
+        "Description": "Boolean; Indicates if element is taxable; Default = False."
     },
     {
         "Id": "68fb196d51f74",
@@ -2891,7 +2963,7 @@
         "Name": "PayElementTypeId",
         "PayanarssTypeId": "100000000000000000000000000000013",
         "Attributes": null,
-        "Description": null
+        "Description": "Required; GUID; Auto-generated PayElementType identifier."
     },
     {
         "Id": "68fb19869a42c",
@@ -2899,7 +2971,7 @@
         "Name": "Name",
         "PayanarssTypeId": "100000000000000000000000000000006",
         "Attributes": null,
-        "Description": null
+        "Description": "Required; Text; Pay element type name; Max length 100; Must be unique."
     },
     {
         "Id": "68fb1a600e014",
@@ -2915,7 +2987,7 @@
         "Name": "PayRunDetail",
         "PayanarssTypeId": "100000000000000000000000000000001",
         "Attributes": null,
-        "Description": ""
+        "Description": null
     },
     {
         "Id": "68fb1ba5128e3",
@@ -2923,7 +2995,7 @@
         "Name": "PayRunDetails",
         "PayanarssTypeId": "68fb1b719e4ce",
         "Attributes": null,
-        "Description": ""
+        "Description": null
     },
     {
         "Id": "68fb1c18d6894",
@@ -2931,7 +3003,7 @@
         "Name": "PayCalculationType",
         "PayanarssTypeId": "100000000000000000000000000000001",
         "Attributes": null,
-        "Description": ""
+        "Description": null
     },
     {
         "Id": "68fb1c454144d",
@@ -2939,7 +3011,7 @@
         "Name": "PayCalculationTypeId",
         "PayanarssTypeId": "100000000000000000000000000000013",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; GUID; Auto-generated identifier."
     },
     {
         "Id": "68fb1c64a034c",
@@ -2947,7 +3019,7 @@
         "Name": "Description",
         "PayanarssTypeId": "100000000000000000000000000000006",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; Text; Description of calculation type; Max length 100."
     },
     {
         "Id": "68fb1c91433a2",
@@ -2955,7 +3027,7 @@
         "Name": "ElementTypeName",
         "PayanarssTypeId": "68fb19869a42c",
         "Attributes": null,
-        "Description": ""
+        "Description": "Derived; Text; PayElementType name."
     },
     {
         "Id": "68fb1cb60aad7",
@@ -2963,7 +3035,7 @@
         "Name": "CalculationTypeName",
         "PayanarssTypeId": "68fb1c64a034c",
         "Attributes": null,
-        "Description": ""
+        "Description": "Derived; Text; PayCalculationType name."
     },
     {
         "Id": "68fb1cb694f81",
@@ -2971,7 +3043,7 @@
         "Name": "PayFrequencyName",
         "PayanarssTypeId": "68fb1d5d9f6f5",
         "Attributes": null,
-        "Description": ""
+        "Description": "Derived; Text; PayFrequency name."
     },
     {
         "Id": "68fb1d1453109",
@@ -2979,7 +3051,7 @@
         "Name": "PayFrequency",
         "PayanarssTypeId": "100000000000000000000000000000001",
         "Attributes": null,
-        "Description": ""
+        "Description": null
     },
     {
         "Id": "68fb1d4097b58",
@@ -2987,7 +3059,7 @@
         "Name": "PayFrequencyId",
         "PayanarssTypeId": "100000000000000000000000000000013",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; GUID; Auto-generated identifier."
     },
     {
         "Id": "68fb1d5d9f6f5",
@@ -2995,7 +3067,7 @@
         "Name": "Description",
         "PayanarssTypeId": "100000000000000000000000000000006",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; Text; Description of frequency; Max length 100."
     },
     {
         "Id": "68fb1dc30515d",
@@ -3003,7 +3075,7 @@
         "Name": "PayRunDetailId",
         "PayanarssTypeId": "100000000000000000000000000000013",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; GUID; Auto-generated PayRunDetail identifier."
     },
     {
         "Id": "68fb1de1dd4ca",
@@ -3011,7 +3083,7 @@
         "Name": "EmployeeId",
         "PayanarssTypeId": "5649CEEF-7D8E-49EB-AAD3-92464F8D323C",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; GUID; References EmployeeId in Employee table."
     },
     {
         "Id": "68fb1e55e868e",
@@ -3019,7 +3091,7 @@
         "Name": "EmployeeName",
         "PayanarssTypeId": "51951A9F-64A5-46A1-A0D9-9B36CCB172D9",
         "Attributes": null,
-        "Description": ""
+        "Description": "Optional; Text; Employee name; Derived."
     },
     {
         "Id": "68fb1e7eeef50",
@@ -3027,7 +3099,7 @@
         "Name": "PayElementId",
         "PayanarssTypeId": "68fb18d735cec",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; GUID; References PayElement."
     },
     {
         "Id": "68fb1eb810531",
@@ -3035,7 +3107,7 @@
         "Name": "PayElementName",
         "PayanarssTypeId": "68fb18ea86ff8",
         "Attributes": null,
-        "Description": ""
+        "Description": "Optional; Text; Pay element name; Derived."
     },
     {
         "Id": "68fb1f9c6c62c",
@@ -3043,7 +3115,7 @@
         "Name": "AttendanceId",
         "PayanarssTypeId": "100000000000000000000000000000013",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; GUID; Auto-generated unique attendance record ID."
     },
     {
         "Id": "68fb1fb7b746e",
@@ -3051,7 +3123,7 @@
         "Name": "AttendanceDate",
         "PayanarssTypeId": "100000000000000000000000000000008",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; Date; Attendance date; Cannot be in future."
     },
     {
         "Id": "68fb1fcf04fab",
@@ -3059,7 +3131,7 @@
         "Name": "EmployeeId",
         "PayanarssTypeId": "5649CEEF-7D8E-49EB-AAD3-92464F8D323C",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; Read only; References EmployeeId."
     },
     {
         "Id": "68fb2048573c4",
@@ -3067,7 +3139,7 @@
         "Name": "EmployeeName",
         "PayanarssTypeId": "51951A9F-64A5-46A1-A0D9-9B36CCB172D9",
         "Attributes": null,
-        "Description": ""
+        "Description": null
     },
     {
         "Id": "68fb207b8858a",
@@ -3075,7 +3147,7 @@
         "Name": "CheckInTime",
         "PayanarssTypeId": "100000000000000000000000000000008",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; DateTime; Check-in timestamp; Must be before CheckOutTime."
     },
     {
         "Id": "68fb209274802",
@@ -3083,7 +3155,7 @@
         "Name": "CheckOutTime",
         "PayanarssTypeId": "100000000000000000000000000000008",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; DateTime; Check-out timestamp; Must be after CheckInTime."
     },
     {
         "Id": "68fb20ac35993",
@@ -3091,7 +3163,7 @@
         "Name": "WorkDuration",
         "PayanarssTypeId": "100000000000000000000000000000007",
         "Attributes": null,
-        "Description": ""
+        "Description": "Calculated; Number; Work duration (hours); Auto-computed."
     },
     {
         "Id": "68fb20c3d52c3",
@@ -3099,7 +3171,7 @@
         "Name": "LateByMinutes",
         "PayanarssTypeId": "100000000000000000000000000000007",
         "Attributes": null,
-        "Description": ""
+        "Description": "Optional; Number; Late minutes; \u2265 0."
     },
     {
         "Id": "68fb20e4e2c64",
@@ -3107,7 +3179,7 @@
         "Name": "EarlyLeaveMinutes",
         "PayanarssTypeId": "100000000000000000000000000000007",
         "Attributes": null,
-        "Description": ""
+        "Description": "Optional; Number; Early-leave minutes; \u2265 0."
     },
     {
         "Id": "68fb20ff0d43c",
@@ -3115,7 +3187,7 @@
         "Name": "IsApproved",
         "PayanarssTypeId": "100000000000000000000000000000009",
         "Attributes": null,
-        "Description": ""
+        "Description": "Boolean; Approval flag; Default = False."
     },
     {
         "Id": "68fb21ccd18b4",
@@ -3123,7 +3195,7 @@
         "Name": "SummaryId",
         "PayanarssTypeId": "100000000000000000000000000000013",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; GUID; Auto-generated summary record ID."
     },
     {
         "Id": "68fb21d82e588",
@@ -3131,7 +3203,7 @@
         "Name": "EmployeeId",
         "PayanarssTypeId": "5649CEEF-7D8E-49EB-AAD3-92464F8D323C",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; GUID; References Employee table."
     },
     {
         "Id": "68fb21f683c5d",
@@ -3139,7 +3211,7 @@
         "Name": "EmployeeName",
         "PayanarssTypeId": "51951A9F-64A5-46A1-A0D9-9B36CCB172D9",
         "Attributes": null,
-        "Description": ""
+        "Description": null
     },
     {
         "Id": "68fb2219aa827",
@@ -3147,7 +3219,7 @@
         "Name": "TotalDays",
         "PayanarssTypeId": "100000000000000000000000000000007",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; Number; Total working days; > 0."
     },
     {
         "Id": "68fb2247dda9a",
@@ -3155,7 +3227,7 @@
         "Name": "DaysPresent",
         "PayanarssTypeId": "100000000000000000000000000000007",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; Number; Days present; 0 \u2264 value \u2264 TotalDays."
     },
     {
         "Id": "68fb226093ddd",
@@ -3163,7 +3235,7 @@
         "Name": "DaysAbsent",
         "PayanarssTypeId": "100000000000000000000000000000007",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; Number; Days absent; 0 \u2264 value \u2264 TotalDays."
     },
     {
         "Id": "68fb22798c6f9",
@@ -3171,7 +3243,7 @@
         "Name": "DaysLate",
         "PayanarssTypeId": "100000000000000000000000000000007",
         "Attributes": null,
-        "Description": ""
+        "Description": "Optional; Number; Late-arrival days; \u2265 0."
     },
     {
         "Id": "68fb228aae4fc",
@@ -3179,7 +3251,7 @@
         "Name": "DaysEarly",
         "PayanarssTypeId": "100000000000000000000000000000007",
         "Attributes": null,
-        "Description": ""
+        "Description": null
     },
     {
         "Id": "68fb22af1f2b8",
@@ -3187,7 +3259,7 @@
         "Name": "LeaveDays",
         "PayanarssTypeId": "100000000000000000000000000000007",
         "Attributes": null,
-        "Description": ""
+        "Description": "Optional; Number; Leave days; \u2265 0."
     },
     {
         "Id": "68fb22c2bcc0c",
@@ -3195,7 +3267,7 @@
         "Name": "PublicHolidays",
         "PayanarssTypeId": "100000000000000000000000000000007",
         "Attributes": null,
-        "Description": ""
+        "Description": "Optional; Number; Public holidays; \u2265 0."
     },
     {
         "Id": "68fb22d1db466",
@@ -3203,7 +3275,7 @@
         "Name": "NetPayableDays",
         "PayanarssTypeId": "100000000000000000000000000000007",
         "Attributes": null,
-        "Description": ""
+        "Description": "Required; Number; Net payable days = DaysPresent + LeaveDays \u2212 DaysAbsent."
     },
     {
         "Id": "68fb22e0d04df",
@@ -3211,6 +3283,6 @@
         "Name": "IsApproved",
         "PayanarssTypeId": "100000000000000000000000000000009",
         "Attributes": null,
-        "Description": ""
+        "Description": "Boolean; Approval flag; Default = False."
     }
 ]

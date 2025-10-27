@@ -111,13 +111,14 @@ $attribute = $app->Attribute;
                     <!-- Table title and add row button -->
                     <header>
                         <tr>
-                            <th class="bg-gray-100 border px-4 py-2 font-semibold text-left" colspan="5">Payanarss Type Designs</th>
+                            <th class="bg-gray-100 border px-4 py-2 font-semibold text-left" colspan="5"><?= htmlspecialchars($parentType->Name ?? 'Payanarss Type Designer') ?></th>
                         </tr>
                         <tr>
                             <th class="bg-gray-100 border px-4 py-2 font-semibold text-left" colspan="5">
                                 <form method="post">
                                     <input type="hidden" name="parent_id" value="<?= htmlspecialchars($parentId) ?>">
                                     <button type='submit' name='add_new_type' value='add_new_type' class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Add Type</button>
+                                    <button type="button" onclick="exportPayanarssJSON()" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 ml-2">Export JSON</button>
                                 </form>
                             </th>
                         </tr>
@@ -275,6 +276,18 @@ $attribute = $app->Attribute;
             </form>
         </div>
     </div>
+
+    <div id="jsonModal" class="fixed inset-0 hidden bg-black bg-opacity-50 z-50 justify-center items-center">
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-4">
+            <h2 class="text-lg font-semibold mb-2">📦 Payanarss Type JSON</h2>
+            <textarea id="jsonOutput" class="w-full h-80 border p-2 text-xs font-mono" readonly></textarea>
+            <div class="mt-3 text-right">
+                <button onclick="closeJsonModal()" class="bg-gray-500 text-white px-3 py-1 rounded">Close</button>
+                <button onclick="downloadJson()" class="bg-blue-500 text-white px-3 py-1 rounded ml-2">Download</button>
+            </div>
+        </div>
+    </div>
+
     <form method="post" id="loadAttributeForm" style="display:none;">
         <input type="hidden" name="attribute_target_id" id="attributeTargetIdHidden">
         <input type="hidden" name="load_attributes" value="1">
@@ -365,7 +378,25 @@ $attribute = $app->Attribute;
             document.getElementById('loadAttributeForm').submit();
         }
     </script>
+    <script>
+        <?php
+        $parentType = $app->get_type($parentId);
+        ?>
 
+        // Function to show the modal
+        function exportPayanarssJSON() {
+            const jsonString = JSON.stringify(<?= json_encode($parentType->Children->all(), JSON_PRETTY_PRINT) ?>, null, 2);
+            document.getElementById("jsonOutput").textContent = jsonString;
+            document.getElementById("jsonModal").classList.remove("hidden");
+            document.getElementById("jsonModal").classList.add("flex");
+        }
+
+        // Function to close the modal
+        function closeJsonModal() {
+            document.getElementById("jsonModal").classList.add("hidden");
+            document.getElementById("jsonModal").classList.remove("flex");
+        }
+    </script>
     <?php if ($shouldOpenAttributeModal): ?>
         <script>
             window.addEventListener('DOMContentLoaded', () => {
