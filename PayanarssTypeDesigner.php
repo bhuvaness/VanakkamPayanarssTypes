@@ -50,7 +50,8 @@ if (isset($_POST['save_type'])) {
         }
     }
 
-    $app->save_all_types();
+    $parentType = $app->get_type($parentId);
+    $app->save_all_types($parentType);
     $_SESSION['PayanarssApp'] = $app;
 }
 

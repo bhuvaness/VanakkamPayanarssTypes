@@ -136,7 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['generate_from_prompt'
                 </div>
 
                 <div id="dataEntryTab" class="hidden">
-                    <?php include 'PayanarssDataEntry.php'; ?>
+                    <?php include 'PayanarssDataEntryVer.php'; ?>
                 </div>
 
                 <!-- Footer for Prompt-Based Schema Generation -->

@@ -50,78 +50,6 @@
         "Description": null
     },
     {
-        "Id": "1000000000000000000000000000000017",
-        "ParentId": "1000000000000000000000000000000017",
-        "Name": "IsRequired",
-        "PayanarssTypeId": "1000000000000000000000000000000017",
-        "Attributes": [],
-        "Description": null
-    },
-    {
-        "Id": "1000000000000000000000000000000018",
-        "ParentId": "1000000000000000000000000000000018",
-        "Name": "Minimum",
-        "PayanarssTypeId": "1000000000000000000000000000000018",
-        "Attributes": [],
-        "Description": null
-    },
-    {
-        "Id": "1000000000000000000000000000000019",
-        "ParentId": "1000000000000000000000000000000019",
-        "Name": "Maximum",
-        "PayanarssTypeId": "1000000000000000000000000000000019",
-        "Attributes": [],
-        "Description": null
-    },
-    {
-        "Id": "1000000000000000000000000000000020",
-        "ParentId": "1000000000000000000000000000000020",
-        "Name": "From",
-        "PayanarssTypeId": "1000000000000000000000000000000020",
-        "Attributes": [],
-        "Description": null
-    },
-    {
-        "Id": "1000000000000000000000000000000021",
-        "ParentId": "1000000000000000000000000000000021",
-        "Name": "To",
-        "PayanarssTypeId": "1000000000000000000000000000000021",
-        "Attributes": [],
-        "Description": null
-    },
-    {
-        "Id": "1000000000000000000000000000000022",
-        "ParentId": "1000000000000000000000000000000022",
-        "Name": "LessThan",
-        "PayanarssTypeId": "1000000000000000000000000000000022",
-        "Attributes": [],
-        "Description": null
-    },
-    {
-        "Id": "1000000000000000000000000000000023",
-        "ParentId": "1000000000000000000000000000000023",
-        "Name": "LessThanEqualTo",
-        "PayanarssTypeId": "1000000000000000000000000000000023",
-        "Attributes": [],
-        "Description": null
-    },
-    {
-        "Id": "1000000000000000000000000000000024",
-        "ParentId": "1000000000000000000000000000000024",
-        "Name": "GreaterThan",
-        "PayanarssTypeId": "1000000000000000000000000000000024",
-        "Attributes": [],
-        "Description": null
-    },
-    {
-        "Id": "1000000000000000000000000000000025",
-        "ParentId": "1000000000000000000000000000000025",
-        "Name": "GreaterThanEqualTo",
-        "PayanarssTypeId": "1000000000000000000000000000000025",
-        "Attributes": [],
-        "Description": null
-    },
-    {
         "Id": "100000000000000000000000000000006",
         "ParentId": "100000000000000000000000000000006",
         "Name": "Text",
@@ -202,6 +130,30 @@
         "ParentId": "100000000000000000000000000000015",
         "Name": "SelectableType",
         "PayanarssTypeId": "100000000000000000000000000000015",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000016",
+        "ParentId": "100000000000000000000000000000016",
+        "Name": "Minimum",
+        "PayanarssTypeId": "100000000000000000000000000000016",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000017",
+        "ParentId": "100000000000000000000000000000017",
+        "Name": "Maximum",
+        "PayanarssTypeId": "100000000000000000000000000000017",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000018",
+        "ParentId": "100000000000000000000000000000018",
+        "Name": "GUID",
+        "PayanarssTypeId": "100000000000000000000000000000018",
         "Attributes": [],
         "Description": null
     },
@@ -727,7 +679,7 @@
     },
     {
         "Id": "38208B39-7FEC-4381-9662-A0F461060C17",
-        "ParentId": "689c31fef2fa9",
+        "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
         "Name": "Employee",
         "PayanarssTypeId": "100000000000000000000000000000001",
         "Attributes": null,
@@ -735,7 +687,7 @@
     },
     {
         "Id": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
-        "ParentId": "689c31fef2fa9",
+        "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
         "Name": "EmployeeProfile",
         "PayanarssTypeId": "100000000000000000000000000000001",
         "Attributes": null,
@@ -2290,7 +2242,20 @@
         "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
         "Name": "EmployeeId",
         "PayanarssTypeId": "100000000000000000000000000000013",
-        "Attributes": null,
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000018",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
         "Description": "Required; GUID; Auto-generated unique Employee identifier."
     },
     {
@@ -2298,7 +2263,20 @@
         "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
         "Name": "EmployeeCode",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000006",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "10"
+            }
+        ],
         "Description": "Required; Text; Unique employee code; Max length 10."
     },
     {
@@ -2306,7 +2284,20 @@
         "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
         "Name": "FirstName",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000006",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "100"
+            }
+        ],
         "Description": "Required; Text; Employee first name; Max length 100."
     },
     {
@@ -2322,7 +2313,20 @@
         "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
         "Name": "LastName",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000006",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "100"
+            }
+        ],
         "Description": "Required; Text; Last name; Max length 100."
     },
     {
@@ -2338,7 +2342,12 @@
         "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
         "Name": "Gender",
         "PayanarssTypeId": "100000000000000000000000000000002",
-        "Attributes": null,
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
         "Description": "Required; Lookup; Must reference Gender master."
     },
     {
@@ -2346,7 +2355,16 @@
         "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
         "Name": "DateOfBirth",
         "PayanarssTypeId": "100000000000000000000000000000008",
-        "Attributes": null,
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000008",
+                "Value": "True"
+            }
+        ],
         "Description": "Required; Date; Must be a valid birth date; Cannot be future. Age must be > 18"
     },
     {
@@ -2362,7 +2380,12 @@
         "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
         "Name": "Status",
         "PayanarssTypeId": "100000000000000000000000000000002",
-        "Attributes": null,
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
         "Description": "Required; Lookup; Must reference Employment Status."
     },
     {
@@ -2370,7 +2393,12 @@
         "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
         "Name": "DateCreated",
         "PayanarssTypeId": "100000000000000000000000000000008",
-        "Attributes": null,
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000008",
+                "Value": "True"
+            }
+        ],
         "Description": "Auto-generated; DateTime; Record creation timestamp."
     },
     {
@@ -2378,12 +2406,17 @@
         "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
         "Name": "DateModified",
         "PayanarssTypeId": "100000000000000000000000000000008",
-        "Attributes": null,
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000008",
+                "Value": "True"
+            }
+        ],
         "Description": "Auto-updated; DateTime; Record modification timestamp."
     },
     {
         "Id": "689b2769ac2f3",
-        "ParentId": "689c31fef2fa9",
+        "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
         "Name": "Gender",
         "PayanarssTypeId": "100000000000000000000000000000001",
         "Attributes": null,
@@ -2391,7 +2424,7 @@
     },
     {
         "Id": "689b278188acd",
-        "ParentId": "689c31fef2fa9",
+        "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
         "Name": "EmployeeStatus",
         "PayanarssTypeId": "100000000000000000000000000000001",
         "Attributes": null,

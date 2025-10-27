@@ -17,10 +17,10 @@ class PayanarssTypeApplication
         $this->RootNodes = null;
         $this->Attribute = null;
     }
-    public function save_all_types()
+    public function save_all_types(PayanarssType $payanarssType): PayanarssTypes
     {
         $busObj = new PayanarssTypeBusinessLogics();
-        $busObj->save_all($this->Types);
+        $busObj->save_all($payanarssType, $this->Types);
         return $this->Types;
     }
     public function remove_type(string $typeId): PayanarssTypes
@@ -125,6 +125,7 @@ class PayanarssType implements JsonSerializable
     public string $PayanarssTypeId = "";
     public $Attributes = [];
     public ?string $Description = null;
+    public ?string $Value = null;
     public ?string $ParentName = null;
     public ?PayanarssType $Parent = null;
     public ?PayanarssType $Type = null;
@@ -138,6 +139,7 @@ class PayanarssType implements JsonSerializable
         $this->PayanarssTypeId = "";
         $this->Attributes = null;
         $this->Description = null;
+        $this->Value = null;
         $this->Type = null;
         $this->Parent = null;
         $this->ParentName = null;
@@ -408,8 +410,30 @@ class PayanarssTypeBusinessLogics
         }
         return null;
     }
-    function save_all(PayanarssTypes $types, string $entityId = "1000000000000000000000000000000000", ?string $fileName = null)
+    function save_all(PayanarssType $payanarssType, PayanarssTypes $types)
     {
+        $bobj = new PayanarssTypeBusinessLogics();
+        $parsedJson = callOpenAIV1($payanarssType, $bobj->convertToArray($types)); // this function should return JSON (see below)
+
+        foreach ($parsedJson as $item) {
+            $parentId = $item['Parent Id'];
+            $attributes = [];
+
+            foreach ($item['attributes'] as $attr) {
+                foreach ($attr as $attrId => $value) {
+                    $attributes[] = ["Id" => $attrId, "Value" => $value];
+                }
+            }
+
+            foreach ($payanarssType->Children as $child) {
+                if ($child->Id === $parentId) {
+                    //echo "Setting attributes for child with ID: " . $child->Id . "\n";
+                    $child->Attributes = $attributes;
+                    break;
+                }
+            }
+        }
+
         /*foreach ($types as $type) {
             createRecord($type->Id, $type, $entityId);
         }*/
@@ -457,9 +481,8 @@ class PayanarssTypeBusinessLogics
             $typ->ParentId = $typeData['ParentId'] ?? $typ->Id;
             $typ->Name = $typeData['Name'] ?? '';
             $typ->PayanarssTypeId = isset($typeData['PayanarssTypeId']) ? $typeData['PayanarssTypeId'] ?? '' : '';
-            //$typ->IsGroupType = isset($typeData['IsGroupType']) ? $typeData['IsGroupType'] ?? 0 : 0;
-            //$typ->IsTableType = isset($typeData['IsTableType']) ? $typeData['IsTableType'] ?? 0 : 0;
-
+            $typ->Description = isset($typeData['Description']) ? $typeData['Description'] ?? null : null;
+            $typ->Value = isset($typeData['Value']) ? $typeData['Value'] ?? null : null;
             if (isset($typeData['Attributes']) && is_array($typeData['Attributes'])) {
                 $typ->Attributes = $typeData['Attributes'];
             }
