@@ -15,7 +15,7 @@ $data = [];
 
 // Load or initialize rows
 if (!isset($_SESSION['PayanarssApp'])) {
-    $app = new PayanarssTypeApplication();
+    $app = new PayanarssApplication();
     $app->load_all_types();
     $_SESSION['PayanarssApp'] = $app;
     $_SESSION['parent_id'] = "";
