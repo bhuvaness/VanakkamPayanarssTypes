@@ -3,7 +3,7 @@ require_once 'PayanarssTypeJsonDAO.php';
 require_once 'PayanarssCrud.php';
 require_once 'OpenAIHelper.php'; // your helper file
 
-class PayanarssTypeApplication
+class PayanarssApplication
 {
     public PayanarssTypes $Types;
     public ?PayanarssTypes $RootNodes = null;
@@ -101,6 +101,10 @@ class PayanarssTypeApplication
                 return $eachTyp;
         }
     }
+    public function addType($payanarssType)
+    {
+        $this->Types->add($payanarssType);
+    }
     function prompt_for_type(string $prompt): string
     {
         $count = 0;
@@ -123,7 +127,7 @@ class PayanarssType implements JsonSerializable
     public string $ParentId = "";
     public string $Name = "";
     public string $PayanarssTypeId = "";
-    public $Attributes = [];
+    public $Attributes = null;
     public ?string $Description = null;
     public ?string $Value = null;
     public ?string $ParentName = null;
@@ -137,7 +141,7 @@ class PayanarssType implements JsonSerializable
         $this->ParentId = $this->Id;
         $this->Name = "";
         $this->PayanarssTypeId = "";
-        $this->Attributes = null;
+        $this->Attributes = [];
         $this->Description = null;
         $this->Value = null;
         $this->Type = null;
@@ -215,7 +219,7 @@ class PayanarssType implements JsonSerializable
             'Description' => $this->Description
         ];
     }
-    public function get_children(PayanarssTypeApplication $payanarssTypeApplication, string $parentId = ""): int
+    public function get_children(PayanarssApplication $payanarssTypeApplication, string $parentId = ""): int
     {
         $this->Children = $payanarssTypeApplication->getChildren($parentId);
         return $this->Children->count();
@@ -306,6 +310,17 @@ class PayanarssTypes implements Iterator, Countable
     public function all()
     {
         return $this->items;
+    }
+}
+
+class PromptRequestMessage
+{
+    public string $role;
+    public PayanarssApplication $application;
+    public function __construct(string $role, PayanarssApplication $application)
+    {
+        $this->role = $role;
+        $this->application = $application;
     }
 }
 

@@ -4,6 +4,7 @@
 
 function callOpenAI(string $prompt, $types = []): string
 {
+    global $myCre;
 
     $allTypesJson = json_encode($types, JSON_PRETTY_PRINT);
 
@@ -30,7 +31,7 @@ EOT;
     $ch = curl_init('https://api.openai.com/v1/chat/completions');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        'Authorization: Bearer ',
+        'Authorization: Bearer ' . $myCre,
         'Content-Type: application/json'
     ]);
 
@@ -48,6 +49,7 @@ EOT;
 
 function callOpenAIV1(PayanarssType $payanarssType, $types = [])
 {
+    global $myCre;
 
     $allRules = "";
     $parentId = $payanarssType->Id;
@@ -80,6 +82,8 @@ Rules-to-ID mapping:
 - "Boolean" → "100000000000000000000000000000009"
 - "DateTime" → "100000000000000000000000000000008"
 - "Unique" → "100000000000000000000000000000013"
+- "Auto Generate" → "100000000000000000000000000000024"
+- "Validate Before Create" → "100000000000000000000000000000025"
 
 Output format:
 [
@@ -133,7 +137,7 @@ EOT;
     $ch = curl_init('https://api.openai.com/v1/chat/completions');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        'Authorization: Bearer ',
+        'Authorization: Bearer ' . $myCre,
         'Content-Type: application/json'
     ]);
 

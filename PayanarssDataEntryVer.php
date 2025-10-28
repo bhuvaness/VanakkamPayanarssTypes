@@ -15,7 +15,7 @@ $data = [];
 
 // Load or initialize rows
 if (!isset($_SESSION['PayanarssApp'])) {
-    $app = new PayanarssTypeApplication();
+    $app = new PayanarssApplication();
     $app->load_all_types();
     $_SESSION['PayanarssApp'] = $app;
     $_SESSION['parent_id'] = "";
@@ -90,13 +90,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
 
             <script>
-                function newRecord() {
-                    // Clear all inputs
-                    document.querySelectorAll('input, select').forEach(el => {
-                        if (el.type === 'checkbox') el.checked = false;
-                        else el.value = '';
-                    });
-                    alert("New record initialized!");
+                async function newRecord() {
+                    try {
+
+                        // These PHP variables come from your current page
+                        const parentId = <?= json_encode($parentId, JSON_PRETTY_PRINT) ?>;
+
+                        // Create payload
+                        const payload = {
+                            parent_id: parentId,
+                        };
+
+                        // Send to prompt_api.php
+                        const response = await fetch('prompt_api.php', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(payload)
+                        });
+
+                        const result = await response.text();
+                        console.log("Response from server:", result);
+                        alert("New record initialized!");
+
+                        // Clear all input controls
+                        document.querySelectorAll('input, select').forEach(el => {
+                            if (el.type === 'checkbox') el.checked = false;
+                            else el.value = '';
+                        });
+
+                    } catch (error) {
+                        console.error("Error:", error);
+                        alert("Failed to create new record!");
+                    }
                 }
 
                 function saveRecord() {
@@ -137,7 +164,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <!-- Input Control -->
                 <div style="flex:1;">
                     <?php
-                     $value = htmlspecialchars($col->Value ?? '');
+                    $value = htmlspecialchars($col->Value ?? '');
                     switch ($col->PayanarssTypeId) {
                         case "100000000000000000000000000000006": // Text
                             echo "

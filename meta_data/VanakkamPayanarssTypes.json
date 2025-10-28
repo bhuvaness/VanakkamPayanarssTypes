@@ -158,6 +158,62 @@
         "Description": null
     },
     {
+        "Id": "100000000000000000000000000000019",
+        "ParentId": "100000000000000000000000000000019",
+        "Name": "Create",
+        "PayanarssTypeId": "100000000000000000000000000000019",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000020",
+        "ParentId": "100000000000000000000000000000020",
+        "Name": "Read",
+        "PayanarssTypeId": "100000000000000000000000000000020",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000021",
+        "ParentId": "100000000000000000000000000000021",
+        "Name": "Update",
+        "PayanarssTypeId": "100000000000000000000000000000021",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000022",
+        "ParentId": "100000000000000000000000000000022",
+        "Name": "Delete",
+        "PayanarssTypeId": "100000000000000000000000000000022",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000023",
+        "ParentId": "100000000000000000000000000000023",
+        "Name": "New",
+        "PayanarssTypeId": "100000000000000000000000000000023",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000024",
+        "ParentId": "100000000000000000000000000000024",
+        "Name": "Auto Generate",
+        "PayanarssTypeId": "100000000000000000000000000000024",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000025",
+        "ParentId": "100000000000000000000000000000025",
+        "Name": "Validate Before Create",
+        "PayanarssTypeId": "100000000000000000000000000000025",
+        "Attributes": [],
+        "Description": null
+    },
+    {
         "Id": "68637a3f60937",
         "ParentId": "68637a3f60937",
         "Name": "PayanarssApplications",
@@ -682,8 +738,13 @@
         "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
         "Name": "Employee",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
-        "Description": null
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000025",
+                "Value": "True"
+            }
+        ],
+        "Description": "Validate before create"
     },
     {
         "Id": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
@@ -2252,6 +2313,10 @@
                 "Value": "True"
             },
             {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
                 "Id": "100000000000000000000000000000013",
                 "Value": "True"
             }
@@ -2270,6 +2335,10 @@
             },
             {
                 "Id": "100000000000000000000000000000006",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
                 "Value": "True"
             },
             {
@@ -2395,6 +2464,10 @@
         "PayanarssTypeId": "100000000000000000000000000000008",
         "Attributes": [
             {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
                 "Id": "100000000000000000000000000000008",
                 "Value": "True"
             }
@@ -2407,6 +2480,10 @@
         "Name": "DateModified",
         "PayanarssTypeId": "100000000000000000000000000000008",
         "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
             {
                 "Id": "100000000000000000000000000000008",
                 "Value": "True"
