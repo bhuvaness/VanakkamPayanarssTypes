@@ -34,16 +34,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['generate_from_prompt'
     if (!empty($prompt)) {
         require_once 'OpenAIHelper.php'; // your helper file
 
-        $response = $app->prompt_for_type($prompt); // this function should return JSON (see below)
-        //echo "<pre>AI Response: " . htmlspecialchars($response) . "</pre>";
-        /*
-        if (preg_match('/json(.*?)/s', $response, $matches)) {
-            $jsonString = trim($matches[1]);
-            echo($jsonString);
+        // Endpoint URL
+        $url = "https://localhost:7000/api/v1/EmployeeDataAgent/Prompt";
+
+        $promptRequestMessage = new PromptRequestMessage("system", $app);
+        $promptRequestMessage->PromptMessage = $prompt;
+
+        // Convert PHP array to JSON
+        $jsonData = json_encode($promptRequestMessage);
+
+        // Initialize cURL
+        $ch = curl_init($url);
+
+        // Set cURL options
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            "Content-Type: application/json",
+            "Accept: application/json"
+        ]);
+
+        // Disable SSL verification for localhost only (⚠️ not for production)
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+
+        // Execute the request
+        $response = curl_exec($ch);
+
+        // Handle any errors
+        if (curl_errno($ch)) {
+            echo "cURL error: " . curl_error($ch);
         } else {
-            echo "JSON block not found!";
+            // Decode and display response
+            $decoded = json_decode($response, true);
+            echo "<pre>";
+            print_r($decoded);
+            echo "</pre>";
         }
-        */
+
+        // Close the connection
+        curl_close($ch);
+
+        /*
+        $response = $app->prompt_for_type($prompt); 
         $start = strpos($response, '[');
         $end = strrpos($response, ']');
         if ($start !== false && $end !== false) {
@@ -56,34 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['generate_from_prompt'
         $types =   $bobj->convert_to_payanarss_type($arr);
         $app->addTypes($parentId, $types);
         $app->save_all_types();
-        /*
-        if ($schema && isset($schema['Table'])) {
-            $table = new PayanarssType();
-            $table->Id = uniqid();
-            $table->ParentId = $table->Id;
-            $table->Name = $schema['Table'];
-
-            foreach ($schema['Columns'] ?? [] as $col) {
-                $colObj = new PayanarssType();
-                $colObj->Id = uniqid();
-                $colObj->ParentId = $table->Id;
-                $colObj->Name = $col['Name'] ?? '';
-                $colObj->PayanarssTypeId = $app->get_type_id_by_name($col['Type'] ?? 'Text');
-                foreach ($col['Attributes'] ?? [] as $attrName) {
-                    $colObj->Attributes[] = $app->get_type_id_by_name($attrName);
-                }
-                $table->Children->add($colObj);
-            }
-
-            $app->Types->add($table);
-            
-
-            $_SESSION['PayanarssApp'] = $app;
-            $success = "✅ Table '{$table->Name}' generated successfully!";
-        } else {
-            $error = "⚠️ Unable to parse AI response. Please try a simpler prompt.";
-        }
-            */
+        */
     }
 }
 
@@ -106,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['generate_from_prompt'
 
     <div class="flex h-[calc(100%-64px)]"> <!-- Adjust height minus header -->
         <!-- 📁 Left Nav (Tree View) -->
-        <aside class="w-64 bg-white border-r border-gray-300 overflow-y-auto p-4">
+        <aside class="w-80 bg-white border-r border-gray-300 overflow-y-auto p-4">
             <h2 class="text-md font-semibold mb-3">📁 Table Designs</h2>
             <ul class="text-xs italic">
                 <?php include 'PayanarssTypeTreeNode.php'; ?>
@@ -115,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['generate_from_prompt'
         </aside>
 
         <!-- 📄 Main Content Area -->
-        <div class="flex-1 flex flex-col">
+        <div class="relative flex-1 flex flex-col">
             <!-- Tabs in Main View -->
             <main class="flex-1 overflow-y-auto p-4">
                 <!-- Tab buttons -->
@@ -136,7 +143,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['generate_from_prompt'
                 </div>
 
                 <div id="dataEntryTab" class="hidden">
-                    <?php include 'PayanarssDataEntryVer.php'; ?>
+                    <?php //include 'PayanarssDataEntry.php'; 
+                    ?>
                 </div>
 
                 <!-- Footer for Prompt-Based Schema Generation -->

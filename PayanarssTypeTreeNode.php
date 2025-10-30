@@ -17,7 +17,7 @@ function renderTree($types, $selectedId)
         $shouldExpand = isInPath($type, $selectedId);
 ?>
         <li class="ml-2">
-            <div class="flex items-center gap-1">
+            <div class="flex items-baseline gap-1 whitespace-nowrap">
                 <?php 
                 
                 if (count($type->Children) > 0): ?>

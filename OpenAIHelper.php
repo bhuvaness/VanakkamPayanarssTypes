@@ -1,7 +1,6 @@
 <?php
 
 
-
 function callOpenAI(string $prompt, $types = []): string
 {
     global $myCre;

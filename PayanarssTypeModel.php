@@ -315,12 +315,18 @@ class PayanarssTypes implements Iterator, Countable
 
 class PromptRequestMessage
 {
-    public string $role;
-    public PayanarssApplication $application;
+    public string $Role;
+    public string $AgentId;
+    public string $RequestId;
+    public PayanarssApplication $Application;
+    public string $PromptMessage;
     public function __construct(string $role, PayanarssApplication $application)
     {
-        $this->role = $role;
-        $this->application = $application;
+        $this->Role = $role;
+        $this->AgentId = "";
+        $this->RequestId = "";
+        $this->Application = $application;
+        $this->PromptMessage = "";
     }
 }
 
