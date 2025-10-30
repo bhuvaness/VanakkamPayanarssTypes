@@ -1,39 +1,79 @@
-
-{
-    "role": "system",
-    "application": {
-        "Types": {},
-        "RootNodes": null,
-        "Attribute": null,
-        "Attributes": null,
-        "SelectableTypes": null
+Decoded types count: 4
+Children: [
+    {
+        "Id": "38208B39-7FEC-4381-9662-A0F461060C17",
+        "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
+        "Name": "Employee",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000025",
+                "Value": "True"
+            }
+        ],
+        "Description": "Validate before create; When a new Employee is created, notify Attendance Agent to create an initial attendance record. Send 'EmployeeId', 'Employee Code', 'Employee Name'."
+    },
+    {
+        "Id": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
+        "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
+        "Name": "EmployeeProfile",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "689b2769ac2f3",
+        "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
+        "Name": "Gender",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "689b278188acd",
+        "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
+        "Name": "EmployeeStatus",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
     }
-}
-{
-    "role": "system",
-    "application": {
-        "Types": {},
-        "RootNodes": null,
-        "Attribute": null,
-        "Attributes": null,
-        "SelectableTypes": null
+]Decoded types count: 4
+Children: [
+    {
+        "Id": "38208B39-7FEC-4381-9662-A0F461060C17",
+        "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
+        "Name": "Employee",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000025",
+                "Value": "True"
+            }
+        ],
+        "Description": "Validate before create; When a new Employee is created, notify Attendance Agent to create an initial attendance record. Send 'EmployeeId', 'Employee Code', 'Employee Name'."
+    },
+    {
+        "Id": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
+        "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
+        "Name": "EmployeeProfile",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "689b2769ac2f3",
+        "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
+        "Name": "Gender",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "689b278188acd",
+        "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
+        "Name": "EmployeeStatus",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
     }
-}
-{
-    "Id": "38208B39-7FEC-4381-9662-A0F461060C17",
-    "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
-    "Name": "Employee",
-    "PayanarssTypeId": "100000000000000000000000000000001",
-    "Attributes": [],
-    "Description": "Validate before create"
-}
-{
-    "role": "system",
-    "application": {
-        "Types": {},
-        "RootNodes": null,
-        "Attribute": null,
-        "Attributes": null,
-        "SelectableTypes": null
-    }
-}
+]
