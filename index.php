@@ -111,6 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['generate_from_prompt'
         <h1 class="text-xl font-semibold">🧠 Payanarss Type Designer</h1>
     </header>
 
+    <!-- Sidenav -->
     <div class="flex h-[calc(100%-64px)]"> <!-- Adjust height minus header -->
         <!-- 📁 Left Nav (Tree View) -->
         <aside class="w-80 bg-white border-r border-gray-300 overflow-y-auto p-4">

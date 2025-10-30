@@ -726,14 +726,6 @@
         "Description": null
     },
     {
-        "Id": "689c31fef2fa9",
-        "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
-        "Name": "Tables",
-        "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
-        "Description": null
-    },
-    {
         "Id": "38208B39-7FEC-4381-9662-A0F461060C17",
         "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
         "Name": "Employee",
