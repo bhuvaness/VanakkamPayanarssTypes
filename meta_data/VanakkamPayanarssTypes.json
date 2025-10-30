@@ -218,7 +218,7 @@
         "ParentId": "68637a3f60937",
         "Name": "PayanarssApplications",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -226,7 +226,7 @@
         "ParentId": "68637a3f60937",
         "Name": "Customers",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -234,7 +234,7 @@
         "ParentId": "68637a3f60937",
         "Name": "Addresses",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -242,7 +242,7 @@
         "ParentId": "68637a3f60937",
         "Name": "CustomerTypes",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -250,7 +250,7 @@
         "ParentId": "68637b20a004f",
         "Name": "Id",
         "PayanarssTypeId": "100000000000000000000000000000013",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -258,7 +258,7 @@
         "ParentId": "68637b20a004f",
         "Name": "Name",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -266,7 +266,7 @@
         "ParentId": "68637b20a004f",
         "Name": "Email",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -274,7 +274,7 @@
         "ParentId": "68637b20a004f",
         "Name": "PhoneNumber",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -282,7 +282,7 @@
         "ParentId": "68637b20a004f",
         "Name": "ContactPersons",
         "PayanarssTypeId": "68639a78dac58",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -290,7 +290,7 @@
         "ParentId": "68637b571d1c2",
         "Name": "Id",
         "PayanarssTypeId": "100000000000000000000000000000013",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -298,7 +298,7 @@
         "ParentId": "68637b571d1c2",
         "Name": "Name",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -306,7 +306,7 @@
         "ParentId": "68637b571d1c2",
         "Name": "Description",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -314,7 +314,7 @@
         "ParentId": "68637b20a004f",
         "Name": "CustomerTypeName",
         "PayanarssTypeId": "68637d657ecb1",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -322,7 +322,7 @@
         "ParentId": "68637a3f60937",
         "Name": "Persons",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -330,7 +330,7 @@
         "ParentId": "68639a78dac58",
         "Name": "Id",
         "PayanarssTypeId": "100000000000000000000000000000013",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -338,7 +338,7 @@
         "ParentId": "68639a78dac58",
         "Name": "First Name",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -346,7 +346,7 @@
         "ParentId": "68639a78dac58",
         "Name": "Last Name",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -354,7 +354,7 @@
         "ParentId": "68639a78dac58",
         "Name": "Middle Name",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -362,7 +362,7 @@
         "ParentId": "68637a3f60937",
         "Name": "ContactDetails",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -370,7 +370,7 @@
         "ParentId": "68639a78dac58",
         "Name": "PersonContactsDetails",
         "PayanarssTypeId": "68639b1660b33",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -378,7 +378,7 @@
         "ParentId": "68639b1660b33",
         "Name": "Id",
         "PayanarssTypeId": "100000000000000000000000000000013",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -386,7 +386,7 @@
         "ParentId": "68639b1660b33",
         "Name": "Value",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -394,7 +394,7 @@
         "ParentId": "68637a3f60937",
         "Name": "ContactTypes",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -402,7 +402,7 @@
         "ParentId": "68639bd86ee2a",
         "Name": "Id",
         "PayanarssTypeId": "100000000000000000000000000000013",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -410,7 +410,7 @@
         "ParentId": "68639bd86ee2a",
         "Name": "Name",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -418,7 +418,7 @@
         "ParentId": "68639bd86ee2a",
         "Name": "Description",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -426,7 +426,7 @@
         "ParentId": "68639b1660b33",
         "Name": "ContactType",
         "PayanarssTypeId": "68639c0179738",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -434,7 +434,7 @@
         "ParentId": "6878a0d084ef4",
         "Name": "AGH",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -442,7 +442,7 @@
         "ParentId": "6878a0d084ef4",
         "Name": "IT Asset Management",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -450,7 +450,7 @@
         "ParentId": "6878a0d084ef4",
         "Name": "HR & Payroll",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -458,7 +458,7 @@
         "ParentId": "6878a0d084ef4",
         "Name": "Tenant Management System",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -466,7 +466,7 @@
         "ParentId": "6878a0d084ef4",
         "Name": "Facilities Management System",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -474,7 +474,7 @@
         "ParentId": "6878a138e904a",
         "Name": "Assets",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -482,7 +482,7 @@
         "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
         "Name": "AssetId",
         "PayanarssTypeId": "100000000000000000000000000000013",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -490,7 +490,7 @@
         "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
         "Name": "AssetName",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -498,7 +498,7 @@
         "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
         "Name": "AssetType",
         "PayanarssTypeId": "68821a6228051",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -506,7 +506,7 @@
         "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
         "Name": "AssetStatus",
         "PayanarssTypeId": "7F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -514,7 +514,7 @@
         "ParentId": "6878a138e904a",
         "Name": "AssetType",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -522,7 +522,7 @@
         "ParentId": "6F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
         "Name": "Id",
         "PayanarssTypeId": "100000000000000000000000000000013",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -530,7 +530,7 @@
         "ParentId": "6F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
         "Name": "Name",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -538,7 +538,7 @@
         "ParentId": "6878a138e904a",
         "Name": "AssetStatus",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -546,7 +546,7 @@
         "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
         "Name": "StatusName",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -554,7 +554,7 @@
         "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
         "Name": "Description",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -562,7 +562,7 @@
         "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
         "Name": "Id",
         "PayanarssTypeId": "100000000000000000000000000000013",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -570,7 +570,7 @@
         "ParentId": "6899a29ee74d1",
         "Name": "MAA.ERP",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -578,7 +578,7 @@
         "ParentId": "6899a29ee74d1",
         "Name": "Accounting Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -586,7 +586,7 @@
         "ParentId": "6899a29ee74d1",
         "Name": "HR Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -594,7 +594,7 @@
         "ParentId": "6899a29ee74d1",
         "Name": "Payroll Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -602,7 +602,7 @@
         "ParentId": "6899a29ee74d1",
         "Name": "Procurement Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -610,7 +610,7 @@
         "ParentId": "6899a29ee74d1",
         "Name": "Property Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -618,7 +618,7 @@
         "ParentId": "6899a29ee74d1",
         "Name": "Property Management Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -626,7 +626,7 @@
         "ParentId": "6899a3afae549",
         "Name": "Employee Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -634,7 +634,7 @@
         "ParentId": "6899a3afae549",
         "Name": "Org & Department Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -642,7 +642,7 @@
         "ParentId": "6899a3afae549",
         "Name": "Designation Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -650,7 +650,7 @@
         "ParentId": "6899a3afae549",
         "Name": "Attendance Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -658,7 +658,7 @@
         "ParentId": "6899a3afae549",
         "Name": "Leave Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -666,7 +666,7 @@
         "ParentId": "6899a3afae549",
         "Name": "Compensation & Benefits Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -674,7 +674,7 @@
         "ParentId": "6899a3afae549",
         "Name": "Payroll Period Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -682,7 +682,7 @@
         "ParentId": "6899a3afae549",
         "Name": "Training Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -690,7 +690,7 @@
         "ParentId": "6899a3afae549",
         "Name": "Performance Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -698,7 +698,7 @@
         "ParentId": "6899a3afae549",
         "Name": "Disciplinary Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -706,7 +706,7 @@
         "ParentId": "6899a3afae549",
         "Name": "Recruitment & Onboarding Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -714,7 +714,7 @@
         "ParentId": "6899a3afae549",
         "Name": "Offboarding Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -722,7 +722,7 @@
         "ParentId": "6899a3afae549",
         "Name": "Employment Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -741,17 +741,17 @@
     {
         "Id": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
         "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
-        "Name": "EmployeeProfile",
+        "Name": "Employee Profile",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
-        "Description": null
+        "Attributes": [],
+        "Description": ""
     },
     {
         "Id": "DF1CE630-3BE9-46E3-862B-C61E877A6713",
         "ParentId": "6899a3c02a8cd",
         "Name": "PayrollCalendar",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -759,7 +759,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayrollPeriod",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -767,7 +767,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayGroup",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -775,7 +775,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayCycle",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -783,7 +783,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayRun",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -791,7 +791,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayRunStatus",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -799,7 +799,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayElement",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -807,7 +807,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayElementType",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -815,7 +815,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayElementAssignment",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -823,7 +823,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "EarningType",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -831,7 +831,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "DeductionType",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -839,7 +839,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "AllowanceType",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -847,7 +847,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "OvertimeRate",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -855,7 +855,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "CommissionPlan",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -863,7 +863,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "BonusPlan",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -871,7 +871,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "BenefitPlan",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -879,7 +879,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "BenefitType",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -887,7 +887,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "EmployeeBenefit",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -895,7 +895,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "Loan",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -903,7 +903,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "LoanRepayment",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -911,7 +911,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "Advance",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -919,7 +919,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "ReimbursementType",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -927,7 +927,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "ReimbursementClaim",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -935,7 +935,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "Timesheet",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -943,7 +943,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "TimeEntry",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -951,7 +951,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "LeaveEncashment",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -959,7 +959,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "EndOfServiceRule",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -967,7 +967,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "EndOfServiceAccrual",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -975,7 +975,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "EndOfServicePayout",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -983,7 +983,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "GratuityRule",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -991,7 +991,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "GratuityAccrual",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -999,7 +999,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "GratuityPayout",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1007,7 +1007,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "TaxRule",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1015,7 +1015,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "TaxBracket",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1023,7 +1023,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "SocialSecurityScheme",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1031,7 +1031,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "GarnishmentType",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1039,7 +1039,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "GarnishmentOrder",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1047,7 +1047,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "CourtOrder",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1055,7 +1055,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayrollAdjustment",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1063,7 +1063,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "RetroPay",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1071,7 +1071,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "Arrears",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1079,7 +1079,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayrollJournal",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1087,7 +1087,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "GLPosting",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1095,7 +1095,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "CostCenter",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1103,7 +1103,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "DimensionMapping",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1111,7 +1111,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "Payslip",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1119,7 +1119,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayslipLine",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1127,7 +1127,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PaymentMethod",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1135,7 +1135,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "BankAccount",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1143,7 +1143,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PaymentBatch",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1151,7 +1151,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PaymentFile",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1159,7 +1159,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "WPSFile",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1167,7 +1167,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "WPSBatch",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1175,7 +1175,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "WPSDetail",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1183,7 +1183,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "SIFFile",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1191,7 +1191,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "Currency",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1199,7 +1199,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "ExchangeRate",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1207,7 +1207,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayrollReport",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1215,7 +1215,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayrollAuditLog",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1223,7 +1223,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayrollIntegrationLog",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1231,7 +1231,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayrollWorkflowDefinition",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1239,7 +1239,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayrollRuleDefinition",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1247,7 +1247,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayrollAgentLog",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1255,7 +1255,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "ChartOfAccounts",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1263,7 +1263,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "AccountType",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1271,7 +1271,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "AccountGroup",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1279,7 +1279,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "GeneralLedger",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1287,7 +1287,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "JournalEntry",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1295,7 +1295,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "JournalLine",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1303,7 +1303,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "TrialBalance",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1311,7 +1311,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "BalanceSheet",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1319,7 +1319,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "IncomeStatement",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1327,7 +1327,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "CashFlowStatement",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1335,7 +1335,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "AccountsReceivable",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1343,7 +1343,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "CustomerInvoice",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1351,7 +1351,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "CustomerPayment",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1359,7 +1359,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "CreditNote",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1367,7 +1367,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "AccountsPayable",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1375,7 +1375,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "VendorBill",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1383,7 +1383,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "VendorPayment",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1391,7 +1391,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "DebitNote",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1399,7 +1399,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "FixedAsset",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1407,7 +1407,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "AssetDepreciation",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1415,7 +1415,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "BankAccount",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1423,7 +1423,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "BankStatement",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1431,7 +1431,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "BankReconciliation",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1439,7 +1439,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "TaxRate",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1447,7 +1447,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "TaxCode",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1455,7 +1455,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "TaxTransaction",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1463,7 +1463,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "Currency",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1471,7 +1471,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "ExchangeRate",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1479,7 +1479,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "FinancialPeriod",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1487,7 +1487,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "Budget",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1495,7 +1495,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "BudgetLine",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1503,7 +1503,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "CostCenter",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1511,7 +1511,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "ProjectAccounting",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1519,7 +1519,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "IntercompanyTransaction",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1527,7 +1527,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "AccountingRule",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1535,7 +1535,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "AccountingWorkflow",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1543,7 +1543,7 @@
         "ParentId": "6899a396ed75c",
         "Name": "AccountingAgentLog",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1551,7 +1551,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "PurchaseRequest",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1559,7 +1559,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "PurchaseRequestLine",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1567,7 +1567,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "PurchaseOrder",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1575,7 +1575,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "PurchaseOrderLine",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1583,7 +1583,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "Supplier",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1591,7 +1591,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "SupplierContact",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1599,7 +1599,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "SupplierCategory",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1607,7 +1607,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "SupplierQualification",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1615,7 +1615,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "RequestForQuotation",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1623,7 +1623,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "RFQLine",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1631,7 +1631,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "Quotation",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1639,7 +1639,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "QuotationLine",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1647,7 +1647,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "QuotationComparison",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1655,7 +1655,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "Contract",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1663,7 +1663,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "ContractLine",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1671,7 +1671,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "GoodsReceiptNote",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1679,7 +1679,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "GRNLine",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1687,7 +1687,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "PurchaseInvoice",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1695,7 +1695,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "PurchaseInvoiceLine",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1703,7 +1703,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "PurchaseReturn",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1711,7 +1711,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "PurchaseReturnLine",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1719,7 +1719,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "PurchaseRequisitionApproval",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1727,7 +1727,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "PurchaseOrderApproval",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1735,7 +1735,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "SupplierEvaluation",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1743,7 +1743,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "SupplierScorecard",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1751,7 +1751,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "ProcurementPlan",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1759,7 +1759,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "ProcurementBudget",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1767,7 +1767,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "ProcurementWorkflowDefinition",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1775,7 +1775,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "ProcurementRuleDefinition",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1783,7 +1783,7 @@
         "ParentId": "6899a3ed050cf",
         "Name": "ProcurementAgentLog",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1791,7 +1791,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "Property",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1799,7 +1799,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "PropertyType",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1807,7 +1807,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "PropertyUnit",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1815,7 +1815,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "PropertyUnitType",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1823,7 +1823,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "PropertyOwner",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1831,7 +1831,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "OwnerContact",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1839,7 +1839,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "Tenant",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1847,7 +1847,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "TenantContact",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1855,7 +1855,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "LeaseAgreement",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1863,7 +1863,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "LeaseAmendment",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1871,7 +1871,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "LeaseTermination",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1879,7 +1879,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "RentSchedule",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1887,7 +1887,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "RentInvoice",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1895,7 +1895,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "RentPayment",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1903,7 +1903,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "SecurityDeposit",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1911,7 +1911,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "DepositRefund",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1919,7 +1919,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "PropertyMaintenanceRequest",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1927,7 +1927,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "MaintenanceWorkOrder",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1935,7 +1935,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "PropertyInspection",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1943,7 +1943,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "InspectionReport",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1951,7 +1951,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "PropertyDocument",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1959,7 +1959,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "Amenity",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1967,7 +1967,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "AmenityType",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1975,7 +1975,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "UtilityMeter",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1983,7 +1983,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "UtilityReading",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1991,7 +1991,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "UtilityBill",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -1999,7 +1999,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "PropertyValuation",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2007,7 +2007,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "PropertySale",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2015,7 +2015,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "PropertyPurchase",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2023,7 +2023,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "PropertyWorkflowDefinition",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2031,7 +2031,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "PropertyRuleDefinition",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2039,7 +2039,7 @@
         "ParentId": "6899a42a1a064",
         "Name": "PropertyAgentLog",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2047,7 +2047,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "Facility",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2055,7 +2055,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "FacilityType",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2063,7 +2063,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "Building",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2071,7 +2071,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "BuildingUnit",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2079,7 +2079,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "CommonArea",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2087,7 +2087,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "MaintenanceRequest",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2095,7 +2095,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "WorkOrder",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2103,7 +2103,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "WorkOrderTask",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2111,7 +2111,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "MaintenanceSchedule",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2119,7 +2119,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "MaintenancePlan",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2127,7 +2127,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "MaintenanceAsset",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2135,7 +2135,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "ServiceProvider",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2143,7 +2143,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "ServiceContract",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2151,7 +2151,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "ServiceContractLine",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2159,7 +2159,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "InventoryItem",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2167,7 +2167,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "InventoryLocation",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2175,7 +2175,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "InventoryTransaction",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2183,7 +2183,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "PurchaseRequest",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2191,7 +2191,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "PurchaseOrder",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2199,7 +2199,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "GoodsReceiptNote",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2207,7 +2207,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "ServiceRequest",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2215,7 +2215,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "IncidentReport",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2223,7 +2223,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "InspectionSchedule",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2231,7 +2231,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "InspectionReport",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2239,7 +2239,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "VisitorLog",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2247,7 +2247,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "KeyManagement",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2255,7 +2255,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "ParkingAllocation",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2263,7 +2263,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "AmenityBooking",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2271,7 +2271,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "PropertyManagementWorkflowDefinition",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2279,7 +2279,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "PropertyManagementRuleDefinition",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2287,7 +2287,7 @@
         "ParentId": "6899a441bd68d",
         "Name": "PropertyManagementAgentLog",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2366,7 +2366,7 @@
         "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
         "Name": "MiddleName",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2395,7 +2395,7 @@
         "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
         "Name": "PreferredName",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2433,7 +2433,7 @@
         "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
         "Name": "Nationality",
         "PayanarssTypeId": "100000000000000000000000000000002",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2488,7 +2488,7 @@
         "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
         "Name": "Gender",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2496,7 +2496,7 @@
         "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
         "Name": "EmployeeStatus",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2638,7 +2638,7 @@
         "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
         "Name": "Id",
         "PayanarssTypeId": "100000000000000000000000000000013",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2646,7 +2646,7 @@
         "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
         "Name": "Code",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2654,7 +2654,7 @@
         "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
         "Name": "EmployeeId",
         "PayanarssTypeId": "100000000000000000000000000000002",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2662,7 +2662,7 @@
         "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
         "Name": "EmailAddress",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2670,7 +2670,7 @@
         "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
         "Name": "PhoneNumber",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2678,7 +2678,7 @@
         "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
         "Name": "AlternatePhone",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2686,7 +2686,7 @@
         "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
         "Name": "PrimaryAddress",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2694,7 +2694,7 @@
         "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
         "Name": "EmergencyContactName",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2702,7 +2702,7 @@
         "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
         "Name": "EmergencyContactPhone",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2710,7 +2710,7 @@
         "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
         "Name": "MaritalStatus",
         "PayanarssTypeId": "100000000000000000000000000000002",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2718,7 +2718,7 @@
         "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
         "Name": "LanguagesSpoken",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2726,7 +2726,7 @@
         "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
         "Name": "PhotoId",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2734,7 +2734,7 @@
         "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
         "Name": "LinkedInProfile",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2742,7 +2742,7 @@
         "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
         "Name": "PersonalEmail",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2750,7 +2750,7 @@
         "ParentId": "76C5635F-089A-4BB7-86EC-D7779DB8318A",
         "Name": "Notes",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2758,7 +2758,7 @@
         "ParentId": "68edaecf94e5e",
         "Name": "Id",
         "PayanarssTypeId": "100000000000000000000000000000013",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2766,7 +2766,7 @@
         "ParentId": "68edaecf94e5e",
         "Name": "Name",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2774,7 +2774,7 @@
         "ParentId": "68ee0e52bd802",
         "Name": "Job Vacancy Declarations",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2782,7 +2782,7 @@
         "ParentId": "68ee0e52bd802",
         "Name": "Job Vacancy Justifications",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2790,7 +2790,7 @@
         "ParentId": "68ee0e52bd802",
         "Name": "Job Requirements",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2798,7 +2798,7 @@
         "ParentId": "68ee0e52bd802",
         "Name": "Job Salary & Budget",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2806,7 +2806,7 @@
         "ParentId": "68ee0e52bd802",
         "Name": "Hiring Plan & Timeline",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2814,7 +2814,7 @@
         "ParentId": "6878a14cee096",
         "Name": "Recruitments",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2822,7 +2822,7 @@
         "ParentId": "6878a14cee096",
         "Name": "Employee Joinings",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2830,7 +2830,7 @@
         "ParentId": "6878a14cee096",
         "Name": "Time & Attendance",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2838,7 +2838,7 @@
         "ParentId": "6878a14cee096",
         "Name": "Payroll Process",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2846,7 +2846,7 @@
         "ParentId": "6878a14cee096",
         "Name": "Performance Appraisal",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2854,7 +2854,7 @@
         "ParentId": "6878a14cee096",
         "Name": "Shukran Module",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2862,7 +2862,7 @@
         "ParentId": "6878a14cee096",
         "Name": "Employee Self Service",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2870,7 +2870,7 @@
         "ParentId": "6878a17dac423",
         "Name": "Properties Detail Management",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2878,7 +2878,7 @@
         "ParentId": "6878a17dac423",
         "Name": "Tenants Detail Management",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2886,7 +2886,7 @@
         "ParentId": "6878a17dac423",
         "Name": "Lease & Contract Management",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2894,7 +2894,7 @@
         "ParentId": "6878a17dac423",
         "Name": "Rental Billing & Invoicing",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2902,7 +2902,7 @@
         "ParentId": "6878a17dac423",
         "Name": "Payments & Collections",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2910,7 +2910,7 @@
         "ParentId": "6878a17dac423",
         "Name": "Vacancy & Occupancy Management",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2918,7 +2918,7 @@
         "ParentId": "6878a17dac423",
         "Name": "Document Management",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2926,7 +2926,7 @@
         "ParentId": "6878a0d084ef4",
         "Name": "Accounting & Finance",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2934,7 +2934,7 @@
         "ParentId": "68ee159d87a57",
         "Name": "General Ledger (GL)",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2942,7 +2942,7 @@
         "ParentId": "68ee159d87a57",
         "Name": "Accounts Payable (AP)",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2950,7 +2950,7 @@
         "ParentId": "68ee159d87a57",
         "Name": "Accounts Receivable (AR)",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2958,7 +2958,7 @@
         "ParentId": "68ee159d87a57",
         "Name": "Cash & Bank Management",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2966,7 +2966,7 @@
         "ParentId": "68ee159d87a57",
         "Name": "Taxation & Compliance",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2974,7 +2974,7 @@
         "ParentId": "68ee159d87a57",
         "Name": "Financial Reporting & Analytics",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2982,7 +2982,7 @@
         "ParentId": "68ee159d87a57",
         "Name": "Budgeting & Forecasting",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2990,7 +2990,7 @@
         "ParentId": "68ee159d87a57",
         "Name": "Controls & Audit Trail",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -2998,7 +2998,7 @@
         "ParentId": "6878a0d084ef4",
         "Name": "Procurements",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -3006,7 +3006,7 @@
         "ParentId": "6878a0d084ef4",
         "Name": "Project Management",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -3014,7 +3014,7 @@
         "ParentId": "6878a0d084ef4",
         "Name": "Time Less",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -3022,7 +3022,7 @@
         "ParentId": "6878a0d084ef4",
         "Name": "Common Utilities Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -3030,7 +3030,7 @@
         "ParentId": "68ee185635c79",
         "Name": "Person Details",
         "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -3038,7 +3038,7 @@
         "ParentId": "65471127-8512-46C1-9125-FC4B81E0038B",
         "Name": "Attendance Log Table",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -3046,7 +3046,7 @@
         "ParentId": "65471127-8512-46C1-9125-FC4B81E0038B",
         "Name": "Attendance Summary Table",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -3054,7 +3054,7 @@
         "ParentId": "2987B3A0-0AF2-4045-9D69-70D8F409B58E",
         "Name": "PayRunId",
         "PayanarssTypeId": "100000000000000000000000000000013",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -3062,7 +3062,7 @@
         "ParentId": "2987B3A0-0AF2-4045-9D69-70D8F409B58E",
         "Name": "PeriodStart",
         "PayanarssTypeId": "100000000000000000000000000000008",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -3070,7 +3070,7 @@
         "ParentId": "2987B3A0-0AF2-4045-9D69-70D8F409B58E",
         "Name": "PeriodEnd",
         "PayanarssTypeId": "100000000000000000000000000000008",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -3078,7 +3078,7 @@
         "ParentId": "2987B3A0-0AF2-4045-9D69-70D8F409B58E",
         "Name": "PayDate",
         "PayanarssTypeId": "100000000000000000000000000000008",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -3086,7 +3086,7 @@
         "ParentId": "2987B3A0-0AF2-4045-9D69-70D8F409B58E",
         "Name": "RunStatusId",
         "PayanarssTypeId": "10000000000000000000000000000000",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -3094,7 +3094,7 @@
         "ParentId": "2987B3A0-0AF2-4045-9D69-70D8F409B58E",
         "Name": "TotalEarnings",
         "PayanarssTypeId": "100000000000000000000000000000007",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -3254,7 +3254,7 @@
         "ParentId": "2987B3A0-0AF2-4045-9D69-70D8F409B58E",
         "Name": "TotalDeductions",
         "PayanarssTypeId": "100000000000000000000000000000007",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -3262,7 +3262,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayRunDetail",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -3270,7 +3270,7 @@
         "ParentId": "2987B3A0-0AF2-4045-9D69-70D8F409B58E",
         "Name": "PayRunDetails",
         "PayanarssTypeId": "68fb1b719e4ce",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -3278,7 +3278,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayCalculationType",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -3367,7 +3367,7 @@
         "ParentId": "6899a3c02a8cd",
         "Name": "PayFrequency",
         "PayanarssTypeId": "100000000000000000000000000000001",
-        "Attributes": null,
+        "Attributes": [],
         "Description": null
     },
     {
@@ -3375,7 +3375,7 @@
         "ParentId": "68fb1d1453109",
         "Name": "PayFrequencyId",
         "PayanarssTypeId": "100000000000000000000000000000013",
-        "Attributes": null,
+        "Attributes": [],
         "Description": "Required; GUID; Auto-generated identifier."
     },
     {
@@ -3383,7 +3383,7 @@
         "ParentId": "68fb1d1453109",
         "Name": "Description",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": null,
+        "Attributes": [],
         "Description": "Required; Text; Description of frequency; Max length 100."
     },
     {
@@ -3391,7 +3391,7 @@
         "ParentId": "68fb1b719e4ce",
         "Name": "PayRunDetailId",
         "PayanarssTypeId": "100000000000000000000000000000013",
-        "Attributes": null,
+        "Attributes": [],
         "Description": "Required; GUID; Auto-generated PayRunDetail identifier."
     },
     {
@@ -3399,7 +3399,7 @@
         "ParentId": "68fb1b719e4ce",
         "Name": "EmployeeId",
         "PayanarssTypeId": "5649CEEF-7D8E-49EB-AAD3-92464F8D323C",
-        "Attributes": null,
+        "Attributes": [],
         "Description": "Required; GUID; References EmployeeId in Employee table."
     },
     {
@@ -3407,7 +3407,7 @@
         "ParentId": "68fb1b719e4ce",
         "Name": "EmployeeName",
         "PayanarssTypeId": "51951A9F-64A5-46A1-A0D9-9B36CCB172D9",
-        "Attributes": null,
+        "Attributes": [],
         "Description": "Optional; Text; Employee name; Derived."
     },
     {
@@ -3415,7 +3415,7 @@
         "ParentId": "68fb1b719e4ce",
         "Name": "PayElementId",
         "PayanarssTypeId": "68fb18d735cec",
-        "Attributes": null,
+        "Attributes": [],
         "Description": "Required; GUID; References PayElement."
     },
     {
@@ -3423,7 +3423,7 @@
         "ParentId": "68fb1b719e4ce",
         "Name": "PayElementName",
         "PayanarssTypeId": "68fb18ea86ff8",
-        "Attributes": null,
+        "Attributes": [],
         "Description": "Optional; Text; Pay element name; Derived."
     },
     {
