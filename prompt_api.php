@@ -24,16 +24,17 @@ if (isset($parentId)) {
 
 if ($payanarssType !== null) {
     $payanarssType->Attributes = []; // safe to assign
+    //error_log("\n" . json_encode($payanarssType, JSON_PRETTY_PRINT), 3, __DIR__ . "/payanarss_debug.log");
 } else {
     error_log("\n❌ PayanarssType is NULL. ParentId may be invalid or not loaded properly.", 3, __DIR__ . "/payanarss_debug.log");
 }
 
 $payanarssType->Attributes[] = ["Id" => "100000000000000000000000000000023", "Value" => "True"];
 
-$app = new PayanarssApplication();
-$app->addType($payanarssType);
+$application = new PayanarssApplication();
+$application->addType($payanarssType);
 
-$request = new PromptRequestMessage("system", $app);
+$request = new PromptRequestMessage("system", $application);
 
 $jsonBody = json_encode($request, JSON_PRETTY_PRINT);
 error_log("\n" . $jsonBody, 3, __DIR__ . "/payanarss_debug.log");
