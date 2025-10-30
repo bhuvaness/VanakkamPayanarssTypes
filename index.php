@@ -2,7 +2,7 @@
 
 use Dom\NamedNodeMap;
 
-require_once 'PayanarssTypeModel.php';
+require_once __DIR__ . '/PayanarssTypeModel.php';
 
 session_start();
 

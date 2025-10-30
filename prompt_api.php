@@ -1,5 +1,5 @@
 <?php
-require_once 'PayanarssTypeModel.php';  // include your class files
+require_once __DIR__ . '/PayanarssTypeModel.php';  // include your class files
 
 header('Content-Type: application/json');
 

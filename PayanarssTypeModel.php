@@ -1,7 +1,7 @@
 <?php
-require_once 'PayanarssTypeJsonDAO.php';
-require_once 'PayanarssCrud.php';
-require_once 'OpenAIHelper.php'; // your helper file
+require_once __DIR__ . '/PayanarssTypeJsonDAO.php';
+require_once __DIR__ . '/PayanarssCrud.php';
+require_once __DIR__ . '/OpenAIHelper.php'; // your helper file
 
 class PayanarssApplication
 {
