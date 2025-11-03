@@ -458,6 +458,7 @@ class PayanarssTypeBusinessLogics
         /*foreach ($types as $type) {
             createRecord($type->Id, $type, $entityId);
         }*/
+
         $fileName = (!isset($fileName)) ? "VanakkamPayanarssTypes.json" : $fileName;
         $dao = new PayanarssTypeJsonDAO($fileName, $this->convertToArray($types));
         $dao->save();

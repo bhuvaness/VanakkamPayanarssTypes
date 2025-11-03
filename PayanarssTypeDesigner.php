@@ -2,9 +2,14 @@
 
 use Dom\NamedNodeMap;
 
-require_once __DIR__ . '/PayanarssTypeModel.php';
+enum PayanarssTypeDescription: string
+{
+    case ValueType = "Value Type";
+    case LookupType = "Lookup Type";
+    case ChildTableType = "Child Table Type";
+}
 
-//session_start();
+require_once __DIR__ . '/PayanarssTypeModel.php';
 
 $app = null;
 $parentId = "";
@@ -46,6 +51,20 @@ if (isset($_POST['save_type'])) {
             $type->PayanarssTypeId = $_POST['payanarss_type_id'] ?? $type->PayanarssTypeId;
             $type->Type = null;
             $type->Description = $_POST['type_description'] ?? ($type->Description ?? '');
+
+            $description = getPayanarssTypeDescription($type->Id, $app); // to refresh type info
+            if($description === PayanarssTypeDescription::ValueType){
+                $type->Attributes = ["Id" => "100000000000000000000000000000000", "Value" => "True"];
+            }
+            else if($description === PayanarssTypeDescription::LookupType){
+                $type->Attributes = [
+                    ["Id" => "100000000000000000000000000000003", "Value" => "True"]
+                ];
+            }else if($description === PayanarssTypeDescription::ChildTableType){
+                $type->Attributes = [
+                    ["Id" => "100000000000000000000000000000002", "Value" => "True"]
+                ];
+            }
             break;
         }
     }
@@ -81,6 +100,26 @@ if (isset($_POST['save_attributes'])) {
 
 if (isset($_POST['attribute_target_id'])) {
     $_SESSION['attribute_target_id'] = $_POST['attribute_target_id'];
+}
+
+function getPayanarssTypeDescription($payanarssTypeId, $app): PayanarssTypeDescription
+{
+    $type = $app->get_type($payanarssTypeId);
+    if ($type) {
+        if ($type->Id === $type->ParentId) {
+            return PayanarssTypeDescription::ValueType; // Root type cannot be a value type
+        } else if($type->Id !== $type->ParentId)
+        {
+            $type = $app->get_type($type->PayanarssTypeId);
+            if($type->PayanarssTypeId === "100000000000000000000000000000001") return PayanarssTypeDescription::ChildTableType;
+        }
+        else
+        {
+            return PayanarssTypeDescription::LookupType;
+        }
+    }
+
+    return PayanarssTypeDescription::ValueType;
 }
 
 $shouldOpenAttributeModal = isset($_POST['load_attributes']);
@@ -304,7 +343,7 @@ $attribute = $app->Attribute;
             tbody.innerHTML = "";
 
             payanarssTypes.forEach(type => {
-                let displayName = fetch('getTypeDisplayName.php', {
+                let displayName = fetch('GetTypeDisplayName.php', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -386,7 +425,7 @@ $attribute = $app->Attribute;
 
         // Function to show the modal
         function exportPayanarssJSON() {
-            const jsonString = JSON.stringify(<?= json_encode($parentType->Children->all(), JSON_PRETTY_PRINT) ?>, null, 2);
+            const jsonString = JSON.stringify(<?= isset($parentType->Children) ? json_encode($parentType->Children->all(), JSON_PRETTY_PRINT) : '[]' ?>, null, 2);
             document.getElementById("jsonOutput").textContent = jsonString;
             document.getElementById("jsonModal").classList.remove("hidden");
             document.getElementById("jsonModal").classList.add("flex");

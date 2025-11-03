@@ -2330,12 +2330,12 @@
                 "Value": "True"
             },
             {
-                "Id": "100000000000000000000000000000013",
-                "Value": "True"
-            },
-            {
                 "Id": "100000000000000000000000000000017",
                 "Value": "10"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
             }
         ],
         "Description": "Required; Text; Unique employee code; Max length 10."
@@ -2401,11 +2401,15 @@
     {
         "Id": "F22FAC60-C28B-4B37-848B-AC87C466F456",
         "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
-        "Name": "Gender",
-        "PayanarssTypeId": "100000000000000000000000000000002",
+        "Name": "GenderId",
+        "PayanarssTypeId": "689b27aa2ae2d",
         "Attributes": [
             {
                 "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000003",
                 "Value": "True"
             }
         ],
@@ -2444,6 +2448,10 @@
         "Attributes": [
             {
                 "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000003",
                 "Value": "True"
             }
         ],
@@ -2494,10 +2502,10 @@
     {
         "Id": "689b278188acd",
         "ParentId": "22FF5008-3E12-48AB-9202-27EBD5FA0A9E",
-        "Name": "EmployeeStatus",
+        "Name": "Employee Status",
         "PayanarssTypeId": "100000000000000000000000000000001",
         "Attributes": [],
-        "Description": null
+        "Description": ""
     },
     {
         "Id": "689b27aa2ae2d",
@@ -3263,7 +3271,7 @@
         "Name": "PayRunDetail",
         "PayanarssTypeId": "100000000000000000000000000000001",
         "Attributes": [],
-        "Description": null
+        "Description": ""
     },
     {
         "Id": "68fb1ba5128e3",
