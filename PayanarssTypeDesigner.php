@@ -53,14 +53,13 @@ if (isset($_POST['save_type'])) {
             $type->Description = $_POST['type_description'] ?? ($type->Description ?? '');
 
             $description = getPayanarssTypeDescription($type->Id, $app); // to refresh type info
-            if($description === PayanarssTypeDescription::ValueType){
+            if ($description === PayanarssTypeDescription::ValueType) {
                 $type->Attributes = ["Id" => "100000000000000000000000000000000", "Value" => "True"];
-            }
-            else if($description === PayanarssTypeDescription::LookupType){
+            } else if ($description === PayanarssTypeDescription::LookupType) {
                 $type->Attributes = [
                     ["Id" => "100000000000000000000000000000003", "Value" => "True"]
                 ];
-            }else if($description === PayanarssTypeDescription::ChildTableType){
+            } else if ($description === PayanarssTypeDescription::ChildTableType) {
                 $type->Attributes = [
                     ["Id" => "100000000000000000000000000000002", "Value" => "True"]
                 ];
@@ -108,13 +107,10 @@ function getPayanarssTypeDescription($payanarssTypeId, $app): PayanarssTypeDescr
     if ($type) {
         if ($type->Id === $type->ParentId) {
             return PayanarssTypeDescription::ValueType; // Root type cannot be a value type
-        } else if($type->Id !== $type->ParentId)
-        {
+        } else if ($type->Id !== $type->ParentId) {
             $type = $app->get_type($type->PayanarssTypeId);
-            if($type->PayanarssTypeId === "100000000000000000000000000000001") return PayanarssTypeDescription::ChildTableType;
-        }
-        else
-        {
+            if ($type->PayanarssTypeId === "100000000000000000000000000000001") return PayanarssTypeDescription::ChildTableType;
+        } else {
             return PayanarssTypeDescription::LookupType;
         }
     }
@@ -226,7 +222,7 @@ $attribute = $app->Attribute;
                                                         class="bg-purple-500 text-white px-2 py-1 text-xs rounded ml-1">Add Child Types</button>
                                                 <?php endif; ?>
                                                 <button type="submit" name="edit_type" value="<?= $type->Id ?>"
-                                                    class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Edit</button>
+                                                    class="bg-yellow-500 text-white px-2 py-1 text-xs rounded hover:bg-yellow-600">Edit</button>
                                                 <button type="submit" name="delete_table" value="<?= $type->Id ?>"
                                                     class="bg-red-500 text-white px-2 py-1 text-xs rounded"
                                                     onclick="return confirm('Are you sure you want to delete this table?')">Delete</button>
@@ -285,25 +281,14 @@ $attribute = $app->Attribute;
                 <div id="attributeList" class="space-y-2 text-sm">
                     <?php
                     $selectedType = $app->get_type($targetId);
-                    if (isset($attribute)) {
-                        // Assuming $attributeTypes is your list of all types and you filtered 'Attribute' children
-                        foreach ($attribute->Children as $attr) {
-                            $isSelected = false;
-
-                            if (isset($selectedType->Attributes)) {
-                                foreach ($selectedType->Attributes as $selAttr) {
-                                    if ($attr->Id == $selAttr) {
-                                        $isSelected = true;
-                                        break;
-                                    }
-                                }
-                            }
-
-                            //echo $isSelected;
+                    if (isset($selectedType->Attributes)) {
+                        $isSelected = true;
+                        foreach ($selectedType->Attributes as $attr) {
+                            $ptype = $app->get_type($attr['Id']);
                             $isChecked = $isSelected ? 'checked' : '';
-                            echo "<label class='flex items-center space-x-2'>";
-                            echo "<input type='checkbox' name='attributes[]' value='{$attr->Id}' class='accent-blue-500' $isChecked>";
-                            echo "<span>{$attr->Name}</span>";
+                            echo "<label class='flex items-center space-x-2 w-full justify-between border p-2 rounded hover:bg-gray-50'>";
+                            echo "  <div class='flex-1 text-gray-700 font-medium'>Name: " . htmlspecialchars($ptype->Name) . "</div>";
+                            echo "  <div class='flex-1 text-gray-600'>Value: " . htmlspecialchars($attr['Value'] ?? '') . "</div>";
                             echo "</label>";
                         }
                     }
