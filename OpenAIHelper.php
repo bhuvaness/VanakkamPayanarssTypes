@@ -163,7 +163,8 @@ Conversion logic:
 - “must be > X” → Add Attribute Id=100000000000000000000000000000026, Value=X
 - “cannot be future” or “must not be a future date” → Add Attribute Id=100000000000000000000000000000008, Value="True"
 - “age” or “birth date” → Add Attribute Id=100000000000000000000000000000028, Value="True"
-- "creation timestamp", "record creation", or "created on", or "modification date", or "modification timestamp" → Add Attribute Id=100000000000000000000000000000029, Value="DateTime.UtcNow"
+- "creation timestamp", "record creation", or "created on" → Add Attribute Id=100000000000000000000000000000029, Value="DateTime.UtcNow"
+- "modification date", or "modification timestamp" → Add Attribute Id=100000000000000000000000000000029, Value="DateTime.UtcNow"
 Guidelines:
 - Whenever you create or modify definitions, always use this structure.
 - Whenever you generate a value for any field named ‘Id’, always use a valid GUID (example: 5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E). Ensure all generated GUIDs are unique.

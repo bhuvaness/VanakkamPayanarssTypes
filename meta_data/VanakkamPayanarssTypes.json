@@ -2339,6 +2339,10 @@
             {
                 "Id": "100000000000000000000000000000024",
                 "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
             }
         ],
         "Description": "Required; GUID; Auto-generated unique Employee identifier."
@@ -2513,12 +2517,8 @@
         "PayanarssTypeId": "100000000000000000000000000000008",
         "Attributes": [
             {
-                "Id": "100000000000000000000000000000024",
-                "Value": "True"
-            },
-            {
-                "Id": "100000000000000000000000000000008",
-                "Value": "True"
+                "Id": "100000000000000000000000000000029",
+                "Value": "DateTime.UtcNow"
             }
         ],
         "Description": "Auto-updated; DateTime; Record modification timestamp."
