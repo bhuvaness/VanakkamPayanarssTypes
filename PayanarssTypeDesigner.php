@@ -287,7 +287,7 @@ $attribute = $app->Attribute;
                             $ptype = $app->get_type($attr['Id']);
                             $isChecked = $isSelected ? 'checked' : '';
                             echo "<label class='flex items-center space-x-2 w-full justify-between border p-2 rounded hover:bg-gray-50'>";
-                            echo "  <div class='flex-1 text-gray-700 font-medium'>Name: " . htmlspecialchars($ptype->Name) . "</div>";
+                            echo "  <div class='flex-1 text-gray-700 font-medium'>Name: " . htmlspecialchars(isset($ptype->Name) ? $ptype->Name : $attr['Id']) . "</div>";
                             echo "  <div class='flex-1 text-gray-600'>Value: " . htmlspecialchars($attr['Value'] ?? '') . "</div>";
                             echo "</label>";
                         }

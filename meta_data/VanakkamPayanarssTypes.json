@@ -214,6 +214,38 @@
         "Description": null
     },
     {
+        "Id": "100000000000000000000000000000026",
+        "ParentId": "100000000000000000000000000000026",
+        "Name": "GreaterThan",
+        "PayanarssTypeId": "100000000000000000000000000000026",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000027",
+        "ParentId": "100000000000000000000000000000027",
+        "Name": "LesserThan",
+        "PayanarssTypeId": "100000000000000000000000000000027",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000028",
+        "ParentId": "100000000000000000000000000000028",
+        "Name": "CalculateAge",
+        "PayanarssTypeId": "100000000000000000000000000000028",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000029",
+        "ParentId": "100000000000000000000000000000029",
+        "Name": "DefaultValue",
+        "PayanarssTypeId": "100000000000000000000000000000029",
+        "Attributes": [],
+        "Description": null
+    },
+    {
         "Id": "68637a3f60937",
         "ParentId": "68637a3f60937",
         "Name": "PayanarssApplications",
@@ -2307,10 +2339,6 @@
             {
                 "Id": "100000000000000000000000000000024",
                 "Value": "True"
-            },
-            {
-                "Id": "100000000000000000000000000000013",
-                "Value": "True"
             }
         ],
         "Description": "Required; GUID; Auto-generated unique Employee identifier."
@@ -2428,6 +2456,14 @@
             {
                 "Id": "100000000000000000000000000000008",
                 "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000028",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000026",
+                "Value": "18"
             }
         ],
         "Description": "Required; Date; Must be a valid birth date; Cannot be future. Age must be > 18"
@@ -2464,12 +2500,8 @@
         "PayanarssTypeId": "100000000000000000000000000000008",
         "Attributes": [
             {
-                "Id": "100000000000000000000000000000024",
-                "Value": "True"
-            },
-            {
-                "Id": "100000000000000000000000000000008",
-                "Value": "True"
+                "Id": "100000000000000000000000000000029",
+                "Value": "DateTime.UtcNow"
             }
         ],
         "Description": "Auto-generated; DateTime; Record creation timestamp."

@@ -81,8 +81,11 @@ Rules-to-ID mapping:
 - "Boolean" → "100000000000000000000000000000009"
 - "DateTime" → "100000000000000000000000000000008"
 - "Unique" → "100000000000000000000000000000013"
-- "Auto Generate" → "100000000000000000000000000000024"
+- "Auto Generate or Auto-updated" → "100000000000000000000000000000024"
 - "Validate Before Create" → "100000000000000000000000000000025"
+- "Default Value" → "100000000000000000000000000000029"
+- "GreaterThan" → "100000000000000000000000000000026"
+- "LessThan" → "100000000000000000000000000000027"
 
 Output format:
 [
@@ -95,7 +98,7 @@ Output format:
 ]
 
 Ex: 1
-Rules: "Required; GUID; Auto-generated unique Employee identifier."
+Rules: "Required; GUID; Auto-generated; Auto-updated unique Employee identifier."
 [
   {
     "Parent Id": "$parentId",
@@ -117,11 +120,55 @@ Rules: "Required; Text; Pay element name; Max length 100."
     ]
   }
 ]
+Ex: 3
+{
+  "role": "system",
+  "content": "You are a metadata interpreter for a dynamic ERP system. The following field definitions use attribute IDs that define rules and relationships."
+},
+{
+  "role": "user",
+  "content": "Field: GenderId
+Description: Required; Lookup; Must reference Gender master.
+Attributes:
+  - Id: "100000000000000000000000000000003" (Lookup Source)
+    Value: "689b2769ac2f3" (Refers to Gender master table)
+  - Id: "100000000000000000000000000000012" (Required)
+    Value: "True"
+Task: Explain how this field should behave in the data entry UI."
+}
 
+Example 4:
+Rule: "Age must be > 18"
+Output:
+{
+  "Attributes": [
+    {"Id": "100000000000000000000000000000028", "Value": "True"},
+    {"Id": "100000000000000000000000000000026", "Value": "18"}
+  ]
+}
+
+Example 5:
+Rule: "Cannot be future. Age must be > 18"
+Output:
+{
+  "Attributes": [
+    {"Id": "100000000000000000000000000000012", "Value": "True"},
+    {"Id": "100000000000000000000000000000008", "Value": "True"},
+    {"Id": "100000000000000000000000000000028", "Value": "True"},
+    {"Id": "100000000000000000000000000000026", "Value": "18"}
+  ]
+}
+
+Conversion logic:
+- “must be > X” → Add Attribute Id=100000000000000000000000000000026, Value=X
+- “cannot be future” or “must not be a future date” → Add Attribute Id=100000000000000000000000000000008, Value="True"
+- “age” or “birth date” → Add Attribute Id=100000000000000000000000000000028, Value="True"
+- "creation timestamp", "record creation", or "created on", or "modification date", or "modification timestamp" → Add Attribute Id=100000000000000000000000000000029, Value="DateTime.UtcNow"
 Guidelines:
 - Whenever you create or modify definitions, always use this structure.
 - Whenever you generate a value for any field named ‘Id’, always use a valid GUID (example: 5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E). Ensure all generated GUIDs are unique.
 - Whenever you generate PayanarssType metadata, always return the result as an array of PayanarssType objects, even if there is only one. Each array element must be a complete PayanarssType object.
+- If a field has an attribute with ID 100000000000000000000000000000003, treat it as a lookup field. Its value points to another PayanarssType that defines the lookup source. Refer example 3.
 EOT;
 
     $data = [
