@@ -768,7 +768,7 @@
                 "Value": "True"
             }
         ],
-        "Description": "Validate before create; When a new Employee is created, notify Attendance Agent to create an initial attendance record. Send 'EmployeeId', 'Employee Code', 'Employee Name'."
+        "Description": "Validate before create; When a new Employee is created, please share 'EmployeeId', 'Employee Code', 'Employee Name' to Attendance Agent."
     },
     {
         "Id": "76C5635F-089A-4BB7-86EC-D7779DB8318A",

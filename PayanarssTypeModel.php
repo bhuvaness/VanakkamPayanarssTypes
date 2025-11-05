@@ -436,22 +436,28 @@ class PayanarssTypeBusinessLogics
         $bobj = new PayanarssTypeBusinessLogics();
         $parsedJson = callOpenAIV1($payanarssType, $bobj->convertToArray($types)); // this function should return JSON (see below)
 
+        //echo json_encode($parsedJson, JSON_PRETTY_PRINT);
+
         foreach ($parsedJson as $item) {
-            $parentId = $item['Parent Id'];
-            $attributes = [];
+            if(empty($item['ParentId'])) continue;
+            
+            try {
+                $parentId = $item['ParentId'];
+                $attributes = [];
 
-            foreach ($item['attributes'] as $attr) {
-                foreach ($attr as $attrId => $value) {
-                    $attributes[] = ["Id" => $attrId, "Value" => $value];
+                foreach ($item['Attributes'] as $attr) {
+                        $attributes[] = ["Id" => $attr['Id'], "Value" => $attr['Value']];
                 }
-            }
 
-            foreach ($payanarssType->Children as $child) {
-                if ($child->Id === $parentId) {
-                    //echo "Setting attributes for child with ID: " . $child->Id . "\n";
-                    $child->Attributes = $attributes;
-                    break;
+                foreach ($payanarssType->Children as $child) {
+                    if ($child->Id === $parentId) {
+                        //echo "Setting attributes for child with ID: " . $child->Id . "\n";
+                        $child->Attributes = $attributes;
+                        break;
+                    }
                 }
+            } catch (Exception $e) {
+                //echo json_encode(["error" => $e->getMessage()]);
             }
         }
 

@@ -54,6 +54,8 @@ function callOpenAIV1(PayanarssType $payanarssType, $types = [])
     $parentId = $payanarssType->Id;
     $allTypesJson = json_encode($types, JSON_PRETTY_PRINT);
 
+    //echo $allTypesJson;
+
     foreach ($payanarssType->Children as $child) {
         $allRules .= "Parent Id: " . $child->Id . ", Rules: " . "Child Description : " . $child->Description . "\n\n";
     }
@@ -101,7 +103,7 @@ Ex: 1
 Rules: "Required; GUID; Auto-generated; Auto-updated unique Employee identifier."
 [
   {
-    "Parent Id": "$parentId",
+    "ParentId": "$parentId",
     "attributes": [
       {"100000000000000000000000000000016": "True"},     // IsRequired
       {"100000000000000000000000000000022": "True"},     // GUID
@@ -113,8 +115,8 @@ Ex: 2
 Rules: "Required; Text; Pay element name; Max length 100."
 [
   {
-    "Parent Id": "$parentId",
-    "attributes": [
+    "ParentId": "$parentId",
+    "Attributes": [
       {"100000000000000000000000000000016": "True"},     // IsRequired
       {"100000000000000000000000000000018": "100"}       // Maximum
     ]
@@ -141,6 +143,7 @@ Example 4:
 Rule: "Age must be > 18"
 Output:
 {
+  "ParentId": "<$parentId from input>",
   "Attributes": [
     {"Id": "100000000000000000000000000000028", "Value": "True"},
     {"Id": "100000000000000000000000000000026", "Value": "18"}
@@ -151,6 +154,7 @@ Example 5:
 Rule: "Cannot be future. Age must be > 18"
 Output:
 {
+  "ParentId": "<$parentId from input>",
   "Attributes": [
     {"Id": "100000000000000000000000000000012", "Value": "True"},
     {"Id": "100000000000000000000000000000008", "Value": "True"},
@@ -195,6 +199,8 @@ EOT;
     if (curl_errno($ch)) {
         echo 'Curl error: ' . curl_error($ch);
     }
+
+    //echo $result;
 
     $responseData = json_decode($result, true);
     $content = $responseData['choices'][0]['message']['content'] ?? '';
