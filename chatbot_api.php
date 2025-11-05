@@ -12,6 +12,12 @@ if (!isset($_SESSION['chat_history'])) {
 $input = file_get_contents('php://input');
 $data = json_decode($input, true);
 
+// Validate JSON parsing
+if (json_last_error() !== JSON_ERROR_NONE) {
+    echo json_encode(['success' => false, 'error' => 'Invalid JSON input']);
+    exit;
+}
+
 // Handle clear chat action
 if (isset($data['action']) && $data['action'] === 'clear_chat') {
     $_SESSION['chat_history'] = [];
@@ -107,6 +113,8 @@ function callOpenAIAPI($prompt)
         ]);
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
         curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
 
         $result = curl_exec($ch);
         
@@ -124,7 +132,16 @@ function callOpenAIAPI($prompt)
             return "OpenAI Error: " . ($decoded['error']['message'] ?? 'Unknown error');
         }
         
-        return $decoded['choices'][0]['message']['content'] ?? 'No response from OpenAI';
+        // Validate response structure
+        if (!isset($decoded['choices']) || !is_array($decoded['choices']) || count($decoded['choices']) === 0) {
+            return "OpenAI Error: Invalid response structure received";
+        }
+        
+        if (!isset($decoded['choices'][0]['message']['content'])) {
+            return "OpenAI Error: No content in response";
+        }
+        
+        return $decoded['choices'][0]['message']['content'];
         
     } catch (Exception $e) {
         return "Exception occurred: " . $e->getMessage();

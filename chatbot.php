@@ -234,7 +234,7 @@ if (!isset($_SESSION['chat_history'])) {
                         AI
                     </div>
                     <div class="flex-1 bg-white rounded-lg shadow-sm p-4 border border-gray-200 max-w-2xl">
-                        <p class="text-gray-700">${escapeHtml(text).replace(/\n/g, '<br>')}</p>
+                        <p class="text-gray-700" style="white-space: pre-wrap;">${escapeHtml(text)}</p>
                         ${apiUsed ? `<p class="text-xs text-gray-500 mt-2">API Used: ${escapeHtml(apiUsed)}</p>` : ''}
                     </div>
                 `;
