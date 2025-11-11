@@ -246,6 +246,454 @@
         "Description": null
     },
     {
+        "Id": "100000000000000000000000000000030",
+        "ParentId": "100000000000000000000000000000030",
+        "Name": "OnBeforeSave",
+        "PayanarssTypeId": "100000000000000000000000000000030",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000031",
+        "ParentId": "100000000000000000000000000000031",
+        "Name": "OnAfterSave",
+        "PayanarssTypeId": "100000000000000000000000000000031",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000032",
+        "ParentId": "100000000000000000000000000000032",
+        "Name": "SendMessageToAgent",
+        "PayanarssTypeId": "100000000000000000000000000000032",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000033",
+        "ParentId": "100000000000000000000000000000033",
+        "Name": "EmailFormat",
+        "PayanarssTypeId": "100000000000000000000000000000033",
+        "Attributes": [],
+        "Description": "Validates email format"
+    },
+    {
+        "Id": "100000000000000000000000000000034",
+        "ParentId": "100000000000000000000000000000034",
+        "Name": "PhoneFormat",
+        "PayanarssTypeId": "100000000000000000000000000000034",
+        "Attributes": [],
+        "Description": "Validates phone number format"
+    },
+    {
+        "Id": "100000000000000000000000000000035",
+        "ParentId": "100000000000000000000000000000035",
+        "Name": "RegexPattern",
+        "PayanarssTypeId": "100000000000000000000000000000035",
+        "Attributes": [],
+        "Description": "Custom regex pattern validation"
+    },
+    {
+        "Id": "100000000000000000000000000000036",
+        "ParentId": "100000000000000000000000000000036",
+        "Name": "MinLength",
+        "PayanarssTypeId": "100000000000000000000000000000036",
+        "Attributes": [],
+        "Description": "Minimum text length validation"
+    },
+    {
+        "Id": "100000000000000000000000000000037",
+        "ParentId": "100000000000000000000000000000037",
+        "Name": "MaxLength",
+        "PayanarssTypeId": "100000000000000000000000000000037",
+        "Attributes": [],
+        "Description": "Maximum text length validation"
+    },
+    {
+        "Id": "100000000000000000000000000000038",
+        "ParentId": "100000000000000000000000000000038",
+        "Name": "Range",
+        "PayanarssTypeId": "100000000000000000000000000000038",
+        "Attributes": [],
+        "Description": "Numeric range validation (min-max)"
+    },
+    {
+        "Id": "100000000000000000000000000000039",
+        "ParentId": "100000000000000000000000000000039",
+        "Name": "Unique",
+        "PayanarssTypeId": "100000000000000000000000000000039",
+        "Attributes": [],
+        "Description": "Ensures field value is unique across table"
+    },
+    {
+        "Id": "100000000000000000000000000000040",
+        "ParentId": "100000000000000000000000000000040",
+        "Name": "ForeignKey",
+        "PayanarssTypeId": "100000000000000000000000000000040",
+        "Attributes": [],
+        "Description": "Foreign key constraint to another table"
+    },
+    {
+        "Id": "100000000000000000000000000000041",
+        "ParentId": "100000000000000000000000000000041",
+        "Name": "CascadeDelete",
+        "PayanarssTypeId": "100000000000000000000000000000041",
+        "Attributes": [],
+        "Description": "Delete related records when parent is deleted"
+    },
+    {
+        "Id": "100000000000000000000000000000042",
+        "ParentId": "100000000000000000000000000000042",
+        "Name": "CascadeUpdate",
+        "PayanarssTypeId": "100000000000000000000000000000042",
+        "Attributes": [],
+        "Description": "Update related records when parent is updated"
+    },
+    {
+        "Id": "100000000000000000000000000000043",
+        "ParentId": "100000000000000000000000000000043",
+        "Name": "NotNull",
+        "PayanarssTypeId": "100000000000000000000000000000043",
+        "Attributes": [],
+        "Description": "Field cannot be null"
+    },
+    {
+        "Id": "100000000000000000000000000000044",
+        "ParentId": "100000000000000000000000000000044",
+        "Name": "Precision",
+        "PayanarssTypeId": "100000000000000000000000000000044",
+        "Attributes": [],
+        "Description": "Decimal precision (total digits)"
+    },
+    {
+        "Id": "100000000000000000000000000000045",
+        "ParentId": "100000000000000000000000000000045",
+        "Name": "Scale",
+        "PayanarssTypeId": "100000000000000000000000000000045",
+        "Attributes": [],
+        "Description": "Decimal scale (digits after decimal point)"
+    },
+    {
+        "Id": "100000000000000000000000000000046",
+        "ParentId": "100000000000000000000000000000046",
+        "Name": "DateRange",
+        "PayanarssTypeId": "100000000000000000000000000000046",
+        "Attributes": [],
+        "Description": "Date must be within specified range"
+    },
+    {
+        "Id": "100000000000000000000000000000047",
+        "ParentId": "100000000000000000000000000000047",
+        "Name": "FutureDate",
+        "PayanarssTypeId": "100000000000000000000000000000047",
+        "Attributes": [],
+        "Description": "Date must be in the future"
+    },
+    {
+        "Id": "100000000000000000000000000000048",
+        "ParentId": "100000000000000000000000000000048",
+        "Name": "PastDate",
+        "PayanarssTypeId": "100000000000000000000000000000048",
+        "Attributes": [],
+        "Description": "Date must be in the past"
+    },
+    {
+        "Id": "100000000000000000000000000000049",
+        "ParentId": "100000000000000000000000000000049",
+        "Name": "CurrentDate",
+        "PayanarssTypeId": "100000000000000000000000000000049",
+        "Attributes": [],
+        "Description": "Date must be current date"
+    },
+    {
+        "Id": "100000000000000000000000000000050",
+        "ParentId": "100000000000000000000000000000050",
+        "Name": "PositiveNumber",
+        "PayanarssTypeId": "100000000000000000000000000000050",
+        "Attributes": [],
+        "Description": "Number must be positive (> 0)"
+    },
+    {
+        "Id": "100000000000000000000000000000051",
+        "ParentId": "100000000000000000000000000000051",
+        "Name": "NonNegativeNumber",
+        "PayanarssTypeId": "100000000000000000000000000000051",
+        "Attributes": [],
+        "Description": "Number must be non-negative (>= 0)"
+    },
+    {
+        "Id": "100000000000000000000000000000052",
+        "ParentId": "100000000000000000000000000000052",
+        "Name": "Uppercase",
+        "PayanarssTypeId": "100000000000000000000000000000052",
+        "Attributes": [],
+        "Description": "Text must be uppercase"
+    },
+    {
+        "Id": "100000000000000000000000000000053",
+        "ParentId": "100000000000000000000000000000053",
+        "Name": "Lowercase",
+        "PayanarssTypeId": "100000000000000000000000000000053",
+        "Attributes": [],
+        "Description": "Text must be lowercase"
+    },
+    {
+        "Id": "100000000000000000000000000000054",
+        "ParentId": "100000000000000000000000000000054",
+        "Name": "AlphaNumeric",
+        "PayanarssTypeId": "100000000000000000000000000000054",
+        "Attributes": [],
+        "Description": "Text must contain only letters and numbers"
+    },
+    {
+        "Id": "100000000000000000000000000000055",
+        "ParentId": "100000000000000000000000000000055",
+        "Name": "NoSpecialCharacters",
+        "PayanarssTypeId": "100000000000000000000000000000055",
+        "Attributes": [],
+        "Description": "Text cannot contain special characters"
+    },
+    {
+        "Id": "100000000000000000000000000000056",
+        "ParentId": "100000000000000000000000000000056",
+        "Name": "URLFormat",
+        "PayanarssTypeId": "100000000000000000000000000000056",
+        "Attributes": [],
+        "Description": "Validates URL format"
+    },
+    {
+        "Id": "100000000000000000000000000000057",
+        "ParentId": "100000000000000000000000000000057",
+        "Name": "IPAddressFormat",
+        "PayanarssTypeId": "100000000000000000000000000000057",
+        "Attributes": [],
+        "Description": "Validates IP address format"
+    },
+    {
+        "Id": "100000000000000000000000000000058",
+        "ParentId": "100000000000000000000000000000058",
+        "Name": "OnAfterCreate",
+        "PayanarssTypeId": "100000000000000000000000000000058",
+        "Attributes": [],
+        "Description": "Execute action after record creation"
+    },
+    {
+        "Id": "100000000000000000000000000000059",
+        "ParentId": "100000000000000000000000000000059",
+        "Name": "OnBeforeUpdate",
+        "PayanarssTypeId": "100000000000000000000000000000059",
+        "Attributes": [],
+        "Description": "Execute action before record update"
+    },
+    {
+        "Id": "100000000000000000000000000000060",
+        "ParentId": "100000000000000000000000000000060",
+        "Name": "OnAfterUpdate",
+        "PayanarssTypeId": "100000000000000000000000000000060",
+        "Attributes": [],
+        "Description": "Execute action after record update"
+    },
+    {
+        "Id": "100000000000000000000000000000061",
+        "ParentId": "100000000000000000000000000000061",
+        "Name": "OnBeforeDelete",
+        "PayanarssTypeId": "100000000000000000000000000000061",
+        "Attributes": [],
+        "Description": "Execute action before record deletion"
+    },
+    {
+        "Id": "100000000000000000000000000000062",
+        "ParentId": "100000000000000000000000000000062",
+        "Name": "OnAfterDelete",
+        "PayanarssTypeId": "100000000000000000000000000000062",
+        "Attributes": [],
+        "Description": "Execute action after record deletion"
+    },
+    {
+        "Id": "100000000000000000000000000000063",
+        "ParentId": "100000000000000000000000000000063",
+        "Name": "ComputedField",
+        "PayanarssTypeId": "100000000000000000000000000000063",
+        "Attributes": [],
+        "Description": "Field value is computed from other fields"
+    },
+    {
+        "Id": "100000000000000000000000000000064",
+        "ParentId": "100000000000000000000000000000064",
+        "Name": "ConditionalRequired",
+        "PayanarssTypeId": "100000000000000000000000000000064",
+        "Attributes": [],
+        "Description": "Field required based on condition"
+    },
+    {
+        "Id": "100000000000000000000000000000065",
+        "ParentId": "100000000000000000000000000000065",
+        "Name": "ConditionalVisible",
+        "PayanarssTypeId": "100000000000000000000000000000065",
+        "Attributes": [],
+        "Description": "Field visible based on condition"
+    },
+    {
+        "Id": "100000000000000000000000000000066",
+        "ParentId": "100000000000000000000000000000066",
+        "Name": "DependentField",
+        "PayanarssTypeId": "100000000000000000000000000000066",
+        "Attributes": [],
+        "Description": "Field depends on another field value"
+    },
+    {
+        "Id": "100000000000000000000000000000067",
+        "ParentId": "100000000000000000000000000000067",
+        "Name": "SoftDelete",
+        "PayanarssTypeId": "100000000000000000000000000000067",
+        "Attributes": [],
+        "Description": "Mark record as deleted instead of physical delete"
+    },
+    {
+        "Id": "100000000000000000000000000000068",
+        "ParentId": "100000000000000000000000000000068",
+        "Name": "AuditLog",
+        "PayanarssTypeId": "100000000000000000000000000000068",
+        "Attributes": [],
+        "Description": "Log all changes to this field"
+    },
+    {
+        "Id": "100000000000000000000000000000069",
+        "ParentId": "100000000000000000000000000000069",
+        "Name": "Encrypted",
+        "PayanarssTypeId": "100000000000000000000000000000069",
+        "Attributes": [],
+        "Description": "Field value is encrypted in database"
+    },
+    {
+        "Id": "100000000000000000000000000000070",
+        "ParentId": "100000000000000000000000000000070",
+        "Name": "Masked",
+        "PayanarssTypeId": "100000000000000000000000000000070",
+        "Attributes": [],
+        "Description": "Field value is masked in UI (e.g., passwords)"
+    },
+    {
+        "Id": "100000000000000000000000000000071",
+        "ParentId": "100000000000000000000000000000071",
+        "Name": "Indexable",
+        "PayanarssTypeId": "100000000000000000000000000000071",
+        "Attributes": [],
+        "Description": "Create database index on this field"
+    },
+    {
+        "Id": "100000000000000000000000000000072",
+        "ParentId": "100000000000000000000000000000072",
+        "Name": "Searchable",
+        "PayanarssTypeId": "100000000000000000000000000000072",
+        "Attributes": [],
+        "Description": "Field can be searched in global search"
+    },
+    {
+        "Id": "100000000000000000000000000000073",
+        "ParentId": "100000000000000000000000000000073",
+        "Name": "Sortable",
+        "PayanarssTypeId": "100000000000000000000000000000073",
+        "Attributes": [],
+        "Description": "Field can be sorted in lists"
+    },
+    {
+        "Id": "100000000000000000000000000000074",
+        "ParentId": "100000000000000000000000000000074",
+        "Name": "Filterable",
+        "PayanarssTypeId": "100000000000000000000000000000074",
+        "Attributes": [],
+        "Description": "Field can be used in filters"
+    },
+    {
+        "Id": "100000000000000000000000000000075",
+        "ParentId": "100000000000000000000000000000075",
+        "Name": "ExportExclude",
+        "PayanarssTypeId": "100000000000000000000000000000075",
+        "Attributes": [],
+        "Description": "Exclude field from exports"
+    },
+    {
+        "Id": "100000000000000000000000000000076",
+        "ParentId": "100000000000000000000000000000076",
+        "Name": "ImportExclude",
+        "PayanarssTypeId": "100000000000000000000000000000076",
+        "Attributes": [],
+        "Description": "Exclude field from imports"
+    },
+    {
+        "Id": "100000000000000000000000000000077",
+        "ParentId": "100000000000000000000000000000077",
+        "Name": "VersionControl",
+        "PayanarssTypeId": "100000000000000000000000000000077",
+        "Attributes": [],
+        "Description": "Track version history of this record"
+    },
+    {
+        "Id": "100000000000000000000000000000078",
+        "ParentId": "100000000000000000000000000000078",
+        "Name": "ApprovalRequired",
+        "PayanarssTypeId": "100000000000000000000000000000078",
+        "Attributes": [],
+        "Description": "Changes require approval"
+    },
+    {
+        "Id": "100000000000000000000000000000079",
+        "ParentId": "100000000000000000000000000000079",
+        "Name": "MultiLanguage",
+        "PayanarssTypeId": "100000000000000000000000000000079",
+        "Attributes": [],
+        "Description": "Field supports multiple languages"
+    },
+    {
+        "Id": "100000000000000000000000000000080",
+        "ParentId": "100000000000000000000000000000080",
+        "Name": "CurrencyFormat",
+        "PayanarssTypeId": "100000000000000000000000000000080",
+        "Attributes": [],
+        "Description": "Format as currency"
+    },
+    {
+        "Id": "100000000000000000000000000000081",
+        "ParentId": "100000000000000000000000000000081",
+        "Name": "PercentageFormat",
+        "PayanarssTypeId": "100000000000000000000000000000081",
+        "Attributes": [],
+        "Description": "Format as percentage"
+    },
+    {
+        "Id": "100000000000000000000000000000082",
+        "ParentId": "100000000000000000000000000000082",
+        "Name": "EqualTo",
+        "PayanarssTypeId": "100000000000000000000000000000082",
+        "Attributes": [],
+        "Description": "Field must equal another field (e.g., confirm password)"
+    },
+    {
+        "Id": "100000000000000000000000000000083",
+        "ParentId": "100000000000000000000000000000083",
+        "Name": "NotEqualTo",
+        "PayanarssTypeId": "100000000000000000000000000000083",
+        "Attributes": [],
+        "Description": "Field must not equal another field"
+    },
+    {
+        "Id": "100000000000000000000000000000084",
+        "ParentId": "100000000000000000000000000000084",
+        "Name": "CheckConstraint",
+        "PayanarssTypeId": "100000000000000000000000000000084",
+        "Attributes": [],
+        "Description": "Custom SQL check constraint"
+    },
+    {
+        "Id": "100000000000000000000000000000085",
+        "ParentId": "100000000000000000000000000000085",
+        "Name": "CustomValidation",
+        "PayanarssTypeId": "100000000000000000000000000000085",
+        "Attributes": [],
+        "Description": "Custom validation function"
+    },
+    {
         "Id": "68637a3f60937",
         "ParentId": "68637a3f60937",
         "Name": "PayanarssApplications",
@@ -3788,5 +4236,1834 @@
             }
         ],
         "Description": "Boolean; Approval flag; Default = False."
+    },
+    {
+        "Id": "A3F9D676-1B2E-5F2A-48CB-F50E4CDE8A3E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "CDE8A3E-B6F9-D676-1B2E-5F2A48CBF50E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "D6761B2E-5F2A-48CB-F50E-4CDE8A3EB6F9",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Address",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "8A3EB6F9-D676-1B2E-5F2A-48CBF50E4CDE",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "ContactNumber",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "48CBF50E-4CDE-8A3E-B6F9-D6761B2E5F2A",
+        "ParentId": "100000000000000000000000000000001",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "B6F9D676-1B2E-5F2A-48CB-F50E4CDE8A3E",
+        "ParentId": "48CBF50E-4CDE-8A3E-B6F9-D6761B2E5F2A",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "F50E4CDE-8A3E-B6F9-D676-1B2E5F2A48CB",
+        "ParentId": "48CBF50E-4CDE-8A3E-B6F9-D6761B2E5F2A",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "1B2E5F2A-48CB-F50E-4CDE-8A3EB6F9D676",
+        "ParentId": "48CBF50E-4CDE-8A3E-B6F9-D6761B2E5F2A",
+        "Name": "OrgId",
+        "PayanarssTypeId": "A3F9D676-1B2E-5F2A-48CB-F50E4CDE8A3E",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "4CDE8A3E-B6F9-D676-1B2E-5F2A48CBF50E",
+        "ParentId": "48CBF50E-4CDE-8A3E-B6F9-D6761B2E5F2A",
+        "Name": "Location",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "5f2a48cb-f50e-4cde-8a3e-b6f9d6761b2e",
+        "ParentId": "100000000000000000000000000000001",
+        "Name": "Organizations",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "d6f8e2c7-9f4b-4b5e-ae3b-3c9f5e2b7c3f",
+        "ParentId": "5f2a48cb-f50e-4cde-8a3e-b6f9d6761b2e",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "a7f9d8e1-2b4c-4d5f-9e3b-6c8f7d9e0b2a",
+        "ParentId": "5f2a48cb-f50e-4cde-8a3e-b6f9d6761b2e",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "9e2b4c5d-7f8a-4b9e-8c3d-0f1e2b3c4d5f",
+        "ParentId": "5f2a48cb-f50e-4cde-8a3e-b6f9d6761b2e",
+        "Name": "Address",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "6c8f7d9e-0b2a-4d5f-9e3b-7f8a9e2b4c5d",
+        "ParentId": "5f2a48cb-f50e-4cde-8a3e-b6f9d6761b2e",
+        "Name": "ContactNumber",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "8c3d0f1e-2b3c-4d5f-9e2b-7f8a9e2b4c5d",
+        "ParentId": "5f2a48cb-f50e-4cde-8a3e-b6f9d6761b2e",
+        "Name": "Email",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "7f8a9e2b-4c5d-9e3b-6c8f7d9e0b2a",
+        "ParentId": "100000000000000000000000000000001",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "3c4d5f9e-2b4c-4d5f-9e3b-7f8a9e2b4c5d",
+        "ParentId": "7f8a9e2b-4c5d-9e3b-6c8f7d9e0b2a",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "0b2a4d5f-9e3b-6c8f-7d9e-0b2a4d5f9e3b",
+        "ParentId": "7f8a9e2b-4c5d-9e3b-6c8f7d9e0b2a",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "9e3b6c8f-7d9e-0b2a-4d5f-9e3b6c8f7d9e",
+        "ParentId": "7f8a9e2b-4c5d-9e3b-6c8f7d9e0b2a",
+        "Name": "OrganizationId",
+        "PayanarssTypeId": "d6f8e2c7-9f4b-4b5e-ae3b-3c9f5e2b7c3f",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "4d5f9e3b-6c8f-7d9e-0b2a-4d5f9e3b6c8f",
+        "ParentId": "7f8a9e2b-4c5d-9e3b-6c8f7d9e0b2a",
+        "Name": "Manager",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "2b4c5d9e-3b6c-8f7d-9e0b-2a4d5f9e3b6c",
+        "ParentId": "7f8a9e2b-4c5d-9e3b-6c8f7d9e0b2a",
+        "Name": "Location",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-1234-56789ABCDEF0",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "B2C3D4E5-F6A1-7890-1234-56789ABCDEF1",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "C3D4E5F6-A1B2-7890-1234-56789ABCDEF2",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Address",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "D4E5F6A1-B2C3-7890-1234-56789ABCDEF3",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "ContactNumber",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "6F7G8H9I-J0K1-2345-6789-123456789ABC",
+        "ParentId": "100000000000000000000000000000001",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "E5F6A1B2-C3D4-7890-1234-56789ABCDEF4",
+        "ParentId": "6F7G8H9I-J0K1-2345-6789-123456789ABC",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "F6A1B2C3-D4E5-7890-1234-56789ABCDEF5",
+        "ParentId": "6F7G8H9I-J0K1-2345-6789-123456789ABC",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "G7H8I9J0-K1L2-3456-7890-123456789DEF",
+        "ParentId": "6F7G8H9I-J0K1-2345-6789-123456789ABC",
+        "Name": "OrganizationId",
+        "PayanarssTypeId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "7E1B4F9A-3A2B-4F2D-8F9D-6B7A8C9D0E1F",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "8A3E2B4C-5F2A-4CDE-8F9D-6B7A8C9D0E1F",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "9D0E1F2A-8A3E-4CDE-8F9D-6B7A8C9D0E1F",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Address",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "6B7A8C9D-0E1F-4CDE-8F9D-5F2A8A3E2B4C",
+        "ParentId": "100000000000000000000000000000001",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "4CDE8F9D-6B7A-8C9D-0E1F-5F2A8A3E2B4C",
+        "ParentId": "6B7A8C9D-0E1F-4CDE-8F9D-5F2A8A3E2B4C",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "5F2A8A3E-2B4C-4CDE-8F9D-6B7A8C9D0E1F",
+        "ParentId": "6B7A8C9D-0E1F-4CDE-8F9D-5F2A8A3E2B4C",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "0E1F5F2A-8A3E-4CDE-8F9D-6B7A8C9D2B4C",
+        "ParentId": "6B7A8C9D-0E1F-4CDE-8F9D-5F2A8A3E2B4C",
+        "Name": "OrganizationId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "B3E2A1D8-4F5B-4A3F-8A2E-1B9D5C6E7F8A",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "C4F3B2D1-6A5B-4E7F-9A3E-2B8D6C7E8F9B",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "D5E4C3B2-7A6B-5F8E-0A4E-3C9D7E8F0A1B",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Address",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "6F7E5D4C-8B7A-6F9E-1A5E-4D0E8F1A2B3C",
+        "ParentId": "100000000000000000000000000000004",
+        "Name": "Department",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "7F8E6D5C-9B8A-7F0E-2A6E-5E1F9A2B3C4D",
+        "ParentId": "6F7E5D4C-8B7A-6F9E-1A5E-4D0E8F1A2B3C",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "8F9E7D6C-0B9A-8F1E-3A7E-6F2A0B3C4D5E",
+        "ParentId": "6F7E5D4C-8B7A-6F9E-1A5E-4D0E8F1A2B3C",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "9F0E8D7C-1B0A-9F2E-4A8E-7G3B1C4D5E6F",
+        "ParentId": "6F7E5D4C-8B7A-6F9E-1A5E-4D0E8F1A2B3C",
+        "Name": "Manager",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "B1C2D3E4-F5A6-7890-1234-56789ABCDEF1",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "C1D2E3F4-A5B6-7890-1234-56789ABCDEF2",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Address",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "D1E2F3A4-B5C6-7890-1234-56789ABCDEF3",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "ContactNumber",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "6F7A8B9C-D0E1-2345-6789-0ABCDEF12345",
+        "ParentId": "68637a3f60937",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "E1F2A3B4-C5D6-7890-1234-56789ABCDEF4",
+        "ParentId": "6F7A8B9C-D0E1-2345-6789-0ABCDEF12345",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "F1A2B3C4-D5E6-7890-1234-56789ABCDEF5",
+        "ParentId": "6F7A8B9C-D0E1-2345-6789-0ABCDEF12345",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "A2B3C4D5-E6F7-8901-2345-67890ABCDEF6",
+        "ParentId": "6F7A8B9C-D0E1-2345-6789-0ABCDEF12345",
+        "Name": "OrganizationId",
+        "PayanarssTypeId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "8D3A1F1E-5B7C-4F5A-8D4C-9A1B2F3C4D5E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "OrgId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Unique identifier for the organization"
+    },
+    {
+        "Id": "9E4B2F3C-5D6E-7F8A-9B1C-2D3E4F5A6B7C",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "OrgName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Name of the organization"
+    },
+    {
+        "Id": "1A2B3C4D-5E6F-7A8B-9C1D-2E3F4A5B6C7D",
+        "ParentId": "100000000000000000000000000000000",
+        "Name": "Department",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Department table"
+    },
+    {
+        "Id": "2B3C4D5E-6F7A-8B9C-1D2E-3F4A5B6C7D8E",
+        "ParentId": "1A2B3C4D-5E6F-7A8B-9C1D-2E3F4A5B6C7D",
+        "Name": "DeptId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Unique identifier for the department"
+    },
+    {
+        "Id": "3C4D5E6F-7A8B-9C1D-2E3F-4A5B6C7D8E9F",
+        "ParentId": "1A2B3C4D-5E6F-7A8B-9C1D-2E3F4A5B6C7D",
+        "Name": "DeptName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Name of the department"
+    },
+    {
+        "Id": "4D5E6F7A-8B9C-1D2E-3F4A-5B6C7D8E9F0A",
+        "ParentId": "1A2B3C4D-5E6F-7A8B-9C1D-2E3F4A5B6C7D",
+        "Name": "OrgId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Foreign key linking to Org table"
+    },
+    {
+        "Id": "A1F2B3C4-D5E6-7890-1234-56789ABCDEF0",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "B2C3D4E5-F6A7-8901-2345-67890BCDEF12",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "C3D4E5F6-A7B8-9012-3456-7890CDEF1234",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Address",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "6A7B8C9D-0E1F-2345-6789-0ABCDEF12345",
+        "ParentId": "68637a3f60937",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "D4E5F6A7-B8C9-0123-4567-890DEF123456",
+        "ParentId": "6A7B8C9D-0E1F-2345-6789-0ABCDEF12345",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "E5F6A7B8-C9D0-1234-5678-90ABCDEF1234",
+        "ParentId": "6A7B8C9D-0E1F-2345-6789-0ABCDEF12345",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "F6A7B8C9-D0E1-2345-6789-0ABCDEF12345",
+        "ParentId": "6A7B8C9D-0E1F-2345-6789-0ABCDEF12345",
+        "Name": "OrganizationId",
+        "PayanarssTypeId": "A1F2B3C4-D5E6-7890-1234-56789ABCDEF0",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": null
+    },
+    {
+        "Id": "A1F3B8C2-3E4D-4F6A-9B8C-7D6E5F4A3B2C",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "B2C3D4E5-F6A7-8B9C-0D1E-2F3A4B5C6D7E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            "Mandatory"
+        ],
+        "Description": null
+    },
+    {
+        "Id": "C3D4E5F6-A7B8-9C0D-1E2F-3A4B5C6D7E8F",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Description",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "6E5F4A3B-2C1D-0E9F-8B7A-6C5D4E3F2A1B",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Create",
+        "PayanarssTypeId": "100000000000000000000000000000019",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "7D6E5F4A-3B2C-1D0E-9F8B-7A6C5D4E3F2A",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Read",
+        "PayanarssTypeId": "100000000000000000000000000000020",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "8C7D6E5F-4A3B-2C1D-0E9F-8B7A6C5D4E3F",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Update",
+        "PayanarssTypeId": "100000000000000000000000000000021",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "9B8C7D6E-5F4A-3B2C-1D0E-9F8B7A6C5D4E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Delete",
+        "PayanarssTypeId": "100000000000000000000000000000022",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "A9B8C7D6-E5F4-A3B2-C1D0-E9F8B7A6C5D4",
+        "ParentId": "A9B8C7D6-E5F4-A3B2-C1D0-E9F8B7A6C5D4",
+        "Name": "Department",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "B8C7D6E5-F4A3-B2C1-D0E9-F8B7A6C5D4E3",
+        "ParentId": "A9B8C7D6-E5F4-A3B2-C1D0-E9F8B7A6C5D4",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "C7D6E5F4-A3B2-C1D0-E9F8-B7A6C5D4E3F2",
+        "ParentId": "A9B8C7D6-E5F4-A3B2-C1D0-E9F8B7A6C5D4",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            "Mandatory"
+        ],
+        "Description": null
+    },
+    {
+        "Id": "D6E5F4A3-B2C1-D0E9-F8B7-A6C5D4E3F2A1",
+        "ParentId": "A9B8C7D6-E5F4-A3B2-C1D0-E9F8B7A6C5D4",
+        "Name": "OrgId",
+        "PayanarssTypeId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Attributes": [
+            "Mandatory"
+        ],
+        "Description": null
+    },
+    {
+        "Id": "E5F4A3B2-C1D0-E9F8-B7A6-C5D4E3F2A1B0",
+        "ParentId": "A9B8C7D6-E5F4-A3B2-C1D0-E9F8B7A6C5D4",
+        "Name": "Create",
+        "PayanarssTypeId": "100000000000000000000000000000019",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "F4A3B2C1-D0E9-F8B7-A6C5-D4E3F2A1B0C9",
+        "ParentId": "A9B8C7D6-E5F4-A3B2-C1D0-E9F8B7A6C5D4",
+        "Name": "Read",
+        "PayanarssTypeId": "100000000000000000000000000000020",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "A3B2C1D0-E9F8-B7A6-C5D4-E3F2A1B0C9D8",
+        "ParentId": "A9B8C7D6-E5F4-A3B2-C1D0-E9F8B7A6C5D4",
+        "Name": "Update",
+        "PayanarssTypeId": "100000000000000000000000000000021",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "B2C1D0E9-F8B7-A6C5-D4E3-F2A1B0C9D8E7",
+        "ParentId": "A9B8C7D6-E5F4-A3B2-C1D0-E9F8B7A6C5D4",
+        "Name": "Delete",
+        "PayanarssTypeId": "100000000000000000000000000000022",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "E3A1F9D4-9C8D-4C3F-8A3E-4B5F6D7A8C9E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": "Unique identifier for the organization."
+    },
+    {
+        "Id": "B2E8A3E4-5F6D-7A8C-9E0B-1C2D3F4A5B6C",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            "Mandatory"
+        ],
+        "Description": "Name of the organization."
+    },
+    {
+        "Id": "1A2B3C4D-5E6F-7A8B-9C0D-1E2F3A4B5C6D",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Location",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": "Location of the organization."
+    },
+    {
+        "Id": "7A8B9C0D-1E2F-3A4B-5C6D-7E8F9A0B1C2D",
+        "ParentId": "100000000000000000000000000000001",
+        "Name": "Department",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Table representing departments within an organization."
+    },
+    {
+        "Id": "8F9A0B1C-2D3E-4F5A-6B7C-8D9E0F1A2B3C",
+        "ParentId": "7A8B9C0D-1E2F-3A4B-5C6D-7E8F9A0B1C2D",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": "Unique identifier for the department."
+    },
+    {
+        "Id": "9E0F1A2B-3C4D-5E6F-7A8B-9C0D1E2F3A4B",
+        "ParentId": "7A8B9C0D-1E2F-3A4B-5C6D-7E8F9A0B1C2D",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            "Mandatory"
+        ],
+        "Description": "Name of the department."
+    },
+    {
+        "Id": "0D1E2F3A-4B5C-6D7E-8F9A-0B1C2D3E4F5A",
+        "ParentId": "7A8B9C0D-1E2F-3A4B-5C6D-7E8F9A0B1C2D",
+        "Name": "OrgId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            "Mandatory"
+        ],
+        "Description": "Foreign key linking to the organization."
+    },
+    {
+        "Id": "6A1B2C3D-4E5F-6789-0ABC-DEF123456789",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "7B8C9D0E-1F2A-3B4C-5D6E-7F8A9B0C1D2E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "This field is mandatory"
+    },
+    {
+        "Id": "8C9D0E1F-2A3B-4C5D-6E7F-8A9B0C1D2E3F",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Location",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "9D0E1F2A-3B4C-5D6E-7F8A-9B0C1D2E3F4G",
+        "ParentId": "68637a3f60937",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "0E1F2A3B-4C5D-6E7F-8A9B-0C1D2E3F4G5H",
+        "ParentId": "9D0E1F2A-3B4C-5D6E-7F8A-9B0C1D2E3F4G",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "1F2A3B4C-5D6E-7F8A-9B0C-1D2E3F4G5H6I",
+        "ParentId": "9D0E1F2A-3B4C-5D6E-7F8A-9B0C1D2E3F4G",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "This field is mandatory"
+    },
+    {
+        "Id": "2A3B4C5D-6E7F-8A9B-0C1D-2E3F4G5H6I7J",
+        "ParentId": "9D0E1F2A-3B4C-5D6E-7F8A-9B0C1D2E3F4G",
+        "Name": "OrganizationId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": "Foreign key to Organizations"
+    },
+    {
+        "Id": "3B4C5D6E-7F8A-9B0C-1D2E-3F4G5H6I7J8K",
+        "ParentId": "9D0E1F2A-3B4C-5D6E-7F8A-9B0C1D2E3F4G",
+        "Name": "DepartmentHead",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "B6F9D6761B2E-5F2A-48CB-F50E-4CDE8A3E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "4CDE8A3E-5F2A-48CB-F50E-B6F9D6761B2E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "This field is mandatory"
+    },
+    {
+        "Id": "F50E4CDE-8A3E-5F2A-48CB-B6F9D6761B2E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Address",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "8A3E4CDE-F50E-5F2A-48CB-B6F9D6761B2E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "PhoneNumber",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "CDE84CDE-F50E-5F2A-48CB-B6F9D6761B2E",
+        "ParentId": "68637a3f60937",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "D6761B2E-5F2A-48CB-F50E-4CDE8A3E",
+        "ParentId": "CDE84CDE-F50E-5F2A-48CB-B6F9D6761B2E",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "48CB5F2A-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "ParentId": "CDE84CDE-F50E-5F2A-48CB-B6F9D6761B2E",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "This field is mandatory"
+    },
+    {
+        "Id": "A3E5F2A4-CDE8-F50E-48CB-B6F9D6761B2E",
+        "ParentId": "CDE84CDE-F50E-5F2A-48CB-B6F9D6761B2E",
+        "Name": "OrganizationId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "F3A2A1C4-5B1A-4F9D-8A3E-9B6F8D6761B2",
+        "ParentId": "68637a3f60937",
+        "Name": "Organizations",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "D4B2A1C4-6C2B-5F9E-9B4F-8C7F9D6761C3",
+        "ParentId": "F3A2A1C4-5B1A-4F9D-8A3E-9B6F8D6761B2",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Unique identifier for the organization"
+    },
+    {
+        "Id": "E5C3A2D5-7D3C-6G0F-0C5G-9D8G0E7872D4",
+        "ParentId": "F3A2A1C4-5B1A-4F9D-8A3E-9B6F8D6761B2",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Name of the organization"
+    },
+    {
+        "Id": "G6D4B3E6-8E4D-7H1G-1D6H-0E9H1F8983E5",
+        "ParentId": "F3A2A1C4-5B1A-4F9D-8A3E-9B6F8D6761B2",
+        "Name": "Address",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": "Address of the organization"
+    },
+    {
+        "Id": "H7E5C4F7-9F5E-8I2H-2E7I-1F0I2G9A94F6",
+        "ParentId": "68637a3f60937",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "I8F6D5G8-0G6F-9J3I-3F8J-2G1J3H0B05G7",
+        "ParentId": "H7E5C4F7-9F5E-8I2H-2E7I-1F0I2G9A94F6",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Unique identifier for the department"
+    },
+    {
+        "Id": "J9G7E6H9-1H7G-0K4J-4G9K-3H2K4I1C16H8",
+        "ParentId": "H7E5C4F7-9F5E-8I2H-2E7I-1F0I2G9A94F6",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Name of the department"
+    },
+    {
+        "Id": "K0H8F7I0-2I8H-1L5K-5H0L-4I3L5J2D27I9",
+        "ParentId": "H7E5C4F7-9F5E-8I2H-2E7I-1F0I2G9A94F6",
+        "Name": "OrganizationId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Identifier of the organization this department belongs to"
+    },
+    {
+        "Id": "7F3B59DC-E60F-4DDE-9A4F-C7E9E6762C3F",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "OrgId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Unique identifier for the organization, mandatory"
+    },
+    {
+        "Id": "8G4C60ED-F71G-5EEF-0B5G-D8F0F7873D4G",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "OrgName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Name of the organization, mandatory"
+    },
+    {
+        "Id": "9H5D71FE-G82H-6FFG-1C6H-E9G1G8984E5H",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "OrgType",
+        "PayanarssTypeId": "100000000000000000000000000000003",
+        "Attributes": [],
+        "Description": "Type of the organization"
+    },
+    {
+        "Id": "6I6E82GF-H93I-7GGH-2D7I-F0H2H9095F6I",
+        "ParentId": "68637a3f60937",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "7J7F93HG-I04J-8HHI-3E8J-G1I3I0106G7J",
+        "ParentId": "6I6E82GF-H93I-7GGH-2D7I-F0H2H9095F6I",
+        "Name": "DeptId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Unique identifier for the department, mandatory"
+    },
+    {
+        "Id": "8K8G04IH-J15K-9IIJ-4F9K-H2J4J1217H8K",
+        "ParentId": "6I6E82GF-H93I-7GGH-2D7I-F0H2H9095F6I",
+        "Name": "DeptName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Name of the department, mandatory"
+    },
+    {
+        "Id": "9L9H15JI-K26L-0JJK-5G0L-I3K5K2328I9L",
+        "ParentId": "6I6E82GF-H93I-7GGH-2D7I-F0H2H9095F6I",
+        "Name": "DeptType",
+        "PayanarssTypeId": "100000000000000000000000000000003",
+        "Attributes": [],
+        "Description": "Type of the department"
+    },
+    {
+        "Id": "7D3A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Unique identifier for the organization"
+    },
+    {
+        "Id": "8E4A48CB-F50E-4CDE-8A3E-B6F9D6761B2G",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Name of the organization"
+    },
+    {
+        "Id": "9F5A48CB-F50E-4CDE-8A3E-B6F9D6761B2H",
+        "ParentId": "68637a3f60937",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "AF6A48CB-F50E-4CDE-8A3E-B6F9D6761B2I",
+        "ParentId": "9F5A48CB-F50E-4CDE-8A3E-B6F9D6761B2H",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Unique identifier for the department"
+    },
+    {
+        "Id": "BF7A48CB-F50E-4CDE-8A3E-B6F9D6761B2J",
+        "ParentId": "9F5A48CB-F50E-4CDE-8A3E-B6F9D6761B2H",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Name of the department"
+    },
+    {
+        "Id": "CF8A48CB-F50E-4CDE-8A3E-B6F9D6761B2K",
+        "ParentId": "9F5A48CB-F50E-4CDE-8A3E-B6F9D6761B2H",
+        "Name": "OrganizationId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Reference to the organization the department belongs to"
+    },
+    {
+        "Id": "B2C3D4E5-F6A7-8901-2345-6789ABCDEF01",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "This field is mandatory"
+    },
+    {
+        "Id": "C3D4E5F6-A7B8-9012-3456-789ABCDEF012",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Description",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "D4E5F6A7-B8C9-0123-4567-89ABCDEF0123",
+        "ParentId": "68637a3f60937",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "E5F6A7B8-C9D0-1234-5678-9ABCDEF01234",
+        "ParentId": "D4E5F6A7-B8C9-0123-4567-89ABCDEF0123",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "F6A7B8C9-D0E1-2345-6789-ABCDEF012345",
+        "ParentId": "D4E5F6A7-B8C9-0123-4567-89ABCDEF0123",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "This field is mandatory"
+    },
+    {
+        "Id": "A7B8C9D0-E1F2-3456-789A-BCDEF0123456",
+        "ParentId": "D4E5F6A7-B8C9-0123-4567-89ABCDEF0123",
+        "Name": "OrganizationId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "This field is mandatory and links to Organizations"
+    },
+    {
+        "Id": "A6B4E1D2-3C45-4D6F-8A7E-9B2C5D6E7F8A",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": "Unique identifier for the organization"
+    },
+    {
+        "Id": "B7C8D9E0-1F2A-3B4C-5D6E-7F8A9B0C1D2E",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Name of the organization, mandatory field"
+    },
+    {
+        "Id": "C8D9E0F1-2A3B-4C5D-6E7F-8A9B0C1D2E3F",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Address",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": "Address of the organization"
+    },
+    {
+        "Id": "D9E0F1A2-3B4C-5D6E-7F8A-9B0C1D2E3F4A",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "ContactNumber",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": "Contact number of the organization"
+    },
+    {
+        "Id": "6E7F8A9B-0C1D-2E3F-4A5B-6C7D8E9F0A1B",
+        "ParentId": "68637a3f60937",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "7F8A9B0C-1D2E-3F4A-5B6C-7D8E9F0A1B2C",
+        "ParentId": "6E7F8A9B-0C1D-2E3F-4A5B-6C7D8E9F0A1B",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": "Unique identifier for the department"
+    },
+    {
+        "Id": "8A9B0C1D-2E3F-4A5B-6C7D-8E9F0A1B2C3D",
+        "ParentId": "6E7F8A9B-0C1D-2E3F-4A5B-6C7D8E9F0A1B",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Name of the department, mandatory field"
+    },
+    {
+        "Id": "9B0C1D2E-3F4A-5B6C-7D8E-9F0A1B2C3D4E",
+        "ParentId": "6E7F8A9B-0C1D-2E3F-4A5B-6C7D8E9F0A1B",
+        "Name": "Manager",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": "Manager of the department"
+    },
+    {
+        "Id": "0C1D2E3F-4A5B-6C7D-8E9F-0A1B2C3D4E5F",
+        "ParentId": "6E7F8A9B-0C1D-2E3F-4A5B-6C7D8E9F0A1B",
+        "Name": "Location",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": "Location of the department"
+    },
+    {
+        "Id": "B1A2B3C4-D5E6-7F8A-9B0C-D1E2F3A4B5C6",
+        "ParentId": "68637a3f60937",
+        "Name": "Organizations",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "C1D2E3F4-A5B6-7C8D-9E0F-1A2B3C4D5E6F",
+        "ParentId": "B1A2B3C4-D5E6-7F8A-9B0C-D1E2F3A4B5C6",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "true"
+            }
+        ],
+        "Description": "Unique identifier for the organization"
+    },
+    {
+        "Id": "D1E2F3A4-B5C6-7D8E-9F0A-1B2C3D4E5F6A",
+        "ParentId": "B1A2B3C4-D5E6-7F8A-9B0C-D1E2F3A4B5C6",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Name of the organization, mandatory field"
+    },
+    {
+        "Id": "E1F2A3B4-C5D6-7E8F-9A0B-1C2D3E4F5A6B",
+        "ParentId": "68637a3f60937",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "F1A2B3C4-D5E6-7F8A-9B0C-D1E2F3A4B5C6",
+        "ParentId": "E1F2A3B4-C5D6-7E8F-9A0B-1C2D3E4F5A6B",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "true"
+            }
+        ],
+        "Description": "Unique identifier for the department"
+    },
+    {
+        "Id": "G1H2I3J4-K5L6-7M8N-9O0P-1Q2R3S4T5U6V",
+        "ParentId": "E1F2A3B4-C5D6-7E8F-9A0B-1C2D3E4F5A6B",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Name of the department, mandatory field"
+    },
+    {
+        "Id": "H1I2J3K4-L5M6-7N8O-9P0Q-1R2S3T4U5V6W",
+        "ParentId": "E1F2A3B4-C5D6-7E8F-9A0B-1C2D3E4F5A6B",
+        "Name": "OrganizationId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Reference to the organization, mandatory field"
+    },
+    {
+        "Id": "C1D2E3F4-G5H6-7890-1234-56789ABCDEF2",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Address",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": "Address of the organization"
+    },
+    {
+        "Id": "6A7B8C9D-E0F1-2345-6789-0ABCDEF12345",
+        "ParentId": "68637a3f60937",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "D1E2F3G4-H5I6-7890-1234-56789ABCDEF3",
+        "ParentId": "6A7B8C9D-E0F1-2345-6789-0ABCDEF12345",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "true"
+            }
+        ],
+        "Description": "Unique identifier for the department"
+    },
+    {
+        "Id": "E1F2G3H4-I5J6-7890-1234-56789ABCDEF4",
+        "ParentId": "6A7B8C9D-E0F1-2345-6789-0ABCDEF12345",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Name of the department, mandatory field"
+    },
+    {
+        "Id": "F1G2H3I4-J5K6-7890-1234-56789ABCDEF5",
+        "ParentId": "6A7B8C9D-E0F1-2345-6789-0ABCDEF12345",
+        "Name": "OrganizationId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Reference to the organization, mandatory field"
+    },
+    {
+        "Id": "B1C2D3E4-F5G6-7890-1234-56789ABCDEF1",
+        "ParentId": "A1B2C3D4-E5F6-7890-1234-56789ABCDEF0",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Unique identifier for the organization"
+    },
+    {
+        "Id": "G1H2I3J4-K5L6-7890-1234-56789ABCDEF6",
+        "ParentId": "E1F2G3H4-I5J6-7890-1234-56789ABCDEF4",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Name of the department"
+    },
+    {
+        "Id": "H1I2J3K4-L5M6-7890-1234-56789ABCDEF7",
+        "ParentId": "E1F2G3H4-I5J6-7890-1234-56789ABCDEF4",
+        "Name": "OrgId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Reference to the organization"
+    },
+    {
+        "Id": "6A3A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "7B3A48CB-F50E-4CDE-8A3E-B6F9D6761B2G",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "This field is mandatory"
+    },
+    {
+        "Id": "8C3A48CB-F50E-4CDE-8A3E-B6F9D6761B2H",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Address",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "9D3A48CB-F50E-4CDE-8A3E-B6F9D6761B2I",
+        "ParentId": "68637a3f60937",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "AE3A48CB-F50E-4CDE-8A3E-B6F9D6761B2J",
+        "ParentId": "9D3A48CB-F50E-4CDE-8A3E-B6F9D6761B2I",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "BF3A48CB-F50E-4CDE-8A3E-B6F9D6761B2K",
+        "ParentId": "9D3A48CB-F50E-4CDE-8A3E-B6F9D6761B2I",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "This field is mandatory"
+    },
+    {
+        "Id": "CF3A48CB-F50E-4CDE-8A3E-B6F9D6761B2L",
+        "ParentId": "9D3A48CB-F50E-4CDE-8A3E-B6F9D6761B2I",
+        "Name": "OrgId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "B1A1E5F2-4F3C-4B5A-8E2C-9F1D4E5A6B7C",
+        "ParentId": "68637a3f60937",
+        "Name": "Organizations",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "C2B2F6A3-5G4D-5C6B-9F3D-0G2E5F6B7C8D",
+        "ParentId": "B1A1E5F2-4F3C-4B5A-8E2C-9F1D4E5A6B7C",
+        "Name": "OrgId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "D3C3G7B4-6H5E-6D7C-0G4E-1H3F6G7C8D9E",
+        "ParentId": "B1A1E5F2-4F3C-4B5A-8E2C-9F1D4E5A6B7C",
+        "Name": "OrgName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "This field is mandatory"
+    },
+    {
+        "Id": "E4D4H8C5-7I6F-7E8D-1H5F-2I4G7H8D9E0F",
+        "ParentId": "68637a3f60937",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "F5E5I9D6-8J7G-8F9E-2I6G-3J5H8I9E0F1G",
+        "ParentId": "E4D4H8C5-7I6F-7E8D-1H5F-2I4G7H8D9E0F",
+        "Name": "DeptId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "G6F6J0E7-9K8H-9G0F-3J7H-4K6I9J0F1G2H",
+        "ParentId": "E4D4H8C5-7I6F-7E8D-1H5F-2I4G7H8D9E0F",
+        "Name": "DeptName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "This field is mandatory"
+    },
+    {
+        "Id": "H7G7K1F8-0L9I-0H1G-4K8I-5L7J0G1H2I3J",
+        "ParentId": "E4D4H8C5-7I6F-7E8D-1H5F-2I4G7H8D9E0F",
+        "Name": "DepartmentAgent",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "This field is mandatory for Department Agent"
+    },
+    {
+        "Id": "6E3A48CB-F50E-4CDE-8A3E-B6F9D6761B2F",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": "Unique identifier for the organization"
+    },
+    {
+        "Id": "7E3A48CB-F50E-4CDE-8A3E-B6F9D6761B2G",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Name of the organization, mandatory field"
+    },
+    {
+        "Id": "8E3A48CB-F50E-4CDE-8A3E-B6F9D6761B2H",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "Location",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": "Location of the organization"
+    },
+    {
+        "Id": "9F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2I",
+        "ParentId": "68637a3f60937",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "AF2A48CB-F50E-4CDE-8A3E-B6F9D6761B2J",
+        "ParentId": "9F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2I",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": "Unique identifier for the department"
+    },
+    {
+        "Id": "BF2A48CB-F50E-4CDE-8A3E-B6F9D6761B2K",
+        "ParentId": "9F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2I",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Name of the department, mandatory field"
+    },
+    {
+        "Id": "CF2A48CB-F50E-4CDE-8A3E-B6F9D6761B2L",
+        "ParentId": "9F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2I",
+        "Name": "Head",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": "Head of the department"
+    },
+    {
+        "Id": "A6B2A48C-B50E-4CDE-8A3E-B6F9D6761B2F",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "OrgId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Unique identifier for the organization"
+    },
+    {
+        "Id": "B6C2A48C-C50E-4CDE-8A3E-B6F9D6761B30",
+        "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
+        "Name": "OrgName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Name of the organization"
+    },
+    {
+        "Id": "C6D2A48C-D50E-4CDE-8A3E-B6F9D6761B31",
+        "ParentId": "68637a3f60937",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "D6E2A48C-E50E-4CDE-8A3E-B6F9D6761B32",
+        "ParentId": "C6D2A48C-D50E-4CDE-8A3E-B6F9D6761B31",
+        "Name": "DeptId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Unique identifier for the department"
+    },
+    {
+        "Id": "E6F2A48C-F50E-4CDE-8A3E-B6F9D6761B33",
+        "ParentId": "C6D2A48C-D50E-4CDE-8A3E-B6F9D6761B31",
+        "Name": "DeptName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Name of the department"
+    },
+    {
+        "Id": "F6G2A48C-G50E-4CDE-8A3E-B6F9D6761B34",
+        "ParentId": "C6D2A48C-D50E-4CDE-8A3E-B6F9D6761B31",
+        "Name": "OrgId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "true"
+            }
+        ],
+        "Description": "Identifier for the organization to which the department belongs"
     }
 ]

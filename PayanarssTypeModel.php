@@ -433,20 +433,28 @@ class PayanarssTypeBusinessLogics
     }
     function save_all(PayanarssType $payanarssType, PayanarssTypes $types)
     {
+        echo json_encode($this->convertToArray($types));
+
+        $fileName = (!isset($fileName)) ? "VanakkamPayanarssTypes.json" : $fileName;
+        $dao = new PayanarssTypeJsonDAO($fileName, $this->convertToArray($types));
+        $dao->save();
+
         $bobj = new PayanarssTypeBusinessLogics();
         $parsedJson = callOpenAIV1($payanarssType, $bobj->convertToArray($types)); // this function should return JSON (see below)
 
+        //echo json_encode($bobj->convertToArray($types), JSON_PRETTY_PRINT);
         //echo json_encode($parsedJson, JSON_PRETTY_PRINT);
 
         foreach ($parsedJson as $item) {
-            if(empty($item['ParentId'])) continue;
-            
+            if (empty($item['ParentId'])) continue;
+
             try {
                 $parentId = $item['ParentId'];
                 $attributes = [];
 
                 foreach ($item['Attributes'] as $attr) {
-                        $attributes[] = ["Id" => $attr['Id'], "Value" => $attr['Value']];
+                    if (!isset($attr['Id']) || !isset($attr['Value'])) continue;
+                    $attributes[] = ["Id" => $attr['Id'], "Value" => $attr['Value']];
                 }
 
                 foreach ($payanarssType->Children as $child) {
@@ -460,10 +468,6 @@ class PayanarssTypeBusinessLogics
                 //echo json_encode(["error" => $e->getMessage()]);
             }
         }
-
-        /*foreach ($types as $type) {
-            createRecord($type->Id, $type, $entityId);
-        }*/
 
         $fileName = (!isset($fileName)) ? "VanakkamPayanarssTypes.json" : $fileName;
         $dao = new PayanarssTypeJsonDAO($fileName, $this->convertToArray($types));

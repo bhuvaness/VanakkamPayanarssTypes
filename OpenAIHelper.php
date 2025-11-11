@@ -8,18 +8,51 @@ function callOpenAI(string $prompt, $types = []): string
     $allTypesJson = json_encode($types, JSON_PRETTY_PRINT);
 
     $systemPrompt = <<<EOT
-You are a metadata assistant working with the PayanarssType structure:
+You are a PayanarssType metadata generator.
 
 $allTypesJson
+
+Your ONLY job is to convert natural-language business rules or field definitions into structured JSON objects following the exact PayanarssType schema.
+Respond ONLY with a valid JSON object. Do NOT include any explanation, PHP object notation, or extra fields. Do NOT wrap the response in any class or array. Output must begin with `{` and end with `}`.
+If you cannot follow this format, respond with: {"error": "Invalid format"}
+
+FORMAT STRICTLY:
+{
+    "Id": "<GUID or unique identifier>",
+    "ParentId": "<ParentId GUID>",
+    "Name": "<FieldName or RuleName>",
+    "PayanarssTypeId": "<PayanarssType GUID>",
+    "Attributes": [ { "Id": "<AttributeTypeId>", "Value": "<AttributeValue>" } ],
+    "Description": "<Description or null>"
+}
+
+No text, markdown, or commentary outside JSON.
+SYS;
 
 Guidelines:
 - Whenever you create or modify definitions, always use this structure.
 - Whenever you generate a value for any field named ‘Id’, always use a valid GUID (example: 5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E). Ensure all generated GUIDs are unique.
 - Whenever you generate PayanarssType metadata, always return the result as an array of PayanarssType objects, even if there is only one. Each array element must be a complete PayanarssType object.
+
+ATTRIBUTE ID RULE:
+- The "<AttributeTypeId>" field must always be one of the known "PayanarssTypeId" values.
+- Use the correct "PayanarssTypeId" from the provided list as the "<AttributeTypeId>" value for each object.
+- Each metadata object represents a PayanarssType instance, so its "<AttributeTypeId>" must match its "PayanarssTypeId".
+
+ATTRIBUTE VALUE RULE:
+- Each item in "Attributes" must be an object with "Id" and "Value".
+- The "Value" must be derived from the meaning or implication of the "Description" field.
+- For example:
+  - If the description says "This field is mandatory", then Value = "true"
+  - If the description says "Maximum allowed is 10", then Value = "10"
+  - If the description implies uniqueness, then Value = "true"
+- Do NOT return generic strings like "Mandatory" or "Unique" as values.
+- Always infer a meaningful, context-based value from the description.
+
 EOT;
 
     $data = [
-        'model' => 'gpt-4',
+        'model' => 'gpt-4o',
         'messages' => [
             ['role' => 'system', 'content' => $systemPrompt],
             ['role' => 'user', 'content' => $prompt]
@@ -92,7 +125,7 @@ Rules-to-ID mapping:
 Output format:
 [
   {
-    "Parent Id": "<$parentId from input>",
+    "Parent Id": "$parentId",
     "attributes": [
       { "<RuleTypeId>": "<Value>" }
     ]
@@ -143,7 +176,7 @@ Example 4:
 Rule: "Age must be > 18"
 Output:
 {
-  "ParentId": "<$parentId from input>",
+  "ParentId": "$parentId",
   "Attributes": [
     {"Id": "100000000000000000000000000000028", "Value": "True"},
     {"Id": "100000000000000000000000000000026", "Value": "18"}
@@ -154,7 +187,7 @@ Example 5:
 Rule: "Cannot be future. Age must be > 18"
 Output:
 {
-  "ParentId": "<$parentId from input>",
+  "ParentId": "$parentId",
   "Attributes": [
     {"Id": "100000000000000000000000000000012", "Value": "True"},
     {"Id": "100000000000000000000000000000008", "Value": "True"},
@@ -162,6 +195,12 @@ Output:
     {"Id": "100000000000000000000000000000026", "Value": "18"}
   ]
 }
+
+IMPORTANT:
+- Do NOT return PayanarssType objects.
+- Do NOT include fields named "Id", "Name", "PayanarssTypeId", or "Description" at the top level.
+- Do NOT wrap the output in code fences.
+- Output MUST be valid JSON, no comments, no trailing commas.
 
 Conversion logic:
 - “must be > X” → Add Attribute Id=100000000000000000000000000000026, Value=X
@@ -184,6 +223,8 @@ EOT;
         ],
         'temperature' => 0.0,
     ];
+
+    echo "<pre>" . json_encode($data, JSON_PRETTY_PRINT) . "</pre>";
 
     $ch = curl_init('https://api.openai.com/v1/chat/completions');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -208,6 +249,7 @@ EOT;
     $clean = preg_replace('/```(?:json)?/', '', $content);
     $clean = preg_replace('/\/\/.*$/m', '', $clean);
     $clean = trim($clean);
+    echo "<pre>$clean</pre>";
 
     $parsedJson = json_decode($clean, true);
 

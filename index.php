@@ -32,51 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['generate_from_prompt'
     $prompt = $_POST['ai_prompt'] ?? '';
 
     if (!empty($prompt)) {
-        require_once 'OpenAIHelper.php'; // your helper file
-
-        // Endpoint URL
-        $url = "https://localhost:7000/api/v1/EmployeeDataAgent/Prompt";
-
-        $promptRequestMessage = new PromptRequestMessage("system", $app);
-        $promptRequestMessage->PromptMessage = $prompt;
-
-        // Convert PHP array to JSON
-        $jsonData = json_encode($promptRequestMessage);
-
-        // Initialize cURL
-        $ch = curl_init($url);
-
-        // Set cURL options
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, [
-            "Content-Type: application/json",
-            "Accept: application/json"
-        ]);
-
-        // Disable SSL verification for localhost only (⚠️ not for production)
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-
-        // Execute the request
-        $response = curl_exec($ch);
-
-        // Handle any errors
-        if (curl_errno($ch)) {
-            echo "cURL error: " . curl_error($ch);
-        } else {
-            // Decode and display response
-            $decoded = json_decode($response, true);
-            echo "<pre>";
-            print_r($decoded);
-            echo "</pre>";
-        }
-
-        // Close the connection
-        curl_close($ch);
-
-        /*
+        
         $response = $app->prompt_for_type($prompt); 
         $start = strpos($response, '[');
         $end = strrpos($response, ']');
@@ -85,12 +41,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['generate_from_prompt'
         } else {
             echo "Could not find JSON array!";
         }
+        //echo "<pre>$response</pre>";
+        //echo "<pre>$jsonString</pre>";
         $arr = json_decode($jsonString, true);
         $bobj = new PayanarssTypeBusinessLogics();
         $types =   $bobj->convert_to_payanarss_type($arr);
         $app->addTypes($parentId, $types);
-        $app->save_all_types();
-        */
+        $payanarssType = $app->get_type($parentId);
+        $app->save_all_types($payanarssType);
     }
 }
 
@@ -127,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['generate_from_prompt'
             <!-- Tabs in Main View -->
             <main class="flex-1 overflow-y-auto p-4">
                 <!-- Tab buttons -->
-                <div class="flex space-x-2 mb-4">
+                <!-- <div class="flex space-x-2 mb-4">
                     <button id="designerTabBtn" onclick="switchTab('designerTab')"
                         class="px-4 py-2 border rounded bg-blue-500 text-white">
                         Designer
@@ -136,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['generate_from_prompt'
                         class="px-4 py-2 border rounded">
                         Data Entry
                     </button>
-                </div>
+                </div> -->
 
                 <!-- Tab content -->
                 <div id="designerTab">
