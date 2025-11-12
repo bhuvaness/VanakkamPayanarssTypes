@@ -1,5 +1,7 @@
 <?php
 
+$config = require 'config.php';
+$myCre = $config['openAI']['my_cre'];
 
 function callOpenAI(string $prompt, $types = []): string
 {

@@ -105,7 +105,7 @@ class PayanarssApplication
     {
         $this->Types->add($payanarssType);
     }
-    function prompt_for_type(string $prompt): string
+    function prompt_for_type(string $prompt, string $parentId): string
     {
         $count = 0;
         $types = new PayanarssTypes();
@@ -115,7 +115,7 @@ class PayanarssApplication
         }
 
         $bobj = new PayanarssTypeBusinessLogics();
-        $response = callOpenAI($prompt, $bobj->convertToArray($types)); // this function should return JSON (see below)
+        $response = buildDomainModelFlat($prompt, $parentId, $bobj->convertToArray($types)); // this function should return JSON (see below)
 
         return $response;
     }

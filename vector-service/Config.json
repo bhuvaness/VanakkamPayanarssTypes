@@ -1,0 +1,10 @@
+[
+    {
+        "anthropic": {
+            "my_cre": "your-anthropic-api-key-here"
+        },
+        "openAI": {
+            "my_cre": "your-openai-api-key-here"
+        }
+    }
+]
