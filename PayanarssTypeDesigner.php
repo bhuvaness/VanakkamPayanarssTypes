@@ -133,387 +133,190 @@ $attribute = $app->Attribute;
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payanarss Type Designer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom animations */
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .row-enter {
-            animation: slideIn 0.3s ease-out;
-        }
-
-        /* Hover effects */
-        .table-row {
-            transition: all 0.2s ease;
-        }
-
-        .table-row:hover {
-            background-color: #f8fafc;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            transform: translateX(2px);
-        }
-
-        /* Badge pulse */
-        @keyframes badgePulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.7;
-            }
-        }
-
-        .badge-pulse {
-            animation: badgePulse 2s ease-in-out infinite;
-        }
-
-        /* Modal backdrop blur */
-        .modal-backdrop {
-            backdrop-filter: blur(4px);
-        }
-
-        /* Custom scrollbar */
-        .custom-scroll::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .custom-scroll::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-
-        .custom-scroll::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 3px;
-        }
-
-        .custom-scroll::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
-    </style>
 </head>
 
-<body class="bg-gray-50">
+<body class="h-screen bg-gray-50">
 
-    <!-- Main Content Area -->
-    <main class="p-6 max-w-7xl mx-auto">
-        
-        <!-- Header Section -->
-        <div class="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl shadow-xl p-6 mb-6 text-white">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center gap-4">
-                    <div class="bg-white/20 p-3 rounded-xl">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h1 class="text-2xl font-bold"><?= htmlspecialchars($parentType->Name ?? 'Type Designer') ?></h1>
-                        <p class="text-blue-100 text-sm mt-1">Design and manage your PayanarssType structure</p>
-                    </div>
-                </div>
-                
-                <!-- Stats -->
-                <div class="flex gap-6">
-                    <div class="text-center">
-                        <div class="text-3xl font-bold"><?= count($payanarssTypes) ?></div>
-                        <div class="text-blue-100 text-xs">Total Types</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold">
-                            <span class="w-3 h-3 bg-green-400 rounded-full inline-block badge-pulse"></span>
-                        </div>
-                        <div class="text-blue-100 text-xs">Active</div>
-                    </div>
-                </div>
-            </div>
+    <div class="flex h-[calc(100%-64px)]"> <!-- Adjust height minus header -->
+        <!-- 📄 Main Content Area -->
+        <main class="flex-1 overflow-y-auto p-6 bg-white">
+            <div>
+                <table class="w-full border border-gray-300 text-sm mb-6">
+                    <!-- Table title and add row button -->
+                    <header>
+                        <tr>
+                            <th class="bg-gray-100 border px-4 py-2 font-semibold text-left" colspan="5"><?= htmlspecialchars($parentType->Name ?? 'Payanarss Type Designer') ?></th>
+                        </tr>
+                        <tr>
+                            <th class="bg-gray-100 border px-4 py-2 font-semibold text-left" colspan="5">
+                                <form method="post">
+                                    <input type="hidden" name="parent_id" value="<?= htmlspecialchars($parentId) ?>">
+                                    <button type='submit' name='add_new_type' value='add_new_type' class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Add Type</button>
+                                    <button type="button" onclick="exportPayanarssJSON()" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 ml-2">Export JSON</button>
+                                </form>
+                            </th>
+                        </tr>
+                        <tr>
+                        <tr>
+                            <th class="bg-gray-100 border px-4 py-2 font-semibold text-left w-1/6">Name</th>
+                            <th class="bg-gray-100 border px-4 py-2 font-semibold text-left w-1/2">Description</th>
+                            <th class="bg-gray-100 border px-4 py-2 font-semibold text-left w-1/6">Type</th>
+                            <th class="bg-gray-100 border px-4 py-2 font-semibold text-left w-1/6">Actions</th>
+                        </tr>
+                        </tr>
+                    </header>
+                    <tbody>
+                        <?php if (count($payanarssTypes) > 0) {
+                            foreach ($payanarssTypes as $type): ?>
 
-            <!-- Action Buttons -->
-            <div class="mt-6 flex gap-3">
-                <form method="post" class="inline-block">
-                    <input type="hidden" name="parent_id" value="<?= htmlspecialchars($parentId) ?>">
-                    <button type="submit" name="add_new_type" value="add_new_type" 
-                        class="bg-white text-blue-600 px-5 py-2.5 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
-                        </svg>
-                        Add New Type
-                    </button>
-                </form>
-                
-                <button type="button" onclick="exportPayanarssJSON()" 
-                    class="bg-green-500 text-white px-5 py-2.5 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:bg-green-600 hover:scale-105 transition-all flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                    </svg>
-                    Export JSON
-                </button>
-            </div>
-        </div>
-
-        <!-- Types Table -->
-        <?php if (count($payanarssTypes) > 0): ?>
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div class="overflow-x-auto custom-scroll">
-                    <table class="w-full">
-                        <!-- Table Header -->
-                        <thead class="bg-gradient-to-r from-gray-50 to-gray-100 border-b-2 border-gray-200">
-                            <tr>
-                                <th class="px-6 py-4 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
-                                    <div class="flex items-center gap-2">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
-                                        </svg>
-                                        Name
-                                    </div>
-                                </th>
-                                <th class="px-6 py-4 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
-                                    <div class="flex items-center gap-2">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/>
-                                        </svg>
-                                        Description
-                                    </div>
-                                </th>
-                                <th class="px-6 py-4 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
-                                    <div class="flex items-center gap-2">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"/>
-                                        </svg>
-                                        Type
-                                    </div>
-                                </th>
-                                <th class="px-6 py-4 text-center text-xs font-bold text-gray-700 uppercase tracking-wider">
-                                    <div class="flex items-center justify-center gap-2">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
-                                        </svg>
-                                        Actions
-                                    </div>
-                                </th>
-                            </tr>
-                        </thead>
-
-                        <!-- Table Body -->
-                        <tbody class="divide-y divide-gray-200">
-                            <?php foreach ($payanarssTypes as $index => $type): ?>
                                 <?php $isEditing = isset($_POST['edit_type']) && $_POST['edit_type'] === $type->Id; ?>
-                                
-                                <tr class="table-row <?= $isEditing ? 'bg-blue-50' : '' ?>">
+                                <tr>
                                     <form method="post">
                                         <input type="hidden" name="type_id" value="<?= $type->Id ?>">
                                         <input type="hidden" name="parent_id" value="<?= $type->ParentId ?>">
 
-                                        <!-- Name Column -->
-                                        <td class="px-6 py-4">
+                                        <td class="border px-3 py-2">
                                             <?php if ($isEditing): ?>
-                                                <input type="text" name="type_name" 
-                                                    value="<?= htmlspecialchars($type->Name) ?>" 
-                                                    class="w-full px-3 py-2 border-2 border-blue-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                                    placeholder="Enter type name">
+                                                <input type="text" name="type_name" value="<?= htmlspecialchars($type->Name) ?>" class="border px-2 py-1 w-full">
                                             <?php else: ?>
-                                                <div class="flex items-center gap-3">
-                                                    <span class="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center text-white font-bold text-sm">
-                                                        <?= strtoupper(substr($type->Name, 0, 2)) ?>
-                                                    </span>
-                                                    <span class="font-semibold text-gray-800">
-                                                        <?= htmlspecialchars($type->Name) ?>
-                                                    </span>
-                                                </div>
+                                                <?= htmlspecialchars($type->Name) ?>
                                             <?php endif; ?>
                                         </td>
-
-                                        <!-- Description Column -->
-                                        <td class="px-6 py-4">
+                                        <td class="border px-3 py-2">
                                             <?php if ($isEditing): ?>
-                                                <textarea name="type_description" rows="2" 
-                                                    class="w-full px-3 py-2 border-2 border-blue-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                                                    placeholder="Enter description"><?= htmlspecialchars($type->Description ?? '') ?></textarea>
+                                                <textarea name="type_description" rows="2" class="border px-2 py-1 w-full"><?= htmlspecialchars($type->Description ?? '') ?></textarea>
                                             <?php else: ?>
-                                                <p class="text-sm text-gray-600 line-clamp-2">
-                                                    <?= htmlspecialchars($type->Description ?? 'No description') ?>
-                                                </p>
+                                                <?= htmlspecialchars($type->Description ?? '') ?>
                                             <?php endif; ?>
                                         </td>
-
-                                        <!-- Type Column -->
-                                        <td class="px-6 py-4">
+                                        <td class="border px-3 py-2">
                                             <?php if ($isEditing): ?>
-                                                <div class="space-y-2">
-                                                    <input type="hidden" name="payanarss_type_id" id="typ_<?= $type->Id ?>_id" value="<?= $type->PayanarssTypeId ?>">
-                                                    <div class="flex items-center gap-2 bg-gray-50 px-3 py-2 rounded-lg border">
-                                                        <span class="text-sm font-medium text-gray-700" id="typ_<?= $type->Id ?>_name">
-                                                            <?= htmlspecialchars($type->getTypeName($app->Types)) ?>
-                                                        </span>
-                                                    </div>
-                                                    <button type="button" onclick="openTypeSelect('typ_<?= $type->Id ?>')" 
-                                                        class="w-full bg-blue-100 text-blue-700 px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-200 transition-colors flex items-center justify-center gap-2">
-                                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
-                                                        </svg>
-                                                        Change Type
-                                                    </button>
-                                                </div>
+                                                <!-- Inside an edit row -->
+                                                <input type="hidden" name="payanarss_type_id" id="typ_<?= $type->Id ?>_id" value="<?= $type->PayanarssTypeId ?>">
+                                                <span id="typ_<?= $type->Id ?>_name"><?= htmlspecialchars($type->getTypeName($app->Types)) ?></span>
+                                                <button type="button" onclick="openTypeSelect('typ_<?= $type->Id ?>')" class="ml-2 bg-blue-500 text-white px-2 py-1 rounded text-xs">Select Type</button>
                                             <?php else: ?>
-                                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
-                                                    <?= htmlspecialchars($type->getTypeName($app->Types)) ?>
-                                                </span>
+                                                <?= htmlspecialchars($type->getTypeName($app->Types)) ?>
                                             <?php endif; ?>
-                                            
                                             <button type="button" onclick="submitAttributeForm('<?= $type->Id ?>')"
-                                                class="mt-2 w-full bg-yellow-100 text-yellow-700 px-3 py-1.5 rounded-lg text-xs font-medium hover:bg-yellow-200 transition-colors flex items-center justify-center gap-2">
-                                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                                </svg>
-                                                Attributes
+                                                class="ml-2 bg-yellow-500 text-white px-2 py-1 rounded text-xs hover:bg-yellow-600">
+                                                ⚙️ Set Attributes
                                             </button>
                                         </td>
 
-                                        <!-- Actions Column -->
-                                        <td class="px-6 py-4">
+                                        <td class="border px-3 py-2 text-center" colspan="2">
                                             <?php if ($isEditing): ?>
-                                                <div class="flex justify-center gap-2">
-                                                    <button type="submit" name="save_type" value="<?= $type->Id ?>"
-                                                        class="bg-green-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-600 shadow-md hover:shadow-lg transition-all flex items-center gap-2">
-                                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                                        </svg>
-                                                        Save
-                                                    </button>
-                                                    <button type="submit" name="cancel_edit"
-                                                        class="bg-gray-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-gray-600 shadow-md hover:shadow-lg transition-all flex items-center gap-2">
-                                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                                        </svg>
-                                                        Cancel
-                                                    </button>
-                                                </div>
+                                                <button type="submit" name="save_type" value="<?= $type->Id ?>"
+                                                    class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">Save</button>
+                                                <button type="submit" name="cancel_edit"
+                                                    class="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-600">Cancel</button>
                                             <?php else: ?>
-                                                <div class="flex flex-col gap-2">
-                                                    <?php if ($type->isTypeOf($app->Types, "GroupType") || $type->isTypeOf($app->Types, "TableType") || $type->isTypeOf($app->Types, "IsChildTable") || $type->isTypeOf($app->Types, "IsLookupType")): ?>
-                                                        <a href="index.php?parent_id=<?= urlencode($type->Id) ?>"
-                                                            class="bg-purple-100 text-purple-700 px-3 py-1.5 rounded-lg text-xs font-medium hover:bg-purple-200 transition-colors text-center flex items-center justify-center gap-2">
-                                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
-                                                            </svg>
-                                                            View Children
-                                                        </a>
-                                                    <?php endif; ?>
-                                                    
-                                                    <div class="flex gap-2 justify-center">
-                                                        <button type="submit" name="edit_type" value="<?= $type->Id ?>"
-                                                            class="bg-blue-500 text-white px-3 py-1.5 rounded-lg text-xs font-medium hover:bg-blue-600 transition-colors flex items-center gap-1">
-                                                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
-                                                            </svg>
-                                                            Edit
-                                                        </button>
-                                                        <button type="submit" name="delete_table" value="<?= $type->Id ?>"
-                                                            class="bg-red-500 text-white px-3 py-1.5 rounded-lg text-xs font-medium hover:bg-red-600 transition-colors flex items-center gap-1"
-                                                            onclick="return confirm('Are you sure you want to delete this type?')">
-                                                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
-                                                            </svg>
-                                                            Delete
-                                                        </button>
-                                                    </div>
-                                                </div>
+                                                <?php if ($type->isTypeOf($app->Types, "GroupType") || $type->isTypeOf($app->Types, "TableType") || $type->isTypeOf($app->Types, "IsChildTable") || $type->isTypeOf($app->Types, "IsLookupType")): ?>
+                                                    <a href="index.php?parent_id=<?= urlencode($type->Id) ?>"
+                                                        class="ml-2 text-xs text-purple-600 hover:underline">
+                                                        ➕ Child Types
+                                                    </a>
+                                                    <button name="add_child_types" onclick="event.preventDefault(); loadStructureView('<?= $type->Id ?>')" value="<?= $type->Id ?>"
+                                                        class="bg-purple-500 text-white px-2 py-1 text-xs rounded ml-1">Add Child Types</button>
+                                                <?php endif; ?>
+                                                <button type="submit" name="edit_type" value="<?= $type->Id ?>"
+                                                    class="bg-yellow-500 text-white px-2 py-1 text-xs rounded hover:bg-yellow-600">Edit</button>
+                                                <button type="submit" name="delete_table" value="<?= $type->Id ?>"
+                                                    class="bg-red-500 text-white px-2 py-1 text-xs rounded"
+                                                    onclick="return confirm('Are you sure you want to delete this table?')">Delete</button>
                                             <?php endif; ?>
                                         </td>
                                     </form>
                                 </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
-                </div>
+                        <?php endforeach;
+                        } ?>
+                    </tbody>
+                </table>
             </div>
-        <?php else: ?>
-            <!-- Empty State -->
-            <div class="bg-white rounded-2xl shadow-lg p-12 text-center">
-                <div class="max-w-md mx-auto">
-                    <div class="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">No Types Found</h3>
-                    <p class="text-gray-600 mb-6">Get started by creating your first PayanarssType</p>
-                    <form method="post" class="inline-block">
-                        <input type="hidden" name="parent_id" value="<?= htmlspecialchars($parentId) ?>">
-                        <button type="submit" name="add_new_type" value="add_new_type"
-                            class="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:bg-blue-700 transition-all flex items-center gap-2 mx-auto">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
-                            </svg>
-                            Create First Type
-                        </button>
-                    </form>
-                </div>
-            </div>
-        <?php endif; ?>
-    </main>
+        </main>
+    </div>
 
-    <!-- Modals remain the same, but with enhanced styling -->
-    <!-- Type Select Modal -->
-    <div id="typeSelectModal" class="fixed inset-0 bg-black bg-opacity-50 modal-backdrop hidden justify-center items-center z-50">
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl p-6 m-4">
-            <div class="flex items-center justify-between mb-4">
-                <h2 class="text-xl font-bold text-gray-800 flex items-center gap-2">
-                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
-                    </svg>
-                    Select Type
-                </h2>
-                <button onclick="closeTypeSelect()" class="text-gray-400 hover:text-gray-600">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                    </svg>
-                </button>
-            </div>
-            
-            <div class="max-h-96 overflow-y-auto custom-scroll border rounded-xl">
-                <table class="w-full">
-                    <thead class="bg-gray-50 sticky top-0">
+    <!-- Select Type Modal -->
+    <div id="typeSelectModal" class="fixed inset-0 bg-black bg-opacity-40 hidden justify-center items-center z-50">
+        <div class="bg-white rounded shadow-lg w-full max-w-md p-4">
+            <h2 class="text-sm font-semibold mb-2">📘 Select Type</h2>
+            <div class="max-h-64 overflow-y-auto text-sm border rounded">
+                <table class="w-full text-left text-xs border-collapse">
+                    <thead class="bg-gray-100">
                         <tr>
-                            <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">Name</th>
-                            <th class="px-4 py-3 text-center text-xs font-semibold text-gray-700 uppercase">Action</th>
+                            <th class="border px-2 py-1">Name</th>
+                            <th class="border px-2 py-1">Select</th>
                         </tr>
                     </thead>
-                    <tbody id="typeSelectTable" class="divide-y divide-gray-200">
+                    <tbody id="typeSelectTable">
                         <!-- dynamically filled -->
                     </tbody>
                 </table>
             </div>
+            <div class="mt-3 text-right">
+                <button onclick="closeTypeSelect()" class="text-xs bg-red-500 text-white px-3 py-1 rounded">Close</button>
+            </div>
         </div>
     </div>
 
-    <!-- Your existing modals and scripts continue here... -->
-    <!-- Add the rest of your modals with similar enhanced styling -->
+    <!-- Structure Modal -->
+    <div id="structureModal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+        <div class="bg-white rounded p-4 shadow max-w-2xl w-full h-[80vh] overflow-y-auto">
+            <h2 class="text-base font-semibold mb-2">📘 Child Payanarss Types</h2>
+            <div id="structureContent" class="text-xs text-gray-800"></div>
+            <div class="text-right mt-3">
+                <button onclick="closeStructureModal()" class="bg-red-500 text-white px-3 py-1 rounded text-xs">Close</button>
+            </div>
+        </div>
+    </div>
 
-    <script>
-        // Add row animation on load
-        document.addEventListener('DOMContentLoaded', function() {
-            const rows = document.querySelectorAll('.table-row');
-            rows.forEach((row, index) => {
-                setTimeout(() => {
-                    row.classList.add('row-enter');
-                }, index * 50);
-            });
-        });
+    <!-- Attribute Modal -->
+    <div id="attributeModal" class="fixed inset-0 hidden bg-black bg-opacity-40 z-50 justify-center items-center">
+        <div class="bg-white w-full max-w-md rounded shadow-lg p-6 relative">
+            <h2 class="text-lg font-semibold mb-4">🧩 Select Attributes</h2>
+            <form method="post">
+                <input type="hidden" name="attribute_target_id" id="attributeTargetId" value="<?= htmlspecialchars($targetId) ?>">
+                <div id="attributeList" class="space-y-2 text-sm">
+                    <?php
+                    $selectedType = $app->get_type($targetId);
+                    if (isset($selectedType->Attributes)) {
+                        $isSelected = true;
+                        foreach ($selectedType->Attributes as $attr) {
+                            $ptype = $app->get_type($attr['Id']);
+                            $isChecked = $isSelected ? 'checked' : '';
+                            echo "<label class='flex items-center space-x-2 w-full justify-between border p-2 rounded hover:bg-gray-50'>";
+                            echo "  <div class='flex-1 text-gray-700 font-medium'>Name: " . htmlspecialchars(isset($ptype->Name) ? $ptype->Name : $attr['Id']) . "</div>";
+                            echo "  <div class='flex-1 text-gray-600'>Value: " . htmlspecialchars($attr['Value'] ?? '') . "</div>";
+                            echo "</label>";
+                        }
+                    }
+                    ?>
+                </div>
+                <div class="mt-4 text-right space-x-2">
+                    <button type="button" onclick="closeAttributeModal()" class="px-3 py-1 bg-gray-400 text-white rounded">Cancel</button>
+                    <button type="submit" name="save_attributes" class="px-3 py-1 bg-green-600 text-white rounded">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
-        // Your existing JavaScript functions...
-    </script>
+    <div id="jsonModal" class="fixed inset-0 hidden bg-black bg-opacity-50 z-50 justify-center items-center">
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-4">
+            <h2 class="text-lg font-semibold mb-2">📦 Payanarss Type JSON</h2>
+            <textarea id="jsonOutput" class="w-full h-80 border p-2 text-xs font-mono" readonly></textarea>
+            <div class="mt-3 text-right">
+                <button onclick="closeJsonModal()" class="bg-gray-500 text-white px-3 py-1 rounded">Close</button>
+                <button onclick="downloadJson()" class="bg-blue-500 text-white px-3 py-1 rounded ml-2">Download</button>
+            </div>
+        </div>
+    </div>
+
+    <form method="post" id="loadAttributeForm" style="display:none;">
+        <input type="hidden" name="attribute_target_id" id="attributeTargetIdHidden">
+        <input type="hidden" name="load_attributes" value="1">
+    </form>
     <script>
         const payanarssTypes = <?= json_encode($app->Types->all()) ?>;
 
@@ -627,4 +430,5 @@ $attribute = $app->Attribute;
         </script>
     <?php endif; ?>
 </body>
+
 </html>
