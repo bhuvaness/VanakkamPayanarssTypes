@@ -2,6 +2,7 @@
 require_once __DIR__ . '/PayanarssTypeJsonDAO.php';
 require_once __DIR__ . '/PayanarssCrud.php';
 require_once __DIR__ . '/OpenAIHelper.php'; // your helper file
+require_once __DIR__ . '/ClaudeAIHelper.php'; // your helper file
 
 class PayanarssApplication
 {
@@ -115,7 +116,16 @@ class PayanarssApplication
         }
 
         $bobj = new PayanarssTypeBusinessLogics();
-        $response = buildDomainModelFlat($prompt, $parentId, $bobj->convertToArray($types)); // this function should return JSON (see below)
+        
+        $count = 0;
+        $children = $this->getChildren($parentId);
+        $bustypes = new PayanarssTypes();
+        foreach ($children as $eachType) {
+            if ($count++ > 50) break;
+            $bustypes->add($eachType);
+        }
+
+        $response = buildDomainModelFlat($prompt, $parentId, $bobj->convertToArray($types), $bobj->convertToArray($bustypes)); // this function should return JSON (see below)
 
         return $response;
     }
@@ -433,18 +443,19 @@ class PayanarssTypeBusinessLogics
     }
     function save_all(PayanarssType $payanarssType, PayanarssTypes $types)
     {
-        echo json_encode($this->convertToArray($types));
+        //echo json_encode($this->convertToArray($types));
 
         $fileName = (!isset($fileName)) ? "VanakkamPayanarssTypes.json" : $fileName;
         $dao = new PayanarssTypeJsonDAO($fileName, $this->convertToArray($types));
         $dao->save();
 
-        $bobj = new PayanarssTypeBusinessLogics();
-        $parsedJson = callOpenAIV1($payanarssType, $bobj->convertToArray($types)); // this function should return JSON (see below)
+        //$bobj = new PayanarssTypeBusinessLogics();
+        //$parsedJson = callOpenAIV1($payanarssType, $bobj->convertToArray($types)); // this function should return JSON (see below)
 
         //echo json_encode($bobj->convertToArray($types), JSON_PRETTY_PRINT);
         //echo json_encode($parsedJson, JSON_PRETTY_PRINT);
 
+        /*
         foreach ($parsedJson as $item) {
             if (empty($item['ParentId'])) continue;
 
@@ -468,7 +479,8 @@ class PayanarssTypeBusinessLogics
                 //echo json_encode(["error" => $e->getMessage()]);
             }
         }
-
+        */
+        
         $fileName = (!isset($fileName)) ? "VanakkamPayanarssTypes.json" : $fileName;
         $dao = new PayanarssTypeJsonDAO($fileName, $this->convertToArray($types));
         $dao->save();

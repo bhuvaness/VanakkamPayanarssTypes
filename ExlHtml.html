@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure JavaScript Excel Tool</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .toolbar {
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #dee2e6;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .toolbar button {
+            padding: 10px 16px;
+            background: white;
+            border: 2px solid #dee2e6;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .toolbar button:hover {
+            background: #e9ecef;
+            border-color: #adb5bd;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .toolbar button.primary {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        
+        .toolbar button.primary:hover {
+            background: #0056b3;
+            border-color: #0056b3;
+        }
+        
+        .toolbar button.success {
+            background: #28a745;
+            color: white;
+            border-color: #28a745;
+        }
+        
+        .toolbar button.success:hover {
+            background: #218838;
+            border-color: #218838;
+        }
+        
+        .toolbar button.danger {
+            background: #dc3545;
+            color: white;
+            border-color: #dc3545;
+        }
+        
+        .toolbar button.danger:hover {
+            background: #c82333;
+            border-color: #c82333;
+        }
+        
+        .toolbar .separator {
+            width: 1px;
+            height: 30px;
+            background: #dee2e6;
+            margin: 0 5px;
+        }
+        
+        .toolbar input[type="file"] {
+            display: none;
+        }
+        
+        .formula-bar {
+            padding: 10px 20px;
+            background: white;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .formula-bar label {
+            font-weight: 600;
+            color: #495057;
+        }
+        
+        .formula-bar input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .table-wrapper {
+            overflow: auto;
+            max-height: calc(100vh - 300px);
+            background: #f8f9fa;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #495057 0%, #343a40 100%);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border: 1px solid #343a40;
+            min-width: 100px;
+            user-select: none;
+            cursor: pointer;
+        }
+        
+        th:hover {
+            background: linear-gradient(135deg, #5a6268 0%, #3d4449 100%);
+        }
+        
+        td {
+            padding: 0;
+            border: 1px solid #dee2e6;
+            position: relative;
+        }
+        
+        td input {
+            width: 100%;
+            padding: 10px 12px;
+            border: none;
+            font-size: 14px;
+            background: transparent;
+            font-family: Arial, sans-serif;
+        }
+        
+        td input:focus {
+            outline: 2px solid #667eea;
+            background: #f8f9ff;
+            z-index: 5;
+        }
+        
+        td.selected {
+            outline: 3px solid #667eea;
+            background: #e7f3ff;
+        }
+        
+        td.copying {
+            outline: 2px dashed #28a745;
+            background: #e8f5e9;
+        }
+        
+        .row-number {
+            background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+            color: #495057;
+            font-weight: 600;
+            text-align: center;
+            width: 50px;
+            min-width: 50px;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            position: sticky;
+            left: 0;
+            z-index: 5;
+            user-select: none;
+            cursor: pointer;
+        }
+        
+        .row-number:hover {
+            background: linear-gradient(135deg, #ced4da 0%, #adb5bd 100%);
+        }
+        
+        .corner-cell {
+            background: linear-gradient(135deg, #343a40 0%, #23272b 100%);
+            position: sticky;
+            left: 0;
+            top: 0;
+            z-index: 15;
+            cursor: pointer;
+        }
+        
+        .corner-cell:hover {
+            background: linear-gradient(135deg, #3d4449 0%, #2c3034 100%);
+        }
+        
+        .status-bar {
+            padding: 10px 20px;
+            background: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #6c757d;
+        }
+        
+        .status-bar .stats {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .context-menu {
+            position: fixed;
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            padding: 5px 0;
+            z-index: 1000;
+            display: none;
+            min-width: 180px;
+        }
+        
+        .context-menu.show {
+            display: block;
+        }
+        
+        .context-menu-item {
+            padding: 10px 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #212529;
+        }
+        
+        .context-menu-item:hover {
+            background: #f8f9fa;
+        }
+        
+        .context-menu-separator {
+            height: 1px;
+            background: #dee2e6;
+            margin: 5px 0;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal.show {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .modal-content h2 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .modal-content textarea {
+            width: 100%;
+            height: 200px;
+            padding: 12px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            resize: vertical;
+        }
+        
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+        
+        .modal-buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .modal-buttons .btn-primary {
+            background: #007bff;
+            color: white;
+        }
+        
+        .modal-buttons .btn-primary:hover {
+            background: #0056b3;
+        }
+        
+        .modal-buttons .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .modal-buttons .btn-secondary:hover {
+            background: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                <span>📊</span>
+                <span>Pure JavaScript Excel</span>
+            </h1>
+            <div style="font-size: 12px; opacity: 0.8;">No External Libraries • 100% JavaScript</div>
+        </div>
+        
+        <div class="toolbar">
+            <button class="primary" onclick="addRow()">
+                <span>➕</span> Add Row
+            </button>
+            <button class="primary" onclick="addColumn()">
+                <span>➕</span> Add Column
+            </button>
+            
+            <div class="separator"></div>
+            
+            <button class="danger" onclick="deleteRow()">
+                <span>❌</span> Delete Row
+            </button>
+            <button class="danger" onclick="deleteColumn()">
+                <span>❌</span> Delete Column
+            </button>
+            
+            <div class="separator"></div>
+            
+            <button onclick="copySelection()">
+                <span>📋</span> Copy
+            </button>
+            <button onclick="pasteSelection()">
+                <span>📄</span> Paste
+            </button>
+            <button onclick="cutSelection()">
+                <span>✂️</span> Cut
+            </button>
+            
+            <div class="separator"></div>
+            
+            <button class="success" onclick="exportToExcel()">
+                <span>📥</span> Export Excel
+            </button>
+            <button class="success" onclick="exportToCSV()">
+                <span>📥</span> Export CSV
+            </button>
+            <button class="success" onclick="exportToJSON()">
+                <span>📥</span> Export JSON
+            </button>
+            
+            <div class="separator"></div>
+            
+            <button onclick="document.getElementById('file-input').click()">
+                <span>📤</span> Import CSV
+            </button>
+            <button onclick="clearAll()">
+                <span>🗑️</span> Clear All
+            </button>
+            
+            <button onclick="showJSONModal()">
+                <span>{ }</span> View JSON
+            </button>
+            
+            <input type="file" id="file-input" accept=".csv" onchange="handleFileImport(event)">
+        </div>
+        
+        <div class="formula-bar">
+            <label id="cell-ref">A1</label>
+            <input type="text" id="formula-input" placeholder="Enter value or formula...">
+        </div>
+        
+        <div class="table-wrapper">
+            <table id="spreadsheet">
+                <thead>
+                    <tr id="header-row">
+                        <th class="corner-cell" onclick="selectAll()">⊞</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="status-bar">
+            <div class="stats">
+                <span>Rows: <strong id="row-count">0</strong></span>
+                <span>Columns: <strong id="col-count">0</strong></span>
+                <span>Selected: <strong id="selected-info">None</strong></span>
+            </div>
+            <div id="status-message">Ready</div>
+        </div>
+    </div>
+    
+    <!-- Context Menu -->
+    <div id="context-menu" class="context-menu">
+        <div class="context-menu-item" onclick="copySelection()">
+            <span>📋</span> Copy
+        </div>
+        <div class="context-menu-item" onclick="pasteSelection()">
+            <span>📄</span> Paste
+        </div>
+        <div class="context-menu-item" onclick="cutSelection()">
+            <span>✂️</span> Cut
+        </div>
+        <div class="context-menu-separator"></div>
+        <div class="context-menu-item" onclick="insertRowAbove()">
+            <span>⬆️</span> Insert Row Above
+        </div>
+        <div class="context-menu-item" onclick="insertRowBelow()">
+            <span>⬇️</span> Insert Row Below
+        </div>
+        <div class="context-menu-separator"></div>
+        <div class="context-menu-item" onclick="deleteRow()">
+            <span>❌</span> Delete Row
+        </div>
+        <div class="context-menu-item" onclick="deleteColumn()">
+            <span>❌</span> Delete Column
+        </div>
+        <div class="context-menu-separator"></div>
+        <div class="context-menu-item" onclick="clearSelection()">
+            <span>🗑️</span> Clear Contents
+        </div>
+    </div>
+    
+    <!-- JSON Modal -->
+    <div id="json-modal" class="modal">
+        <div class="modal-content">
+            <h2>JSON Data</h2>
+            <textarea id="json-output" readonly></textarea>
+            <div class="modal-buttons">
+                <button class="btn-primary" onclick="copyJSONToClipboard()">Copy to Clipboard</button>
+                <button class="btn-secondary" onclick="closeJSONModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global state
+        let rowCount = 0;
+        let colCount = 0;
+        let selectedCell = null;
+        let copiedData = null;
+        let isCut = false;
+        
+        // Initialize spreadsheet
+        function init() {
+            // Create initial grid (10 rows x 10 columns)
+            for (let i = 0; i < 10; i++) {
+                addColumn(false);
+            }
+            for (let i = 0; i < 10; i++) {
+                addRow(false);
+            }
+            
+            updateStats();
+            setupEventListeners();
+        }
+        
+        // Setup event listeners
+        function setupEventListeners() {
+            // Formula bar input
+            const formulaInput = document.getElementById('formula-input');
+            formulaInput.addEventListener('input', function() {
+                if (selectedCell) {
+                    selectedCell.value = this.value;
+                }
+            });
+            
+            formulaInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' && selectedCell) {
+                    moveSelection('down');
+                }
+            });
+            
+            // Click outside context menu to close
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('#context-menu')) {
+                    hideContextMenu();
+                }
+            });
+            
+            // Keyboard shortcuts
+            document.addEventListener('keydown', function(e) {
+                // Ctrl/Cmd + C (Copy)
+                if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
+                    e.preventDefault();
+                    copySelection();
+                }
+                
+                // Ctrl/Cmd + V (Paste)
+                if ((e.ctrlKey || e.metaKey) && e.key === 'v') {
+                    e.preventDefault();
+                    pasteSelection();
+                }
+                
+                // Ctrl/Cmd + X (Cut)
+                if ((e.ctrlKey || e.metaKey) && e.key === 'x') {
+                    e.preventDefault();
+                    cutSelection();
+                }
+                
+                // Ctrl/Cmd + S (Save/Export)
+                if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                    e.preventDefault();
+                    exportToCSV();
+                }
+                
+                // Delete (Clear)
+                if (e.key === 'Delete' && selectedCell) {
+                    clearSelection();
+                }
+                
+                // Arrow keys navigation
+                if (selectedCell && ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+                    e.preventDefault();
+                    const direction = {
+                        'ArrowUp': 'up',
+                        'ArrowDown': 'down',
+                        'ArrowLeft': 'left',
+                        'ArrowRight': 'right'
+                    }[e.key];
+                    moveSelection(direction);
+                }
+            });
+        }
+        
+        // Get column letter from number (1 = A, 2 = B, ..., 27 = AA)
+        function getColumnLetter(num) {
+            let letter = '';
+            while (num > 0) {
+                let remainder = (num - 1) % 26;
+                letter = String.fromCharCode(65 + remainder) + letter;
+                num = Math.floor((num - 1) / 26);
+            }
+            return letter;
+        }
+        
+        // Add column
+        function addColumn(updateUI = true) {
+            colCount++;
+            const colLetter = getColumnLetter(colCount);
+            
+            // Add header
+            const headerRow = document.getElementById('header-row');
+            const th = document.createElement('th');
+            th.textContent = colLetter;
+            th.id = `col-${colCount}`;
+            th.onclick = function() { selectColumn(colCount); };
+            headerRow.appendChild(th);
+            
+            // Add cell to each row
+            const tbody = document.getElementById('table-body');
+            Array.from(tbody.children).forEach((row, rowIndex) => {
+                const td = document.createElement('td');
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.dataset.row = rowIndex + 1;
+                input.dataset.col = colCount;
+                input.id = `cell-${rowIndex + 1}-${colCount}`;
+                
+                input.addEventListener('focus', function() {
+                    selectCell(this);
+                });
+                
+                input.addEventListener('contextmenu', function(e) {
+                    e.preventDefault();
+                    selectCell(this);
+                    showContextMenu(e.pageX, e.pageY);
+                });
+                
+                td.appendChild(input);
+                row.appendChild(td);
+            });
+            
+            if (updateUI) {
+                updateStats();
+                showStatus('Column added');
+            }
+        }
+        
+        // Add row
+        function addRow(updateUI = true) {
+            rowCount++;
+            const tbody = document.getElementById('table-body');
+            const tr = document.createElement('tr');
+            tr.dataset.row = rowCount;
+            tr.id = `row-${rowCount}`;
+            
+            // Row number cell
+            const tdNum = document.createElement('td');
+            tdNum.className = 'row-number';
+            tdNum.textContent = rowCount;
+            tdNum.onclick = function() { selectRow(rowCount); };
+            tr.appendChild(tdNum);
+            
+            // Add cells for each column
+            for (let i = 1; i <= colCount; i++) {
+                const td = document.createElement('td');
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.dataset.row = rowCount;
+                input.dataset.col = i;
+                input.id = `cell-${rowCount}-${i}`;
+                
+                input.addEventListener('focus', function() {
+                    selectCell(this);
+                });
+                
+                input.addEventListener('contextmenu', function(e) {
+                    e.preventDefault();
+                    selectCell(this);
+                    showContextMenu(e.pageX, e.pageY);
+                });
+                
+                td.appendChild(input);
+                tr.appendChild(td);
+            }
+            
+            tbody.appendChild(tr);
+            
+            if (updateUI) {
+                updateStats();
+                showStatus('Row added');
+            }
+        }
+        
+        // Delete row
+        function deleteRow() {
+            if (!selectedCell) {
+                alert('Please select a cell first');
+                return;
+            }
+            
+            const row = parseInt(selectedCell.dataset.row);
+            const rowElement = document.getElementById(`row-${row}`);
+            
+            if (rowElement && rowCount > 1) {
+                rowElement.remove();
+                rowCount--;
+                
+                // Update row numbers and IDs
+                const tbody = document.getElementById('table-body');
+                Array.from(tbody.children).forEach((tr, index) => {
+                    const newRowNum = index + 1;
+                    tr.dataset.row = newRowNum;
+                    tr.id = `row-${newRowNum}`;
+                    tr.querySelector('.row-number').textContent = newRowNum;
+                    
+                    // Update cell IDs
+                    Array.from(tr.querySelectorAll('input')).forEach((input, colIndex) => {
+                        input.dataset.row = newRowNum;
+                        input.id = `cell-${newRowNum}-${colIndex + 1}`;
+                    });
+                });
+                
+                selectedCell = null;
+                updateStats();
+                showStatus('Row deleted');
+            }
+        }
+        
+        // Delete column
+        function deleteColumn() {
+            if (!selectedCell) {
+                alert('Please select a cell first');
+                return;
+            }
+            
+            const col = parseInt(selectedCell.dataset.col);
+            
+            if (colCount > 1) {
+                // Remove header
+                document.getElementById(`col-${col}`).remove();
+                
+                // Remove cells from each row
+                const tbody = document.getElementById('table-body');
+                Array.from(tbody.children).forEach(row => {
+                    const cell = row.querySelector(`input[data-col="${col}"]`);
+                    if (cell) {
+                        cell.parentElement.remove();
+                    }
+                });
+                
+                colCount--;
+                
+                // Update column numbers and IDs
+                const headerRow = document.getElementById('header-row');
+                Array.from(headerRow.children).forEach((th, index) => {
+                    if (index > 0) { // Skip corner cell
+                        const newColNum = index;
+                        th.id = `col-${newColNum}`;
+                        th.textContent = getColumnLetter(newColNum);
+                    }
+                });
+                
+                Array.from(tbody.children).forEach(row => {
+                    Array.from(row.querySelectorAll('input')).forEach((input, index) => {
+                        const newColNum = index + 1;
+                        input.dataset.col = newColNum;
+                        input.id = `cell-${input.dataset.row}-${newColNum}`;
+                    });
+                });
+                
+                selectedCell = null;
+                updateStats();
+                showStatus('Column deleted');
+            }
+        }
+        
+        // Select cell
+        function selectCell(input) {
+            // Clear previous selection
+            if (selectedCell) {
+                selectedCell.parentElement.classList.remove('selected');
+            }
+            
+            selectedCell = input;
+            input.parentElement.classList.add('selected');
+            
+            // Update formula bar
+            const row = input.dataset.row;
+            const col = input.dataset.col;
+            const cellRef = getColumnLetter(parseInt(col)) + row;
+            document.getElementById('cell-ref').textContent = cellRef;
+            document.getElementById('formula-input').value = input.value;
+            document.getElementById('selected-info').textContent = cellRef;
+        }
+        
+        // Select row
+        function selectRow(rowNum) {
+            const row = document.getElementById(`row-${rowNum}`);
+            Array.from(row.querySelectorAll('input')).forEach(input => {
+                input.parentElement.classList.add('selected');
+            });
+            showStatus(`Row ${rowNum} selected`);
+        }
+        
+        // Select column
+        function selectColumn(colNum) {
+            const tbody = document.getElementById('table-body');
+            Array.from(tbody.children).forEach(row => {
+                const input = row.querySelector(`input[data-col="${colNum}"]`);
+                if (input) {
+                    input.parentElement.classList.add('selected');
+                }
+            });
+            showStatus(`Column ${getColumnLetter(colNum)} selected`);
+        }
+        
+        // Select all
+        function selectAll() {
+            const tbody = document.getElementById('table-body');
+            Array.from(tbody.querySelectorAll('input')).forEach(input => {
+                input.parentElement.classList.add('selected');
+            });
+            showStatus('All cells selected');
+        }
+        
+        // Move selection
+        function moveSelection(direction) {
+            if (!selectedCell) return;
+            
+            const row = parseInt(selectedCell.dataset.row);
+            const col = parseInt(selectedCell.dataset.col);
+            
+            let newRow = row;
+            let newCol = col;
+            
+            switch(direction) {
+                case 'up':
+                    newRow = Math.max(1, row - 1);
+                    break;
+                case 'down':
+                    newRow = Math.min(rowCount, row + 1);
+                    break;
+                case 'left':
+                    newCol = Math.max(1, col - 1);
+                    break;
+                case 'right':
+                    newCol = Math.min(colCount, col + 1);
+                    break;
+            }
+            
+            const newCell = document.getElementById(`cell-${newRow}-${newCol}`);
+            if (newCell) {
+                newCell.focus();
+                selectCell(newCell);
+            }
+        }
+        
+        // Copy selection
+        function copySelection() {
+            if (!selectedCell) {
+                alert('Please select a cell first');
+                return;
+            }
+            
+            copiedData = selectedCell.value;
+            isCut = false;
+            selectedCell.parentElement.classList.add('copying');
+            
+            setTimeout(() => {
+                if (selectedCell) {
+                    selectedCell.parentElement.classList.remove('copying');
+                }
+            }, 1000);
+            
+            showStatus('Copied to clipboard');
+        }
+        
+        // Cut selection
+        function cutSelection() {
+            if (!selectedCell) {
+                alert('Please select a cell first');
+                return;
+            }
+            
+            copiedData = selectedCell.value;
+            isCut = true;
+            selectedCell.parentElement.classList.add('copying');
+            
+            showStatus('Cut to clipboard');
+        }
+        
+        // Paste selection
+        function pasteSelection() {
+            if (!selectedCell || copiedData === null) {
+                alert('Nothing to paste');
+                return;
+            }
+            
+            selectedCell.value = copiedData;
+            document.getElementById('formula-input').value = copiedData;
+            
+            if (isCut) {
+                // Clear the original cell if it was cut
+                copiedData = null;
+                isCut = false;
+            }
+            
+            showStatus('Pasted');
+        }
+        
+        // Clear selection
+        function clearSelection() {
+            if (!selectedCell) return;
+            
+            selectedCell.value = '';
+            document.getElementById('formula-input').value = '';
+            showStatus('Content cleared');
+        }
+        
+        // Insert row above
+        function insertRowAbove() {
+            if (!selectedCell) {
+                alert('Please select a cell first');
+                return;
+            }
+            
+            const currentRow = parseInt(selectedCell.dataset.row);
+            insertRowAt(currentRow);
+        }
+        
+        // Insert row below
+        function insertRowBelow() {
+            if (!selectedCell) {
+                alert('Please select a cell first');
+                return;
+            }
+            
+            const currentRow = parseInt(selectedCell.dataset.row);
+            insertRowAt(currentRow + 1);
+        }
+        
+        // Insert row at specific position
+        function insertRowAt(position) {
+            rowCount++;
+            const tbody = document.getElementById('table-body');
+            const tr = document.createElement('tr');
+            tr.dataset.row = position;
+            tr.id = `row-${position}`;
+            
+            // Row number cell
+            const tdNum = document.createElement('td');
+            tdNum.className = 'row-number';
+            tdNum.textContent = position;
+            tdNum.onclick = function() { selectRow(position); };
+            tr.appendChild(tdNum);
+            
+            // Add cells
+            for (let i = 1; i <= colCount; i++) {
+                const td = document.createElement('td');
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.dataset.row = position;
+                input.dataset.col = i;
+                input.id = `cell-${position}-${i}`;
+                
+                input.addEventListener('focus', function() {
+                    selectCell(this);
+                });
+                
+                input.addEventListener('contextmenu', function(e) {
+                    e.preventDefault();
+                    selectCell(this);
+                    showContextMenu(e.pageX, e.pageY);
+                });
+                
+                td.appendChild(input);
+                tr.appendChild(td);
+            }
+            
+            // Insert at position
+            if (position <= tbody.children.length) {
+                tbody.insertBefore(tr, tbody.children[position - 1]);
+            } else {
+                tbody.appendChild(tr);
+            }
+            
+            // Update row numbers
+            Array.from(tbody.children).forEach((row, index) => {
+                const newRowNum = index + 1;
+                row.dataset.row = newRowNum;
+                row.id = `row-${newRowNum}`;
+                row.querySelector('.row-number').textContent = newRowNum;
+                
+                Array.from(row.querySelectorAll('input')).forEach((input, colIndex) => {
+                    input.dataset.row = newRowNum;
+                    input.id = `cell-${newRowNum}-${colIndex + 1}`;
+                });
+            });
+            
+            updateStats();
+            showStatus('Row inserted');
+        }
+        
+        // Show context menu
+        function showContextMenu(x, y) {
+            const menu = document.getElementById('context-menu');
+            menu.style.left = x + 'px';
+            menu.style.top = y + 'px';
+            menu.classList.add('show');
+        }
+        
+        // Hide context menu
+        function hideContextMenu() {
+            document.getElementById('context-menu').classList.remove('show');
+        }
+        
+        // Get all data
+        function getAllData() {
+            const data = [];
+            const tbody = document.getElementById('table-body');
+            
+            Array.from(tbody.children).forEach(row => {
+                const rowData = [];
+                const inputs = row.querySelectorAll('input');
+                inputs.forEach(input => {
+                    rowData.push(input.value);
+                });
+                data.push(rowData);
+            });
+            
+            return data;
+        }
+        
+        // Get headers
+        function getHeaders() {
+            const headers = [];
+            for (let i = 1; i <= colCount; i++) {
+                headers.push(getColumnLetter(i));
+            }
+            return headers;
+        }
+        
+        // Export to CSV
+        function exportToCSV() {
+            const data = getAllData();
+            const headers = getHeaders();
+            
+            let csv = headers.join(',') + '\n';
+            data.forEach(row => {
+                csv += row.map(cell => `"${cell.replace(/"/g, '""')}"`).join(',') + '\n';
+            });
+            
+            downloadFile(csv, 'spreadsheet.csv', 'text/csv');
+            showStatus('Exported to CSV');
+        }
+        
+        // Export to JSON
+        function exportToJSON() {
+            const data = getAllData();
+            const headers = getHeaders();
+            
+            const jsonData = data.map(row => {
+                const obj = {};
+                headers.forEach((header, index) => {
+                    obj[header] = row[index];
+                });
+                return obj;
+            });
+            
+            const json = JSON.stringify(jsonData, null, 2);
+            downloadFile(json, 'spreadsheet.json', 'application/json');
+            showStatus('Exported to JSON');
+        }
+        
+        // Export to Excel (HTML table that Excel can open)
+        function exportToExcel() {
+            const data = getAllData();
+            const headers = getHeaders();
+            
+            let html = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel">';
+            html += '<head><meta charset="UTF-8"><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet>';
+            html += '<x:Name>Sheet1</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet>';
+            html += '</x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body>';
+            html += '<table border="1">';
+            
+            // Headers
+            html += '<tr>';
+            headers.forEach(header => {
+                html += `<th>${header}</th>`;
+            });
+            html += '</tr>';
+            
+            // Data
+            data.forEach(row => {
+                html += '<tr>';
+                row.forEach(cell => {
+                    html += `<td>${cell}</td>`;
+                });
+                html += '</tr>';
+            });
+            
+            html += '</table></body></html>';
+            
+            downloadFile(html, 'spreadsheet.xls', 'application/vnd.ms-excel');
+            showStatus('Exported to Excel');
+        }
+        
+        // Import CSV
+        function handleFileImport(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const csv = e.target.result;
+                const lines = csv.split('\n').filter(line => line.trim());
+                
+                if (lines.length === 0) return;
+                
+                // Parse CSV
+                const data = lines.map(line => {
+                    // Simple CSV parser (doesn't handle complex cases)
+                    return line.split(',').map(cell => cell.replace(/^"|"$/g, '').trim());
+                });
+                
+                // Clear existing data
+                clearAll(false);
+                
+                // Determine required size
+                const numRows = data.length;
+                const numCols = Math.max(...data.map(row => row.length));
+                
+                // Create columns
+                for (let i = 0; i < numCols; i++) {
+                    addColumn(false);
+                }
+                
+                // Create rows and populate
+                data.forEach((rowData, rowIndex) => {
+                    addRow(false);
+                    rowData.forEach((cellValue, colIndex) => {
+                        const input = document.getElementById(`cell-${rowIndex + 1}-${colIndex + 1}`);
+                        if (input) {
+                            input.value = cellValue;
+                        }
+                    });
+                });
+                
+                updateStats();
+                showStatus('CSV imported successfully');
+            };
+            
+            reader.readAsText(file);
+            event.target.value = ''; // Reset file input
+        }
+        
+        // Show JSON modal
+        function showJSONModal() {
+            const data = getAllData();
+            const headers = getHeaders();
+            
+            const jsonData = data.map(row => {
+                const obj = {};
+                headers.forEach((header, index) => {
+                    obj[header] = row[index];
+                });
+                return obj;
+            });
+            
+            document.getElementById('json-output').value = JSON.stringify(jsonData, null, 2);
+            document.getElementById('json-modal').classList.add('show');
+        }
+        
+        // Close JSON modal
+        function closeJSONModal() {
+            document.getElementById('json-modal').classList.remove('show');
+        }
+        
+        // Copy JSON to clipboard
+        function copyJSONToClipboard() {
+            const textarea = document.getElementById('json-output');
+            textarea.select();
+            document.execCommand('copy');
+            showStatus('JSON copied to clipboard');
+        }
+        
+        // Clear all
+        function clearAll(confirm = true) {
+            if (confirm && !window.confirm('Are you sure you want to clear all data?')) {
+                return;
+            }
+            
+            const tbody = document.getElementById('table-body');
+            tbody.innerHTML = '';
+            
+            const headerRow = document.getElementById('header-row');
+            headerRow.innerHTML = '<th class="corner-cell" onclick="selectAll()">⊞</th>';
+            
+            rowCount = 0;
+            colCount = 0;
+            selectedCell = null;
+            
+            init();
+            showStatus('All data cleared');
+        }
+        
+        // Download file
+        function downloadFile(content, fileName, mimeType) {
+            const blob = new Blob([content], { type: mimeType });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+        
+        // Update statistics
+        function updateStats() {
+            document.getElementById('row-count').textContent = rowCount;
+            document.getElementById('col-count').textContent = colCount;
+        }
+        
+        // Show status message
+        function showStatus(message) {
+            const statusElement = document.getElementById('status-message');
+            statusElement.textContent = message;
+            statusElement.style.color = '#28a745';
+            
+            setTimeout(() => {
+                statusElement.textContent = 'Ready';
+                statusElement.style.color = '#6c757d';
+            }, 3000);
+        }
+        
+        // Initialize on page load
+        window.onload = init;
+    </script>
+</body>
+</html>

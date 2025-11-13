@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['generate_from_prompt'
 
     if (!empty($prompt)) {
         
-        $response = $app->prompt_for_type($prompt); 
+        $response = $app->prompt_for_type($prompt, $parentId); 
         $start = strpos($response, '[');
         $end = strrpos($response, ']');
         if ($start !== false && $end !== false) {

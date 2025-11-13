@@ -221,7 +221,7 @@ EOT;
     'temperature' => 0.0,
   ];
 
-  echo "<pre>" . json_encode($data, JSON_PRETTY_PRINT) . "</pre>";
+  //echo "<pre>" . json_encode($data, JSON_PRETTY_PRINT) . "</pre>";
 
   $ch = curl_init('https://api.anthropic.com/v1/messages');
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -247,7 +247,7 @@ EOT;
   $clean = preg_replace('/```(?:json)?/', '', $content);
   $clean = preg_replace('/\/\/.*$/m', '', $clean);
   $clean = trim($clean);
-  echo "<pre>$clean</pre>";
+  //echo "<pre>$clean</pre>";
 
   $parsedJson = json_decode($clean, true);
 
@@ -260,236 +260,490 @@ EOT;
   return $parsedJson;
 }
 
-function buildDomainModelFlat(string $domainPrompt, string $parentId, $allTypes = []): string
+function buildDomainModelFlat(string $domainPrompt, string $parentId, $allTypes = [], $busTypes = []): string
 {
   global $myCre;
 
   $allTypesJson = json_encode($allTypes, JSON_PRETTY_PRINT);
+  $busTypesJson = json_encode($busTypes, JSON_PRETTY_PRINT);
+  $entityCount = count($busTypes);
 
   $systemPrompt = <<<EOT
-You are an expert ERP system architect and database designer working with the PayanarssType metadata structure.
+You are generating BUSINESS METADATA (columns and rules) using predefined SYSTEM TYPES.
 
-AVAILABLE PAYANARSS TYPES:
-$allTypesJson
+🔴 CRITICAL: You are generating BUSINESS-TIER metadata ONLY 🔴
 
-PARENT ID FOR THIS REQUEST: $parentId
+PARENT ID: {$parentId}
+
+EXISTING ENTITIES (Tables already created):
+{$busTypesJson}
+
+AVAILABLE SYSTEM TYPES (Framework - DO NOT CREATE, ONLY REFERENCE):
+{$allTypesJson}
 
 YOUR TASK:
-When given a business domain request (e.g., "Build Leave Management", "Create Employee Management"), you must:
+Generate ONLY field-level (column) Business metadata for the entities provided.
 
-1. Analyze the domain and identify ALL required entities (tables)
-2. For each entity, define ALL necessary fields (columns)
-3. For each field, specify ALL business rules and constraints
-4. Define relationships between entities (lookup fields, foreign keys)
-5. Return everything as a FLAT array of PayanarssType objects (no nesting, no Children arrays)
+WHAT TO GENERATE:
+✅ Field/Column definitions (Business tier)
+✅ Business rules using system rule types
+✅ Attributes using system attribute types
 
-PAYANARSS TYPE STRUCTURE (FLAT):
+WHAT NOT TO GENERATE:
+❌ Entity/Table definitions (already provided)
+❌ System types (Text, Number, DateTime, etc.)
+❌ System rules (Required, Unique, MaxLength, etc.)
+❌ System attributes (ATTR-REQUIRED, ATTR-MAX-LENGTH, etc.)
+❌ System operations (Create, Read, Update, Delete)
+
+HOW TO USE SYSTEM TYPES:
+
+1. For PayanarssTypeId in fields, use these EXACT IDs from system types:
+   - "TYPE-FIELD-TEXT" → for text/string fields
+   - "TYPE-FIELD-NUMBER" → for numeric fields
+   - "TYPE-FIELD-DATETIME" → for date/time fields
+   - "TYPE-FIELD-BOOLEAN" → for yes/no fields
+   - "TYPE-FIELD-GUID" → for unique identifiers
+   - "TYPE-FIELD-LOOKUP" → for foreign key references
+
+2. For Attribute Ids, use these EXACT IDs from system types:
+   - "ATTR-REQUIRED" → field is mandatory (Value: "True"/"False")
+   - "ATTR-UNIQUE" → value must be unique (Value: "True")
+   - "ATTR-MAX-LENGTH" → maximum text length (Value: number)
+   - "ATTR-MIN-LENGTH" → minimum text length (Value: number)
+   - "ATTR-AUTO-GENERATE" → auto-generated value (Value: "True")
+   - "ATTR-DEFAULT-VALUE" → default value (Value: the default)
+   - "RULE-GREATER-THAN" → minimum value constraint (Value: number)
+   - "RULE-LESS-THAN" → maximum value constraint (Value: number)
+   - "RULE-CANNOT-BE-FUTURE" → date cannot be future (Value: "True")
+   - "RULE-LOOKUP-SOURCE" → lookup reference (Value: target entity Id)
+
+STRUCTURE FOR BUSINESS FIELDS:
 {
     "Id": "<unique GUID>",
-    "ParentId": "<parent GUID - NEVER null>",
-    "Name": "<EntityName or FieldName>",
-    "PayanarssTypeId": "<type GUID from available types>",
+    "ParentId": "<entity Id from existing entities list>",
+    "Name": "<FieldName>",
+    "PayanarssTypeId": "<system type Id - e.g., TYPE-FIELD-TEXT>",
+    "Description": "<Rule1; Rule2; Rule3; Brief description>",
     "Attributes": [
         {
-            "Id": "<AttributeTypeId from available types>",
-            "Value": "<rule value>"
+            "Id": "<system attribute Id - e.g., ATTR-REQUIRED>",
+            "Value": "<value>"
         }
-    ],
-    "Description": "<clear description>"
+    ]
 }
 
-KNOWN ATTRIBUTE TYPE IDs (use these in Attributes array):
-- "100000000000000000000000000000012" = Required/Mandatory (Value: "True"/"False")
-- "100000000000000000000000000000017" = Maximum/DateTo (Value: number or date)
-- "100000000000000000000000000000016" = Minimum/DateFrom (Value: number or date)
-- "100000000000000000000000000000018" = GUID type (Value: "True")
-- "100000000000000000000000000000006" = Text type (Value: max length)
-- "100000000000000000000000000000007" = Number type (Value: "True")
-- "100000000000000000000000000000009" = Boolean type (Value: "True")
-- "100000000000000000000000000000008" = DateTime type (Value: "True")
-- "100000000000000000000000000000013" = Unique constraint (Value: "True")
-- "100000000000000000000000000000024" = Auto Generate/Auto-updated (Value: "True")
-- "100000000000000000000000000000025" = Validate Before Create (Value: "True")
-- "100000000000000000000000000000029" = Default Value (Value: the default value)
-- "100000000000000000000000000000026" = GreaterThan (Value: number)
-- "100000000000000000000000000000027" = LessThan (Value: number)
-- "100000000000000000000000000000003" = Lookup/Foreign Key (Value: target entity GUID)
+DESCRIPTION FORMAT (MANDATORY):
+"Rule1; Rule2; Rule3; Human-readable description."
 
-FLAT ARRAY OUTPUT EXAMPLE for "Leave Management":
+Rules to include based on Attributes:
+- ATTR-REQUIRED = "True" → "Required"
+- ATTR-UNIQUE = "True" → "Unique"
+- ATTR-AUTO-GENERATE = "True" → "Auto-generated"
+- ATTR-MAX-LENGTH = number → "Max length: X"
+- RULE-GREATER-THAN = number → "Min: X"
+- RULE-LESS-THAN = number → "Max: X"
+- RULE-CANNOT-BE-FUTURE = "True" → "Cannot be future"
+- RULE-LOOKUP-SOURCE → "Lookup; References {EntityName}"
+- TYPE-FIELD-GUID → "GUID"
+- TYPE-FIELD-TEXT → "Text"
+- TYPE-FIELD-NUMBER → "Number"
+- TYPE-FIELD-BOOLEAN → "Boolean"
+- TYPE-FIELD-DATETIME → "DateTime" or "Date"
+
+MANDATORY FIELDS FOR EVERY ENTITY:
+Generate these 6 standard fields for each entity:
+
+1. {EntityName}Id (Primary Key)
+   PayanarssTypeId: "TYPE-FIELD-GUID"
+   Description: "Required; GUID; Auto-generated; Unique; {Entity} primary key."
+   Attributes:
+   [
+     {"Id": "ATTR-REQUIRED", "Value": "True"},
+     {"Id": "ATTR-UNIQUE", "Value": "True"},
+     {"Id": "ATTR-AUTO-GENERATE", "Value": "True"}
+   ]
+
+2. CreatedBy
+   PayanarssTypeId: "TYPE-FIELD-GUID"
+   Description: "Required; GUID; Auto-populated; User who created this record."
+   Attributes:
+   [
+     {"Id": "ATTR-REQUIRED", "Value": "True"},
+     {"Id": "ATTR-AUTO-GENERATE", "Value": "True"}
+   ]
+
+3. CreatedOn
+   PayanarssTypeId: "TYPE-FIELD-DATETIME"
+   Description: "Required; DateTime; Auto-populated; Timestamp when created."
+   Attributes:
+   [
+     {"Id": "ATTR-REQUIRED", "Value": "True"},
+     {"Id": "ATTR-AUTO-GENERATE", "Value": "True"}
+   ]
+
+4. ModifiedBy
+   PayanarssTypeId: "TYPE-FIELD-GUID"
+   Description: "Optional; GUID; Auto-updated; User who last modified."
+   Attributes:
+   [
+     {"Id": "ATTR-AUTO-GENERATE", "Value": "True"}
+   ]
+
+5. ModifiedOn
+   PayanarssTypeId: "TYPE-FIELD-DATETIME"
+   Description: "Optional; DateTime; Auto-updated; Last modification timestamp."
+   Attributes:
+   [
+     {"Id": "ATTR-AUTO-GENERATE", "Value": "True"}
+   ]
+
+6. IsActive
+   PayanarssTypeId: "TYPE-FIELD-BOOLEAN"
+   Description: "Required; Boolean; Default: True; Indicates if record is active."
+   Attributes:
+   [
+     {"Id": "ATTR-REQUIRED", "Value": "True"},
+     {"Id": "ATTR-DEFAULT-VALUE", "Value": "True"}
+   ]
+
+EXAMPLE OUTPUT:
+
+Given entity:
+{
+  "Id": "ENTITY-EMPLOYEE-001",
+  "Name": "Employee"
+}
+
+Generate ONLY business fields (columns):
 [
-    {
-        "Id": "A1B2C3D4-E5F6-4789-0123-456789ABCDEF",
-        "ParentId": "$parentId",
-        "Name": "LeaveType",
-        "PayanarssTypeId": "100000000000000000000000000000001",
-        "Description": "Master table for leave types",
-        "Attributes": []
-    },
-    {
-        "Id": "B2C3D4E5-F6A7-4890-1234-56789ABCDEF0",
-        "ParentId": "A1B2C3D4-E5F6-4789-0123-456789ABCDEF",
-        "Name": "LeaveTypeId",
-        "PayanarssTypeId": "100000000000000000000000000000018",
-        "Description": "Primary key for leave type",
-        "Attributes": [
-            {"Id": "100000000000000000000000000000012", "Value": "True"},
-            {"Id": "100000000000000000000000000000018", "Value": "True"},
-            {"Id": "100000000000000000000000000000013", "Value": "True"},
-            {"Id": "100000000000000000000000000000024", "Value": "True"}
-        ]
-    },
-    {
-        "Id": "C3D4E5F6-A7B8-4901-2345-6789ABCDEF01",
-        "ParentId": "A1B2C3D4-E5F6-4789-0123-456789ABCDEF",
-        "Name": "LeaveTypeName",
-        "PayanarssTypeId": "100000000000000000000000000000006",
-        "Description": "Name of leave type",
-        "Attributes": [
-            {"Id": "100000000000000000000000000000012", "Value": "True"},
-            {"Id": "100000000000000000000000000000006", "Value": "100"},
-            {"Id": "100000000000000000000000000000013", "Value": "True"}
-        ]
-    },
-    {
-        "Id": "D4E5F6A7-B8C9-4012-3456-789ABCDEF012",
-        "ParentId": "A1B2C3D4-E5F6-4789-0123-456789ABCDEF",
-        "Name": "MaxDaysPerYear",
-        "PayanarssTypeId": "100000000000000000000000000000007",
-        "Description": "Maximum days allowed per year",
-        "Attributes": [
-            {"Id": "100000000000000000000000000000012", "Value": "True"},
-            {"Id": "100000000000000000000000000000007", "Value": "True"},
-            {"Id": "100000000000000000000000000000026", "Value": "0"}
-        ]
-    },
-    {
-        "Id": "E5F6A7B8-C9D0-4123-4567-89ABCDEF0123",
-        "ParentId": "$parentId",
-        "Name": "LeaveApplication",
-        "PayanarssTypeId": "100000000000000000000000000000001",
-        "Description": "Leave application requests",
-        "Attributes": []
-    },
-    {
-        "Id": "F6A7B8C9-D0E1-4234-5678-9ABCDEF01234",
-        "ParentId": "E5F6A7B8-C9D0-4123-4567-89ABCDEF0123",
-        "Name": "ApplicationId",
-        "PayanarssTypeId": "100000000000000000000000000000018",
-        "Description": "Primary key for leave application",
-        "Attributes": [
-            {"Id": "100000000000000000000000000000012", "Value": "True"},
-            {"Id": "100000000000000000000000000000018", "Value": "True"},
-            {"Id": "100000000000000000000000000000013", "Value": "True"},
-            {"Id": "100000000000000000000000000000024", "Value": "True"}
-        ]
-    },
-    {
-        "Id": "A7B8C9D0-E1F2-4345-6789-ABCDEF012345",
-        "ParentId": "E5F6A7B8-C9D0-4123-4567-89ABCDEF0123",
-        "Name": "LeaveTypeId",
-        "PayanarssTypeId": "100000000000000000000000000000018",
-        "Description": "Foreign key to LeaveType",
-        "Attributes": [
-            {"Id": "100000000000000000000000000000012", "Value": "True"},
-            {"Id": "100000000000000000000000000000003", "Value": "A1B2C3D4-E5F6-4789-0123-456789ABCDEF"}
-        ]
-    },
-    {
-        "Id": "B8C9D0E1-F2A3-4456-789A-BCDEF0123456",
-        "ParentId": "E5F6A7B8-C9D0-4123-4567-89ABCDEF0123",
-        "Name": "StartDate",
-        "PayanarssTypeId": "100000000000000000000000000000008",
-        "Description": "Leave start date",
-        "Attributes": [
-            {"Id": "100000000000000000000000000000012", "Value": "True"},
-            {"Id": "100000000000000000000000000000008", "Value": "True"}
-        ]
-    },
-    {
-        "Id": "C9D0E1F2-A3B4-4567-89AB-CDEF01234567",
-        "ParentId": "E5F6A7B8-C9D0-4123-4567-89ABCDEF0123",
-        "Name": "EndDate",
-        "PayanarssTypeId": "100000000000000000000000000000008",
-        "Description": "Leave end date",
-        "Attributes": [
-            {"Id": "100000000000000000000000000000012", "Value": "True"},
-            {"Id": "100000000000000000000000000000008", "Value": "True"}
-        ]
-    },
-    {
-        "Id": "D0E1F2A3-B4C5-4678-9ABC-DEF012345678",
-        "ParentId": "$parentId",
-        "Name": "LeaveBalance",
-        "PayanarssTypeId": "100000000000000000000000000000001",
-        "Description": "Track employee leave balances",
-        "Attributes": []
-    },
-    {
-        "Id": "E1F2A3B4-C5D6-4789-ABCD-EF0123456789",
-        "ParentId": "D0E1F2A3-B4C5-4678-9ABC-DEF012345678",
-        "Name": "BalanceId",
-        "PayanarssTypeId": "100000000000000000000000000000018",
-        "Description": "Primary key for leave balance",
-        "Attributes": [
-            {"Id": "100000000000000000000000000000012", "Value": "True"},
-            {"Id": "100000000000000000000000000000018", "Value": "True"},
-            {"Id": "100000000000000000000000000000013", "Value": "True"},
-            {"Id": "100000000000000000000000000000024", "Value": "True"}
-        ]
-    }
+  {
+    "Id": "FIELD-EMP-ID-001",
+    "ParentId": "ENTITY-EMPLOYEE-001",
+    "Name": "EmployeeId",
+    "PayanarssTypeId": "TYPE-FIELD-GUID",
+    "Description": "Required; GUID; Auto-generated; Unique; Employee primary key.",
+    "Attributes": [
+      {"Id": "ATTR-REQUIRED", "Value": "True"},
+      {"Id": "ATTR-UNIQUE", "Value": "True"},
+      {"Id": "ATTR-AUTO-GENERATE", "Value": "True"}
+    ]
+  },
+  {
+    "Id": "FIELD-EMP-FIRSTNAME-001",
+    "ParentId": "ENTITY-EMPLOYEE-001",
+    "Name": "FirstName",
+    "PayanarssTypeId": "TYPE-FIELD-TEXT",
+    "Description": "Required; Text; Max length: 100; Employee first name.",
+    "Attributes": [
+      {"Id": "ATTR-REQUIRED", "Value": "True"},
+      {"Id": "ATTR-MAX-LENGTH", "Value": "100"}
+    ]
+  },
+  {
+    "Id": "FIELD-EMP-EMAIL-001",
+    "ParentId": "ENTITY-EMPLOYEE-001",
+    "Name": "Email",
+    "PayanarssTypeId": "TYPE-FIELD-TEXT",
+    "Description": "Required; Text; Unique; Max length: 255; Employee email address.",
+    "Attributes": [
+      {"Id": "ATTR-REQUIRED", "Value": "True"},
+      {"Id": "ATTR-UNIQUE", "Value": "True"},
+      {"Id": "ATTR-MAX-LENGTH", "Value": "255"}
+    ]
+  },
+  {
+    "Id": "FIELD-EMP-DOB-001",
+    "ParentId": "ENTITY-EMPLOYEE-001",
+    "Name": "DateOfBirth",
+    "PayanarssTypeId": "TYPE-FIELD-DATETIME",
+    "Description": "Required; Date; Cannot be future; Min age: 18; Employee birth date.",
+    "Attributes": [
+      {"Id": "ATTR-REQUIRED", "Value": "True"},
+      {"Id": "RULE-CANNOT-BE-FUTURE", "Value": "True"},
+      {"Id": "RULE-GREATER-THAN", "Value": "18"}
+    ]
+  },
+  {
+    "Id": "FIELD-EMP-DEPT-001",
+    "ParentId": "ENTITY-EMPLOYEE-001",
+    "Name": "DepartmentId",
+    "PayanarssTypeId": "TYPE-FIELD-GUID",
+    "Description": "Required; Lookup; References Department; Employee department.",
+    "Attributes": [
+      {"Id": "ATTR-REQUIRED", "Value": "True"},
+      {"Id": "RULE-LOOKUP-SOURCE", "Value": "ENTITY-DEPARTMENT-001"}
+    ]
+  },
+  {
+    "Id": "FIELD-EMP-SALARY-001",
+    "ParentId": "ENTITY-EMPLOYEE-001",
+    "Name": "Salary",
+    "PayanarssTypeId": "TYPE-FIELD-NUMBER",
+    "Description": "Required; Number; Min: 0; Employee monthly salary.",
+    "Attributes": [
+      {"Id": "ATTR-REQUIRED", "Value": "True"},
+      {"Id": "RULE-GREATER-THAN", "Value": "0"}
+    ]
+  },
+  {
+    "Id": "FIELD-EMP-CREATED-BY-001",
+    "ParentId": "ENTITY-EMPLOYEE-001",
+    "Name": "CreatedBy",
+    "PayanarssTypeId": "TYPE-FIELD-GUID",
+    "Description": "Required; GUID; Auto-populated; User who created this record.",
+    "Attributes": [
+      {"Id": "ATTR-REQUIRED", "Value": "True"},
+      {"Id": "ATTR-AUTO-GENERATE", "Value": "True"}
+    ]
+  },
+  {
+    "Id": "FIELD-EMP-CREATED-ON-001",
+    "ParentId": "ENTITY-EMPLOYEE-001",
+    "Name": "CreatedOn",
+    "PayanarssTypeId": "TYPE-FIELD-DATETIME",
+    "Description": "Required; DateTime; Auto-populated; Timestamp when created.",
+    "Attributes": [
+      {"Id": "ATTR-REQUIRED", "Value": "True"},
+      {"Id": "ATTR-AUTO-GENERATE", "Value": "True"}
+    ]
+  },
+  {
+    "Id": "FIELD-EMP-MODIFIED-BY-001",
+    "ParentId": "ENTITY-EMPLOYEE-001",
+    "Name": "ModifiedBy",
+    "PayanarssTypeId": "TYPE-FIELD-GUID",
+    "Description": "Optional; GUID; Auto-updated; User who last modified.",
+    "Attributes": [
+      {"Id": "ATTR-AUTO-GENERATE", "Value": "True"}
+    ]
+  },
+  {
+    "Id": "FIELD-EMP-MODIFIED-ON-001",
+    "ParentId": "ENTITY-EMPLOYEE-001",
+    "Name": "ModifiedOn",
+    "PayanarssTypeId": "TYPE-FIELD-DATETIME",
+    "Description": "Optional; DateTime; Auto-updated; Last modification timestamp.",
+    "Attributes": [
+      {"Id": "ATTR-AUTO-GENERATE", "Value": "True"}
+    ]
+  },
+  {
+    "Id": "FIELD-EMP-ISACTIVE-001",
+    "ParentId": "ENTITY-EMPLOYEE-001",
+    "Name": "IsActive",
+    "PayanarssTypeId": "TYPE-FIELD-BOOLEAN",
+    "Description": "Required; Boolean; Default: True; Indicates if employee is active.",
+    "Attributes": [
+      {"Id": "ATTR-REQUIRED", "Value": "True"},
+      {"Id": "ATTR-DEFAULT-VALUE", "Value": "True"}
+    ]
+  }
 ]
 
-CRITICAL PARENT-CHILD RULES:
-1. ALL objects MUST have a ParentId - NEVER use null
-2. Entity-level objects (tables) have ParentId = "$parentId" (the input ParentId provided)
-3. Field-level objects (columns) have ParentId = their entity's Id (the GUID of the table they belong to)
-4. Output must be a FLAT array - NO nested "Children" property
-5. ALWAYS generate unique GUIDs for every Id field
+CRITICAL VALIDATION CHECKLIST:
+Before responding, verify:
+☑ Are you generating ONLY field-level objects? (ParentId = entity Id)
+☑ Are you using PayanarssTypeId from system types? (TYPE-FIELD-*)
+☑ Are you using Attribute Ids from system types? (ATTR-*, RULE-*)
+☑ Are you NOT creating new system types?
+☑ Does each entity have 6 mandatory fields?
+☑ Is Description in semicolon-separated format?
+☑ Does Description match the Attributes?
 
-STRUCTURE PATTERN (2-LEVEL HIERARCHY):
-Level 1: Entities (ParentId = "$parentId")
-Level 2: Fields (ParentId = their entity's Id)
+COUNT OF ENTITIES: {$entityCount}
+YOU MUST GENERATE FIELDS FOR ALL {$entityCount} ENTITIES.
 
-Example Pattern:
-- Object 1: Entity "LeaveType" with ParentId = "$parentId"
-- Object 2: Field "LeaveTypeId" with ParentId = "LeaveType's Id"
-- Object 3: Field "LeaveTypeName" with ParentId = "LeaveType's Id"
-- Object 4: Field "MaxDaysPerYear" with ParentId = "LeaveType's Id"
-- Object 5: Entity "LeaveApplication" with ParentId = "$parentId"
-- Object 6: Field "ApplicationId" with ParentId = "LeaveApplication's Id"
-- Object 7: Field "LeaveTypeId" with ParentId = "LeaveApplication's Id"
-- Continue pattern...
+CRITICAL RULES:
+1. Generate ONLY business field metadata (columns and rules)
+2. DO NOT generate entity definitions (already provided)
+3. DO NOT create new system types
+4. ONLY reference existing system type Ids
+5. Generate fields for ALL {$entityCount} entities provided
+6. Each entity MUST have at least 6 standard fields + business fields
+7. Use semicolon-separated Description format
+8. Output ONLY valid JSON array starting with [ and ending with ]
+9. NO markdown, NO explanation, NO text outside JSON
 
-MANDATORY RULES:
-1. Return ONLY valid JSON - no markdown, no explanation, no code fences, no text outside the JSON array
-2. Do NOT include any "Children" property in any object
-3. The entire output must be a single JSON array starting with [ and ending with ]
-4. ALWAYS include standard fields for every entity:
-   - Id (GUID, Required, Unique, Auto-generated)
-   - CreatedBy (GUID, Required, Lookup to User)
-   - CreatedOn (DateTime, Required, Auto-generated, Default: DateTime.UtcNow)
-   - ModifiedBy (GUID, Lookup to User)
-   - ModifiedOn (DateTime, Auto-updated)
-   - IsActive (Boolean, Required, Default: True)
 
-DOMAIN-SPECIFIC CONSIDERATIONS:
-For Leave Management, include entities like:
-- LeaveType (master data)
-- LeaveApplication (transaction)
-- LeaveBalance (balance tracking)
-- LeaveApproval (approval workflow)
-- LeaveEntitlement (policy rules)
-- LeavePolicy (configuration)
+🔴 CRITICAL: COMPLETE JSON OUTPUT REQUIREMENT 🔴
 
-For other domains, think comprehensively about:
-- Master data entities
-- Transaction entities
-- Lookup/reference entities
-- Configuration entities
-- Audit/tracking needs
-- Business rules and validations
+MANDATORY RULES FOR JSON RESPONSE:
 
-Remember: Every entity uses ParentId = "$parentId", and every field uses ParentId = its entity's Id.
+1. ALWAYS output COMPLETE and VALID JSON
+2. NEVER send incomplete JSON that cuts off mid-object or mid-array
+3. If approaching token limit, REDUCE the number of fields per entity rather than sending incomplete JSON
+4. The response MUST end with a complete closing bracket ]
+
+PRIORITY ORDER:
+Priority 1: Send COMPLETE valid JSON (even if fewer fields)
+Priority 2: Send all fields for all entities
+Priority 3: Send detailed descriptions
+
+STRATEGY WHEN APPROACHING TOKEN LIMIT:
+If you're running out of tokens:
+✅ DO: Generate mandatory fields (Id, ParentId, Name, PayanarssTypeId, Description, Attributes) for ALL entities
+✅ DO: Skip optional business-specific fields if needed
+✅ DO: Use shorter descriptions if needed
+✅ DO: Always close the JSON array with ]
+❌ DON'T: Send incomplete JSON that cuts off
+❌ DON'T: Leave objects or arrays unclosed
+❌ DON'T: Stop mid-field
+
+VALIDATION BEFORE SENDING:
+Before sending your response, verify:
+☑ Does the response start with [ ?
+☑ Does the response end with ] ?
+☑ Are all { matched with } ?
+☑ Are all [ matched with ] ?
+☑ Is the last object in the array complete?
+☑ Can this JSON be parsed without errors?
+
+If ANY of the above checks fail, DO NOT send the response. Instead:
+1. Reduce the number of fields per entity
+2. Generate only mandatory fields (6 standard + 2-3 business fields per entity)
+3. Ensure JSON is complete and valid
+
+EXAMPLE OF WHAT TO DO IF RUNNING OUT OF TOKENS:
+
+❌ WRONG (Incomplete JSON):
+[
+  {
+    "Id": "FIELD-001",
+    "ParentId": "ENTITY-001",
+    "Name": "EmployeeId",
+    "PayanarssTypeId": "TYPE-FIELD-
+
+✅ CORRECT (Complete JSON with fewer fields):
+[
+  {
+    "Id": "FIELD-001",
+    "ParentId": "ENTITY-001",
+    "Name": "EmployeeId",
+    "PayanarssTypeId": "TYPE-FIELD-GUID",
+    "Description": "Required; GUID; Auto-generated; Unique; Primary key.",
+    "Attributes": [
+      {"Id": "ATTR-REQUIRED", "Value": "True"}
+    ]
+  }
+]
+
+NOTE: It's better to send complete JSON with FEWER FIELDS than incomplete JSON with MORE FIELDS.
+
+The user can always request more fields in a follow-up request.
+Complete, valid JSON is MANDATORY - incomplete JSON causes errors and is unacceptable.
+YOUR FINAL RESPONSE MUST BE ONLY THE JSON ARRAY BELOW:
+
+  Generate field definitions for ALL entities above:
+  - PayanarssTypeId: TYPE-FIELD-TEXT, TYPE-FIELD-NUMBER, TYPE-FIELD-GUID, etc.
+  - ParentId: Entity Id from the list above
+  - Include: Id, ParentId, Name, PayanarssTypeId, Description, Attributes
+  - DO NOT generate entities
+
+IF SCENARIO 3 (Complete):
+  Generate BOTH entities AND fields:
+  - First generate entities (ParentId = "{$parentId}")
+  - Then generate fields (ParentId = entity Id)
+  - Output as single flat array: [entity1, entity2, field1, field2, field3...]
+
+🔴 OUTPUT STRUCTURE 🔴
+
+SCENARIO 1 - Tables Only:
+[
+  {
+    "Id": "ENTITY-001",
+    "ParentId": "{$parentId}",
+    "Name": "Organization",
+    "PayanarssTypeId": "TYPE-ENTITY-TABLE",
+    "Description": "Master; Organization master data table.",
+    "Attributes": [
+      {"Id": "ATTR-ENTITY-TYPE", "Value": "Master"}
+    ]
+  },
+  {
+    "Id": "ENTITY-002",
+    "ParentId": "{$parentId}",
+    "Name": "Department",
+    "PayanarssTypeId": "TYPE-ENTITY-TABLE",
+    "Description": "Master; Department master data table.",
+    "Attributes": [
+      {"Id": "ATTR-ENTITY-TYPE", "Value": "Master"}
+    ]
+  }
+]
+
+SCENARIO 2 - Columns and Rules Only:
+[
+  {
+    "Id": "FIELD-001",
+    "ParentId": "ENTITY-001",
+    "Name": "OrganizationId",
+    "PayanarssTypeId": "TYPE-FIELD-GUID",
+    "Description": "Required; GUID; Auto-generated; Unique; Primary key.",
+    "Attributes": [
+      {"Id": "ATTR-REQUIRED", "Value": "True"}
+    ]
+  },
+  {
+    "Id": "FIELD-002",
+    "ParentId": "ENTITY-001",
+    "Name": "OrganizationName",
+    "PayanarssTypeId": "TYPE-FIELD-TEXT",
+    "Description": "Required; Text; Max length: 200; Organization name.",
+    "Attributes": [
+      {"Id": "ATTR-REQUIRED", "Value": "True"},
+      {"Id": "ATTR-MAX-LENGTH", "Value": "200"}
+    ]
+  }
+]
+
+SCENARIO 3 - Complete (Tables + Columns + Rules):
+[
+  {
+    "Id": "ENTITY-001",
+    "ParentId": "{$parentId}",
+    "Name": "Organization",
+    "PayanarssTypeId": "TYPE-ENTITY-TABLE",
+    "Description": "Master; Organization master data table.",
+    "Attributes": []
+  },
+  {
+    "Id": "FIELD-001",
+    "ParentId": "ENTITY-001",
+    "Name": "OrganizationId",
+    "PayanarssTypeId": "TYPE-FIELD-GUID",
+    "Description": "Required; GUID; Auto-generated; Unique; Primary key.",
+    "Attributes": [
+      {"Id": "ATTR-REQUIRED", "Value": "True"}
+    ]
+  },
+  {
+    "Id": "FIELD-002",
+    "ParentId": "ENTITY-001",
+    "Name": "OrganizationName",
+    "PayanarssTypeId": "TYPE-FIELD-TEXT",
+    "Description": "Required; Text; Max length: 200; Organization name.",
+    "Attributes": [
+      {"Id": "ATTR-REQUIRED", "Value": "True"}
+    ]
+  }
+]
+
+🔴 CRITICAL: COMPLETE JSON OUTPUT 🔴
+
+ALWAYS:
+✅ Send COMPLETE valid JSON starting with [ and ending with ]
+✅ If running out of tokens, reduce fields per entity but ALWAYS close JSON
+✅ Never send incomplete JSON that cuts off mid-object
+
+USER REQUEST (Pay attention to keywords):
+{$domainPrompt}
+
+Keywords detected: "columns and rules" or "fields and rules" or "only columns"
+Action: Generate ONLY business field metadata for all entities provided.
+
+Analyze the request above, detect the scenario, and generate appropriate metadata.
+
 EOT;
 
   $data = [
@@ -515,6 +769,23 @@ EOT;
 
   $result = curl_exec($ch);
 
+  // Decode the API response
+  $apiResponse = json_decode($result, true);
+
+  // Check for API errors
+  if (isset($apiResponse['error'])) {
+    throw new Exception("Claude API Error: " . json_encode($apiResponse['error']));
+  }
+
+  // Extract the actual text content
+  if (!isset($apiResponse['content'][0]['text'])) {
+    throw new Exception("Invalid API response structure: " . $result);
+  }
+
+  $text = $apiResponse['content'][0]['text'];
+
+  //echo "<pre>Claude V1 Response: " . htmlspecialchars($text) . "</pre>";
+
   if (curl_errno($ch)) {
     echo 'Curl error: ' . curl_error($ch);
     curl_close($ch);
@@ -523,11 +794,12 @@ EOT;
 
   curl_close($ch);
 
-  $decoded = json_decode($result, true);
-  $content = $decoded['content'][0]['text'] ?? '[]';
+  //$content = json_decode($text, true);
+  
+  //echo "<pre>Domain Model Flat Response: " . htmlspecialchars($text) . "</pre>";
 
   // Clean up any markdown code fences
-  $clean = preg_replace('/```(?:json)?/', '', $content);
+  $clean = preg_replace('/```(?:json)?/', '', $text);
   $clean = trim($clean);
 
   return $clean;

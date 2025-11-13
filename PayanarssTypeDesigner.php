@@ -78,7 +78,7 @@ if (isset($_POST['delete_table'])) {
     $parentType = $app->get_type($parentId);
     $parentType->remove_type($id);
     $app->remove_type($id);
-    $app->save_all_types();
+    $app->save_all_types($parentType);
     $_SESSION['PayanarssApp'] = $app;
 }
 
@@ -218,8 +218,6 @@ $attribute = $app->Attribute;
                                                         class="ml-2 text-xs text-purple-600 hover:underline">
                                                         ➕ Child Types
                                                     </a>
-                                                    <button name="add_child_types" onclick="event.preventDefault(); loadStructureView('<?= $type->Id ?>')" value="<?= $type->Id ?>"
-                                                        class="bg-purple-500 text-white px-2 py-1 text-xs rounded ml-1">Add Child Types</button>
                                                 <?php endif; ?>
                                                 <button type="submit" name="edit_type" value="<?= $type->Id ?>"
                                                     class="bg-yellow-500 text-white px-2 py-1 text-xs rounded hover:bg-yellow-600">Edit</button>
