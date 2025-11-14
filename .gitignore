@@ -1,0 +1,31 @@
+# Session files
+sessions/
+*.session
+
+# Log files
+*.log
+Payanarss_debug.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Data files
+datas/
+data_entry_store.json
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+dist/
+build/
