@@ -10,6 +10,9 @@ $app = null;
 $parentId = "";
 $payanarssTypes = null;
 
+//echo ini_get('memory_limit');
+ini_set('memory_limit', '512M');
+
 // Load or initialize rows
 if (!isset($_SESSION['PayanarssApp'])) {
     $app = new PayanarssApplication();
@@ -32,8 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['generate_from_prompt'
     $prompt = $_POST['ai_prompt'] ?? '';
 
     if (!empty($prompt)) {
-        
-        $response = $app->prompt_for_type($prompt, $parentId); 
+
+        $response = $app->prompt_for_type($prompt, $parentId);
         $start = strpos($response, '[');
         $end = strrpos($response, ']');
         if ($start !== false && $end !== false) {
@@ -43,12 +46,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['generate_from_prompt'
         }
         //echo "<pre>$response</pre>";
         //echo "<pre>$jsonString</pre>";
-        $arr = json_decode($jsonString, true);
-        $bobj = new PayanarssTypeBusinessLogics();
-        $types =   $bobj->convert_to_payanarss_type($arr);
-        $app->addTypes($parentId, $types);
-        $payanarssType = $app->get_type($parentId);
-        $app->save_all_types($payanarssType);
+        try { 
+            $arr = json_decode($jsonString, true);
+            $bobj = new PayanarssTypeBusinessLogics();
+            $newtypes =   $bobj->convert_to_payanarss_type($arr);
+            //echo "<p>" . count($types) . "</p>";
+            $app->addTypes($parentId, $newtypes);
+            //echo "<p>" . count($app->Types) . "</p>";
+            $payanarssType = $app->get_type($parentId);
+            $app->save_all_types($payanarssType);
+        } catch (Exception $e) {
+            echo json_encode(["error" => $e->getMessage()]);
+        }
     }
 }
 

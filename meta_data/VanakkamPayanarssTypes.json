@@ -734,14 +734,6 @@
         "Description": null
     },
     {
-        "Id": "46D4EAD1-AF83-40B7-AD9A-729157B6E0B8",
-        "ParentId": "6899a3afae549",
-        "Name": "Disciplinary Agent",
-        "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": [],
-        "Description": null
-    },
-    {
         "Id": "6C6B5F3C-11F7-40E5-92F0-09D6A4301C3C",
         "ParentId": "6899a3afae549",
         "Name": "Recruitment & Onboarding Agent",
@@ -753,14 +745,6 @@
         "Id": "ADF4A32C-5183-4A34-94C1-ACBC8EE70B62",
         "ParentId": "6899a3afae549",
         "Name": "Offboarding Agent",
-        "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": [],
-        "Description": null
-    },
-    {
-        "Id": "BD0380E0-2A3B-40E8-883E-5A1B7BBA38DF",
-        "ParentId": "6899a3afae549",
-        "Name": "Employment Agent",
         "PayanarssTypeId": "100000000000000000000000000000004",
         "Attributes": [],
         "Description": null
@@ -17544,5 +17528,973 @@
             }
         ],
         "Description": "Master, Designation"
+    },
+    {
+        "Id": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d",
+        "ParentId": "0085A4CE-EBB2-4987-8875-D516EAA8F223",
+        "Name": "TrainingProgram",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Master; Training program master data table."
+    },
+    {
+        "Id": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e",
+        "ParentId": "0085A4CE-EBB2-4987-8875-D516EAA8F223",
+        "Name": "TrainingSession",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Transaction; Training session transaction table."
+    },
+    {
+        "Id": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f",
+        "ParentId": "0085A4CE-EBB2-4987-8875-D516EAA8F223",
+        "Name": "TrainingMaterial",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Master; Training material master data table."
+    },
+    {
+        "Id": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a",
+        "ParentId": "0085A4CE-EBB2-4987-8875-D516EAA8F223",
+        "Name": "TrainingAttendance",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Transaction; Training attendance transaction table."
+    },
+    {
+        "Id": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d-001",
+        "ParentId": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d",
+        "Name": "TrainingProgramId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; Training program primary key."
+    },
+    {
+        "Id": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d-002",
+        "ParentId": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d",
+        "Name": "ProgramName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "200"
+            }
+        ],
+        "Description": "Required; Text; Max length: 200; Training program name."
+    },
+    {
+        "Id": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d-003",
+        "ParentId": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d",
+        "Name": "Description",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "1000"
+            }
+        ],
+        "Description": "Optional; Text; Max length: 1000; Program description."
+    },
+    {
+        "Id": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d-004",
+        "ParentId": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d",
+        "Name": "Duration",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "1"
+            }
+        ],
+        "Description": "Required; Number; Min: 1; Duration in hours."
+    },
+    {
+        "Id": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d-005",
+        "ParentId": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d",
+        "Name": "MaxParticipants",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "1"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "1000"
+            }
+        ],
+        "Description": "Required; Number; Min: 1; Max: 1000; Maximum participants allowed."
+    },
+    {
+        "Id": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d-006",
+        "ParentId": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d-007",
+        "ParentId": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d-008",
+        "ParentId": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d-009",
+        "ParentId": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d-010",
+        "ParentId": "686c8a2c-5e3f-4a1b-8d2c-9c8b6e0f3a5d",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if program is active."
+    },
+    {
+        "Id": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e-001",
+        "ParentId": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e",
+        "Name": "TrainingSessionId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; Training session primary key."
+    },
+    {
+        "Id": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e-002",
+        "ParentId": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e",
+        "Name": "TrainingProgramId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Lookup; References TrainingProgram; Associated training program."
+    },
+    {
+        "Id": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e-003",
+        "ParentId": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e",
+        "Name": "SessionName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "200"
+            }
+        ],
+        "Description": "Required; Text; Max length: 200; Training session name."
+    },
+    {
+        "Id": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e-004",
+        "ParentId": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e",
+        "Name": "StartDateTime",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Session start date and time."
+    },
+    {
+        "Id": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e-005",
+        "ParentId": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e",
+        "Name": "EndDateTime",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Session end date and time."
+    },
+    {
+        "Id": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e-006",
+        "ParentId": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e",
+        "Name": "Location",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "300"
+            }
+        ],
+        "Description": "Required; Text; Max length: 300; Session location."
+    },
+    {
+        "Id": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e-007",
+        "ParentId": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e",
+        "Name": "InstructorName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "200"
+            }
+        ],
+        "Description": "Required; Text; Max length: 200; Instructor name."
+    },
+    {
+        "Id": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e-008",
+        "ParentId": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e-009",
+        "ParentId": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e-010",
+        "ParentId": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e-011",
+        "ParentId": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e-012",
+        "ParentId": "686c8a3d-6f4a-5b2c-9e3d-0d9c7f1a4b6e",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if session is active."
+    },
+    {
+        "Id": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f-001",
+        "ParentId": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f",
+        "Name": "TrainingMaterialId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; Training material primary key."
+    },
+    {
+        "Id": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f-002",
+        "ParentId": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f",
+        "Name": "TrainingProgramId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Lookup; References TrainingProgram; Associated training program."
+    },
+    {
+        "Id": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f-003",
+        "ParentId": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f",
+        "Name": "MaterialName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "200"
+            }
+        ],
+        "Description": "Required; Text; Max length: 200; Training material name."
+    },
+    {
+        "Id": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f-004",
+        "ParentId": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f",
+        "Name": "MaterialType",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "50"
+            }
+        ],
+        "Description": "Required; Text; Max length: 50; Material type (PDF, Video, Document)."
+    },
+    {
+        "Id": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f-005",
+        "ParentId": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f",
+        "Name": "FilePath",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "500"
+            }
+        ],
+        "Description": "Optional; Text; Max length: 500; File path or URL."
+    },
+    {
+        "Id": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f-006",
+        "ParentId": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f",
+        "Name": "FileSize",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "0"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; File size in bytes."
+    },
+    {
+        "Id": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f-007",
+        "ParentId": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f-008",
+        "ParentId": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f-009",
+        "ParentId": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f-010",
+        "ParentId": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f-011",
+        "ParentId": "686c8a4e-7a5b-6c3d-0f4e-1e0d8a2b5c7f",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if material is active."
+    },
+    {
+        "Id": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a-001",
+        "ParentId": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a",
+        "Name": "TrainingAttendanceId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; Training attendance primary key."
+    },
+    {
+        "Id": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a-002",
+        "ParentId": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a",
+        "Name": "TrainingSessionId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Lookup; References TrainingSession; Associated training session."
+    },
+    {
+        "Id": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a-003",
+        "ParentId": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a",
+        "Name": "ParticipantName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "200"
+            }
+        ],
+        "Description": "Required; Text; Max length: 200; Participant full name."
+    },
+    {
+        "Id": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a-004",
+        "ParentId": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a",
+        "Name": "ParticipantEmail",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "255"
+            }
+        ],
+        "Description": "Required; Text; Max length: 255; Participant email address."
+    },
+    {
+        "Id": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a-005",
+        "ParentId": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a",
+        "Name": "AttendanceStatus",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "20"
+            }
+        ],
+        "Description": "Required; Text; Max length: 20; Attendance status (Present, Absent, Late)."
+    },
+    {
+        "Id": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a-006",
+        "ParentId": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a",
+        "Name": "CheckInTime",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [],
+        "Description": "Optional; DateTime; Participant check-in time."
+    },
+    {
+        "Id": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a-007",
+        "ParentId": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a",
+        "Name": "CheckOutTime",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [],
+        "Description": "Optional; DateTime; Participant check-out time."
+    },
+    {
+        "Id": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a-008",
+        "ParentId": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a-009",
+        "ParentId": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a-010",
+        "ParentId": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a-011",
+        "ParentId": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a-012",
+        "ParentId": "686c8a5f-8b6c-7d4e-1a5f-2f1e9b3c6d8a",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if attendance record is active."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-ABCD-123456789001",
+        "ParentId": "6C6B5F3C-11F7-40E5-92F0-09D6A4301C3C",
+        "Name": "JobPositions",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Master; Job positions and requirements table."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-ABCD-123456789006",
+        "ParentId": "6C6B5F3C-11F7-40E5-92F0-09D6A4301C3C",
+        "Name": "OnboardingTasks",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Master; Onboarding task templates table."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-ABCD-123456789007",
+        "ParentId": "6C6B5F3C-11F7-40E5-92F0-09D6A4301C3C",
+        "Name": "OnboardingProgress",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Transaction; Employee onboarding progress tracking table."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-ABCD-123456789008",
+        "ParentId": "6C6B5F3C-11F7-40E5-92F0-09D6A4301C3C",
+        "Name": "Departments",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Master; Company departments table."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-ABCD-123456789009",
+        "ParentId": "6C6B5F3C-11F7-40E5-92F0-09D6A4301C3C",
+        "Name": "ApplicationStatuses",
+        "PayanarssTypeId": "100000000000000000000000000000003",
+        "Attributes": [],
+        "Description": "Lookup; Application status values table."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-ABCD-123456789010",
+        "ParentId": "6C6B5F3C-11F7-40E5-92F0-09D6A4301C3C",
+        "Name": "InterviewTypes",
+        "PayanarssTypeId": "100000000000000000000000000000003",
+        "Attributes": [],
+        "Description": "Lookup; Interview type values table."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-ABCD-123456789011",
+        "ParentId": "A1B2C3D4-E5F6-7890-ABCD-123456789001",
+        "Name": "Location",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "200"
+            }
+        ],
+        "Description": "Required; Text; Max length: 200; Job location."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-ABCD-123456789012",
+        "ParentId": "A1B2C3D4-E5F6-7890-ABCD-123456789001",
+        "Name": "PostingDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Date when position was posted."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-ABCD-123456789013",
+        "ParentId": "A1B2C3D4-E5F6-7890-ABCD-123456789001",
+        "Name": "ApplicationDeadline",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [],
+        "Description": "Optional; DateTime; Application deadline date."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-ABCD-123456789014",
+        "ParentId": "A1B2C3D4-E5F6-7890-ABCD-123456789001",
+        "Name": "Status",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "50"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "Open"
+            }
+        ],
+        "Description": "Required; Text; Max length: 50; Position status (Open, Closed, On Hold)."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-ABCD-123456789015",
+        "ParentId": "A1B2C3D4-E5F6-7890-ABCD-123456789001",
+        "Name": "HiringManagerId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Hiring manager responsible for position."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-ABCD-123456789016",
+        "ParentId": "A1B2C3D4-E5F6-7890-ABCD-123456789001",
+        "Name": "NumberOfOpenings",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "1"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "1"
+            }
+        ],
+        "Description": "Required; Number; Min: 1; Number of available positions."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-ABCD-123456789017",
+        "ParentId": "A1B2C3D4-E5F6-7890-ABCD-123456789001",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-ABCD-123456789018",
+        "ParentId": "A1B2C3D4-E5F6-7890-ABCD-123456789001",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-ABCD-123456789019",
+        "ParentId": "A1B2C3D4-E5F6-7890-ABCD-123456789001",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-ABCD-123456789020",
+        "ParentId": "A1B2C3D4-E5F6-7890-ABCD-123456789001",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-ABCD-123456789021",
+        "ParentId": "A1B2C3D4-E5F6-7890-ABCD-123456789001",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if position is active."
+    },
+    {
+        "Id": "6916e0b1e0fb5",
+        "ParentId": "A1B2C3D4-E5F6-7890-ABCD-123456789001",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": ""
     }
 ]

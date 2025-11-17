@@ -20,6 +20,7 @@ class PayanarssApplication
     }
     public function save_all_types(PayanarssType $payanarssType): PayanarssTypes
     {
+        echo count($this->Types);
         $busObj = new PayanarssTypeBusinessLogics();
         $busObj->save_all($payanarssType, $this->Types);
         return $this->Types;
@@ -75,7 +76,7 @@ class PayanarssApplication
         $this->RootNodes = $this->map_parent_children();
         return $new;
     }
-    public function addTypes($parentId = null, $types = [])
+    public function addTypes($parentId = null, $types = null)
     {
         foreach ($types as $new) {
             if ($new->ParentId === null || $new->ParentId === "") {
@@ -84,7 +85,9 @@ class PayanarssApplication
                 else
                     $new->ParentId = $new->Id;
             }
+            echo "<p>Add item with ID: " . $new->Id . "</p>";
             $this->Types->add($new);
+
         }
 
         $this->RootNodes = $this->map_parent_children();
@@ -116,7 +119,7 @@ class PayanarssApplication
         }
 
         $bobj = new PayanarssTypeBusinessLogics();
-        
+
         $count = 0;
         $children = $this->getChildren($parentId);
         $bustypes = new PayanarssTypes();
@@ -251,7 +254,9 @@ class PayanarssTypes implements Iterator, Countable
     public function add(PayanarssType $item)
     {
         if (!$this->contains($item)) {
+            //echo "<p>Adding item with ID: " . $item->Id . "</p>";
             $this->items[] = $item;
+            //echo "<p>Items count after add: " . count($this->items) . "</p>";
             //$this->keys = array_keys($this->items);
             $this->storage->attach($item);
         }
@@ -480,7 +485,7 @@ class PayanarssTypeBusinessLogics
             }
         }
         */
-        
+
         $fileName = (!isset($fileName)) ? "VanakkamPayanarssTypes.json" : $fileName;
         $dao = new PayanarssTypeJsonDAO($fileName, $this->convertToArray($types));
         $dao->save();

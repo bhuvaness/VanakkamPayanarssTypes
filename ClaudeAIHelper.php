@@ -729,6 +729,65 @@ SCENARIO 3 - Complete (Tables + Columns + Rules):
   }
 ]
 
+🔴 CRITICAL: PRIMARY KEY ID FIELD REQUIREMENT 🔴
+
+MANDATORY RULE FOR ALL ENTITIES:
+Every entity/table MUST have a Primary Key Id field as the FIRST field.
+
+PRIMARY KEY FIELD SPECIFICATIONS:
+- Field Name: Id (e.g., EmployeeId, DepartmentId, CustomerId)
+- PayanarssTypeId: "100000000000000000000000000000018" (GUID type)
+- Description: "Required; GUID; Auto-generated; Unique; {Entity} primary key identifier."
+- Attributes MUST include:
+  * {"Id": "100000000000000000000000000000012", "Value": "True"} - Required
+  * {"Id": "100000000000000000000000000000018", "Value": "True"} - GUID type
+  * {"Id": "100000000000000000000000000000024", "Value": "True"} - Auto-generated
+  * {"Id": "100000000000000000000000000000013", "Value": "True"} - Unique
+
+VALIDATION CHECKLIST:
+Before generating any entity, ensure:
+☑ First field is Id
+☑ PayanarssTypeId is GUID type
+☑ Has Required attribute
+☑ Has Unique attribute
+☑ Has Auto-generated attribute
+☑ Description follows format
+
+EXAMPLE PRIMARY KEY FIELD:
+{
+  "Id": "<generated-guid>",
+  "ParentId": "<entity-id>",
+  "Name": "EmployeeId",
+  "PayanarssTypeId": "100000000000000000000000000000018",
+  "Description": "Required; GUID; Auto-generated; Unique; Employee primary key identifier.",
+  "Attributes": [
+    {"Id": "100000000000000000000000000000012", "Value": "True"},
+    {"Id": "100000000000000000000000000000018", "Value": "True"},
+    {"Id": "100000000000000000000000000000024", "Value": "True"},
+    {"Id": "100000000000000000000000000000013", "Value": "True"}
+  ]
+}
+
+WRONG EXAMPLES (DO NOT DO THIS):
+❌ Missing Id field entirely
+❌ Id field not first
+❌ Id field named just "Id" instead of "{EntityName}Id"
+❌ Id field missing Required attribute
+❌ Id field missing Unique attribute
+❌ Id field not GUID type
+
+CORRECT FIELD ORDER FOR EVERY ENTITY:
+1. Id (Primary Key) - ALWAYS FIRST
+2. Business-specific fields
+3. CreatedBy
+4. CreatedOn
+5. ModifiedBy
+6. ModifiedOn
+7. IsActive
+
+REMEMBER: NO ENTITY WITHOUT PRIMARY KEY ID FIELD AS FIRST FIELD!
+
+
 🔴 CRITICAL: COMPLETE JSON OUTPUT 🔴
 
 ALWAYS:
