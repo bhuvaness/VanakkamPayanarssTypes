@@ -854,7 +854,121 @@ EOT;
   curl_close($ch);
 
   //$content = json_decode($text, true);
-  
+
+  //echo "<pre>Domain Model Flat Response: " . htmlspecialchars($text) . "</pre>";
+
+  // Clean up any markdown code fences
+  $clean = preg_replace('/```(?:json)?/', '', $text);
+  $clean = trim($clean);
+
+  return $clean;
+}
+
+/**
+ * Call Claude to extract agent names from user prompt
+ */
+function extractAgentsFromPrompt(string $prompt)
+{
+  global $myCre;
+
+  $allTypes = file_get_contents(__DIR__ . '/meta_data/VanakkamPayanarssTypes.json');
+
+  $systemPrompt = <<<EOT
+You are an agent configuration assistant. Your task is to extract complete agent metadata including all tables, columns, rules, and child-level PayanarssTypes only from 'All Types' data.
+
+## All Types:
+$allTypes
+
+## User Prompt:
+$prompt
+
+## Complete PayanarssType Database (All available types):
+{completePayanarssTypeDatabase}
+
+## Task:
+1. Extract agent names mentioned in the user prompt
+2. Find each agent in the database
+3. Return ONLY the agents that match, with ALL their nested structure
+4. Include all child-level PayanarssTypes, tables, columns, and rules
+
+## CRITICAL REQUIREMENTS:
+
+1. **ALWAYS return a JSON ARRAY** - Even if there is only one agent
+
+2. **Include COMPLETE structure for each agent:**
+   - Id
+   - ParentId
+   - Name
+   - PayanarssTypeId
+   - Description
+   - Attributes (all levels)
+
+3. **Search recursively** - Include all child PayanarssTypes and their properties
+
+4. **Match by Name** - Find agents whose Name contains any of the mentioned agent names
+
+5. **Flatten the structure
+
+## Rules:
+- ONLY return agents matching the user prompt
+- Include ALL nested levels (no truncation)
+- Preserve complete structure with all properties
+- Return ONLY valid JSON array
+- Do NOT filter out any child elements
+- Include descriptions where available
+- Include all metadata attributes
+
+Return ONLY the JSON array, no additional text.
+EOT;
+
+  $data = [
+    'model' => 'claude-sonnet-4-20250514',
+    'max_tokens' => 16000,
+    'system' => $systemPrompt,
+    'messages' => [
+      ['role' => 'user', 'content' => $prompt]
+    ],
+    'temperature' => 0.1,
+  ];
+
+  $ch = curl_init('https://api.anthropic.com/v1/messages');
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    'x-api-key: ' . $myCre,
+    'Content-Type: application/json',
+    'anthropic-version: 2023-06-01'
+  ]);
+
+  curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+  ini_set('max_execution_time', '180');
+
+  $result = curl_exec($ch);
+
+  // Decode the API response
+  $apiResponse = json_decode($result, true);
+
+  // Check for API errors
+  if (isset($apiResponse['error'])) {
+    throw new Exception("Claude API Error: " . json_encode($apiResponse['error']));
+  }
+
+  // Extract the actual text content
+  if (!isset($apiResponse['content'][0]['text'])) {
+    throw new Exception("Invalid API response structure: " . $result);
+  }
+
+  $text = $apiResponse['content'][0]['text'];
+
+  //echo "<pre>Claude V1 Response: " . htmlspecialchars($text) . "</pre>";
+
+  if (curl_errno($ch)) {
+    echo 'Curl error: ' . curl_error($ch);
+    curl_close($ch);
+    return '[]';
+  }
+
+  curl_close($ch);
+
   //echo "<pre>Domain Model Flat Response: " . htmlspecialchars($text) . "</pre>";
 
   // Clean up any markdown code fences

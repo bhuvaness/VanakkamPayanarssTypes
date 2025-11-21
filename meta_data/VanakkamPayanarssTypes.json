@@ -811,14 +811,6 @@
         "Description": null
     },
     {
-        "Id": "AF880F43-DE6D-451D-BDB8-F9B1DCD82E07",
-        "ParentId": "6899a3c02a8cd",
-        "Name": "PayRunStatus",
-        "PayanarssTypeId": "100000000000000000000000000000004",
-        "Attributes": [],
-        "Description": null
-    },
-    {
         "Id": "50F1D304-5AF2-424B-84DA-B1A61E1FB68B",
         "ParentId": "6899a3c02a8cd",
         "Name": "PayElement",
@@ -2344,25 +2336,11 @@
         "ParentId": "38208B39-7FEC-4381-9662-A0F461060C17",
         "Name": "EmployeeCode",
         "PayanarssTypeId": "100000000000000000000000000000006",
-        "Attributes": [
-            {
-                "Id": "100000000000000000000000000000012",
-                "Value": "True"
-            },
-            {
-                "Id": "100000000000000000000000000000006",
-                "Value": "True"
-            },
-            {
-                "Id": "100000000000000000000000000000017",
-                "Value": "10"
-            },
-            {
-                "Id": "100000000000000000000000000000013",
-                "Value": "True"
-            }
-        ],
-        "Description": "Required; Text; Unique employee code; Max length 10."
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Required; Text; Unique employee code; Max length 10. Regex(HAD\/Current Year\/Sequence number)"
     },
     {
         "Id": "51951A9F-64A5-46A1-A0D9-9B36CCB172D9",
@@ -18496,5 +18474,2552 @@
             "Value": "True"
         },
         "Description": ""
+    },
+    {
+        "Id": "686c8a1b2d4e7",
+        "ParentId": "ADF4A32C-5183-4A34-94C1-ACBC8EE70B62",
+        "Name": "OffboardingAgents",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Master; Offboarding agent master data table."
+    },
+    {
+        "Id": "686c8a2c3f5a8",
+        "ParentId": "ADF4A32C-5183-4A34-94C1-ACBC8EE70B62",
+        "Name": "OffboardingRequests",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Transaction; Employee offboarding request records."
+    },
+    {
+        "Id": "686c8a3d4e6b9",
+        "ParentId": "ADF4A32C-5183-4A34-94C1-ACBC8EE70B62",
+        "Name": "OffboardingTasks",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Transaction; Individual offboarding task items."
+    },
+    {
+        "Id": "686c8a4e5f7ca",
+        "ParentId": "ADF4A32C-5183-4A34-94C1-ACBC8EE70B62",
+        "Name": "OffboardingStatuses",
+        "PayanarssTypeId": "100000000000000000000000000000003",
+        "Attributes": [],
+        "Description": "Lookup; Offboarding status reference data."
+    },
+    {
+        "Id": "686c8b1a2d3e4",
+        "ParentId": "686c8a1b2d4e7",
+        "Name": "OffboardingAgentId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; Offboarding agent primary key identifier."
+    },
+    {
+        "Id": "686c8b2b3e4f5",
+        "ParentId": "686c8a1b2d4e7",
+        "Name": "AgentName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Text; Max length: 200; Agent full name."
+    },
+    {
+        "Id": "686c8b3c4f5a6",
+        "ParentId": "686c8a1b2d4e7",
+        "Name": "Email",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Text; Unique; Max length: 255; Agent email address."
+    },
+    {
+        "Id": "686c8b4d5a6b7",
+        "ParentId": "686c8a1b2d4e7",
+        "Name": "PhoneNumber",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": "Optional; Text; Max length: 20; Agent contact number."
+    },
+    {
+        "Id": "686c8b5e6b7c8",
+        "ParentId": "686c8a1b2d4e7",
+        "Name": "Department",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Text; Max length: 100; Agent department."
+    },
+    {
+        "Id": "686c8b6f7c8d9",
+        "ParentId": "686c8a1b2d4e7",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "686c8b7a8d9ea",
+        "ParentId": "686c8a1b2d4e7",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "686c8b8b9eafb",
+        "ParentId": "686c8a1b2d4e7",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "686c8b9cafb0c",
+        "ParentId": "686c8a1b2d4e7",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "686c8badb0c1d",
+        "ParentId": "686c8a1b2d4e7",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if agent is active."
+    },
+    {
+        "Id": "686c8c1a2d3e5",
+        "ParentId": "686c8a2c3f5a8",
+        "Name": "OffboardingRequestId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; Offboarding request primary key identifier."
+    },
+    {
+        "Id": "686c8c2b3e4f6",
+        "ParentId": "686c8a2c3f5a8",
+        "Name": "EmployeeId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Employee being offboarded."
+    },
+    {
+        "Id": "686c8c3c4f5a7",
+        "ParentId": "686c8a2c3f5a8",
+        "Name": "AssignedAgentId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Lookup; References OffboardingAgents; Assigned offboarding agent."
+    },
+    {
+        "Id": "686c8c4d5a6b8",
+        "ParentId": "686c8a2c3f5a8",
+        "Name": "RequestDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Cannot be future; Offboarding request date."
+    },
+    {
+        "Id": "686c8c5e6b7c9",
+        "ParentId": "686c8a2c3f5a8",
+        "Name": "LastWorkingDay",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Employee last working day."
+    },
+    {
+        "Id": "686c8c6f7c8da",
+        "ParentId": "686c8a2c3f5a8",
+        "Name": "Reason",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Text; Max length: 500; Offboarding reason."
+    },
+    {
+        "Id": "686c8c7a8d9eb",
+        "ParentId": "686c8a2c3f5a8",
+        "Name": "StatusId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Lookup; References OffboardingStatuses; Current status."
+    },
+    {
+        "Id": "686c8c8b9eafc",
+        "ParentId": "686c8a2c3f5a8",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "686c8c9cafb0d",
+        "ParentId": "686c8a2c3f5a8",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "686c8cadb0c1e",
+        "ParentId": "686c8a2c3f5a8",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "686c8cbec1d2f",
+        "ParentId": "686c8a2c3f5a8",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "686c8ccfd2e3a",
+        "ParentId": "686c8a2c3f5a8",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if request is active."
+    },
+    {
+        "Id": "686c8a3d4e6b9001",
+        "ParentId": "686c8a3d4e6b9",
+        "Name": "OffboardingTaskId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; OffboardingTask primary key identifier."
+    },
+    {
+        "Id": "686c8a3d4e6b9002",
+        "ParentId": "686c8a3d4e6b9",
+        "Name": "OffboardingRequestId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Lookup; References OffboardingRequests; Parent offboarding request."
+    },
+    {
+        "Id": "686c8a3d4e6b9003",
+        "ParentId": "686c8a3d4e6b9",
+        "Name": "TaskName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "200"
+            }
+        ],
+        "Description": "Required; Text; Max length: 200; Name of the offboarding task."
+    },
+    {
+        "Id": "686c8a3d4e6b9004",
+        "ParentId": "686c8a3d4e6b9",
+        "Name": "TaskDescription",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "1000"
+            }
+        ],
+        "Description": "Optional; Text; Max length: 1000; Detailed description of the task."
+    },
+    {
+        "Id": "686c8a3d4e6b9005",
+        "ParentId": "686c8a3d4e6b9",
+        "Name": "AssignedToAgentId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Lookup; References OffboardingAgents; Agent assigned to task."
+    },
+    {
+        "Id": "686c8a3d4e6b9006",
+        "ParentId": "686c8a3d4e6b9",
+        "Name": "TaskStatusId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Lookup; References OffboardingStatuses; Current task status."
+    },
+    {
+        "Id": "686c8a3d4e6b9007",
+        "ParentId": "686c8a3d4e6b9",
+        "Name": "DueDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Task completion due date."
+    },
+    {
+        "Id": "686c8a3d4e6b9008",
+        "ParentId": "686c8a3d4e6b9",
+        "Name": "CompletedDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [],
+        "Description": "Optional; DateTime; Cannot be future; Date when task was completed."
+    },
+    {
+        "Id": "686c8a3d4e6b9009",
+        "ParentId": "686c8a3d4e6b9",
+        "Name": "Priority",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "1"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "5"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "3"
+            }
+        ],
+        "Description": "Required; Number; Min: 1; Max: 5; Default: 3; Task priority level."
+    },
+    {
+        "Id": "686c8a3d4e6b9010",
+        "ParentId": "686c8a3d4e6b9",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "686c8a3d4e6b9011",
+        "ParentId": "686c8a3d4e6b9",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "686c8a3d4e6b9012",
+        "ParentId": "686c8a3d4e6b9",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "686c8a3d4e6b9013",
+        "ParentId": "686c8a3d4e6b9",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "686c8a3d4e6b9014",
+        "ParentId": "686c8a3d4e6b9",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if record is active."
+    },
+    {
+        "Id": "686c8a4e5f7ca001",
+        "ParentId": "686c8a4e5f7ca",
+        "Name": "OffboardingStatusId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; OffboardingStatus primary key identifier."
+    },
+    {
+        "Id": "686c8a4e5f7ca002",
+        "ParentId": "686c8a4e5f7ca",
+        "Name": "StatusCode",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "50"
+            }
+        ],
+        "Description": "Required; Text; Unique; Max length: 50; Status code identifier."
+    },
+    {
+        "Id": "686c8a4e5f7ca003",
+        "ParentId": "686c8a4e5f7ca",
+        "Name": "StatusName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "100"
+            }
+        ],
+        "Description": "Required; Text; Max length: 100; Display name of the status."
+    },
+    {
+        "Id": "686c8a4e5f7ca004",
+        "ParentId": "686c8a4e5f7ca",
+        "Name": "StatusDescription",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "500"
+            }
+        ],
+        "Description": "Optional; Text; Max length: 500; Detailed description of the status."
+    },
+    {
+        "Id": "686c8a4e5f7ca005",
+        "ParentId": "686c8a4e5f7ca",
+        "Name": "SortOrder",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "1"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "1"
+            }
+        ],
+        "Description": "Required; Number; Min: 1; Default: 1; Display sort order."
+    },
+    {
+        "Id": "686c8a4e5f7ca006",
+        "ParentId": "686c8a4e5f7ca",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "686c8a4e5f7ca007",
+        "ParentId": "686c8a4e5f7ca",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "686c8a4e5f7ca008",
+        "ParentId": "686c8a4e5f7ca",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "686c8a4e5f7ca009",
+        "ParentId": "686c8a4e5f7ca",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "686c8a4e5f7ca010",
+        "ParentId": "686c8a4e5f7ca",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if record is active."
+    },
+    {
+        "Id": "FIELD-PC-ID-001",
+        "ParentId": "DF1CE630-3BE9-46E3-862B-C61E877A6713",
+        "Name": "PayrollCalendarId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; PayrollCalendar primary key identifier."
+    },
+    {
+        "Id": "FIELD-PC-NAME-001",
+        "ParentId": "DF1CE630-3BE9-46E3-862B-C61E877A6713",
+        "Name": "CalendarName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "100"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Text; Max length: 100; Unique; Payroll calendar name."
+    },
+    {
+        "Id": "FIELD-PC-DESC-001",
+        "ParentId": "DF1CE630-3BE9-46E3-862B-C61E877A6713",
+        "Name": "Description",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "500"
+            }
+        ],
+        "Description": "Optional; Text; Max length: 500; Calendar description."
+    },
+    {
+        "Id": "FIELD-PC-YEAR-001",
+        "ParentId": "DF1CE630-3BE9-46E3-862B-C61E877A6713",
+        "Name": "CalendarYear",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "2000"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "2100"
+            }
+        ],
+        "Description": "Required; Number; Min: 2000; Max: 2100; Calendar year."
+    },
+    {
+        "Id": "FIELD-PC-START-001",
+        "ParentId": "DF1CE630-3BE9-46E3-862B-C61E877A6713",
+        "Name": "StartDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Date; Calendar start date."
+    },
+    {
+        "Id": "FIELD-PC-END-001",
+        "ParentId": "DF1CE630-3BE9-46E3-862B-C61E877A6713",
+        "Name": "EndDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Date; Calendar end date."
+    },
+    {
+        "Id": "FIELD-PC-STATUS-001",
+        "ParentId": "DF1CE630-3BE9-46E3-862B-C61E877A6713",
+        "Name": "Status",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "20"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "Active"
+            }
+        ],
+        "Description": "Required; Text; Max length: 20; Default: Active; Calendar status."
+    },
+    {
+        "Id": "FIELD-PC-CREATED-BY-001",
+        "ParentId": "DF1CE630-3BE9-46E3-862B-C61E877A6713",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "FIELD-PC-CREATED-ON-001",
+        "ParentId": "DF1CE630-3BE9-46E3-862B-C61E877A6713",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "FIELD-PC-MODIFIED-BY-001",
+        "ParentId": "DF1CE630-3BE9-46E3-862B-C61E877A6713",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "FIELD-PC-MODIFIED-ON-001",
+        "ParentId": "DF1CE630-3BE9-46E3-862B-C61E877A6713",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "FIELD-PC-ISACTIVE-001",
+        "ParentId": "DF1CE630-3BE9-46E3-862B-C61E877A6713",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if calendar is active."
+    },
+    {
+        "Id": "FIELD-PP-ID-001",
+        "ParentId": "1B8B7211-C53D-4BD0-98EB-D4BC38610A3F",
+        "Name": "PayrollPeriodId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; PayrollPeriod primary key identifier."
+    },
+    {
+        "Id": "FIELD-PP-CALENDAR-001",
+        "ParentId": "1B8B7211-C53D-4BD0-98EB-D4BC38610A3F",
+        "Name": "PayrollCalendarId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Lookup; References PayrollCalendar; Associated calendar."
+    },
+    {
+        "Id": "FIELD-PP-NAME-001",
+        "ParentId": "1B8B7211-C53D-4BD0-98EB-D4BC38610A3F",
+        "Name": "PeriodName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "100"
+            }
+        ],
+        "Description": "Required; Text; Max length: 100; Period name."
+    },
+    {
+        "Id": "FIELD-PP-START-001",
+        "ParentId": "1B8B7211-C53D-4BD0-98EB-D4BC38610A3F",
+        "Name": "StartDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Date; Period start date."
+    },
+    {
+        "Id": "FIELD-PP-END-001",
+        "ParentId": "1B8B7211-C53D-4BD0-98EB-D4BC38610A3F",
+        "Name": "EndDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Date; Period end date."
+    },
+    {
+        "Id": "FIELD-PP-PAYDATE-001",
+        "ParentId": "1B8B7211-C53D-4BD0-98EB-D4BC38610A3F",
+        "Name": "PayDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Date; Scheduled pay date."
+    },
+    {
+        "Id": "FIELD-PP-STATUS-001",
+        "ParentId": "1B8B7211-C53D-4BD0-98EB-D4BC38610A3F",
+        "Name": "Status",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "20"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "Open"
+            }
+        ],
+        "Description": "Required; Text; Max length: 20; Default: Open; Period status."
+    },
+    {
+        "Id": "FIELD-PP-CUTOFF-001",
+        "ParentId": "1B8B7211-C53D-4BD0-98EB-D4BC38610A3F",
+        "Name": "CutoffDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [],
+        "Description": "Optional; Date; Timesheet cutoff date."
+    },
+    {
+        "Id": "FIELD-PP-CREATED-BY-001",
+        "ParentId": "1B8B7211-C53D-4BD0-98EB-D4BC38610A3F",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "FIELD-PP-CREATED-ON-001",
+        "ParentId": "1B8B7211-C53D-4BD0-98EB-D4BC38610A3F",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "FIELD-PP-MODIFIED-BY-001",
+        "ParentId": "1B8B7211-C53D-4BD0-98EB-D4BC38610A3F",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "FIELD-PP-MODIFIED-ON-001",
+        "ParentId": "1B8B7211-C53D-4BD0-98EB-D4BC38610A3F",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "FIELD-PP-ISACTIVE-001",
+        "ParentId": "1B8B7211-C53D-4BD0-98EB-D4BC38610A3F",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if period is active."
+    },
+    {
+        "Id": "F1A2B3C4-D5E6-F7A8-B9C0-D1E2F3A4B5C6",
+        "ParentId": "CAAC10C0-D8C5-49A2-A38F-960757E3A693",
+        "Name": "PayGroupId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; PayGroup primary key identifier."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-A7B8-C9D0-E1F2A3B4C5D6",
+        "ParentId": "CAAC10C0-D8C5-49A2-A38F-960757E3A693",
+        "Name": "PayGroupCode",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "20"
+            }
+        ],
+        "Description": "Required; Text; Unique; Max length: 20; PayGroup unique code."
+    },
+    {
+        "Id": "B2C3D4E5-F6A7-B8C9-D0E1-F2A3B4C5D6E7",
+        "ParentId": "CAAC10C0-D8C5-49A2-A38F-960757E3A693",
+        "Name": "PayGroupName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "100"
+            }
+        ],
+        "Description": "Required; Text; Max length: 100; PayGroup display name."
+    },
+    {
+        "Id": "C3D4E5F6-A7B8-C9D0-E1F2-A3B4C5D6E7F8",
+        "ParentId": "CAAC10C0-D8C5-49A2-A38F-960757E3A693",
+        "Name": "Description",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "500"
+            }
+        ],
+        "Description": "Optional; Text; Max length: 500; PayGroup description."
+    },
+    {
+        "Id": "D4E5F6A7-B8C9-D0E1-F2A3-B4C5D6E7F8A9",
+        "ParentId": "CAAC10C0-D8C5-49A2-A38F-960757E3A693",
+        "Name": "PayCycleId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Lookup; References PayCycle; Default pay cycle for group."
+    },
+    {
+        "Id": "E5F6A7B8-C9D0-E1F2-A3B4-C5D6E7F8A9B0",
+        "ParentId": "CAAC10C0-D8C5-49A2-A38F-960757E3A693",
+        "Name": "PayrollCalendarId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Lookup; References PayrollCalendar; Associated payroll calendar."
+    },
+    {
+        "Id": "F6A7B8C9-D0E1-F2A3-B4C5-D6E7F8A9B0C1",
+        "ParentId": "CAAC10C0-D8C5-49A2-A38F-960757E3A693",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "A7B8C9D0-E1F2-A3B4-C5D6-E7F8A9B0C1D2",
+        "ParentId": "CAAC10C0-D8C5-49A2-A38F-960757E3A693",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "B8C9D0E1-F2A3-B4C5-D6E7-F8A9B0C1D2E3",
+        "ParentId": "CAAC10C0-D8C5-49A2-A38F-960757E3A693",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "C9D0E1F2-A3B4-C5D6-E7F8-A9B0C1D2E3F4",
+        "ParentId": "CAAC10C0-D8C5-49A2-A38F-960757E3A693",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "D0E1F2A3-B4C5-D6E7-F8A9-B0C1D2E3F4A5",
+        "ParentId": "CAAC10C0-D8C5-49A2-A38F-960757E3A693",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if PayGroup is active."
+    },
+    {
+        "Id": "E1F2A3B4-C5D6-E7F8-A9B0-C1D2E3F4A5B6",
+        "ParentId": "97188D9B-BE3A-44AF-8160-C69B2E7A7CD5",
+        "Name": "PayCycleId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; PayCycle primary key identifier."
+    },
+    {
+        "Id": "F2A3B4C5-D6E7-F8A9-B0C1-D2E3F4A5B6C7",
+        "ParentId": "97188D9B-BE3A-44AF-8160-C69B2E7A7CD5",
+        "Name": "PayCycleCode",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "20"
+            }
+        ],
+        "Description": "Required; Text; Unique; Max length: 20; PayCycle unique code."
+    },
+    {
+        "Id": "A3B4C5D6-E7F8-A9B0-C1D2-E3F4A5B6C7D8",
+        "ParentId": "97188D9B-BE3A-44AF-8160-C69B2E7A7CD5",
+        "Name": "PayCycleName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "100"
+            }
+        ],
+        "Description": "Required; Text; Max length: 100; PayCycle display name."
+    },
+    {
+        "Id": "B4C5D6E7-F8A9-B0C1-D2E3-F4A5B6C7D8E9",
+        "ParentId": "97188D9B-BE3A-44AF-8160-C69B2E7A7CD5",
+        "Name": "FrequencyType",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "50"
+            }
+        ],
+        "Description": "Required; Text; Max length: 50; Pay frequency (Weekly, Bi-weekly, Monthly, etc.)."
+    },
+    {
+        "Id": "C5D6E7F8-A9B0-C1D2-E3F4-A5B6C7D8E9F0",
+        "ParentId": "97188D9B-BE3A-44AF-8160-C69B2E7A7CD5",
+        "Name": "PayPeriodsPerYear",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "1"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "365"
+            }
+        ],
+        "Description": "Required; Number; Min: 1; Max: 365; Number of pay periods in a year."
+    },
+    {
+        "Id": "D6E7F8A9-B0C1-D2E3-F4A5-B6C7D8E9F0A1",
+        "ParentId": "97188D9B-BE3A-44AF-8160-C69B2E7A7CD5",
+        "Name": "Description",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "500"
+            }
+        ],
+        "Description": "Optional; Text; Max length: 500; PayCycle description."
+    },
+    {
+        "Id": "E7F8A9B0-C1D2-E3F4-A5B6-C7D8E9F0A1B2",
+        "ParentId": "97188D9B-BE3A-44AF-8160-C69B2E7A7CD5",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "F8A9B0C1-D2E3-F4A5-B6C7-D8E9F0A1B2C3",
+        "ParentId": "97188D9B-BE3A-44AF-8160-C69B2E7A7CD5",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "A9B0C1D2-E3F4-A5B6-C7D8-E9F0A1B2C3D4",
+        "ParentId": "97188D9B-BE3A-44AF-8160-C69B2E7A7CD5",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "B0C1D2E3-F4A5-B6C7-D8E9-F0A1B2C3D4E5",
+        "ParentId": "97188D9B-BE3A-44AF-8160-C69B2E7A7CD5",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "C1D2E3F4-A5B6-C7D8-E9F0-A1B2C3D4E5F6",
+        "ParentId": "97188D9B-BE3A-44AF-8160-C69B2E7A7CD5",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if PayCycle is active."
+    },
+    {
+        "Id": "A1B2C3D4-E5F6-7890-1234-567890ABCDEF",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "PropertyId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; Property primary key identifier."
+    },
+    {
+        "Id": "B2C3D4E5-F6G7-8901-2345-678901BCDEFG",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "PropertyName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "200"
+            }
+        ],
+        "Description": "Required; Text; Max length: 200; Property name or title."
+    },
+    {
+        "Id": "C3D4E5F6-G7H8-9012-3456-789012CDEFGH",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "PropertyTypeId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000015",
+                "Value": "2B825665-B964-4580-9850-0B6709D20058"
+            }
+        ],
+        "Description": "Required; Lookup; References PropertyType; Property type classification."
+    },
+    {
+        "Id": "D4E5F6G7-H8I9-0123-4567-890123DEFGHI",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "Address",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "500"
+            }
+        ],
+        "Description": "Required; Text; Max length: 500; Property full address."
+    },
+    {
+        "Id": "E5F6G7H8-I9J0-1234-5678-901234EFGHIJ",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "City",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "100"
+            }
+        ],
+        "Description": "Required; Text; Max length: 100; Property city location."
+    },
+    {
+        "Id": "F6G7H8I9-J0K1-2345-6789-012345FGHIJK",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "State",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "50"
+            }
+        ],
+        "Description": "Required; Text; Max length: 50; Property state or province."
+    },
+    {
+        "Id": "G7H8I9J0-K1L2-3456-7890-123456GHIJKL",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "ZipCode",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "20"
+            }
+        ],
+        "Description": "Required; Text; Max length: 20; Property postal code."
+    },
+    {
+        "Id": "H8I9J0K1-L2M3-4567-8901-234567HIJKLM",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "PurchasePrice",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000026",
+                "Value": "0"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Property purchase price."
+    },
+    {
+        "Id": "I9J0K1L2-M3N4-5678-9012-345678IJKLMN",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "CurrentValue",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000026",
+                "Value": "0"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Current market value of property."
+    },
+    {
+        "Id": "J0K1L2M3-N4O5-6789-0123-456789JKLMNO",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "YearBuilt",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000026",
+                "Value": "1800"
+            },
+            {
+                "Id": "100000000000000000000000000000027",
+                "Value": "2024"
+            }
+        ],
+        "Description": "Optional; Number; Min: 1800; Max: 2024; Year property was built."
+    },
+    {
+        "Id": "K1L2M3N4-O5P6-7890-1234-567890KLMNOP",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "SquareFootage",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000026",
+                "Value": "1"
+            }
+        ],
+        "Description": "Optional; Number; Min: 1; Property total square footage."
+    },
+    {
+        "Id": "L2M3N4O5-P6Q7-8901-2345-678901LMNOPQ",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "LotSize",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000026",
+                "Value": "0"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Property lot size in square feet."
+    },
+    {
+        "Id": "M3N4O5P6-Q7R8-9012-3456-789012MNOPQR",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "Bedrooms",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000026",
+                "Value": "0"
+            },
+            {
+                "Id": "100000000000000000000000000000027",
+                "Value": "20"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Max: 20; Number of bedrooms."
+    },
+    {
+        "Id": "N4O5P6Q7-R8S9-0123-4567-890123NOPQRS",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "Bathrooms",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000026",
+                "Value": "0"
+            },
+            {
+                "Id": "100000000000000000000000000000027",
+                "Value": "20"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Max: 20; Number of bathrooms."
+    },
+    {
+        "Id": "O5P6Q7R8-S9T0-1234-5678-901234OPQRST",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "Description",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "2000"
+            }
+        ],
+        "Description": "Optional; Text; Max length: 2000; Property detailed description."
+    },
+    {
+        "Id": "P6Q7R8S9-T0U1-2345-6789-012345PQRSTU",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "Q7R8S9T0-U1V2-3456-7890-123456QRSTUV",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "R8S9T0U1-V2W3-4567-8901-234567RSTUVW",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "S9T0U1V2-W3X4-5678-9012-345678STUVWX",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "T0U1V2W3-X4Y5-6789-0123-456789TUVWXY",
+        "ParentId": "6FD1ECA7-EDFE-4CA8-AFB7-FF8E08D14C73",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if property is active."
+    },
+    {
+        "Id": "U1V2W3X4-Y5Z6-7890-1234-567890UVWXYZ",
+        "ParentId": "2B825665-B964-4580-9850-0B6709D20058",
+        "Name": "PropertyTypeId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; PropertyType primary key identifier."
+    },
+    {
+        "Id": "V2W3X4Y5-Z6A7-8901-2345-678901VWXYZA",
+        "ParentId": "2B825665-B964-4580-9850-0B6709D20058",
+        "Name": "TypeName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "100"
+            }
+        ],
+        "Description": "Required; Text; Unique; Max length: 100; Property type name."
+    },
+    {
+        "Id": "W3X4Y5Z6-A7B8-9012-3456-789012WXYZAB",
+        "ParentId": "2B825665-B964-4580-9850-0B6709D20058",
+        "Name": "TypeCode",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "20"
+            }
+        ],
+        "Description": "Required; Text; Unique; Max length: 20; Property type code."
+    },
+    {
+        "Id": "X4Y5Z6A7-B8C9-0123-4567-890123XYZABC",
+        "ParentId": "2B825665-B964-4580-9850-0B6709D20058",
+        "Name": "Description",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "500"
+            }
+        ],
+        "Description": "Optional; Text; Max length: 500; Property type description."
+    },
+    {
+        "Id": "Y5Z6A7B8-C9D0-1234-5678-901234YZABCD",
+        "ParentId": "2B825665-B964-4580-9850-0B6709D20058",
+        "Name": "Category",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "50"
+            }
+        ],
+        "Description": "Optional; Text; Max length: 50; Property type category."
+    },
+    {
+        "Id": "Z6A7B8C9-D0E1-2345-6789-012345ZABCDE",
+        "ParentId": "2B825665-B964-4580-9850-0B6709D20058",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "A7B8C9D0-E1F2-3456-7890-123456ABCDEF",
+        "ParentId": "2B825665-B964-4580-9850-0B6709D20058",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "B8C9D0E1-F2G3-4567-8901-234567BCDEFG",
+        "ParentId": "2B825665-B964-4580-9850-0B6709D20058",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "C9D0E1F2-G3H4-5678-9012-345678CDEFGH",
+        "ParentId": "2B825665-B964-4580-9850-0B6709D20058",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "D0E1F2G3-H4I5-6789-0123-456789DEFGHI",
+        "ParentId": "2B825665-B964-4580-9850-0B6709D20058",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if property type is active."
+    },
+    {
+        "Id": "FIELD-PR-ID-001",
+        "ParentId": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "Name": "PurchaseRequestId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; Purchase request primary key identifier."
+    },
+    {
+        "Id": "FIELD-PR-NUMBER-001",
+        "ParentId": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "Name": "RequestNumber",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "50"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Text; Unique; Max length: 50; Auto-generated; Purchase request number."
+    },
+    {
+        "Id": "FIELD-PR-TITLE-001",
+        "ParentId": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "Name": "Title",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "200"
+            }
+        ],
+        "Description": "Required; Text; Max length: 200; Purchase request title."
+    },
+    {
+        "Id": "FIELD-PR-DESC-001",
+        "ParentId": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "Name": "Description",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "1000"
+            }
+        ],
+        "Description": "Optional; Text; Max length: 1000; Purchase request description."
+    },
+    {
+        "Id": "FIELD-PR-REQDATE-001",
+        "ParentId": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "Name": "RequestDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000028",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Cannot be future; Purchase request date."
+    },
+    {
+        "Id": "FIELD-PR-REQDATE2-001",
+        "ParentId": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "Name": "RequiredDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Must be future; Required delivery date."
+    },
+    {
+        "Id": "FIELD-PR-STATUS-001",
+        "ParentId": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "Name": "Status",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "50"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "Draft"
+            }
+        ],
+        "Description": "Required; Text; Max length: 50; Default: Draft; Request status."
+    },
+    {
+        "Id": "FIELD-PR-PRIORITY-001",
+        "ParentId": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "Name": "Priority",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "20"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "Medium"
+            }
+        ],
+        "Description": "Required; Text; Max length: 20; Default: Medium; Request priority."
+    },
+    {
+        "Id": "FIELD-PR-TOTALAMT-001",
+        "ParentId": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "Name": "TotalAmount",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000026",
+                "Value": "0"
+            }
+        ],
+        "Description": "Required; Number; Min: 0; Total request amount."
+    },
+    {
+        "Id": "FIELD-PR-CURRENCY-001",
+        "ParentId": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "Name": "Currency",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "3"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "USD"
+            }
+        ],
+        "Description": "Required; Text; Max length: 3; Default: USD; Currency code."
+    },
+    {
+        "Id": "FIELD-PR-REQUESTOR-001",
+        "ParentId": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "Name": "RequestorId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Lookup; References User; Requestor user."
+    },
+    {
+        "Id": "FIELD-PR-DEPT-001",
+        "ParentId": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "Name": "DepartmentId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Lookup; References Department; Requesting department."
+    },
+    {
+        "Id": "FIELD-PR-CREATEDBY-001",
+        "ParentId": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "FIELD-PR-CREATEDON-001",
+        "ParentId": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "FIELD-PR-MODIFIEDBY-001",
+        "ParentId": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "FIELD-PR-MODIFIEDON-001",
+        "ParentId": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "FIELD-PR-ISACTIVE-001",
+        "ParentId": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if record is active."
+    },
+    {
+        "Id": "FIELD-PRL-ID-001",
+        "ParentId": "9EE295E3-A3B0-4A24-8872-EA2CEA51425A",
+        "Name": "PurchaseRequestLineId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; Purchase request line primary key identifier."
+    },
+    {
+        "Id": "FIELD-PRL-PRID-001",
+        "ParentId": "9EE295E3-A3B0-4A24-8872-EA2CEA51425A",
+        "Name": "PurchaseRequestId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000015",
+                "Value": "38C27791-37B4-415C-AB1E-A78EBE5F70E2"
+            }
+        ],
+        "Description": "Required; GUID; Lookup; References PurchaseRequest; Parent purchase request."
+    },
+    {
+        "Id": "FIELD-PRL-LINENUM-001",
+        "ParentId": "9EE295E3-A3B0-4A24-8872-EA2CEA51425A",
+        "Name": "LineNumber",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000026",
+                "Value": "1"
+            }
+        ],
+        "Description": "Required; Number; Min: 1; Line sequence number."
+    },
+    {
+        "Id": "FIELD-PRL-ITEMCODE-001",
+        "ParentId": "9EE295E3-A3B0-4A24-8872-EA2CEA51425A",
+        "Name": "ItemCode",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "50"
+            }
+        ],
+        "Description": "Required; Text; Max length: 50; Item or service code."
+    },
+    {
+        "Id": "FIELD-PRL-ITEMDESC-001",
+        "ParentId": "9EE295E3-A3B0-4A24-8872-EA2CEA51425A",
+        "Name": "ItemDescription",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "500"
+            }
+        ],
+        "Description": "Required; Text; Max length: 500; Item or service description."
+    },
+    {
+        "Id": "FIELD-PRL-QTY-001",
+        "ParentId": "9EE295E3-A3B0-4A24-8872-EA2CEA51425A",
+        "Name": "Quantity",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000026",
+                "Value": "0.01"
+            }
+        ],
+        "Description": "Required; Number; Min: 0.01; Requested quantity."
+    },
+    {
+        "Id": "FIELD-PRL-UOM-001",
+        "ParentId": "9EE295E3-A3B0-4A24-8872-EA2CEA51425A",
+        "Name": "UnitOfMeasure",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "20"
+            }
+        ],
+        "Description": "Required; Text; Max length: 20; Unit of measure."
+    },
+    {
+        "Id": "FIELD-PRL-UNITPRICE-001",
+        "ParentId": "9EE295E3-A3B0-4A24-8872-EA2CEA51425A",
+        "Name": "EstimatedUnitPrice",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000026",
+                "Value": "0"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Estimated unit price."
+    },
+    {
+        "Id": "FIELD-PRL-TOTALAMT-001",
+        "ParentId": "9EE295E3-A3B0-4A24-8872-EA2CEA51425A",
+        "Name": "TotalAmount",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000026",
+                "Value": "0"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Total line amount."
+    },
+    {
+        "Id": "FIELD-PRL-REQDATE-001",
+        "ParentId": "9EE295E3-A3B0-4A24-8872-EA2CEA51425A",
+        "Name": "RequiredDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Must be future; Required delivery date."
+    },
+    {
+        "Id": "FIELD-PRL-CATEGORY-001",
+        "ParentId": "9EE295E3-A3B0-4A24-8872-EA2CEA51425A",
+        "Name": "Category",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "100"
+            }
+        ],
+        "Description": "Optional; Text; Max length: 100; Item category."
+    },
+    {
+        "Id": "FIELD-PRL-NOTES-001",
+        "ParentId": "9EE295E3-A3B0-4A24-8872-EA2CEA51425A",
+        "Name": "Notes",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "1000"
+            }
+        ],
+        "Description": "Optional; Text; Max length: 1000; Additional notes."
+    },
+    {
+        "Id": "FIELD-PRL-CREATEDBY-001",
+        "ParentId": "9EE295E3-A3B0-4A24-8872-EA2CEA51425A",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "FIELD-PRL-CREATEDON-001",
+        "ParentId": "9EE295E3-A3B0-4A24-8872-EA2CEA51425A",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "FIELD-PRL-MODIFIEDBY-001",
+        "ParentId": "9EE295E3-A3B0-4A24-8872-EA2CEA51425A",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "FIELD-PRL-MODIFIEDON-001",
+        "ParentId": "9EE295E3-A3B0-4A24-8872-EA2CEA51425A",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "FIELD-PRL-ISACTIVE-001",
+        "ParentId": "9EE295E3-A3B0-4A24-8872-EA2CEA51425A",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if record is active."
+    },
+    {
+        "Id": "FIELD-PR-REQBY-001",
+        "ParentId": "38C27791-37B4-415C-AB1E-A78EBE5F70E2",
+        "Name": "RequestedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; User who requested."
     }
 ]

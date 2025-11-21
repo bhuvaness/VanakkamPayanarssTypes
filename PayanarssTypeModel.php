@@ -85,7 +85,7 @@ class PayanarssApplication
                 else
                     $new->ParentId = $new->Id;
             }
-            echo "<p>Add item with ID: " . $new->Id . "</p>";
+            //echo "<p>Add item with ID: " . $new->Id . "</p>";
             $this->Types->add($new);
 
         }
