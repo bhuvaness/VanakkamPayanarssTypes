@@ -270,6 +270,504 @@
         "Description": null
     },
     {
+        "Id": "100000000000000000010000000000001",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "if",
+        "PayanarssTypeId": "100000000000000000010000000000001",
+        "Attributes": [
+            "100000000000000000000000000000012",
+            "100000000000000000000000000000013"
+        ],
+        "Description": "Conditional statement; Executes code block if condition is true; Returns Boolean decision result"
+    },
+    {
+        "Id": "100000000000000000010000000000002",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "else",
+        "PayanarssTypeId": "100000000000000000010000000000002",
+        "Attributes": [
+            "100000000000000000010000000000001"
+        ],
+        "Description": "Else block; Executes code if preceding if condition is false; Always paired with if"
+    },
+    {
+        "Id": "100000000000000000010000000000003",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "else if",
+        "PayanarssTypeId": "100000000000000000010000000000003",
+        "Attributes": [
+            "100000000000000000010000000000001",
+            "100000000000000000000000000000012"
+        ],
+        "Description": "Else if block; Tests additional condition if previous if was false; Allows multiple conditions"
+    },
+    {
+        "Id": "100000000000000000010000000000004",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "switch",
+        "PayanarssTypeId": "100000000000000000010000000000004",
+        "Attributes": [
+            "100000000000000000000000000000006",
+            "100000000000000000010000000000005",
+            "100000000000000000010000000000006"
+        ],
+        "Description": "Switch statement; Tests expression against multiple cases; More efficient than if-else chain"
+    },
+    {
+        "Id": "100000000000000000010000000000005",
+        "ParentId": "100000000000000000010000000000004",
+        "Name": "case",
+        "PayanarssTypeId": "100000000000000000010000000000005",
+        "Attributes": [
+            "100000000000000000000000000000006",
+            "100000000000000000010000000000007"
+        ],
+        "Description": "Case label in switch; Matches value against switch expression; Execution continues to next case if no break"
+    },
+    {
+        "Id": "100000000000000000010000000000006",
+        "ParentId": "100000000000000000010000000000004",
+        "Name": "default",
+        "PayanarssTypeId": "100000000000000000010000000000006",
+        "Attributes": [],
+        "Description": "Default case in switch; Executes if no other cases match; Optional but recommended"
+    },
+    {
+        "Id": "100000000000000000010000000000007",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "break",
+        "PayanarssTypeId": "100000000000000000010000000000007",
+        "Attributes": [],
+        "Description": "Break statement; Terminates loop or switch execution; Transfers control to statement after loop/switch"
+    },
+    {
+        "Id": "100000000000000000010000000000008",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "for",
+        "PayanarssTypeId": "100000000000000000010000000000008",
+        "Attributes": [
+            "100000000000000000000000000000012",
+            "100000000000000000010000000000009",
+            "100000000000000000010000000000010"
+        ],
+        "Description": "For loop; Iterates fixed number of times; Takes init, condition, increment; Best for counting loops"
+    },
+    {
+        "Id": "100000000000000000010000000000011",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "foreach",
+        "PayanarssTypeId": "100000000000000000010000000000011",
+        "Attributes": [
+            "100000000000000000010000000000012",
+            "100000000000000000000000000000001"
+        ],
+        "Description": "Foreach loop; Iterates over collection elements; Cleaner syntax than for loop for collections; Each iteration gets one element"
+    },
+    {
+        "Id": "100000000000000000010000000000015",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "continue",
+        "PayanarssTypeId": "100000000000000000010000000000015",
+        "Attributes": [],
+        "Description": "Continue statement; Skips current iteration; Continues with next iteration of loop; Ignores remaining code in current iteration"
+    },
+    {
+        "Id": "100000000000000000010000000000016",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "return",
+        "PayanarssTypeId": "100000000000000000010000000000016",
+        "Attributes": [
+            "100000000000000000000000000000000"
+        ],
+        "Description": "Return statement; Exits function immediately; Returns value to caller; Optional value if void function"
+    },
+    {
+        "Id": "100000000000000000010000000000017",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "throw",
+        "PayanarssTypeId": "100000000000000000010000000000017",
+        "Attributes": [
+            "100000000000000000010000000000018"
+        ],
+        "Description": "Throw statement; Throws exception; Transfers control to exception handler; Used for error handling"
+    },
+    {
+        "Id": "100000000000000000020000000000001",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "SELECT",
+        "PayanarssTypeId": "100000000000000000020000000000001",
+        "Attributes": [],
+        "Description": "SELECT statement; Retrieves data from one or more tables; Returns result set; Foundation of all queries"
+    },
+    {
+        "Id": "100000000000000000020000000000002",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "FROM",
+        "PayanarssTypeId": "100000000000000000020000000000002",
+        "Attributes": [],
+        "Description": "FROM clause; Specifies table(s) to query; Required in SELECT; Can include table joins"
+    },
+    {
+        "Id": "100000000000000000020000000000003",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "WHERE",
+        "PayanarssTypeId": "100000000000000000020000000000003",
+        "Attributes": [],
+        "Description": "WHERE clause; Filters rows based on conditions; Optional; Returns matching records only"
+    },
+    {
+        "Id": "100000000000000000020000000000004",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "JOIN",
+        "PayanarssTypeId": "100000000000000000020000000000004",
+        "Attributes": [],
+        "Description": "JOIN clause; Combines rows from multiple tables; Uses relationship keys; Returns matched records"
+    },
+    {
+        "Id": "100000000000000000020000000000005",
+        "ParentId": "100000000000000000020000000000004",
+        "Name": "INNER JOIN",
+        "PayanarssTypeId": "100000000000000000020000000000005",
+        "Attributes": [],
+        "Description": "INNER JOIN; Returns only matching records from both tables; Default JOIN type; Excludes unmatched rows"
+    },
+    {
+        "Id": "100000000000000000020000000000006",
+        "ParentId": "100000000000000000020000000000004",
+        "Name": "LEFT JOIN",
+        "PayanarssTypeId": "100000000000000000020000000000006",
+        "Attributes": [],
+        "Description": "LEFT JOIN; Returns all rows from left table plus matching from right; Includes unmatched left records with NULL"
+    },
+    {
+        "Id": "100000000000000000020000000000007",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "GROUP BY",
+        "PayanarssTypeId": "100000000000000000020000000000007",
+        "Attributes": [],
+        "Description": "GROUP BY clause; Groups rows by column values; Used with aggregate functions; Summarizes data"
+    },
+    {
+        "Id": "100000000000000000020000000000008",
+        "ParentId": "100000000000000000020000000000007",
+        "Name": "HAVING",
+        "PayanarssTypeId": "100000000000000000020000000000008",
+        "Attributes": [],
+        "Description": "HAVING clause; Filters grouped data; Works with GROUP BY; Like WHERE but for groups"
+    },
+    {
+        "Id": "100000000000000000020000000000009",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "ORDER BY",
+        "PayanarssTypeId": "100000000000000000020000000000009",
+        "Attributes": [],
+        "Description": "ORDER BY clause; Sorts result set; ASC (ascending) or DESC (descending); Affects result presentation"
+    },
+    {
+        "Id": "100000000000000000020000000000010",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "LIMIT",
+        "PayanarssTypeId": "100000000000000000020000000000010",
+        "Attributes": [],
+        "Description": "LIMIT clause; Restricts number of returned rows; Useful for pagination; Improves performance"
+    },
+    {
+        "Id": "100000000000000000020000000000011",
+        "ParentId": "100000000000000000020000000000010",
+        "Name": "OFFSET",
+        "PayanarssTypeId": "100000000000000000020000000000011",
+        "Attributes": [],
+        "Description": "OFFSET clause; Skips specified number of rows; Used with LIMIT for pagination; Enables paging"
+    },
+    {
+        "Id": "100000000000000000020000000000012",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "INSERT",
+        "PayanarssTypeId": "100000000000000000020000000000012",
+        "Attributes": [],
+        "Description": "INSERT statement; Adds new rows to table; Specifies columns and values; Creates new records"
+    },
+    {
+        "Id": "100000000000000000020000000000013",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "UPDATE",
+        "PayanarssTypeId": "100000000000000000020000000000013",
+        "Attributes": [],
+        "Description": "UPDATE statement; Modifies existing rows; Always use WHERE to target specific rows; Changes data values"
+    },
+    {
+        "Id": "100000000000000000020000000000014",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "DELETE",
+        "PayanarssTypeId": "100000000000000000020000000000014",
+        "Attributes": [],
+        "Description": "DELETE statement; Removes rows from table; Always use WHERE; Deletes data permanently"
+    },
+    {
+        "Id": "100000000000000000020000000000015",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "CREATE TABLE",
+        "PayanarssTypeId": "100000000000000000020000000000015",
+        "Attributes": [],
+        "Description": "CREATE TABLE statement; Creates new table; Defines columns and data types; Establishes structure"
+    },
+    {
+        "Id": "100000000000000000020000000000016",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "ALTER TABLE",
+        "PayanarssTypeId": "100000000000000000020000000000016",
+        "Attributes": [],
+        "Description": "ALTER TABLE statement; Modifies table structure; Adds/removes/changes columns; Changes constraints"
+    },
+    {
+        "Id": "100000000000000000020000000000017",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "DROP TABLE",
+        "PayanarssTypeId": "100000000000000000020000000000017",
+        "Attributes": [],
+        "Description": "DROP TABLE statement; Deletes entire table; Removes structure and data; Irreversible operation"
+    },
+    {
+        "Id": "100000000000000000020000000000018",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "COUNT",
+        "PayanarssTypeId": "100000000000000000020000000000018",
+        "Attributes": [],
+        "Description": "COUNT function; Counts number of rows; Returns integer; Ignores NULL values"
+    },
+    {
+        "Id": "100000000000000000020000000000019",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "SUM",
+        "PayanarssTypeId": "100000000000000000020000000000019",
+        "Attributes": [],
+        "Description": "SUM function; Sums numeric values; Returns total; Useful for financial calculations"
+    },
+    {
+        "Id": "100000000000000000020000000000020",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "AVG",
+        "PayanarssTypeId": "100000000000000000020000000000020",
+        "Attributes": [],
+        "Description": "AVG function; Calculates average; Returns decimal; Useful for analysis"
+    },
+    {
+        "Id": "100000000000000000020000000000021",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "MIN",
+        "PayanarssTypeId": "100000000000000000020000000000021",
+        "Attributes": [],
+        "Description": "MIN function; Returns smallest value; Useful for range analysis; Works with numbers and dates"
+    },
+    {
+        "Id": "100000000000000000020000000000022",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "MAX",
+        "PayanarssTypeId": "100000000000000000020000000000022",
+        "Attributes": [],
+        "Description": "MAX function; Returns largest value; Useful for range analysis; Works with numbers and dates"
+    },
+    {
+        "Id": "100000000000000000020000000000023",
+        "ParentId": "100000000000000000020000000000003",
+        "Name": "AND",
+        "PayanarssTypeId": "100000000000000000020000000000023",
+        "Attributes": [],
+        "Description": "AND operator; All conditions must be true; Narrows result set; Used in WHERE clause"
+    },
+    {
+        "Id": "100000000000000000020000000000024",
+        "ParentId": "100000000000000000020000000000003",
+        "Name": "OR",
+        "PayanarssTypeId": "100000000000000000020000000000024",
+        "Attributes": [],
+        "Description": "OR operator; At least one condition true; Broadens result set; Used in WHERE clause"
+    },
+    {
+        "Id": "100000000000000000020000000000025",
+        "ParentId": "100000000000000000020000000000003",
+        "Name": "NOT",
+        "PayanarssTypeId": "100000000000000000020000000000025",
+        "Attributes": [],
+        "Description": "NOT operator; Reverses condition logic; Returns opposite results; Used with other operators"
+    },
+    {
+        "Id": "100000000000000000020000000000026",
+        "ParentId": "100000000000000000020000000000003",
+        "Name": "IN",
+        "PayanarssTypeId": "100000000000000000020000000000026",
+        "Attributes": [],
+        "Description": "IN operator; Matches any value in list; Shorthand for multiple OR; Useful for filtering"
+    },
+    {
+        "Id": "100000000000000000020000000000027",
+        "ParentId": "100000000000000000020000000000003",
+        "Name": "BETWEEN",
+        "PayanarssTypeId": "100000000000000000020000000000027",
+        "Attributes": [],
+        "Description": "BETWEEN operator; Matches values within range; Inclusive on both ends; Useful for date/number ranges"
+    },
+    {
+        "Id": "100000000000000000020000000000028",
+        "ParentId": "100000000000000000020000000000003",
+        "Name": "LIKE",
+        "PayanarssTypeId": "100000000000000000020000000000028",
+        "Attributes": [],
+        "Description": "LIKE operator; Pattern matching on text; Uses % (wildcard) and _ (single char); Case-insensitive"
+    },
+    {
+        "Id": "100000000000000000020000000000029",
+        "ParentId": "100000000000000000020000000000003",
+        "Name": "IS NULL",
+        "PayanarssTypeId": "100000000000000000020000000000029",
+        "Attributes": [],
+        "Description": "IS NULL operator; Checks for NULL values; Not equal to empty string; Used for missing data"
+    },
+    {
+        "Id": "100000000000000000020000000000030",
+        "ParentId": "100000000000000000020000000000003",
+        "Name": "IS NOT NULL",
+        "PayanarssTypeId": "100000000000000000020000000000030",
+        "Attributes": [],
+        "Description": "IS NOT NULL operator; Checks for non-NULL values; Opposite of IS NULL; Filters out missing data"
+    },
+    {
+        "Id": "100000000000000000020000000000031",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "DISTINCT",
+        "PayanarssTypeId": "100000000000000000020000000000031",
+        "Attributes": [],
+        "Description": "DISTINCT keyword; Returns unique values only; Removes duplicates; Reduces result set size"
+    },
+    {
+        "Id": "100000000000000000020000000000032",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "UNION",
+        "PayanarssTypeId": "100000000000000000020000000000032",
+        "Attributes": [],
+        "Description": "UNION operator; Combines results from multiple queries; Removes duplicates; Columns must match"
+    },
+    {
+        "Id": "100000000000000000020000000000033",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "SUBQUERY",
+        "PayanarssTypeId": "100000000000000000020000000000033",
+        "Attributes": [],
+        "Description": "SUBQUERY; Query within query; Inner query executes first; Result used by outer query"
+    },
+    {
+        "Id": "100000000000000000020000000000034",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "EXISTS",
+        "PayanarssTypeId": "100000000000000000020000000000034",
+        "Attributes": [],
+        "Description": "EXISTS operator; Checks if subquery returns any rows; Returns TRUE/FALSE; Used with WHERE"
+    },
+    {
+        "Id": "100000000000000000020000000000035",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "CASE",
+        "PayanarssTypeId": "100000000000000000020000000000035",
+        "Attributes": [],
+        "Description": "CASE statement; Conditional logic in SQL; Returns different values based on conditions; Like IF-ELSE"
+    },
+    {
+        "Id": "100000000000000000020000000000036",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "CAST",
+        "PayanarssTypeId": "100000000000000000020000000000036",
+        "Attributes": [],
+        "Description": "CAST function; Converts data type; Changes column/value type; Useful for compatibility"
+    },
+    {
+        "Id": "100000000000000000020000000000037",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "COMMIT",
+        "PayanarssTypeId": "100000000000000000020000000000037",
+        "Attributes": [],
+        "Description": "COMMIT statement; Saves all changes permanently; Ends transaction; Changes are irreversible"
+    },
+    {
+        "Id": "100000000000000000020000000000038",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "ROLLBACK",
+        "PayanarssTypeId": "100000000000000000020000000000038",
+        "Attributes": [],
+        "Description": "ROLLBACK statement; Undoes all changes in transaction; Reverts to previous state; Restores data"
+    },
+    {
+        "Id": "100000000000000000020000000000039",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "BEGIN TRANSACTION",
+        "PayanarssTypeId": "100000000000000000020000000000039",
+        "Attributes": [],
+        "Description": "BEGIN TRANSACTION; Starts new transaction; Groups multiple SQL statements; Enables atomicity"
+    },
+    {
+        "Id": "100000000000000000020000000000040",
+        "ParentId": "100000000000000000020000000000015",
+        "Name": "PRIMARY KEY",
+        "PayanarssTypeId": "100000000000000000020000000000040",
+        "Attributes": [],
+        "Description": "PRIMARY KEY constraint; Uniquely identifies each row; Not NULL; Only one per table"
+    },
+    {
+        "Id": "100000000000000000020000000000041",
+        "ParentId": "100000000000000000020000000000015",
+        "Name": "FOREIGN KEY",
+        "PayanarssTypeId": "100000000000000000020000000000041",
+        "Attributes": [],
+        "Description": "FOREIGN KEY constraint; Links to another table; Maintains referential integrity; Enforces relationships"
+    },
+    {
+        "Id": "100000000000000000020000000000042",
+        "ParentId": "100000000000000000020000000000015",
+        "Name": "UNIQUE",
+        "PayanarssTypeId": "100000000000000000020000000000042",
+        "Attributes": [],
+        "Description": "UNIQUE constraint; Ensures all values are unique; Allows NULL; Prevents duplicates"
+    },
+    {
+        "Id": "100000000000000000020000000000043",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "INDEX",
+        "PayanarssTypeId": "100000000000000000020000000000043",
+        "Attributes": [],
+        "Description": "INDEX; Creates searchable index; Speeds up queries; Slows down INSERT/UPDATE; Improves performance"
+    },
+    {
+        "Id": "100000000000000000020000000000044",
+        "ParentId": "100000000000000000020000000000004",
+        "Name": "RIGHT JOIN",
+        "PayanarssTypeId": "100000000000000000020000000000044",
+        "Attributes": [],
+        "Description": "RIGHT JOIN; Returns all rows from right table plus matching from left; Opposite of LEFT JOIN"
+    },
+    {
+        "Id": "100000000000000000020000000000045",
+        "ParentId": "100000000000000000020000000000004",
+        "Name": "CROSS JOIN",
+        "PayanarssTypeId": "100000000000000000020000000000045",
+        "Attributes": [],
+        "Description": "CROSS JOIN; Cartesian product; Returns all combinations; No ON condition needed"
+    },
+    {
+        "Id": "100000000000000000020000000000046",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "HAVING COUNT",
+        "PayanarssTypeId": "100000000000000000020000000000046",
+        "Attributes": [],
+        "Description": "HAVING with COUNT; Filters groups by count condition; Common aggregate filtering; Used with GROUP BY"
+    },
+    {
+        "Id": "100000000000000000020000000000047",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "LIKE PATTERN",
+        "PayanarssTypeId": "100000000000000000020000000000047",
+        "Attributes": [],
+        "Description": "LIKE pattern matching; Wildcard '%' matches any chars; Wildcard '_' matches single char; Text search"
+    },
+    {
         "Id": "68637a3f60937",
         "ParentId": "68637a3f60937",
         "Name": "PayanarssApplications",
