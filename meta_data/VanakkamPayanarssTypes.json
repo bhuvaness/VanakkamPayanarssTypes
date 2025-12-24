@@ -338,7 +338,7 @@
         "Name": "break",
         "PayanarssTypeId": "100000000000000000010000000000007",
         "Attributes": [],
-        "Description": "Break statement; Terminates loop or switch execution; Transfers control to statement after loop/switch"
+        "Description": "Break statement; Terminates loop or switch execution; Transfers control to statement after loop\/switch"
     },
     {
         "Id": "100000000000000000010000000000008",
@@ -517,7 +517,7 @@
         "Name": "ALTER TABLE",
         "PayanarssTypeId": "100000000000000000020000000000016",
         "Attributes": [],
-        "Description": "ALTER TABLE statement; Modifies table structure; Adds/removes/changes columns; Changes constraints"
+        "Description": "ALTER TABLE statement; Modifies table structure; Adds\/removes\/changes columns; Changes constraints"
     },
     {
         "Id": "100000000000000000020000000000017",
@@ -605,7 +605,7 @@
         "Name": "BETWEEN",
         "PayanarssTypeId": "100000000000000000020000000000027",
         "Attributes": [],
-        "Description": "BETWEEN operator; Matches values within range; Inclusive on both ends; Useful for date/number ranges"
+        "Description": "BETWEEN operator; Matches values within range; Inclusive on both ends; Useful for date\/number ranges"
     },
     {
         "Id": "100000000000000000020000000000028",
@@ -661,7 +661,7 @@
         "Name": "EXISTS",
         "PayanarssTypeId": "100000000000000000020000000000034",
         "Attributes": [],
-        "Description": "EXISTS operator; Checks if subquery returns any rows; Returns TRUE/FALSE; Used with WHERE"
+        "Description": "EXISTS operator; Checks if subquery returns any rows; Returns TRUE\/FALSE; Used with WHERE"
     },
     {
         "Id": "100000000000000000020000000000035",
@@ -677,7 +677,7 @@
         "Name": "CAST",
         "PayanarssTypeId": "100000000000000000020000000000036",
         "Attributes": [],
-        "Description": "CAST function; Converts data type; Changes column/value type; Useful for compatibility"
+        "Description": "CAST function; Converts data type; Changes column\/value type; Useful for compatibility"
     },
     {
         "Id": "100000000000000000020000000000037",
@@ -733,7 +733,7 @@
         "Name": "INDEX",
         "PayanarssTypeId": "100000000000000000020000000000043",
         "Attributes": [],
-        "Description": "INDEX; Creates searchable index; Speeds up queries; Slows down INSERT/UPDATE; Improves performance"
+        "Description": "INDEX; Creates searchable index; Speeds up queries; Slows down INSERT\/UPDATE; Improves performance"
     },
     {
         "Id": "100000000000000000020000000000044",
@@ -2838,7 +2838,7 @@
             "Id": "100000000000000000000000000000000",
             "Value": "True"
         },
-        "Description": "Required; Text; Unique employee code; Max length 10. Regex(HAD\/Current Year\/Sequence number)"
+        "Description": "Required; Text; Unique employee code; Max length 10. Regex(VM\/Current Year\/Sequence number)"
     },
     {
         "Id": "51951A9F-64A5-46A1-A0D9-9B36CCB172D9",
@@ -4971,14 +4971,6 @@
         "ParentId": "5F2A48CB-F50E-4CDE-8A3E-B6F9D6761B2E",
         "Name": "Delete",
         "PayanarssTypeId": "100000000000000000000000000000022",
-        "Attributes": [],
-        "Description": null
-    },
-    {
-        "Id": "A9B8C7D6-E5F4-A3B2-C1D0-E9F8B7A6C5D4",
-        "ParentId": "A9B8C7D6-E5F4-A3B2-C1D0-E9F8B7A6C5D4",
-        "Name": "Department",
-        "PayanarssTypeId": "100000000000000000000000000000001",
         "Attributes": [],
         "Description": null
     },
@@ -21519,5 +21511,2311 @@
             }
         ],
         "Description": "Required; GUID; User who requested."
+    },
+    {
+        "Id": "693aa09e2b06c",
+        "ParentId": "693aa09e2b06c",
+        "Name": "VIP Life Style",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": ""
+    },
+    {
+        "Id": "693aa09e2b06c001",
+        "ParentId": "6943ba4b9b541",
+        "Name": "User",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Master; User account management table."
+    },
+    {
+        "Id": "693aa09e2b06c002",
+        "ParentId": "6943ba4b9b541",
+        "Name": "Role",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Master; User role definition table."
+    },
+    {
+        "Id": "693aa09e2b06c003",
+        "ParentId": "6943ba4b9b541",
+        "Name": "Permission",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Master; System permission definition table."
+    },
+    {
+        "Id": "693aa09e2b06c004",
+        "ParentId": "6943ba4b9b541",
+        "Name": "UserRole",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Transaction; User role assignment table."
+    },
+    {
+        "Id": "693aa09e2b06c005",
+        "ParentId": "6943ba4b9b541",
+        "Name": "RolePermission",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Transaction; Role permission assignment table."
+    },
+    {
+        "Id": "693aa09e2b06c006",
+        "ParentId": "6943ba4b9b541",
+        "Name": "UserSession",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Transaction; User login session tracking table."
+    },
+    {
+        "Id": "693aa09e2b06c007",
+        "ParentId": "6943ba4b9b541",
+        "Name": "PasswordHistory",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Transaction; User password change history table."
+    },
+    {
+        "Id": "693aa09e2b06c101",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "UserId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; User primary key identifier."
+    },
+    {
+        "Id": "693aa09e2b06c102",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "Username",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "50"
+            }
+        ],
+        "Description": "Required; Text; Unique; Max length: 50; User login name."
+    },
+    {
+        "Id": "693aa09e2b06c103",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "Email",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "255"
+            }
+        ],
+        "Description": "Required; Text; Unique; Max length: 255; User email address."
+    },
+    {
+        "Id": "693aa09e2b06c104",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "PasswordHash",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "500"
+            }
+        ],
+        "Description": "Required; Text; Max length: 500; Encrypted password hash."
+    },
+    {
+        "Id": "693aa09e2b06c105",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "FirstName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "100"
+            }
+        ],
+        "Description": "Required; Text; Max length: 100; User first name."
+    },
+    {
+        "Id": "693aa09e2b06c106",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "LastName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "100"
+            }
+        ],
+        "Description": "Required; Text; Max length: 100; User last name."
+    },
+    {
+        "Id": "693aa09e2b06c107",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "IsLocked",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "False"
+            }
+        ],
+        "Description": "Required; Boolean; Default: False; User account lock status."
+    },
+    {
+        "Id": "693aa09e2b06c108",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "LastLoginDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [],
+        "Description": "Optional; DateTime; User last login timestamp."
+    },
+    {
+        "Id": "693aa09e2b06c109",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "PasswordExpiryDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [],
+        "Description": "Optional; DateTime; Password expiration date."
+    },
+    {
+        "Id": "693aa09e2b06c110",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "693aa09e2b06c111",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "693aa09e2b06c112",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "693aa09e2b06c113",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "693aa09e2b06c114",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if user is active."
+    },
+    {
+        "Id": "693aa09e2b06c201",
+        "ParentId": "693aa09e2b06c002",
+        "Name": "RoleId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; Role primary key identifier."
+    },
+    {
+        "Id": "693aa09e2b06c202",
+        "ParentId": "693aa09e2b06c002",
+        "Name": "RoleName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "100"
+            }
+        ],
+        "Description": "Required; Text; Unique; Max length: 100; Role name."
+    },
+    {
+        "Id": "693aa09e2b06c203",
+        "ParentId": "693aa09e2b06c002",
+        "Name": "Description",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "500"
+            }
+        ],
+        "Description": "Optional; Text; Max length: 500; Role description."
+    },
+    {
+        "Id": "693aa09e2b06c204",
+        "ParentId": "693aa09e2b06c002",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "693aa09e2b06c205",
+        "ParentId": "693aa09e2b06c002",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "693aa09e2b06c206",
+        "ParentId": "693aa09e2b06c002",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "693aa09e2b06c207",
+        "ParentId": "693aa09e2b06c002",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "693aa09e2b06c208",
+        "ParentId": "693aa09e2b06c002",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if role is active."
+    },
+    {
+        "Id": "693aa09e2b06c301",
+        "ParentId": "693aa09e2b06c003",
+        "Name": "PermissionId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; Permission primary key identifier."
+    },
+    {
+        "Id": "693aa09e2b06c302",
+        "ParentId": "693aa09e2b06c003",
+        "Name": "PermissionName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "100"
+            }
+        ],
+        "Description": "Required; Text; Unique; Max length: 100; Permission name."
+    },
+    {
+        "Id": "693aa09e2b06c303",
+        "ParentId": "693aa09e2b06c003",
+        "Name": "Module",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "100"
+            }
+        ],
+        "Description": "Required; Text; Max length: 100; System module name."
+    },
+    {
+        "Id": "693aa09e2b06c304",
+        "ParentId": "693aa09e2b06c003",
+        "Name": "Action",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "50"
+            }
+        ],
+        "Description": "Required; Text; Max length: 50; Permission action type."
+    },
+    {
+        "Id": "693aa09e2b06c305",
+        "ParentId": "693aa09e2b06c003",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "693aa09e2b06c306",
+        "ParentId": "693aa09e2b06c003",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "693aa09e2b06c307",
+        "ParentId": "693aa09e2b06c003",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "693aa09e2b06c308",
+        "ParentId": "693aa09e2b06c003",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "693aa09e2b06c309",
+        "ParentId": "693aa09e2b06c003",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if permission is active."
+    },
+    {
+        "Id": "693aa09e2b06c401",
+        "ParentId": "693aa09e2b06c004",
+        "Name": "UserRoleId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; UserRole primary key identifier."
+    },
+    {
+        "Id": "693aa09e2b06c402",
+        "ParentId": "693aa09e2b06c004",
+        "Name": "UserId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Lookup; References User; User identifier."
+    },
+    {
+        "Id": "693aa09e2b06c403",
+        "ParentId": "693aa09e2b06c004",
+        "Name": "RoleId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Lookup; References Role; Role identifier."
+    },
+    {
+        "Id": "693aa09e2b06c404",
+        "ParentId": "693aa09e2b06c004",
+        "Name": "AssignedDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Role assignment date."
+    },
+    {
+        "Id": "693aa09e2b06c405",
+        "ParentId": "693aa09e2b06c004",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "693aa09e2b06c406",
+        "ParentId": "693aa09e2b06c004",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "693aa09e2b06c407",
+        "ParentId": "693aa09e2b06c004",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if assignment is active."
+    },
+    {
+        "Id": "693aa09e2b06c001001",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "UserId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; User primary key identifier."
+    },
+    {
+        "Id": "693aa09e2b06c001002",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "Username",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "50"
+            }
+        ],
+        "Description": "Required; Text; Unique; Max length: 50; User login name."
+    },
+    {
+        "Id": "693aa09e2b06c001003",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "Email",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "255"
+            }
+        ],
+        "Description": "Required; Text; Unique; Max length: 255; User email address."
+    },
+    {
+        "Id": "693aa09e2b06c001004",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "PasswordHash",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "500"
+            }
+        ],
+        "Description": "Required; Text; Max length: 500; Encrypted password hash."
+    },
+    {
+        "Id": "693aa09e2b06c001005",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "FirstName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "100"
+            }
+        ],
+        "Description": "Required; Text; Max length: 100; User first name."
+    },
+    {
+        "Id": "693aa09e2b06c001006",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "LastName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "100"
+            }
+        ],
+        "Description": "Required; Text; Max length: 100; User last name."
+    },
+    {
+        "Id": "693aa09e2b06c001007",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "IsLocked",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "False"
+            }
+        ],
+        "Description": "Required; Boolean; Default: False; User account lock status."
+    },
+    {
+        "Id": "693aa09e2b06c001008",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "LastLoginDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [],
+        "Description": "Optional; DateTime; User last login timestamp."
+    },
+    {
+        "Id": "693aa09e2b06c001009",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "693aa09e2b06c001010",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "693aa09e2b06c001011",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "693aa09e2b06c001012",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "693aa09e2b06c001013",
+        "ParentId": "693aa09e2b06c001",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if user is active."
+    },
+    {
+        "Id": "693aa09e2b06c002001",
+        "ParentId": "693aa09e2b06c002",
+        "Name": "RoleId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; Role primary key identifier."
+    },
+    {
+        "Id": "693aa09e2b06c002002",
+        "ParentId": "693aa09e2b06c002",
+        "Name": "RoleName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "100"
+            }
+        ],
+        "Description": "Required; Text; Unique; Max length: 100; Role name."
+    },
+    {
+        "Id": "693aa09e2b06c002003",
+        "ParentId": "693aa09e2b06c002",
+        "Name": "Description",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "500"
+            }
+        ],
+        "Description": "Optional; Text; Max length: 500; Role description."
+    },
+    {
+        "Id": "693aa09e2b06c002004",
+        "ParentId": "693aa09e2b06c002",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "693aa09e2b06c002005",
+        "ParentId": "693aa09e2b06c002",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "693aa09e2b06c002006",
+        "ParentId": "693aa09e2b06c002",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "693aa09e2b06c002007",
+        "ParentId": "693aa09e2b06c002",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "693aa09e2b06c002008",
+        "ParentId": "693aa09e2b06c002",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if role is active."
+    },
+    {
+        "Id": "693aa09e2b06c003001",
+        "ParentId": "693aa09e2b06c003",
+        "Name": "PermissionId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; Permission primary key identifier."
+    },
+    {
+        "Id": "693aa09e2b06c003002",
+        "ParentId": "693aa09e2b06c003",
+        "Name": "PermissionName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "100"
+            }
+        ],
+        "Description": "Required; Text; Unique; Max length: 100; Permission name."
+    },
+    {
+        "Id": "693aa09e2b06c003003",
+        "ParentId": "693aa09e2b06c003",
+        "Name": "Module",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "100"
+            }
+        ],
+        "Description": "Required; Text; Max length: 100; System module name."
+    },
+    {
+        "Id": "693aa09e2b06c003004",
+        "ParentId": "693aa09e2b06c003",
+        "Name": "Action",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "50"
+            }
+        ],
+        "Description": "Required; Text; Max length: 50; Permission action type."
+    },
+    {
+        "Id": "693aa09e2b06c003005",
+        "ParentId": "693aa09e2b06c003",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "693aa09e2b06c003006",
+        "ParentId": "693aa09e2b06c003",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "693aa09e2b06c003007",
+        "ParentId": "693aa09e2b06c003",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "693aa09e2b06c003008",
+        "ParentId": "693aa09e2b06c003",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "693aa09e2b06c003009",
+        "ParentId": "693aa09e2b06c003",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if permission is active."
+    },
+    {
+        "Id": "693aa09e2b06c004001",
+        "ParentId": "693aa09e2b06c004",
+        "Name": "UserRoleId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; UserRole primary key identifier."
+    },
+    {
+        "Id": "693aa09e2b06c004002",
+        "ParentId": "693aa09e2b06c004",
+        "Name": "UserId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; References User; User identifier."
+    },
+    {
+        "Id": "693aa09e2b06c004003",
+        "ParentId": "693aa09e2b06c004",
+        "Name": "RoleId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; References Role; Role identifier."
+    },
+    {
+        "Id": "693aa09e2b06c004004",
+        "ParentId": "693aa09e2b06c004",
+        "Name": "AssignedDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Role assignment date."
+    },
+    {
+        "Id": "693aa09e2b06c004005",
+        "ParentId": "693aa09e2b06c004",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "693aa09e2b06c004006",
+        "ParentId": "693aa09e2b06c004",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "693aa09e2b06c004007",
+        "ParentId": "693aa09e2b06c004",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if assignment is active."
+    },
+    {
+        "Id": "693aa09e2b06c005001",
+        "ParentId": "693aa09e2b06c005",
+        "Name": "RolePermissionId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; RolePermission primary key identifier."
+    },
+    {
+        "Id": "693aa09e2b06c005002",
+        "ParentId": "693aa09e2b06c005",
+        "Name": "RoleId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; References Role; Role identifier."
+    },
+    {
+        "Id": "693aa09e2b06c005003",
+        "ParentId": "693aa09e2b06c005",
+        "Name": "PermissionId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; References Permission; Permission identifier."
+    },
+    {
+        "Id": "693aa09e2b06c005004",
+        "ParentId": "693aa09e2b06c005",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "693aa09e2b06c005005",
+        "ParentId": "693aa09e2b06c005",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "693aa09e2b06c005006",
+        "ParentId": "693aa09e2b06c005",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if permission assignment is active."
+    },
+    {
+        "Id": "693aa09e2b06c006001",
+        "ParentId": "693aa09e2b06c006",
+        "Name": "SessionId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; Session primary key identifier."
+    },
+    {
+        "Id": "693aa09e2b06c006002",
+        "ParentId": "693aa09e2b06c006",
+        "Name": "UserId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; References User; User identifier."
+    },
+    {
+        "Id": "693aa09e2b06c006003",
+        "ParentId": "693aa09e2b06c006",
+        "Name": "LoginTime",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Session start time."
+    },
+    {
+        "Id": "693aa09e2b06c006004",
+        "ParentId": "693aa09e2b06c006",
+        "Name": "LogoutTime",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [],
+        "Description": "Optional; DateTime; Session end time."
+    },
+    {
+        "Id": "693aa09e2b06c006005",
+        "ParentId": "693aa09e2b06c006",
+        "Name": "IPAddress",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "45"
+            }
+        ],
+        "Description": "Optional; Text; Max length: 45; User IP address."
+    },
+    {
+        "Id": "693aa09e2b06c006006",
+        "ParentId": "693aa09e2b06c006",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if session is active."
+    },
+    {
+        "Id": "693aa09e2b06c007001",
+        "ParentId": "693aa09e2b06c007",
+        "Name": "PasswordHistoryId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; PasswordHistory primary key identifier."
+    },
+    {
+        "Id": "693aa09e2b06c007002",
+        "ParentId": "693aa09e2b06c007",
+        "Name": "UserId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; References User; User identifier."
+    },
+    {
+        "Id": "693aa09e2b06c007003",
+        "ParentId": "693aa09e2b06c007",
+        "Name": "OldPasswordHash",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000017",
+                "Value": "500"
+            }
+        ],
+        "Description": "Required; Text; Max length: 500; Previous password hash."
+    },
+    {
+        "Id": "693aa09e2b06c007004",
+        "ParentId": "693aa09e2b06c007",
+        "Name": "ChangedDate",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Password change date."
+    },
+    {
+        "Id": "693aa09e2b06c007005",
+        "ParentId": "693aa09e2b06c007",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "693aa09e2b06c007006",
+        "ParentId": "693aa09e2b06c007",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "6943ba4b9b541",
+        "ParentId": "693aa09e2b06c",
+        "Name": "User Management",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000002",
+                "Value": "True"
+            }
+        ],
+        "Description": ""
+    },
+    {
+        "Id": "6943bb71e6a7d",
+        "ParentId": "693aa09e2b06c",
+        "Name": "Meal Management",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000002",
+                "Value": "True"
+            }
+        ],
+        "Description": ""
+    },
+    {
+        "Id": "6943bb71e6a7d001",
+        "ParentId": "6943bb71e6a7d",
+        "Name": "Meal",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Master; Meal master data table for meal planning and management."
+    },
+    {
+        "Id": "6943bb71e6a7d002",
+        "ParentId": "6943bb71e6a7d",
+        "Name": "Dish",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Master; Dish master data table containing recipe information."
+    },
+    {
+        "Id": "6943bb71e6a7d003",
+        "ParentId": "6943bb71e6a7d",
+        "Name": "Ingredient",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Master; Ingredient master data table with nutritional information."
+    },
+    {
+        "Id": "6943bb71e6a7d004",
+        "ParentId": "6943bb71e6a7d",
+        "Name": "Allergen",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Master; Allergen master data table for dietary restrictions."
+    },
+    {
+        "Id": "6943bb71e6a7d005",
+        "ParentId": "6943bb71e6a7d",
+        "Name": "MealDish",
+        "PayanarssTypeId": "100000000000000000000000000000002",
+        "Attributes": [],
+        "Description": "Transaction; Junction table linking meals to dishes."
+    },
+    {
+        "Id": "6943bb71e6a7d006",
+        "ParentId": "6943bb71e6a7d",
+        "Name": "DishIngredient",
+        "PayanarssTypeId": "100000000000000000000000000000002",
+        "Attributes": [],
+        "Description": "Transaction; Junction table linking dishes to ingredients with quantities."
+    },
+    {
+        "Id": "6943bb71e6a7d007",
+        "ParentId": "6943bb71e6a7d",
+        "Name": "IngredientAllergen",
+        "PayanarssTypeId": "100000000000000000000000000000002",
+        "Attributes": [],
+        "Description": "Transaction; Junction table linking ingredients to allergens."
+    },
+    {
+        "Id": "6943bb71e6a7d008",
+        "ParentId": "6943bb71e6a7d",
+        "Name": "IngredientStock",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Master; Ingredient stock management table."
+    },
+    {
+        "Id": "6943bb71e6a7d009",
+        "ParentId": "6943bb71e6a7d",
+        "Name": "DishStock",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Master; Dish stock management table."
+    },
+    {
+        "Id": "6943bb71e6a7d001001",
+        "ParentId": "6943bb71e6a7d001",
+        "Name": "MealId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; Meal primary key identifier."
+    },
+    {
+        "Id": "6943bb71e6a7d001002",
+        "ParentId": "6943bb71e6a7d001",
+        "Name": "MealName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Text; Max length: 200; Unique; Meal name or title."
+    },
+    {
+        "Id": "6943bb71e6a7d001003",
+        "ParentId": "6943bb71e6a7d001",
+        "Name": "MealType",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Text; Max length: 50; Meal type (Breakfast, Lunch, Dinner, Snack)."
+    },
+    {
+        "Id": "6943bb71e6a7d001004",
+        "ParentId": "6943bb71e6a7d001",
+        "Name": "ServingSize",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "1"
+            }
+        ],
+        "Description": "Required; Number; Min: 1; Number of servings for this meal."
+    },
+    {
+        "Id": "6943bb71e6a7d001005",
+        "ParentId": "6943bb71e6a7d001",
+        "Name": "TotalCalories",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "0"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Total calories for the meal."
+    },
+    {
+        "Id": "6943bb71e6a7d001006",
+        "ParentId": "6943bb71e6a7d001",
+        "Name": "TotalProtein",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "0"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Total protein in grams."
+    },
+    {
+        "Id": "6943bb71e6a7d001007",
+        "ParentId": "6943bb71e6a7d001",
+        "Name": "TotalCarbs",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "0"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Total carbohydrates in grams."
+    },
+    {
+        "Id": "6943bb71e6a7d001008",
+        "ParentId": "6943bb71e6a7d001",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "6943bb71e6a7d001009",
+        "ParentId": "6943bb71e6a7d001",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "6943bb71e6a7d001010",
+        "ParentId": "6943bb71e6a7d001",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "6943bb71e6a7d001011",
+        "ParentId": "6943bb71e6a7d001",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "6943bb71e6a7d001012",
+        "ParentId": "6943bb71e6a7d001",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if meal is active."
+    },
+    {
+        "Id": "6943bb71e6a7d002001",
+        "ParentId": "6943bb71e6a7d002",
+        "Name": "DishId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; Dish primary key identifier."
+    },
+    {
+        "Id": "6943bb71e6a7d002002",
+        "ParentId": "6943bb71e6a7d002",
+        "Name": "DishName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Text; Max length: 200; Unique; Dish name or title."
+    },
+    {
+        "Id": "6943bb71e6a7d002003",
+        "ParentId": "6943bb71e6a7d002",
+        "Name": "Description",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": "Optional; Text; Max length: 1000; Dish description or recipe notes."
+    },
+    {
+        "Id": "6943bb71e6a7d002004",
+        "ParentId": "6943bb71e6a7d002",
+        "Name": "PreparationTime",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "0"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Preparation time in minutes."
+    },
+    {
+        "Id": "6943bb71e6a7d002005",
+        "ParentId": "6943bb71e6a7d002",
+        "Name": "CookingTime",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "0"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Cooking time in minutes."
+    },
+    {
+        "Id": "6943bb71e6a7d002006",
+        "ParentId": "6943bb71e6a7d002",
+        "Name": "ServingSize",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "1"
+            }
+        ],
+        "Description": "Required; Number; Min: 1; Default serving size for this dish."
+    },
+    {
+        "Id": "6943bb71e6a7d002007",
+        "ParentId": "6943bb71e6a7d002",
+        "Name": "CaloriesPerServing",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "0"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Calories per serving."
+    },
+    {
+        "Id": "6943bb71e6a7d002008",
+        "ParentId": "6943bb71e6a7d002",
+        "Name": "ProteinPerServing",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "0"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Protein per serving in grams."
+    },
+    {
+        "Id": "6943bb71e6a7d002009",
+        "ParentId": "6943bb71e6a7d002",
+        "Name": "CarbsPerServing",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "0"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Carbohydrates per serving in grams."
+    },
+    {
+        "Id": "6943bb71e6a7d002010",
+        "ParentId": "6943bb71e6a7d002",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "6943bb71e6a7d002011",
+        "ParentId": "6943bb71e6a7d002",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "6943bb71e6a7d002012",
+        "ParentId": "6943bb71e6a7d002",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "6943bb71e6a7d002013",
+        "ParentId": "6943bb71e6a7d002",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "6943bb71e6a7d002014",
+        "ParentId": "6943bb71e6a7d002",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if dish is active."
+    },
+    {
+        "Id": "6943bb71e6a7d003001",
+        "ParentId": "6943bb71e6a7d003",
+        "Name": "IngredientId",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-generated; Unique; Ingredient primary key identifier."
+    },
+    {
+        "Id": "6943bb71e6a7d003002",
+        "ParentId": "6943bb71e6a7d003",
+        "Name": "IngredientName",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000013",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Text; Max length: 200; Unique; Ingredient name."
+    },
+    {
+        "Id": "6943bb71e6a7d003003",
+        "ParentId": "6943bb71e6a7d003",
+        "Name": "Category",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": "Optional; Text; Max length: 100; Ingredient category (Vegetable, Meat, Dairy, etc)."
+    },
+    {
+        "Id": "6943bb71e6a7d003004",
+        "ParentId": "6943bb71e6a7d003",
+        "Name": "Unit",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Text; Max length: 20; Unit of measurement (kg, g, ml, pieces)."
+    },
+    {
+        "Id": "6943bb71e6a7d003005",
+        "ParentId": "6943bb71e6a7d003",
+        "Name": "CaloriesPer100g",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "0"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Calories per 100 grams."
+    },
+    {
+        "Id": "6943bb71e6a7d003006",
+        "ParentId": "6943bb71e6a7d003",
+        "Name": "ProteinPer100g",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "0"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Protein per 100 grams."
+    },
+    {
+        "Id": "6943bb71e6a7d003007",
+        "ParentId": "6943bb71e6a7d003",
+        "Name": "CarbsPer100g",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "0"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Carbohydrates per 100 grams."
+    },
+    {
+        "Id": "6943bb71e6a7d003008",
+        "ParentId": "6943bb71e6a7d003",
+        "Name": "FatPer100g",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000016",
+                "Value": "0"
+            }
+        ],
+        "Description": "Optional; Number; Min: 0; Fat per 100 grams."
+    },
+    {
+        "Id": "6943bb71e6a7d003009",
+        "ParentId": "6943bb71e6a7d003",
+        "Name": "CreatedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; GUID; Auto-populated; User who created this record."
+    },
+    {
+        "Id": "6943bb71e6a7d003010",
+        "ParentId": "6943bb71e6a7d003",
+        "Name": "CreatedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; DateTime; Auto-populated; Timestamp when created."
+    },
+    {
+        "Id": "6943bb71e6a7d003011",
+        "ParentId": "6943bb71e6a7d003",
+        "Name": "ModifiedBy",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; GUID; Auto-updated; User who last modified."
+    },
+    {
+        "Id": "6943bb71e6a7d003012",
+        "ParentId": "6943bb71e6a7d003",
+        "Name": "ModifiedOn",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000024",
+                "Value": "True"
+            }
+        ],
+        "Description": "Optional; DateTime; Auto-updated; Last modification timestamp."
+    },
+    {
+        "Id": "6943bb71e6a7d003013",
+        "ParentId": "6943bb71e6a7d003",
+        "Name": "IsActive",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000012",
+                "Value": "True"
+            },
+            {
+                "Id": "100000000000000000000000000000029",
+                "Value": "True"
+            }
+        ],
+        "Description": "Required; Boolean; Default: True; Indicates if ingredient is active."
+    },
+    {
+        "Id": "6943c912a70e0",
+        "ParentId": "6943bb71e6a7d004",
+        "Name": "Id",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Unique ID, Not Null, Mandatory"
+    },
+    {
+        "Id": "6943cf38a126e",
+        "ParentId": "6943bb71e6a7d004",
+        "Name": "Name",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": ""
+    },
+    {
+        "Id": "69490bde022df",
+        "ParentId": "6943bb71e6a7d",
+        "Name": "MealType",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [
+            {
+                "Id": "100000000000000000000000000000002",
+                "Value": "True"
+            }
+        ],
+        "Description": "This is a lookup table"
     }
 ]

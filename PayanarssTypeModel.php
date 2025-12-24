@@ -18,11 +18,11 @@ class PayanarssApplication
         $this->RootNodes = null;
         $this->Attribute = null;
     }
-    public function save_all_types(PayanarssType $payanarssType): PayanarssTypes
+    public function save_all_types(): PayanarssTypes
     {
         echo count($this->Types);
         $busObj = new PayanarssTypeBusinessLogics();
-        $busObj->save_all($payanarssType, $this->Types);
+        $busObj->save_all($this->Types);
         return $this->Types;
     }
     public function remove_type(string $typeId): PayanarssTypes
@@ -446,7 +446,7 @@ class PayanarssTypeBusinessLogics
         }
         return null;
     }
-    function save_all(PayanarssType $payanarssType, PayanarssTypes $types)
+    function save_all(PayanarssTypes $types)
     {
         //echo json_encode($this->convertToArray($types));
 
