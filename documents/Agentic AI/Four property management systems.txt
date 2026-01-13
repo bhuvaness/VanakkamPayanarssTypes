@@ -1,0 +1,127 @@
+
+
+
+
+
+<?php
+// config.php
+
+
+Curating module lists across four property management systems.The user is asking for a list of modules for:
+
+Rental/Tenancy management
+Hotel Booking Management
+PG Booking Management
+Hostel Room Management
+
+They want:
+
+Only modules (not tables and columns)
+Only modules related to builds
+Clear list format
+
+Let me think about what modules would be needed for each system:
+
+Rental/Tenancy Management:
+ Property Management
+ Tenant Management
+ Lease Management
+ Rent Collection/Billing
+ Maintenance/Repairs
+ Document Management
+ Reports & Analytics
+ User Management
+ Settings
+
+Hotel Booking Management:
+ Room Management
+ Booking Management
+ Guest Management
+ Reservation Management
+ Rate Management
+ Billing/Invoice
+ Payment Management
+ Housekeeping Management
+ Reports & Analytics
+ User Management
+ Settings
+
+PG (Paying Guest) Booking Management:
+ Room/Bed Management
+ Guest Management
+ Booking Management
+ Monthly Rent Collection
+ Utilities Management
+ Complain/Maintenance
+ Document Management
+ Reports & Analytics
+ User Management
+ Settings
+
+Hostel Room Management:
+ Room Management
+ Bed Management
+ Student/Guest Management
+ Booking Management
+ Fee Collection
+ Attendance Management
+ Complain Management
+ Housekeeping
+ Reports & Analytics
+ User Management
+ Settings
+
+Let me organize this in a clear, structured way.Here are the core modules for each system:
+
+Rental/Tenancy Management
+ Property Management
+ Tenant Management
+ Lease Management
+ Rent Billing & Collection
+ Maintenance & Repairs
+ Document Management
+ Notice Management
+ Reports & Analytics
+ User Management
+ Settings
+
+Hotel Booking Management
+ Room Management
+ Room Types & Categories
+ Booking Management
+ Guest Management
+ Reservation Management
+ Rate Management
+ Billing & Invoicing
+ Payment Management
+ Housekeeping Management
+ Reports & Analytics
+ User Management
+ Settings
+
+PG (Paying Guest) Booking Management
+ Room & Bed Management
+ Guest Management
+ Booking Management
+ Monthly Billing
+ Utilities Management
+ Complaint Management
+ Maintenance Requests
+ Document Management
+ Reports & Analytics
+ User Management
+ Settings
+
+Hostel Room Management
+ Room Management
+ Bed Management
+ Student/Guest Management
+ Booking Management
+ Fee Collection & Billing
+ Attendance Management
+ Complaint Management
+ Housekeeping Management
+ Document Management
+ Reports & Analytics
+ User Management
+ Settings
