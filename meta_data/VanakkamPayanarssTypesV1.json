@@ -1,0 +1,2645 @@
+[
+    {
+        "Id": "100000000000000000000000000000000",
+        "ParentId": "100000000000000000000000000000000",
+        "Name": "ValueType",
+        "PayanarssTypeId": "100000000000000000000000000000000",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000001",
+        "ParentId": "100000000000000000000000000000001",
+        "Name": "TableType",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000002",
+        "ParentId": "100000000000000000000000000000002",
+        "Name": "ChildTableType",
+        "PayanarssTypeId": "100000000000000000000000000000002",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000003",
+        "ParentId": "100000000000000000000000000000003",
+        "Name": "LookupType",
+        "PayanarssTypeId": "100000000000000000000000000000003",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000004",
+        "ParentId": "100000000000000000000000000000004",
+        "Name": "GroupType",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000005",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "AttributeType",
+        "PayanarssTypeId": "100000000000000000000000000000005",
+        "Attributes": [
+            1.0e+32
+        ],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000006",
+        "ParentId": "100000000000000000000000000000006",
+        "Name": "Text",
+        "PayanarssTypeId": "100000000000000000000000000000006",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000007",
+        "ParentId": "100000000000000000000000000000007",
+        "Name": "Number",
+        "PayanarssTypeId": "100000000000000000000000000000007",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000008",
+        "ParentId": "100000000000000000000000000000008",
+        "Name": "DateTime",
+        "PayanarssTypeId": "100000000000000000000000000000008",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000009",
+        "ParentId": "100000000000000000000000000000009",
+        "Name": "Boolean",
+        "PayanarssTypeId": "100000000000000000000000000000009",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000010",
+        "ParentId": "100000000000000000000000000000010",
+        "Name": "Blob",
+        "PayanarssTypeId": "100000000000000000000000000000010",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000011",
+        "ParentId": "100000000000000000000000000000011",
+        "Name": "ReadOnly",
+        "PayanarssTypeId": "100000000000000000000000000000011",
+        "Attributes": [
+            1.0e+32
+        ],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000012",
+        "ParentId": "100000000000000000000000000000012",
+        "Name": "Mandatory",
+        "PayanarssTypeId": "100000000000000000000000000000012",
+        "Attributes": [
+            1.0e+32
+        ],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000013",
+        "ParentId": "100000000000000000000000000000013",
+        "Name": "IsUniqueId",
+        "PayanarssTypeId": "100000000000000000000000000000013",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000014",
+        "ParentId": "100000000000000000000000000000014",
+        "Name": "ShowInTreeView",
+        "PayanarssTypeId": "100000000000000000000000000000014",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000015",
+        "ParentId": "100000000000000000000000000000015",
+        "Name": "SelectableType",
+        "PayanarssTypeId": "100000000000000000000000000000015",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000016",
+        "ParentId": "100000000000000000000000000000016",
+        "Name": "Minimum",
+        "PayanarssTypeId": "100000000000000000000000000000016",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000017",
+        "ParentId": "100000000000000000000000000000017",
+        "Name": "Maximum",
+        "PayanarssTypeId": "100000000000000000000000000000017",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000018",
+        "ParentId": "100000000000000000000000000000018",
+        "Name": "GUID",
+        "PayanarssTypeId": "100000000000000000000000000000018",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000019",
+        "ParentId": "100000000000000000000000000000019",
+        "Name": "Create",
+        "PayanarssTypeId": "100000000000000000000000000000019",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000020",
+        "ParentId": "100000000000000000000000000000020",
+        "Name": "Read",
+        "PayanarssTypeId": "100000000000000000000000000000020",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000021",
+        "ParentId": "100000000000000000000000000000021",
+        "Name": "Update",
+        "PayanarssTypeId": "100000000000000000000000000000021",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000022",
+        "ParentId": "100000000000000000000000000000022",
+        "Name": "Delete",
+        "PayanarssTypeId": "100000000000000000000000000000022",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000023",
+        "ParentId": "100000000000000000000000000000023",
+        "Name": "New",
+        "PayanarssTypeId": "100000000000000000000000000000023",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000024",
+        "ParentId": "100000000000000000000000000000024",
+        "Name": "Auto Generate",
+        "PayanarssTypeId": "100000000000000000000000000000024",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000025",
+        "ParentId": "100000000000000000000000000000025",
+        "Name": "Validate Before Create",
+        "PayanarssTypeId": "100000000000000000000000000000025",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000026",
+        "ParentId": "100000000000000000000000000000026",
+        "Name": "GreaterThan",
+        "PayanarssTypeId": "100000000000000000000000000000026",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000027",
+        "ParentId": "100000000000000000000000000000027",
+        "Name": "LesserThan",
+        "PayanarssTypeId": "100000000000000000000000000000027",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000028",
+        "ParentId": "100000000000000000000000000000028",
+        "Name": "CalculateAge",
+        "PayanarssTypeId": "100000000000000000000000000000028",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000029",
+        "ParentId": "100000000000000000000000000000029",
+        "Name": "DefaultValue",
+        "PayanarssTypeId": "100000000000000000000000000000029",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000030",
+        "ParentId": "100000000000000000000000000000030",
+        "Name": "OnBeforeSave",
+        "PayanarssTypeId": "100000000000000000000000000000030",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000031",
+        "ParentId": "100000000000000000000000000000031",
+        "Name": "OnAfterSave",
+        "PayanarssTypeId": "100000000000000000000000000000031",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000000000000000032",
+        "ParentId": "100000000000000000000000000000032",
+        "Name": "SendMessageToAgent",
+        "PayanarssTypeId": "100000000000000000000000000000032",
+        "Attributes": [],
+        "Description": null
+    },
+    {
+        "Id": "100000000000000000010000000000001",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "if",
+        "PayanarssTypeId": "100000000000000000010000000000001",
+        "Attributes": [
+            "100000000000000000000000000000012",
+            "100000000000000000000000000000013"
+        ],
+        "Description": "Conditional statement; Executes code block if condition is true; Returns Boolean decision result"
+    },
+    {
+        "Id": "100000000000000000010000000000002",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "else",
+        "PayanarssTypeId": "100000000000000000010000000000002",
+        "Attributes": [
+            "100000000000000000010000000000001"
+        ],
+        "Description": "Else block; Executes code if preceding if condition is false; Always paired with if"
+    },
+    {
+        "Id": "100000000000000000010000000000003",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "else if",
+        "PayanarssTypeId": "100000000000000000010000000000003",
+        "Attributes": [
+            "100000000000000000010000000000001",
+            "100000000000000000000000000000012"
+        ],
+        "Description": "Else if block; Tests additional condition if previous if was false; Allows multiple conditions"
+    },
+    {
+        "Id": "100000000000000000010000000000004",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "switch",
+        "PayanarssTypeId": "100000000000000000010000000000004",
+        "Attributes": [
+            "100000000000000000000000000000006",
+            "100000000000000000010000000000005",
+            "100000000000000000010000000000006"
+        ],
+        "Description": "Switch statement; Tests expression against multiple cases; More efficient than if-else chain"
+    },
+    {
+        "Id": "100000000000000000010000000000005",
+        "ParentId": "100000000000000000010000000000004",
+        "Name": "case",
+        "PayanarssTypeId": "100000000000000000010000000000005",
+        "Attributes": [
+            "100000000000000000000000000000006",
+            "100000000000000000010000000000007"
+        ],
+        "Description": "Case label in switch; Matches value against switch expression; Execution continues to next case if no break"
+    },
+    {
+        "Id": "100000000000000000010000000000006",
+        "ParentId": "100000000000000000010000000000004",
+        "Name": "default",
+        "PayanarssTypeId": "100000000000000000010000000000006",
+        "Attributes": [],
+        "Description": "Default case in switch; Executes if no other cases match; Optional but recommended"
+    },
+    {
+        "Id": "100000000000000000010000000000007",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "break",
+        "PayanarssTypeId": "100000000000000000010000000000007",
+        "Attributes": [],
+        "Description": "Break statement; Terminates loop or switch execution; Transfers control to statement after loop\/switch"
+    },
+    {
+        "Id": "100000000000000000010000000000008",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "for",
+        "PayanarssTypeId": "100000000000000000010000000000008",
+        "Attributes": [
+            "100000000000000000000000000000012",
+            "100000000000000000010000000000009",
+            "100000000000000000010000000000010"
+        ],
+        "Description": "For loop; Iterates fixed number of times; Takes init, condition, increment; Best for counting loops"
+    },
+    {
+        "Id": "100000000000000000010000000000011",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "foreach",
+        "PayanarssTypeId": "100000000000000000010000000000011",
+        "Attributes": [
+            "100000000000000000010000000000012",
+            "100000000000000000000000000000001"
+        ],
+        "Description": "Foreach loop; Iterates over collection elements; Cleaner syntax than for loop for collections; Each iteration gets one element"
+    },
+    {
+        "Id": "100000000000000000010000000000015",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "continue",
+        "PayanarssTypeId": "100000000000000000010000000000015",
+        "Attributes": [],
+        "Description": "Continue statement; Skips current iteration; Continues with next iteration of loop; Ignores remaining code in current iteration"
+    },
+    {
+        "Id": "100000000000000000010000000000016",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "return",
+        "PayanarssTypeId": "100000000000000000010000000000016",
+        "Attributes": [
+            "100000000000000000000000000000000"
+        ],
+        "Description": "Return statement; Exits function immediately; Returns value to caller; Optional value if void function"
+    },
+    {
+        "Id": "100000000000000000010000000000017",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "throw",
+        "PayanarssTypeId": "100000000000000000010000000000017",
+        "Attributes": [
+            "100000000000000000010000000000018"
+        ],
+        "Description": "Throw statement; Throws exception; Transfers control to exception handler; Used for error handling"
+    },
+    {
+        "Id": "100000000000000000020000000000001",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "SELECT",
+        "PayanarssTypeId": "100000000000000000020000000000001",
+        "Attributes": [],
+        "Description": "SELECT statement; Retrieves data from one or more tables; Returns result set; Foundation of all queries"
+    },
+    {
+        "Id": "100000000000000000020000000000002",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "FROM",
+        "PayanarssTypeId": "100000000000000000020000000000002",
+        "Attributes": [],
+        "Description": "FROM clause; Specifies table(s) to query; Required in SELECT; Can include table joins"
+    },
+    {
+        "Id": "100000000000000000020000000000003",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "WHERE",
+        "PayanarssTypeId": "100000000000000000020000000000003",
+        "Attributes": [],
+        "Description": "WHERE clause; Filters rows based on conditions; Optional; Returns matching records only"
+    },
+    {
+        "Id": "100000000000000000020000000000004",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "JOIN",
+        "PayanarssTypeId": "100000000000000000020000000000004",
+        "Attributes": [],
+        "Description": "JOIN clause; Combines rows from multiple tables; Uses relationship keys; Returns matched records"
+    },
+    {
+        "Id": "100000000000000000020000000000005",
+        "ParentId": "100000000000000000020000000000004",
+        "Name": "INNER JOIN",
+        "PayanarssTypeId": "100000000000000000020000000000005",
+        "Attributes": [],
+        "Description": "INNER JOIN; Returns only matching records from both tables; Default JOIN type; Excludes unmatched rows"
+    },
+    {
+        "Id": "100000000000000000020000000000006",
+        "ParentId": "100000000000000000020000000000004",
+        "Name": "LEFT JOIN",
+        "PayanarssTypeId": "100000000000000000020000000000006",
+        "Attributes": [],
+        "Description": "LEFT JOIN; Returns all rows from left table plus matching from right; Includes unmatched left records with NULL"
+    },
+    {
+        "Id": "100000000000000000020000000000007",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "GROUP BY",
+        "PayanarssTypeId": "100000000000000000020000000000007",
+        "Attributes": [],
+        "Description": "GROUP BY clause; Groups rows by column values; Used with aggregate functions; Summarizes data"
+    },
+    {
+        "Id": "100000000000000000020000000000008",
+        "ParentId": "100000000000000000020000000000007",
+        "Name": "HAVING",
+        "PayanarssTypeId": "100000000000000000020000000000008",
+        "Attributes": [],
+        "Description": "HAVING clause; Filters grouped data; Works with GROUP BY; Like WHERE but for groups"
+    },
+    {
+        "Id": "100000000000000000020000000000009",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "ORDER BY",
+        "PayanarssTypeId": "100000000000000000020000000000009",
+        "Attributes": [],
+        "Description": "ORDER BY clause; Sorts result set; ASC (ascending) or DESC (descending); Affects result presentation"
+    },
+    {
+        "Id": "100000000000000000020000000000010",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "LIMIT",
+        "PayanarssTypeId": "100000000000000000020000000000010",
+        "Attributes": [],
+        "Description": "LIMIT clause; Restricts number of returned rows; Useful for pagination; Improves performance"
+    },
+    {
+        "Id": "100000000000000000020000000000011",
+        "ParentId": "100000000000000000020000000000010",
+        "Name": "OFFSET",
+        "PayanarssTypeId": "100000000000000000020000000000011",
+        "Attributes": [],
+        "Description": "OFFSET clause; Skips specified number of rows; Used with LIMIT for pagination; Enables paging"
+    },
+    {
+        "Id": "100000000000000000020000000000012",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "INSERT",
+        "PayanarssTypeId": "100000000000000000020000000000012",
+        "Attributes": [],
+        "Description": "INSERT statement; Adds new rows to table; Specifies columns and values; Creates new records"
+    },
+    {
+        "Id": "100000000000000000020000000000013",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "UPDATE",
+        "PayanarssTypeId": "100000000000000000020000000000013",
+        "Attributes": [],
+        "Description": "UPDATE statement; Modifies existing rows; Always use WHERE to target specific rows; Changes data values"
+    },
+    {
+        "Id": "100000000000000000020000000000014",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "DELETE",
+        "PayanarssTypeId": "100000000000000000020000000000014",
+        "Attributes": [],
+        "Description": "DELETE statement; Removes rows from table; Always use WHERE; Deletes data permanently"
+    },
+    {
+        "Id": "100000000000000000020000000000015",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "CREATE TABLE",
+        "PayanarssTypeId": "100000000000000000020000000000015",
+        "Attributes": [],
+        "Description": "CREATE TABLE statement; Creates new table; Defines columns and data types; Establishes structure"
+    },
+    {
+        "Id": "100000000000000000020000000000016",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "ALTER TABLE",
+        "PayanarssTypeId": "100000000000000000020000000000016",
+        "Attributes": [],
+        "Description": "ALTER TABLE statement; Modifies table structure; Adds\/removes\/changes columns; Changes constraints"
+    },
+    {
+        "Id": "100000000000000000020000000000017",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "DROP TABLE",
+        "PayanarssTypeId": "100000000000000000020000000000017",
+        "Attributes": [],
+        "Description": "DROP TABLE statement; Deletes entire table; Removes structure and data; Irreversible operation"
+    },
+    {
+        "Id": "100000000000000000020000000000018",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "COUNT",
+        "PayanarssTypeId": "100000000000000000020000000000018",
+        "Attributes": [],
+        "Description": "COUNT function; Counts number of rows; Returns integer; Ignores NULL values"
+    },
+    {
+        "Id": "100000000000000000020000000000019",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "SUM",
+        "PayanarssTypeId": "100000000000000000020000000000019",
+        "Attributes": [],
+        "Description": "SUM function; Sums numeric values; Returns total; Useful for financial calculations"
+    },
+    {
+        "Id": "100000000000000000020000000000020",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "AVG",
+        "PayanarssTypeId": "100000000000000000020000000000020",
+        "Attributes": [],
+        "Description": "AVG function; Calculates average; Returns decimal; Useful for analysis"
+    },
+    {
+        "Id": "100000000000000000020000000000021",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "MIN",
+        "PayanarssTypeId": "100000000000000000020000000000021",
+        "Attributes": [],
+        "Description": "MIN function; Returns smallest value; Useful for range analysis; Works with numbers and dates"
+    },
+    {
+        "Id": "100000000000000000020000000000022",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "MAX",
+        "PayanarssTypeId": "100000000000000000020000000000022",
+        "Attributes": [],
+        "Description": "MAX function; Returns largest value; Useful for range analysis; Works with numbers and dates"
+    },
+    {
+        "Id": "100000000000000000020000000000023",
+        "ParentId": "100000000000000000020000000000003",
+        "Name": "AND",
+        "PayanarssTypeId": "100000000000000000020000000000023",
+        "Attributes": [],
+        "Description": "AND operator; All conditions must be true; Narrows result set; Used in WHERE clause"
+    },
+    {
+        "Id": "100000000000000000020000000000024",
+        "ParentId": "100000000000000000020000000000003",
+        "Name": "OR",
+        "PayanarssTypeId": "100000000000000000020000000000024",
+        "Attributes": [],
+        "Description": "OR operator; At least one condition true; Broadens result set; Used in WHERE clause"
+    },
+    {
+        "Id": "100000000000000000020000000000025",
+        "ParentId": "100000000000000000020000000000003",
+        "Name": "NOT",
+        "PayanarssTypeId": "100000000000000000020000000000025",
+        "Attributes": [],
+        "Description": "NOT operator; Reverses condition logic; Returns opposite results; Used with other operators"
+    },
+    {
+        "Id": "100000000000000000020000000000026",
+        "ParentId": "100000000000000000020000000000003",
+        "Name": "IN",
+        "PayanarssTypeId": "100000000000000000020000000000026",
+        "Attributes": [],
+        "Description": "IN operator; Matches any value in list; Shorthand for multiple OR; Useful for filtering"
+    },
+    {
+        "Id": "100000000000000000020000000000027",
+        "ParentId": "100000000000000000020000000000003",
+        "Name": "BETWEEN",
+        "PayanarssTypeId": "100000000000000000020000000000027",
+        "Attributes": [],
+        "Description": "BETWEEN operator; Matches values within range; Inclusive on both ends; Useful for date\/number ranges"
+    },
+    {
+        "Id": "100000000000000000020000000000028",
+        "ParentId": "100000000000000000020000000000003",
+        "Name": "LIKE",
+        "PayanarssTypeId": "100000000000000000020000000000028",
+        "Attributes": [],
+        "Description": "LIKE operator; Pattern matching on text; Uses % (wildcard) and _ (single char); Case-insensitive"
+    },
+    {
+        "Id": "100000000000000000020000000000029",
+        "ParentId": "100000000000000000020000000000003",
+        "Name": "IS NULL",
+        "PayanarssTypeId": "100000000000000000020000000000029",
+        "Attributes": [],
+        "Description": "IS NULL operator; Checks for NULL values; Not equal to empty string; Used for missing data"
+    },
+    {
+        "Id": "100000000000000000020000000000030",
+        "ParentId": "100000000000000000020000000000003",
+        "Name": "IS NOT NULL",
+        "PayanarssTypeId": "100000000000000000020000000000030",
+        "Attributes": [],
+        "Description": "IS NOT NULL operator; Checks for non-NULL values; Opposite of IS NULL; Filters out missing data"
+    },
+    {
+        "Id": "100000000000000000020000000000031",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "DISTINCT",
+        "PayanarssTypeId": "100000000000000000020000000000031",
+        "Attributes": [],
+        "Description": "DISTINCT keyword; Returns unique values only; Removes duplicates; Reduces result set size"
+    },
+    {
+        "Id": "100000000000000000020000000000032",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "UNION",
+        "PayanarssTypeId": "100000000000000000020000000000032",
+        "Attributes": [],
+        "Description": "UNION operator; Combines results from multiple queries; Removes duplicates; Columns must match"
+    },
+    {
+        "Id": "100000000000000000020000000000033",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "SUBQUERY",
+        "PayanarssTypeId": "100000000000000000020000000000033",
+        "Attributes": [],
+        "Description": "SUBQUERY; Query within query; Inner query executes first; Result used by outer query"
+    },
+    {
+        "Id": "100000000000000000020000000000034",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "EXISTS",
+        "PayanarssTypeId": "100000000000000000020000000000034",
+        "Attributes": [],
+        "Description": "EXISTS operator; Checks if subquery returns any rows; Returns TRUE\/FALSE; Used with WHERE"
+    },
+    {
+        "Id": "100000000000000000020000000000035",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "CASE",
+        "PayanarssTypeId": "100000000000000000020000000000035",
+        "Attributes": [],
+        "Description": "CASE statement; Conditional logic in SQL; Returns different values based on conditions; Like IF-ELSE"
+    },
+    {
+        "Id": "100000000000000000020000000000036",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "CAST",
+        "PayanarssTypeId": "100000000000000000020000000000036",
+        "Attributes": [],
+        "Description": "CAST function; Converts data type; Changes column\/value type; Useful for compatibility"
+    },
+    {
+        "Id": "100000000000000000020000000000037",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "COMMIT",
+        "PayanarssTypeId": "100000000000000000020000000000037",
+        "Attributes": [],
+        "Description": "COMMIT statement; Saves all changes permanently; Ends transaction; Changes are irreversible"
+    },
+    {
+        "Id": "100000000000000000020000000000038",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "ROLLBACK",
+        "PayanarssTypeId": "100000000000000000020000000000038",
+        "Attributes": [],
+        "Description": "ROLLBACK statement; Undoes all changes in transaction; Reverts to previous state; Restores data"
+    },
+    {
+        "Id": "100000000000000000020000000000039",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "BEGIN TRANSACTION",
+        "PayanarssTypeId": "100000000000000000020000000000039",
+        "Attributes": [],
+        "Description": "BEGIN TRANSACTION; Starts new transaction; Groups multiple SQL statements; Enables atomicity"
+    },
+    {
+        "Id": "100000000000000000020000000000040",
+        "ParentId": "100000000000000000020000000000015",
+        "Name": "PRIMARY KEY",
+        "PayanarssTypeId": "100000000000000000020000000000040",
+        "Attributes": [],
+        "Description": "PRIMARY KEY constraint; Uniquely identifies each row; Not NULL; Only one per table"
+    },
+    {
+        "Id": "100000000000000000020000000000041",
+        "ParentId": "100000000000000000020000000000015",
+        "Name": "FOREIGN KEY",
+        "PayanarssTypeId": "100000000000000000020000000000041",
+        "Attributes": [],
+        "Description": "FOREIGN KEY constraint; Links to another table; Maintains referential integrity; Enforces relationships"
+    },
+    {
+        "Id": "100000000000000000020000000000042",
+        "ParentId": "100000000000000000020000000000015",
+        "Name": "UNIQUE",
+        "PayanarssTypeId": "100000000000000000020000000000042",
+        "Attributes": [],
+        "Description": "UNIQUE constraint; Ensures all values are unique; Allows NULL; Prevents duplicates"
+    },
+    {
+        "Id": "100000000000000000020000000000043",
+        "ParentId": "100000000000000000000000000000005",
+        "Name": "INDEX",
+        "PayanarssTypeId": "100000000000000000020000000000043",
+        "Attributes": [],
+        "Description": "INDEX; Creates searchable index; Speeds up queries; Slows down INSERT\/UPDATE; Improves performance"
+    },
+    {
+        "Id": "100000000000000000020000000000044",
+        "ParentId": "100000000000000000020000000000004",
+        "Name": "RIGHT JOIN",
+        "PayanarssTypeId": "100000000000000000020000000000044",
+        "Attributes": [],
+        "Description": "RIGHT JOIN; Returns all rows from right table plus matching from left; Opposite of LEFT JOIN"
+    },
+    {
+        "Id": "100000000000000000020000000000045",
+        "ParentId": "100000000000000000020000000000004",
+        "Name": "CROSS JOIN",
+        "PayanarssTypeId": "100000000000000000020000000000045",
+        "Attributes": [],
+        "Description": "CROSS JOIN; Cartesian product; Returns all combinations; No ON condition needed"
+    },
+    {
+        "Id": "100000000000000000020000000000046",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "HAVING COUNT",
+        "PayanarssTypeId": "100000000000000000020000000000046",
+        "Attributes": [],
+        "Description": "HAVING with COUNT; Filters groups by count condition; Common aggregate filtering; Used with GROUP BY"
+    },
+    {
+        "Id": "100000000000000000020000000000047",
+        "ParentId": "100000000000000000020000000000001",
+        "Name": "LIKE PATTERN",
+        "PayanarssTypeId": "100000000000000000020000000000047",
+        "Attributes": [],
+        "Description": "LIKE pattern matching; Wildcard '%' matches any chars; Wildcard '_' matches single char; Text search"
+    },
+    {
+        "Id": "F0000001-0000-0000-0000-000000000001",
+        "ParentId": "F0000001-0000-0000-0000-000000000001",
+        "Name": "BuildingManagementSystem",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": [],
+        "Description": "Root group for Building Management System covering Hotels, Rentals, PGs, Schools, etc."
+    },
+    {
+        "Id": "6965ecefa11f0",
+        "ParentId": "6965ecefa11f0",
+        "Name": "Rental\/Tenancy Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Rental\/Tenancy Management"
+    },
+    {
+        "Id": "6965ed7283cae",
+        "ParentId": "6965ed7283cae",
+        "Name": "Hotel Booking Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Hotel Booking Management"
+    },
+    {
+        "Id": "6965ee5e9ffea",
+        "ParentId": "6965ecefa11f0",
+        "Name": "Property Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Property Management"
+    },
+    {
+        "Id": "6965ee8d4b683",
+        "ParentId": "6965ecefa11f0",
+        "Name": "Tenant Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Tenant Management"
+    },
+    {
+        "Id": "6965ee9fbbf21",
+        "ParentId": "6965ecefa11f0",
+        "Name": "Lease Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Lease Management"
+    },
+    {
+        "Id": "6965eeb40d370",
+        "ParentId": "6965ecefa11f0",
+        "Name": "Rent Collection\/Billing",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Rent Collection\/Billing"
+    },
+    {
+        "Id": "6965eec725e7d",
+        "ParentId": "6965ecefa11f0",
+        "Name": "Document Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Document Management"
+    },
+    {
+        "Id": "6965eee369f1d",
+        "ParentId": "6965ecefa11f0",
+        "Name": "Reports & Analytics",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Reports & Analytics"
+    },
+    {
+        "Id": "6965eef457eb5",
+        "ParentId": "6965ecefa11f0",
+        "Name": "Settings",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Settings for Rental\/ Tenancy Management"
+    },
+    {
+        "Id": "6965ef2838aa3",
+        "ParentId": "6965ed7283cae",
+        "Name": "Room Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Room Management"
+    },
+    {
+        "Id": "6965ef336fcfc",
+        "ParentId": "6965ed7283cae",
+        "Name": "Booking Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Booking Management"
+    },
+    {
+        "Id": "6965ef445e6f7",
+        "ParentId": "6965ed7283cae",
+        "Name": "Guest Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Guest Management"
+    },
+    {
+        "Id": "6965ef5faa41a",
+        "ParentId": "6965ed7283cae",
+        "Name": "Reservation Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Reservation Management"
+    },
+    {
+        "Id": "6965ef780df3a",
+        "ParentId": "6965ed7283cae",
+        "Name": "Rate Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Rate Management"
+    },
+    {
+        "Id": "6965ef8f559c9",
+        "ParentId": "6965ed7283cae",
+        "Name": "Billing\/Invoice",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Billing\/Invoice"
+    },
+    {
+        "Id": "6965efa32587b",
+        "ParentId": "6965ed7283cae",
+        "Name": "Payment Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Payment Management"
+    },
+    {
+        "Id": "6965efc717b83",
+        "ParentId": "6965ed7283cae",
+        "Name": "Reports & Analytics",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Reports & Analytics"
+    },
+    {
+        "Id": "6965efdc12d58",
+        "ParentId": "6965ed7283cae",
+        "Name": "Settings",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Settings for Hotel Booking Management"
+    },
+    {
+        "Id": "6965f010dc4d7",
+        "ParentId": "6965f010dc4d7",
+        "Name": "User Management",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "User Management"
+    },
+    {
+        "Id": "6966062313698",
+        "ParentId": "6965ecefa11f0",
+        "Name": "Security Deposits",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Security Deposits"
+    },
+    {
+        "Id": "PM1000001-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Master",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Core property information and master data"
+    },
+    {
+        "Id": "PM1000002-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Location",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Property address, GPS coordinates, and geographic details"
+    },
+    {
+        "Id": "PM1000003-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Ownership",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Property owner details and ownership percentages for co-owned properties"
+    },
+    {
+        "Id": "PM1000004-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_ContactInfo",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Property emergency contacts and stakeholder contact details"
+    },
+    {
+        "Id": "PM1000005-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_BankDetails",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Bank account details for property rental income deposits"
+    },
+    {
+        "Id": "PM2000001-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Floors",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Floor information and structure within property"
+    },
+    {
+        "Id": "PM2000002-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Units",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Individual units\/rooms\/shops details within property"
+    },
+    {
+        "Id": "PM2000003-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_UnitTypes",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Classification of unit types (1BHK, 2BHK, Shop, Office, etc.)"
+    },
+    {
+        "Id": "PM2000004-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_UnitStatus",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Current status of each unit (Available, Occupied, Maintenance, Blocked)"
+    },
+    {
+        "Id": "PM2000005-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_UnitAmenities",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Amenities mapping for individual units (WiFi, AC, Parking, etc.)"
+    },
+    {
+        "Id": "PM3000001-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Measurements",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Property and unit area measurements (Total, Built-up, Carpet area)"
+    },
+    {
+        "Id": "PM3000002-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_StructureDetails",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Structural and construction details (Age, Material, Floors, Construction Type)"
+    },
+    {
+        "Id": "PM3000003-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Amenities",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Common amenities available at property level (Gym, Pool, Parking, Security)"
+    },
+    {
+        "Id": "PM4000001-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Licenses",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Government licenses and permits for the property"
+    },
+    {
+        "Id": "PM4000002-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Certifications",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Building certifications (Fire Safety, Occupancy, Structural, Environmental)"
+    },
+    {
+        "Id": "PM4000003-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Registration",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Property registration details with government authorities"
+    },
+    {
+        "Id": "PM4000004-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_TaxInfo",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Property tax identification and annual tax details"
+    },
+    {
+        "Id": "PM5000001-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Occupancy",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Current occupancy status and tracking"
+    },
+    {
+        "Id": "PM5000002-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_OccupancyHistory",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Historical occupancy records for reporting and analysis"
+    },
+    {
+        "Id": "PM6000001-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Inspection",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Property and unit inspection records and reports"
+    },
+    {
+        "Id": "PM6000002-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_InspectionChecklist",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Inspection checklist items and findings"
+    },
+    {
+        "Id": "PM6000003-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_ConditionReport",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Property condition assessment and ratings"
+    },
+    {
+        "Id": "PM7000001-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_MaintenanceSchedule",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Scheduled maintenance and cleaning calendar"
+    },
+    {
+        "Id": "PM7000002-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_MaintenanceWork",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Maintenance work orders and tracking"
+    },
+    {
+        "Id": "PM7000003-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Utilities",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Utility connections (Electricity, Water, Gas, Internet)"
+    },
+    {
+        "Id": "PM7000004-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_UtilityMeters",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Utility meter details and readings"
+    },
+    {
+        "Id": "PM8000001-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Insurance",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Insurance policies and coverage details"
+    },
+    {
+        "Id": "PM8000002-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_InsuranceClaims",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Insurance claims and settlements"
+    },
+    {
+        "Id": "PM9000001-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Inventory",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Furnishings and items inventory for furnished units"
+    },
+    {
+        "Id": "PM9000002-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_InventoryTracking",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Inventory movements and condition tracking"
+    },
+    {
+        "Id": "PM10000001-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Policies",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Building policies and rules for tenants"
+    },
+    {
+        "Id": "PM10000002-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_NearbyFacilities",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Nearby facilities and attractions for marketing"
+    },
+    {
+        "Id": "PM10000003-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Zones",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Zoning information and land use classification"
+    },
+    {
+        "Id": "PM11000001-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Media",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Property photos, videos, and media files"
+    },
+    {
+        "Id": "PM11000002-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_FloorPlans",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Floor plans and layout diagrams"
+    },
+    {
+        "Id": "PM12000001-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Pricing",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Rent rates and pricing information for units"
+    },
+    {
+        "Id": "PM12000002-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Valuation",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Property valuation and depreciation tracking"
+    },
+    {
+        "Id": "PM13000001-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Expenses",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Property operating expenses (Maintenance, Security, Cleaning, etc.)"
+    },
+    {
+        "Id": "PM13000002-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Revenue",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Property rental income and revenue tracking"
+    },
+    {
+        "Id": "PM14000001-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Staff",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Property management staff and caretaker details"
+    },
+    {
+        "Id": "PM14000002-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Vendors",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Vendor and contractor information for maintenance"
+    },
+    {
+        "Id": "PM15000001-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Documents",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Property related documents storage and indexing"
+    },
+    {
+        "Id": "PM15000002-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Agreements",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Property agreements and contracts"
+    },
+    {
+        "Id": "PM16000001-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Audit",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Audit reports and compliance tracking"
+    },
+    {
+        "Id": "PM16000002-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Compliance",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Compliance with regulations and legal requirements"
+    },
+    {
+        "Id": "PM17000001-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Incidents",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Incident and accident reporting for properties"
+    },
+    {
+        "Id": "PM17000002-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_Security",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Security systems and access control tracking"
+    },
+    {
+        "Id": "PM18000001-0000-0000-0000-000000000001",
+        "ParentId": "6965ee5e9ffea",
+        "Name": "Property_TransactionLog",
+        "PayanarssTypeId": "100000000000000000000000000000001",
+        "Attributes": [],
+        "Description": "Audit log for all property management transactions"
+    },
+    {
+        "Id": "696767e13c532",
+        "ParentId": "696767e13c532",
+        "Name": "Project Planning",
+        "PayanarssTypeId": "100000000000000000000000000000004",
+        "Attributes": {
+            "Id": "100000000000000000000000000000000",
+            "Value": "True"
+        },
+        "Description": "Project Planning"
+    },
+  {
+    "Id": "F0000002-0000-0000-0000-000000000001",
+    "ParentId": "696767e13c532",
+    "Name": "ProjectPlanningSystem",
+    "PayanarssTypeId": "100000000000000000000000000000004",
+    "Attributes": [],
+    "Description": "Root group for Project Planning System covering all aspects of project management"
+  },
+  {
+    "Id": "6966100000001",
+    "ParentId": "696767e13c532",
+    "Name": "Project Initialization",
+    "PayanarssTypeId": "100000000000000000000000000000004",
+    "Attributes": {
+      "Id": "100000000000000000000000000000000",
+      "Value": "True"
+    },
+    "Description": "Project charter, business case, and initialization"
+  },
+  {
+    "Id": "6966100000002",
+    "ParentId": "696767e13c532",
+    "Name": "Scope Management",
+    "PayanarssTypeId": "100000000000000000000000000000004",
+    "Attributes": {
+      "Id": "100000000000000000000000000000000",
+      "Value": "True"
+    },
+    "Description": "Project scope definition, WBS, and requirements"
+  },
+  {
+    "Id": "6966100000003",
+    "ParentId": "696767e13c532",
+    "Name": "Schedule Management",
+    "PayanarssTypeId": "100000000000000000000000000000004",
+    "Attributes": {
+      "Id": "100000000000000000000000000000000",
+      "Value": "True"
+    },
+    "Description": "Timeline, milestones, task scheduling, and dependencies"
+  },
+  {
+    "Id": "6966100000004",
+    "ParentId": "696767e13c532",
+    "Name": "Resource Management",
+    "PayanarssTypeId": "100000000000000000000000000000004",
+    "Attributes": {
+      "Id": "100000000000000000000000000000000",
+      "Value": "True"
+    },
+    "Description": "Team, equipment, materials, and resource allocation"
+  },
+  {
+    "Id": "6966100000005",
+    "ParentId": "696767e13c532",
+    "Name": "Cost Management",
+    "PayanarssTypeId": "100000000000000000000000000000004",
+    "Attributes": {
+      "Id": "100000000000000000000000000000000",
+      "Value": "True"
+    },
+    "Description": "Budget, cost estimation, expense tracking, and financial control"
+  },
+  {
+    "Id": "6966100000006",
+    "ParentId": "696767e13c532",
+    "Name": "Quality Management",
+    "PayanarssTypeId": "100000000000000000000000000000004",
+    "Attributes": {
+      "Id": "100000000000000000000000000000000",
+      "Value": "True"
+    },
+    "Description": "Quality standards, testing, inspections, and assurance"
+  },
+  {
+    "Id": "6966100000007",
+    "ParentId": "696767e13c532",
+    "Name": "Risk Management",
+    "PayanarssTypeId": "100000000000000000000000000000004",
+    "Attributes": {
+      "Id": "100000000000000000000000000000000",
+      "Value": "True"
+    },
+    "Description": "Risk identification, assessment, mitigation, and monitoring"
+  },
+  {
+    "Id": "6966100000008",
+    "ParentId": "696767e13c532",
+    "Name": "Communication Management",
+    "PayanarssTypeId": "100000000000000000000000000000004",
+    "Attributes": {
+      "Id": "100000000000000000000000000000000",
+      "Value": "True"
+    },
+    "Description": "Stakeholder communication, meetings, and reporting"
+  },
+  {
+    "Id": "6966100000009",
+    "ParentId": "696767e13c532",
+    "Name": "Procurement Management",
+    "PayanarssTypeId": "100000000000000000000000000000004",
+    "Attributes": {
+      "Id": "100000000000000000000000000000000",
+      "Value": "True"
+    },
+    "Description": "Vendor management, contracts, and purchasing"
+  },
+  {
+    "Id": "6966100000010",
+    "ParentId": "696767e13c532",
+    "Name": "Stakeholder Management",
+    "PayanarssTypeId": "100000000000000000000000000000004",
+    "Attributes": {
+      "Id": "100000000000000000000000000000000",
+      "Value": "True"
+    },
+    "Description": "Stakeholder identification, engagement, and management"
+  },
+  {
+    "Id": "6966100000011",
+    "ParentId": "696767e13c532",
+    "Name": "Change Management",
+    "PayanarssTypeId": "100000000000000000000000000000004",
+    "Attributes": {
+      "Id": "100000000000000000000000000000000",
+      "Value": "True"
+    },
+    "Description": "Change requests, impact analysis, and version control"
+  },
+  {
+    "Id": "6966100000012",
+    "ParentId": "696767e13c532",
+    "Name": "Issue Management",
+    "PayanarssTypeId": "100000000000000000000000000000004",
+    "Attributes": {
+      "Id": "100000000000000000000000000000000",
+      "Value": "True"
+    },
+    "Description": "Issue tracking, escalation, and resolution"
+  },
+  {
+    "Id": "6966100000013",
+    "ParentId": "696767e13c532",
+    "Name": "Document Management",
+    "PayanarssTypeId": "100000000000000000000000000000004",
+    "Attributes": {
+      "Id": "100000000000000000000000000000000",
+      "Value": "True"
+    },
+    "Description": "Project documentation, templates, and knowledge base"
+  },
+  {
+    "Id": "6966100000014",
+    "ParentId": "696767e13c532",
+    "Name": "Reporting & Analytics",
+    "PayanarssTypeId": "100000000000000000000000000000004",
+    "Attributes": {
+      "Id": "100000000000000000000000000000000",
+      "Value": "True"
+    },
+    "Description": "Dashboards, reports, KPIs, and project analytics"
+  },
+  {
+    "Id": "6966100000015",
+    "ParentId": "696767e13c532",
+    "Name": "Settings & Configuration",
+    "PayanarssTypeId": "100000000000000000000000000000004",
+    "Attributes": {
+      "Id": "100000000000000000000000000000000",
+      "Value": "True"
+    },
+    "Description": "System settings, templates, and configurations"
+  },
+  {
+    "Id": "PP1000001-0000-0000-0000-000000000001",
+    "ParentId": "6966100000001",
+    "Name": "Project_Master",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Core project information and metadata"
+  },
+  {
+    "Id": "PP1000002-0000-0000-0000-000000000001",
+    "ParentId": "6966100000001",
+    "Name": "Project_Charter",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Project charter with objectives, justification, and authorization"
+  },
+  {
+    "Id": "PP1000003-0000-0000-0000-000000000001",
+    "ParentId": "6966100000001",
+    "Name": "Business_Case",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Business case with ROI, benefits, and feasibility analysis"
+  },
+  {
+    "Id": "PP1000004-0000-0000-0000-000000000001",
+    "ParentId": "6966100000001",
+    "Name": "Project_Goals",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "SMART goals and success criteria"
+  },
+  {
+    "Id": "PP1000005-0000-0000-0000-000000000001",
+    "ParentId": "6966100000001",
+    "Name": "Project_Constraints",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Project constraints (time, cost, scope, quality)"
+  },
+  {
+    "Id": "PP1000006-0000-0000-0000-000000000001",
+    "ParentId": "6966100000001",
+    "Name": "Project_Assumptions",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Project assumptions and dependencies"
+  },
+  {
+    "Id": "PP2000001-0000-0000-0000-000000000001",
+    "ParentId": "6966100000002",
+    "Name": "Scope_Statement",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Detailed scope statement and boundaries"
+  },
+  {
+    "Id": "PP2000002-0000-0000-0000-000000000001",
+    "ParentId": "6966100000002",
+    "Name": "Requirements",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Functional and non-functional requirements"
+  },
+  {
+    "Id": "PP2000003-0000-0000-0000-000000000001",
+    "ParentId": "6966100000002",
+    "Name": "Work_Breakdown_Structure",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "WBS hierarchy and work packages"
+  },
+  {
+    "Id": "PP2000004-0000-0000-0000-000000000001",
+    "ParentId": "6966100000002",
+    "Name": "Deliverables",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Project deliverables and acceptance criteria"
+  },
+  {
+    "Id": "PP2000005-0000-0000-0000-000000000001",
+    "ParentId": "6966100000002",
+    "Name": "Scope_Baseline",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Approved scope baseline for change control"
+  },
+  {
+    "Id": "PP3000001-0000-0000-0000-000000000001",
+    "ParentId": "6966100000003",
+    "Name": "Project_Schedule",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Master project schedule and timeline"
+  },
+  {
+    "Id": "PP3000002-0000-0000-0000-000000000001",
+    "ParentId": "6966100000003",
+    "Name": "Tasks",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Individual tasks with start/end dates, duration, effort"
+  },
+  {
+    "Id": "PP3000003-0000-0000-0000-000000000001",
+    "ParentId": "6966100000003",
+    "Name": "Task_Dependencies",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Task dependencies (FS, SS, FF, SF) and relationships"
+  },
+  {
+    "Id": "PP3000004-0000-0000-0000-000000000001",
+    "ParentId": "6966100000003",
+    "Name": "Milestones",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Key milestones and checkpoints"
+  },
+  {
+    "Id": "PP3000005-0000-0000-0000-000000000001",
+    "ParentId": "6966100000003",
+    "Name": "Critical_Path",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Critical path analysis and tracking"
+  },
+  {
+    "Id": "PP3000006-0000-0000-0000-000000000001",
+    "ParentId": "6966100000003",
+    "Name": "Schedule_Baseline",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Approved schedule baseline for variance tracking"
+  },
+  {
+    "Id": "PP3000007-0000-0000-0000-000000000001",
+    "ParentId": "6966100000003",
+    "Name": "Task_Progress",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Task completion percentage and status updates"
+  },
+  {
+    "Id": "PP3000008-0000-0000-0000-000000000001",
+    "ParentId": "6966100000003",
+    "Name": "Gantt_Charts",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Gantt chart configurations and views"
+  },
+  {
+    "Id": "PP4000001-0000-0000-0000-000000000001",
+    "ParentId": "6966100000004",
+    "Name": "Resource_Pool",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Available resources (human, equipment, materials)"
+  },
+  {
+    "Id": "PP4000002-0000-0000-0000-000000000001",
+    "ParentId": "6966100000004",
+    "Name": "Team_Members",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Project team members with roles and responsibilities"
+  },
+  {
+    "Id": "PP4000003-0000-0000-0000-000000000001",
+    "ParentId": "6966100000004",
+    "Name": "Resource_Allocation",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Resource assignments to tasks and projects"
+  },
+  {
+    "Id": "PP4000004-0000-0000-0000-000000000001",
+    "ParentId": "6966100000004",
+    "Name": "Resource_Calendar",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Resource availability and working calendars"
+  },
+  {
+    "Id": "PP4000005-0000-0000-0000-000000000001",
+    "ParentId": "6966100000004",
+    "Name": "Resource_Capacity",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Resource capacity planning and utilization tracking"
+  },
+  {
+    "Id": "PP4000006-0000-0000-0000-000000000001",
+    "ParentId": "6966100000004",
+    "Name": "Skills_Matrix",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Team skills, competencies, and certifications"
+  },
+  {
+    "Id": "PP4000007-0000-0000-0000-000000000001",
+    "ParentId": "6966100000004",
+    "Name": "Timesheet",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Time tracking and effort logging"
+  },
+  {
+    "Id": "PP4000008-0000-0000-0000-000000000001",
+    "ParentId": "6966100000004",
+    "Name": "Equipment_Assets",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Equipment and asset inventory"
+  },
+  {
+    "Id": "PP5000001-0000-0000-0000-000000000001",
+    "ParentId": "6966100000005",
+    "Name": "Project_Budget",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Overall project budget and cost breakdown"
+  },
+  {
+    "Id": "PP5000002-0000-0000-0000-000000000001",
+    "ParentId": "6966100000005",
+    "Name": "Cost_Estimation",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Cost estimates for activities and resources"
+  },
+  {
+    "Id": "PP5000003-0000-0000-0000-000000000001",
+    "ParentId": "6966100000005",
+    "Name": "Expenses",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Actual expenses and expenditure tracking"
+  },
+  {
+    "Id": "PP5000004-0000-0000-0000-000000000001",
+    "ParentId": "6966100000005",
+    "Name": "Purchase_Orders",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Purchase orders and approvals"
+  },
+  {
+    "Id": "PP5000005-0000-0000-0000-000000000001",
+    "ParentId": "6966100000005",
+    "Name": "Invoices",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Vendor invoices and payment tracking"
+  },
+  {
+    "Id": "PP5000006-0000-0000-0000-000000000001",
+    "ParentId": "6966100000005",
+    "Name": "Cost_Baseline",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Approved cost baseline for variance analysis"
+  },
+  {
+    "Id": "PP5000007-0000-0000-0000-000000000001",
+    "ParentId": "6966100000005",
+    "Name": "Earned_Value_Management",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "EVM metrics (PV, EV, AC, CPI, SPI)"
+  },
+  {
+    "Id": "PP5000008-0000-0000-0000-000000000001",
+    "ParentId": "6966100000005",
+    "Name": "Forecast",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Cost forecasting and EAC/ETC calculations"
+  },
+  {
+    "Id": "PP6000001-0000-0000-0000-000000000001",
+    "ParentId": "6966100000006",
+    "Name": "Quality_Standards",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Quality standards and criteria"
+  },
+  {
+    "Id": "PP6000002-0000-0000-0000-000000000001",
+    "ParentId": "6966100000006",
+    "Name": "Quality_Plan",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Quality management plan and processes"
+  },
+  {
+    "Id": "PP6000003-0000-0000-0000-000000000001",
+    "ParentId": "6966100000006",
+    "Name": "Quality_Checklists",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Quality assurance checklists"
+  },
+  {
+    "Id": "PP6000004-0000-0000-0000-000000000001",
+    "ParentId": "6966100000006",
+    "Name": "Inspections",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Inspection schedules and reports"
+  },
+  {
+    "Id": "PP6000005-0000-0000-0000-000000000001",
+    "ParentId": "6966100000006",
+    "Name": "Testing_Logs",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Testing results and defect tracking"
+  },
+  {
+    "Id": "PP6000006-0000-0000-0000-000000000001",
+    "ParentId": "6966100000006",
+    "Name": "Quality_Metrics",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Quality KPIs and measurement data"
+  },
+  {
+    "Id": "PP6000007-0000-0000-0000-000000000001",
+    "ParentId": "6966100000006",
+    "Name": "Audit_Reports",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Quality audit findings and actions"
+  },
+  {
+    "Id": "PP7000001-0000-0000-0000-000000000001",
+    "ParentId": "6966100000007",
+    "Name": "Risk_Register",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Risk identification and registry"
+  },
+  {
+    "Id": "PP7000002-0000-0000-0000-000000000001",
+    "ParentId": "6966100000007",
+    "Name": "Risk_Assessment",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Risk analysis (probability, impact, priority)"
+  },
+  {
+    "Id": "PP7000003-0000-0000-0000-000000000001",
+    "ParentId": "6966100000007",
+    "Name": "Risk_Response",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Risk response strategies and action plans"
+  },
+  {
+    "Id": "PP7000004-0000-0000-0000-000000000001",
+    "ParentId": "6966100000007",
+    "Name": "Risk_Monitoring",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Risk tracking and status updates"
+  },
+  {
+    "Id": "PP7000005-0000-0000-0000-000000000001",
+    "ParentId": "6966100000007",
+    "Name": "Risk_Categories",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Risk categorization (technical, business, external, etc.)"
+  },
+  {
+    "Id": "PP7000006-0000-0000-0000-000000000001",
+    "ParentId": "6966100000007",
+    "Name": "Risk_Matrix",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Risk probability-impact matrix"
+  },
+  {
+    "Id": "PP8000001-0000-0000-0000-000000000001",
+    "ParentId": "6966100000008",
+    "Name": "Communication_Plan",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Communication strategy and channels"
+  },
+  {
+    "Id": "PP8000002-0000-0000-0000-000000000001",
+    "ParentId": "6966100000008",
+    "Name": "Meetings",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Meeting schedules, agendas, and minutes"
+  },
+  {
+    "Id": "PP8000003-0000-0000-0000-000000000001",
+    "ParentId": "6966100000008",
+    "Name": "Status_Reports",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Project status reports and updates"
+  },
+  {
+    "Id": "PP8000004-0000-0000-0000-000000000001",
+    "ParentId": "6966100000008",
+    "Name": "Notifications",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Alert and notification management"
+  },
+  {
+    "Id": "PP8000005-0000-0000-0000-000000000001",
+    "ParentId": "6966100000008",
+    "Name": "Email_Templates",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Communication templates and formats"
+  },
+  {
+    "Id": "PP8000006-0000-0000-0000-000000000001",
+    "ParentId": "6966100000008",
+    "Name": "Collaboration_Logs",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Team collaboration and discussion threads"
+  },
+  {
+    "Id": "PP9000001-0000-0000-0000-000000000001",
+    "ParentId": "6966100000009",
+    "Name": "Vendor_Master",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Vendor and supplier database"
+  },
+  {
+    "Id": "PP9000002-0000-0000-0000-000000000001",
+    "ParentId": "6966100000009",
+    "Name": "Contracts",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Contract management and terms"
+  },
+  {
+    "Id": "PP9000003-0000-0000-0000-000000000001",
+    "ParentId": "6966100000009",
+    "Name": "RFP_RFQ",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Request for Proposals and Quotations"
+  },
+  {
+    "Id": "PP9000004-0000-0000-0000-000000000001",
+    "ParentId": "6966100000009",
+    "Name": "Vendor_Evaluation",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Vendor performance assessment"
+  },
+  {
+    "Id": "PP9000005-0000-0000-0000-000000000001",
+    "ParentId": "6966100000009",
+    "Name": "Purchase_Requests",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Internal procurement requests"
+  },
+  {
+    "Id": "PP9000006-0000-0000-0000-000000000001",
+    "ParentId": "6966100000009",
+    "Name": "Delivery_Tracking",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Material and service delivery tracking"
+  },
+  {
+    "Id": "PP10000001-0000-0000-0000-000000000001",
+    "ParentId": "6966100000010",
+    "Name": "Stakeholder_Register",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Stakeholder identification and contact info"
+  },
+  {
+    "Id": "PP10000002-0000-0000-0000-000000000001",
+    "ParentId": "6966100000010",
+    "Name": "Stakeholder_Analysis",
+    "PayanarssTypeId": "100000000000000000000000000000001",
+    "Attributes": [],
+    "Description": "Power-interest grid and influence mapping"
+  },
+  {
+    "Id": "PP1000001-COL-000001",
+    "ParentId": "PP1000001-0000-0000-0000-000000000001",
+    "Name": "Id",
+    "PayanarssTypeId": "100000000000000000000000000000018",
+    "DataType": "GUID",
+    "Attributes": ["100000000000000000000000000000013", "100000000000000000000000000000012"],
+    "Description": "Unique identifier for the project",
+    "Domain": "Identity",
+    "Purpose": "Uniquely identifies each project across the entire system to ensure referential integrity"
+  },
+  {
+    "Id": "PP1000001-COL-000002",
+    "ParentId": "PP1000001-0000-0000-0000-000000000001",
+    "Name": "ProjectCode",
+    "PayanarssTypeId": "100000000000000000000000000000006",
+    "DataType": "Text",
+    "Attributes": ["100000000000000000000000000000012", "100000000000000000000000000000013"],
+    "Description": "Human-readable project identifier",
+    "Domain": "Reference",
+    "Purpose": "Provides a business-friendly identifier for project tracking, reporting, and communication"
+  },
+  {
+    "Id": "PP1000001-COL-000003",
+    "ParentId": "PP1000001-0000-0000-0000-000000000001",
+    "Name": "ProjectName",
+    "PayanarssTypeId": "100000000000000000000000000000006",
+    "DataType": "Text",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Official name of the project",
+    "Domain": "ProjectCore",
+    "Purpose": "Defines the project identity for stakeholder communication and documentation"
+  },
+  {
+    "Id": "PP1000001-COL-000004",
+    "ParentId": "PP1000001-0000-0000-0000-000000000001",
+    "Name": "ProjectDescription",
+    "PayanarssTypeId": "100000000000000000000000000000006",
+    "DataType": "Text",
+    "Attributes": [],
+    "Description": "Detailed description of the project",
+    "Domain": "ProjectCore",
+    "Purpose": "Provides comprehensive overview to ensure stakeholder alignment on project scope and objectives"
+  },
+  {
+    "Id": "PP1000001-COL-000005",
+    "ParentId": "PP1000001-0000-0000-0000-000000000001",
+    "Name": "ProjectType",
+    "PayanarssTypeId": "100000000000000000000000000000003",
+    "DataType": "Lookup",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Category of project",
+    "Domain": "Reference",
+    "Purpose": "Classifies projects for resource allocation, reporting, and methodology application"
+  },
+  {
+    "Id": "PP1000001-COL-000006",
+    "ParentId": "PP1000001-0000-0000-0000-000000000001",
+    "Name": "ProjectPriority",
+    "PayanarssTypeId": "100000000000000000000000000000003",
+    "DataType": "Lookup",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Priority level",
+    "Domain": "Governance",
+    "Purpose": "Guides resource allocation decisions and stakeholder attention during conflicts"
+  },
+  {
+    "Id": "PP1000001-COL-000007",
+    "ParentId": "PP1000001-0000-0000-0000-000000000001",
+    "Name": "ProjectStatus",
+    "PayanarssTypeId": "100000000000000000000000000000003",
+    "DataType": "Lookup",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Current status",
+    "Domain": "ProjectCore",
+    "Purpose": "Tracks project lifecycle stage for governance reporting and automated workflow triggers"
+  },
+  {
+    "Id": "PP1000001-COL-000008",
+    "ParentId": "PP1000001-0000-0000-0000-000000000001",
+    "Name": "ProjectManagerId",
+    "PayanarssTypeId": "100000000000000000000000000000018",
+    "DataType": "GUID",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Reference to assigned Project Manager",
+    "Domain": "Governance",
+    "Purpose": "Establishes accountability by assigning single point of responsibility for project success"
+  },
+  {
+    "Id": "PP1000001-COL-000009",
+    "ParentId": "PP1000001-0000-0000-0000-000000000001",
+    "Name": "SponsorId",
+    "PayanarssTypeId": "100000000000000000000000000000018",
+    "DataType": "GUID",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Reference to Executive Sponsor",
+    "Domain": "Governance",
+    "Purpose": "Links project to executive leadership for funding approval and strategic alignment"
+  },
+  {
+    "Id": "PP1000001-COL-000010",
+    "ParentId": "PP1000001-0000-0000-0000-000000000001",
+    "Name": "StartDate",
+    "PayanarssTypeId": "100000000000000000000000000000008",
+    "DataType": "DateTime",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Planned project start date",
+    "Domain": "Scheduling",
+    "Purpose": "Establishes timeline baseline for resource planning and dependency management"
+  },
+  {
+    "Id": "PP1000001-COL-000011",
+    "ParentId": "PP1000001-0000-0000-0000-000000000001",
+    "Name": "EndDate",
+    "PayanarssTypeId": "100000000000000000000000000000008",
+    "DataType": "DateTime",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Planned project end date",
+    "Domain": "Scheduling",
+    "Purpose": "Defines delivery commitment for stakeholder expectations and resource release planning"
+  },
+  {
+    "Id": "PP1000001-COL-000012",
+    "ParentId": "PP1000001-0000-0000-0000-000000000001",
+    "Name": "TotalBudget",
+    "PayanarssTypeId": "100000000000000000000000000000007",
+    "DataType": "Number",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Total approved budget amount",
+    "Domain": "Financial",
+    "Purpose": "Sets financial boundary for cost control and variance monitoring"
+  },
+  {
+    "Id": "PP1000001-COL-000013",
+    "ParentId": "PP1000001-0000-0000-0000-000000000001",
+    "Name": "ActualCost",
+    "PayanarssTypeId": "100000000000000000000000000000007",
+    "DataType": "Number",
+    "Attributes": ["100000000000000000000000000000011"],
+    "Description": "Total actual cost incurred",
+    "Domain": "Financial",
+    "Purpose": "Tracks spending for earned value analysis and profitability calculations"
+  },
+  {
+    "Id": "PP1000001-COL-000014",
+    "ParentId": "PP1000001-0000-0000-0000-000000000001",
+    "Name": "PercentComplete",
+    "PayanarssTypeId": "100000000000000000000000000000007",
+    "DataType": "Number",
+    "Attributes": ["100000000000000000000000000000011"],
+    "Description": "Overall project completion percentage",
+    "Domain": "ProjectCore",
+    "Purpose": "Communicates progress to stakeholders and triggers milestone-based workflows"
+  },
+  {
+    "Id": "PP1000001-COL-000015",
+    "ParentId": "PP1000001-0000-0000-0000-000000000001",
+    "Name": "CreatedBy",
+    "PayanarssTypeId": "100000000000000000000000000000018",
+    "DataType": "GUID",
+    "Attributes": ["100000000000000000000000000000012", "100000000000000000000000000000011"],
+    "Description": "User who created the project record",
+    "Domain": "Audit",
+    "Purpose": "Establishes data ownership for compliance and accountability tracking"
+  },
+  {
+    "Id": "PP1000001-COL-000016",
+    "ParentId": "PP1000001-0000-0000-0000-000000000001",
+    "Name": "CreatedDate",
+    "PayanarssTypeId": "100000000000000000000000000000008",
+    "DataType": "DateTime",
+    "Attributes": ["100000000000000000000000000000012", "100000000000000000000000000000011"],
+    "Description": "Timestamp when project was created",
+    "Domain": "Audit",
+    "Purpose": "Provides temporal context for data lifecycle management and audit trails"
+  },
+  {
+    "Id": "PP1000001-COL-000017",
+    "ParentId": "PP1000001-0000-0000-0000-000000000001",
+    "Name": "UpdatedBy",
+    "PayanarssTypeId": "100000000000000000000000000000018",
+    "DataType": "GUID",
+    "Attributes": ["100000000000000000000000000000011"],
+    "Description": "User who last updated the project",
+    "Domain": "Audit",
+    "Purpose": "Tracks modification responsibility for change management and dispute resolution"
+  },
+  {
+    "Id": "PP1000001-COL-000018",
+    "ParentId": "PP1000001-0000-0000-0000-000000000001",
+    "Name": "UpdatedDate",
+    "PayanarssTypeId": "100000000000000000000000000000008",
+    "DataType": "DateTime",
+    "Attributes": ["100000000000000000000000000000011"],
+    "Description": "Timestamp of last update",
+    "Domain": "Audit",
+    "Purpose": "Enables delta synchronization and tracks data freshness for reporting"
+  },
+  {
+    "Id": "PP1000002-COL-000001",
+    "ParentId": "PP1000002-0000-0000-0000-000000000001",
+    "Name": "Id",
+    "PayanarssTypeId": "100000000000000000000000000000018",
+    "DataType": "GUID",
+    "Attributes": ["100000000000000000000000000000013", "100000000000000000000000000000012"],
+    "Description": "Unique identifier for the charter",
+    "Domain": "Identity",
+    "Purpose": "Uniquely identifies each charter to maintain document integrity and versioning"
+  },
+  {
+    "Id": "PP1000002-COL-000002",
+    "ParentId": "PP1000002-0000-0000-0000-000000000001",
+    "Name": "ProjectId",
+    "PayanarssTypeId": "100000000000000000000000000000018",
+    "DataType": "GUID",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Reference to parent project",
+    "Domain": "Reference",
+    "Purpose": "Links charter to its project for hierarchical navigation and data integrity"
+  },
+  {
+    "Id": "PP1000002-COL-000003",
+    "ParentId": "PP1000002-0000-0000-0000-000000000001",
+    "Name": "CharterTitle",
+    "PayanarssTypeId": "100000000000000000000000000000006",
+    "DataType": "Text",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Official title of the charter document",
+    "Domain": "Governance",
+    "Purpose": "Identifies the authorization document for formal communication and archival"
+  },
+  {
+    "Id": "PP1000002-COL-000004",
+    "ParentId": "PP1000002-0000-0000-0000-000000000001",
+    "Name": "ProjectPurpose",
+    "PayanarssTypeId": "100000000000000000000000000000006",
+    "DataType": "Text",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Business justification for the project",
+    "Domain": "Governance",
+    "Purpose": "Documents why the project exists to ensure strategic alignment and stakeholder buy-in"
+  },
+  {
+    "Id": "PP1000002-COL-000005",
+    "ParentId": "PP1000002-0000-0000-0000-000000000001",
+    "Name": "ProjectObjectives",
+    "PayanarssTypeId": "100000000000000000000000000000006",
+    "DataType": "Text",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "High-level measurable objectives",
+    "Domain": "Governance",
+    "Purpose": "Defines success criteria to enable objective performance evaluation at project closure"
+  },
+  {
+    "Id": "PP1000002-COL-000006",
+    "ParentId": "PP1000002-0000-0000-0000-000000000001",
+    "Name": "HighLevelRequirements",
+    "PayanarssTypeId": "100000000000000000000000000000006",
+    "DataType": "Text",
+    "Attributes": [],
+    "Description": "Key requirements and deliverables",
+    "Domain": "ProjectCore",
+    "Purpose": "Establishes baseline scope understanding for initial planning and stakeholder agreement"
+  },
+  {
+    "Id": "PP1000002-COL-000007",
+    "ParentId": "PP1000002-0000-0000-0000-000000000001",
+    "Name": "ProjectManagerAssigned",
+    "PayanarssTypeId": "100000000000000000000000000000018",
+    "DataType": "GUID",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Assigned project manager",
+    "Domain": "Governance",
+    "Purpose": "Formally delegates authority and establishes accountability for project execution"
+  },
+  {
+    "Id": "PP1000002-COL-000008",
+    "ParentId": "PP1000002-0000-0000-0000-000000000001",
+    "Name": "AuthorizedBy",
+    "PayanarssTypeId": "100000000000000000000000000000018",
+    "DataType": "GUID",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Executive who authorized the project",
+    "Domain": "Governance",
+    "Purpose": "Documents executive approval for compliance and escalation chain of command"
+  },
+  {
+    "Id": "PP1000002-COL-000009",
+    "ParentId": "PP1000002-0000-0000-0000-000000000001",
+    "Name": "AuthorizedDate",
+    "PayanarssTypeId": "100000000000000000000000000000008",
+    "DataType": "DateTime",
+    "Attributes": [],
+    "Description": "Date of formal authorization",
+    "Domain": "Governance",
+    "Purpose": "Marks official project start for contractual obligations and audit purposes"
+  },
+  {
+    "Id": "PP1000002-COL-000010",
+    "ParentId": "PP1000002-0000-0000-0000-000000000001",
+    "Name": "CharterStatus",
+    "PayanarssTypeId": "100000000000000000000000000000003",
+    "DataType": "Lookup",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Status of charter",
+    "Domain": "Governance",
+    "Purpose": "Tracks approval workflow state to control project initiation process"
+  },
+  {
+    "Id": "PP1000002-COL-000011",
+    "ParentId": "PP1000002-0000-0000-0000-000000000001",
+    "Name": "CreatedBy",
+    "PayanarssTypeId": "100000000000000000000000000000018",
+    "DataType": "GUID",
+    "Attributes": ["100000000000000000000000000000012", "100000000000000000000000000000011"],
+    "Description": "User who created the charter",
+    "Domain": "Audit",
+    "Purpose": "Establishes document authorship for accountability and version control"
+  },
+  {
+    "Id": "PP1000002-COL-000012",
+    "ParentId": "PP1000002-0000-0000-0000-000000000001",
+    "Name": "CreatedDate",
+    "PayanarssTypeId": "100000000000000000000000000000008",
+    "DataType": "DateTime",
+    "Attributes": ["100000000000000000000000000000012", "100000000000000000000000000000011"],
+    "Description": "Charter creation timestamp",
+    "Domain": "Audit",
+    "Purpose": "Records document origin for compliance and timeline reconstruction"
+  },
+  {
+    "Id": "PP1000002-COL-000013",
+    "ParentId": "PP1000002-0000-0000-0000-000000000001",
+    "Name": "UpdatedBy",
+    "PayanarssTypeId": "100000000000000000000000000000018",
+    "DataType": "GUID",
+    "Attributes": ["100000000000000000000000000000011"],
+    "Description": "User who last modified the charter",
+    "Domain": "Audit",
+    "Purpose": "Tracks latest editor for change control and dispute resolution"
+  },
+  {
+    "Id": "PP1000002-COL-000014",
+    "ParentId": "PP1000002-0000-0000-0000-000000000001",
+    "Name": "UpdatedDate",
+    "PayanarssTypeId": "100000000000000000000000000000008",
+    "DataType": "DateTime",
+    "Attributes": ["100000000000000000000000000000011"],
+    "Description": "Last modification timestamp",
+    "Domain": "Audit",
+    "Purpose": "Indicates document currency for approval workflow and review cycles"
+  },
+  {
+    "Id": "PP1000003-COL-000001",
+    "ParentId": "PP1000003-0000-0000-0000-000000000001",
+    "Name": "Id",
+    "PayanarssTypeId": "100000000000000000000000000000018",
+    "DataType": "GUID",
+    "Attributes": ["100000000000000000000000000000013", "100000000000000000000000000000012"],
+    "Description": "Unique identifier for business case",
+    "Domain": "Identity",
+    "Purpose": "Uniquely identifies each business case for investment tracking and portfolio analysis"
+  },
+  {
+    "Id": "PP1000003-COL-000002",
+    "ParentId": "PP1000003-0000-0000-0000-000000000001",
+    "Name": "ProjectId",
+    "PayanarssTypeId": "100000000000000000000000000000018",
+    "DataType": "GUID",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Reference to associated project",
+    "Domain": "Reference",
+    "Purpose": "Links financial justification to project for traceability and benefits realization tracking"
+  },
+  {
+    "Id": "PP1000003-COL-000003",
+    "ParentId": "PP1000003-0000-0000-0000-000000000001",
+    "Name": "BusinessCaseTitle",
+    "PayanarssTypeId": "100000000000000000000000000000006",
+    "DataType": "Text",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Title of the business case",
+    "Domain": "Financial",
+    "Purpose": "Identifies the investment proposal for executive review and approval routing"
+  },
+  {
+    "Id": "PP1000003-COL-000004",
+    "ParentId": "PP1000003-0000-0000-0000-000000000001",
+    "Name": "ExecutiveSummary",
+    "PayanarssTypeId": "100000000000000000000000000000006",
+    "DataType": "Text",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Brief overview for executives",
+    "Domain": "Financial",
+    "Purpose": "Enables quick decision-making by summarizing key investment merits"
+  },
+  {
+    "Id": "PP1000003-COL-000005",
+    "ParentId": "PP1000003-0000-0000-0000-000000000001",
+    "Name": "ProblemStatement",
+    "PayanarssTypeId": "100000000000000000000000000000006",
+    "DataType": "Text",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Business problem being addressed",
+    "Domain": "ProjectCore",
+    "Purpose": "Articulates the pain point to validate project necessity and measure impact"
+  },
+  {
+    "Id": "PP1000003-COL-000006",
+    "ParentId": "PP1000003-0000-0000-0000-000000000001",
+    "Name": "ProposedSolution",
+    "PayanarssTypeId": "100000000000000000000000000000006",
+    "DataType": "Text",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Recommended solution approach",
+    "Domain": "ProjectCore",
+    "Purpose": "Describes how the problem will be solved to enable feasibility assessment"
+  },
+  {
+    "Id": "PP1000003-COL-000007",
+    "ParentId": "PP1000003-0000-0000-0000-000000000001",
+    "Name": "EstimatedCost",
+    "PayanarssTypeId": "100000000000000000000000000000007",
+    "DataType": "Number",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Total estimated project cost",
+    "Domain": "Financial",
+    "Purpose": "Quantifies investment required for ROI calculation and budget approval"
+  },
+  {
+    "Id": "PP1000003-COL-000008",
+    "ParentId": "PP1000003-0000-0000-0000-000000000001",
+    "Name": "EstimatedBenefits",
+    "PayanarssTypeId": "100000000000000000000000000000007",
+    "DataType": "Number",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Quantified benefits",
+    "Domain": "Financial",
+    "Purpose": "Measures expected value creation for investment prioritization"
+  },
+  {
+    "Id": "PP1000003-COL-000009",
+    "ParentId": "PP1000003-0000-0000-0000-000000000001",
+    "Name": "ROI",
+    "PayanarssTypeId": "100000000000000000000000000000007",
+    "DataType": "Number",
+    "Attributes": ["100000000000000000000000000000011"],
+    "Description": "Return on Investment percentage",
+    "Domain": "Financial",
+    "Purpose": "Enables comparison across portfolio for capital allocation decisions"
+  },
+  {
+    "Id": "PP1000003-COL-000010",
+    "ParentId": "PP1000003-0000-0000-0000-000000000001",
+    "Name": "NPV",
+    "PayanarssTypeId": "100000000000000000000000000000007",
+    "DataType": "Number",
+    "Attributes": [],
+    "Description": "Net Present Value",
+    "Domain": "Financial",
+    "Purpose": "Accounts for time value of money in long-term investment decisions"
+  },
+  {
+    "Id": "PP1000003-COL-000011",
+    "ParentId": "PP1000003-0000-0000-0000-000000000001",
+    "Name": "PaybackPeriod",
+    "PayanarssTypeId": "100000000000000000000000000000007",
+    "DataType": "Number",
+    "Attributes": [],
+    "Description": "Payback period in months",
+    "Domain": "Financial",
+    "Purpose": "Indicates how quickly investment will be recovered for cash flow planning"
+  },
+  {
+    "Id": "PP1000003-COL-000012",
+    "ParentId": "PP1000003-0000-0000-0000-000000000001",
+    "Name": "ApprovalStatus",
+    "PayanarssTypeId": "100000000000000000000000000000003",
+    "DataType": "Lookup",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Approval status",
+    "Domain": "Governance",
+    "Purpose": "Controls project funding release through approval workflow gates"
+  },
+  {
+    "Id": "PP1000003-COL-000013",
+    "ParentId": "PP1000003-0000-0000-0000-000000000001",
+    "Name": "CreatedBy",
+    "PayanarssTypeId": "100000000000000000000000000000018",
+    "DataType": "GUID",
+    "Attributes": ["100000000000000000000000000000012", "100000000000000000000000000000011"],
+    "Description": "User who created business case",
+    "Domain": "Audit",
+    "Purpose": "Identifies proposal author for follow-up questions and accountability"
+  },
+  {
+    "Id": "PP1000003-COL-000014",
+    "ParentId": "PP1000003-0000-0000-0000-000000000001",
+    "Name": "CreatedDate",
+    "PayanarssTypeId": "100000000000000000000000000000008",
+    "DataType": "DateTime",
+    "Attributes": ["100000000000000000000000000000012", "100000000000000000000000000000011"],
+    "Description": "Business case creation date",
+    "Domain": "Audit",
+    "Purpose": "Records proposal submission for approval cycle timing and archival"
+  },
+  {
+    "Id": "PP1000003-COL-000015",
+    "ParentId": "PP1000003-0000-0000-0000-000000000001",
+    "Name": "UpdatedBy",
+    "PayanarssTypeId": "100000000000000000000000000000018",
+    "DataType": "GUID",
+    "Attributes": ["100000000000000000000000000000011"],
+    "Description": "User who last updated",
+    "Domain": "Audit",
+    "Purpose": "Tracks revision responsibility for change control and approval resets"
+  },
+  {
+    "Id": "PP1000003-COL-000016",
+    "ParentId": "PP1000003-0000-0000-0000-000000000001",
+    "Name": "UpdatedDate",
+    "PayanarssTypeId": "100000000000000000000000000000008",
+    "DataType": "DateTime",
+    "Attributes": ["100000000000000000000000000000011"],
+    "Description": "Last update timestamp",
+    "Domain": "Audit",
+    "Purpose": "Indicates document currency for review cycles and reapproval triggers"
+  },
+  {
+    "Id": "PP1000004-COL-000001",
+    "ParentId": "PP1000004-0000-0000-0000-000000000001",
+    "Name": "Id",
+    "PayanarssTypeId": "100000000000000000000000000000018",
+    "DataType": "GUID",
+    "Attributes": ["100000000000000000000000000000013", "100000000000000000000000000000012"],
+    "Description": "Unique identifier for the goal",
+    "Domain": "Identity",
+    "Purpose": "Uniquely identifies each goal for tracking and benefits realization measurement"
+  },
+  {
+    "Id": "PP1000004-COL-000002",
+    "ParentId": "PP1000004-0000-0000-0000-000000000001",
+    "Name": "ProjectId",
+    "PayanarssTypeId": "100000000000000000000000000000018",
+    "DataType": "GUID",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Reference to parent project",
+    "Domain": "Reference",
+    "Purpose": "Associates goals with project for success evaluation and reporting"
+  },
+  {
+    "Id": "PP1000004-COL-000003",
+    "ParentId": "PP1000004-0000-0000-0000-000000000001",
+    "Name": "GoalTitle",
+    "PayanarssTypeId": "100000000000000000000000000000006",
+    "DataType": "Text",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Short descriptive title",
+    "Domain": "ProjectCore",
+    "Purpose": "Provides recognizable label for dashboard display and stakeholder communication"
+  },
+  {
+    "Id": "PP1000004-COL-000004",
+    "ParentId": "PP1000004-0000-0000-0000-000000000001",
+    "Name": "GoalDescription",
+    "PayanarssTypeId": "100000000000000000000000000000006",
+    "DataType": "Text",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "Detailed goal description",
+    "Domain": "ProjectCore",
+    "Purpose": "Clarifies intent to ensure common understanding across stakeholders"
+  },
+  {
+    "Id": "PP1000004-COL-000005",
+    "ParentId": "PP1000004-0000-0000-0000-000000000001",
+    "Name": "MeasurementCriteria",
+    "PayanarssTypeId": "100000000000000000000000000000006",
+    "DataType": "Text",
+    "Attributes": ["100000000000000000000000000000012"],
+    "Description": "How success will be measured",
+    "Domain": "ProjectCore",
+    "Purpose": "Defines quantifiable metrics to enable objective achievement assessment"
+  }        
+]

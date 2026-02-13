@@ -450,7 +450,7 @@ class PayanarssTypeBusinessLogics
     {
         //echo json_encode($this->convertToArray($types));
 
-        $fileName = (!isset($fileName)) ? "VanakkamPayanarssTypes.json" : $fileName;
+        $fileName = (!isset($fileName)) ? "VanakkamPayanarssTypesV1.json" : $fileName;
         $dao = new PayanarssTypeJsonDAO($fileName, $this->convertToArray($types));
         $dao->save();
 
@@ -486,7 +486,7 @@ class PayanarssTypeBusinessLogics
         }
         */
 
-        $fileName = (!isset($fileName)) ? "VanakkamPayanarssTypes.json" : $fileName;
+        $fileName = (!isset($fileName)) ? "VanakkamPayanarssTypesV1.json" : $fileName;
         $dao = new PayanarssTypeJsonDAO($fileName, $this->convertToArray($types));
         $dao->save();
     }
@@ -505,7 +505,7 @@ class PayanarssTypeBusinessLogics
     }
     function load_all(): PayanarssTypes
     {
-        $dao = new PayanarssTypeJsonDAO("VanakkamPayanarssTypes.json");
+        $dao = new PayanarssTypeJsonDAO("VanakkamPayanarssTypesV1.json");
         $loadedTypes = $dao->load();
         return $this->convert_to_payanarss_type($loadedTypes);
     }

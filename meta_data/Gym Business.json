@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "070febc1-a9ac-4f25-ac77-7fce45ada806",
+    "ParentId": "17f681bb-d832-4930-9f1d-009af7b45810",
+    "Name": "Start",
+    "PayanarssTypeId": "10000000000000000000000000000000111",
+    "Attributes": [],
+    "Description": null
+  },
+  {
+    "Id": "b3f50e59-8cd6-4e0f-bb1f-f40e0ff4ecbf",
+    "ParentId": "17f681bb-d832-4930-9f1d-009af7b45810",
+    "Name": "Find Building",
+    "PayanarssTypeId": "10000000000000000000000000000000111",
+    "Attributes": [],
+    "Description": null
+  },
+  {
+    "Id": "c6592d91-53dd-4009-8d72-bd3e483f2f0c",
+    "ParentId": "17f681bb-d832-4930-9f1d-009af7b45810",
+    "Name": "Budget Plan",
+    "PayanarssTypeId": "10000000000000000000000000000000111",
+    "Attributes": [],
+    "Description": null
+  },
+  {
+    "Id": "bb95c1a2-8b88-44ec-a7a0-9f1b84b181d5",
+    "ParentId": "17f681bb-d832-4930-9f1d-009af7b45810",
+    "Name": "Finalize equipments list with budget",
+    "PayanarssTypeId": "10000000000000000000000000000000111",
+    "Attributes": [],
+    "Description": null
+  },
+  {
+    "Id": "a84dbf57-d4cc-4c17-b319-b245d0bf843b",
+    "ParentId": "17f681bb-d832-4930-9f1d-009af7b45810",
+    "Name": "Prepare Equipment Placing Plan",
+    "PayanarssTypeId": "10000000000000000000000000000000111",
+    "Attributes": [],
+    "Description": null
+  },
+  {
+    "Id": "c467ad03-c12c-474e-a2c6-19a0dd6183f5",
+    "ParentId": "17f681bb-d832-4930-9f1d-009af7b45810",
+    "Name": "Purchase Equipments",
+    "PayanarssTypeId": "10000000000000000000000000000000111",
+    "Attributes": [],
+    "Description": null
+  }
+]
